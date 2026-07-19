@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-19",
+  "format": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "pets": [
+    {
+      "id": "star-armor-tuantuan",
+      "displayName": { "zh": "星铠团团", "en": "Star-Armor Tuantuan" },
+      "download": "/downloads/star-armor-tuantuan.zip"
+    },
+    {
+      "id": "gemini-twincrest-duck",
+      "displayName": { "zh": "双子镜辉鸭", "en": "Gemini Twincrest Duck" },
+      "download": "/downloads/gemini-twincrest-duck.zip"
+    },
+    {
+      "id": "aries-ramcrest-duck",
+      "displayName": { "zh": "白羊金翎鸭", "en": "Aries Ramcrest Duck" },
+      "download": "/downloads/aries-ramcrest-duck.zip"
+    },
+    {
+      "id": "taurus-bullguard-duck",
+      "displayName": { "zh": "金牛鎏甲鸭", "en": "Taurus Bullguard Duck" },
+      "download": "/downloads/taurus-bullguard-duck.zip"
+    }
+  ]
+}
