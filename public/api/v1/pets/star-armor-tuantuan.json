@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-20",
+  "languages": ["zh", "en"],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": ["idle", "running-right", "running-left", "waving", "jumping", "failed", "waiting", "running", "review", "look"],
+  "pet": {
+    "id": "star-armor-tuantuan",
+    "status": "published",
+    "displayName": { "zh": "星铠团团", "en": "Star-Armor Tuantuan" },
+    "tagline": {
+      "zh": "披着星光，陪你把难题走完。",
+      "en": "Armored in starlight for every hard problem."
+    },
+    "description": {
+      "zh": "穿着原创星座铠甲、勇敢又软萌的猫科星界守护宠物。",
+      "en": "A brave, soft-hearted feline guardian in original constellation armor."
+    },
+    "personalityTags": [
+      { "zh": "勇敢", "en": "Brave" },
+      { "zh": "软萌", "en": "Soft-hearted" },
+      { "zh": "守护型", "en": "Protective" }
+    ],
+    "badge": "HERO 01",
+    "accent": "#4b68ff",
+    "softAccent": "#dfe5ff",
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/star-armor-tuantuan/spritesheet.webp",
+    "manifestPath": "/pets/star-armor-tuantuan/pet.json",
+    "downloadPath": "/downloads/star-armor-tuantuan.zip",
+    "detailPath": "/api/v1/pets/star-armor-tuantuan.json"
+  }
+}
+

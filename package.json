@@ -10,12 +10,13 @@
     "build": "vinext build",
     "start": "vinext start",
     "deploy": "wrangler deploy --config wrangler.jsonc",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "test": "npm run build && node --test tests/rendered-html.test.mjs tests/pet-data-contract.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",
+    "lucide-react": "^0.468.0",
     "next": "16.2.6",
     "react": "19.2.6",
     "react-dom": "19.2.6"

@@ -2,12 +2,12 @@ import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 import "./globals.css";
 
-const title = "Codex Pets — Desktop companions hatched for work";
+const title = "Codex Pets｜会回应工作的桌面搭子";
 const description =
-  "浏览、预览并安装原创 Codex Desktop v2 宠物，或下载 Hatch Pet Skill 孵化自己的桌面搭子。Browse, preview, and install original Codex Desktop pets.";
+  "为 Codex Desktop 挑选、预览并安装一只会陪你工作、等待与庆祝完成的原创桌面宠物。";
 
 export const viewport: Viewport = {
-  themeColor: "#f4f0e7",
+  themeColor: "#f7f1e5",
   colorScheme: "light",
   width: "device-width",
   initialScale: 1,
@@ -29,12 +29,11 @@ export async function generateMetadata(): Promise<Metadata> {
     title,
     description,
     keywords: [
-      "Codex pet",
+      "Codex Pets",
       "Codex Desktop",
-      "AI pet",
-      "desktop companion",
-      "Hatch Pet",
-      "Codex 宠物",
+      "AI desktop pet",
+      "桌面宠物",
+      "Hatch Pet Skill",
     ],
     authors: [{ name: "Codex Pets" }],
     openGraph: {
@@ -46,8 +45,10 @@ export async function generateMetadata(): Promise<Metadata> {
       alternateLocale: ["en_US"],
       images: [
         {
-          url: `${origin}/og.png`,
-          alt: "Codex Pets — a star-armored cat and three golden guardian duck companions",
+          url: `${origin}/og-v2.png`,
+          width: 1600,
+          height: 900,
+          alt: "Codex Pets desktop companions",
         },
       ],
     },
@@ -55,12 +56,9 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      images: [`${origin}/og.png`],
+      images: [`${origin}/og-v2.png`],
     },
-    robots: {
-      index: true,
-      follow: true,
-    },
+    robots: { index: true, follow: true },
   };
 }
 

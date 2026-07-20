@@ -1,0 +1,414 @@
+.pageShell {
+  --route-ink: var(--ink);
+  --route-cream: var(--paper);
+  --route-paper: var(--paper-strong);
+  --route-blue: var(--blue);
+  --route-blue-soft: #dfe5ff;
+  --route-yellow: var(--yellow);
+  --route-mint: var(--mint);
+  width: min(var(--page-width), 100%);
+  margin: 0 auto;
+  padding: 18px 22px 36px;
+}
+
+.stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: center;
+  min-height: min(820px, calc(100svh - 126px));
+  margin-top: 22px;
+  padding: 46px 52px 132px;
+  overflow: hidden;
+  border: var(--border);
+  border-radius: 34px;
+  background: var(--blue);
+  box-shadow: var(--shadow);
+}
+
+.copyCard {
+  z-index: 2;
+  grid-column: 1 / 6;
+  align-self: center;
+  max-width: 520px;
+  padding: clamp(26px, 2.6vw, 36px);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--paper-strong);
+  box-shadow: 9px 9px 0 var(--ink);
+}
+
+.eyebrow,
+.nextCard > div:nth-child(2) > span {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.copyCard h1 {
+  max-width: 13ch;
+  margin: 0;
+  font-family: Impact, "Arial Black", "Microsoft YaHei", sans-serif;
+  font-size: clamp(2.55rem, 3.6vw, 4.2rem);
+  font-weight: 950;
+  letter-spacing: -0.035em;
+  line-height: 1.04;
+}
+
+.copyCard p {
+  max-width: 34rem;
+  margin: 20px 0 0;
+  font-size: clamp(1rem, 1.3vw, 1.16rem);
+  font-weight: 650;
+  line-height: 1.7;
+}
+
+.copyActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px 22px;
+  margin-top: 26px;
+}
+
+.primaryButton,
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-weight: 900;
+}
+
+.primaryButton {
+  min-height: 56px;
+  padding: 0 19px;
+  border: var(--border);
+  border-radius: 12px;
+  background: var(--yellow);
+  box-shadow: var(--shadow-sm);
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.primaryButton:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.textLink {
+  padding: 10px 0 7px;
+  border-bottom: 3px solid currentColor;
+}
+
+.petStage {
+  z-index: 1;
+  grid-column: 6 / -1;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-width: 0;
+  color: white;
+  text-align: center;
+}
+
+.liveBadge {
+  justify-self: end;
+  margin: 0 18px -2px 0;
+  padding: 8px 11px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--yellow);
+  box-shadow: 3px 3px 0 var(--ink);
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.09em;
+}
+
+.petButton {
+  display: grid;
+  width: min(520px, 42vw);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  filter: drop-shadow(0 24px 20px rgb(9 26 91 / 0.42));
+  transition: transform 160ms ease;
+}
+
+.petButton:hover {
+  transform: translateY(-6px) rotate(-1deg);
+}
+
+.petButton:active {
+  transform: translateY(1px) scale(0.985);
+}
+
+.heroPet {
+  width: 100%;
+}
+
+.petName {
+  margin: -12px 0 0;
+  font-family: Impact, "Arial Black", "Microsoft YaHei", sans-serif;
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  letter-spacing: 0.035em;
+  text-shadow: 3px 3px 0 var(--ink);
+}
+
+.petStatus {
+  max-width: 34rem;
+  min-height: 3em;
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.modeDock {
+  position: absolute;
+  z-index: 4;
+  right: 50%;
+  bottom: 26px;
+  display: grid;
+  width: min(800px, calc(100% - 54px));
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  border: var(--border);
+  border-radius: 24px;
+  background: var(--paper-strong);
+  box-shadow: 8px 8px 0 var(--ink);
+  transform: translateX(50%);
+}
+
+.modeDock button {
+  display: flex;
+  min-height: 70px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border: 0;
+  border-right: 2px solid rgb(11 13 18 / 0.5);
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.02rem;
+  font-weight: 950;
+}
+
+.modeDock button:last-child {
+  border-right: 0;
+}
+
+.modeDock button > span {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  background: white;
+}
+
+.modeDock .modeActive {
+  color: var(--blue);
+}
+
+.modeDock .modeActive > span {
+  border-color: var(--blue);
+  background: var(--yellow);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.nextSteps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 34px;
+}
+
+.nextCard {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 22px;
+  min-height: 220px;
+  padding: clamp(24px, 3vw, 38px);
+  border: var(--border);
+  border-radius: var(--radius);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow);
+}
+
+.hatchCard {
+  background: var(--yellow);
+}
+
+.cardIcon,
+.nextCard > a {
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--ink);
+  background: white;
+}
+
+.cardIcon {
+  width: 58px;
+  height: 58px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-sm);
+}
+
+.nextCard h2 {
+  margin: 0;
+  font-family: Impact, "Arial Black", "Microsoft YaHei", sans-serif;
+  font-size: clamp(1.55rem, 2.1vw, 2.35rem);
+  letter-spacing: -0.015em;
+  line-height: 1.08;
+}
+
+.nextCard p {
+  margin: 12px 0 0;
+  font-weight: 620;
+  line-height: 1.6;
+}
+
+.nextCard > a {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 1040px) {
+  .stage {
+    grid-template-columns: 1fr 1fr;
+    min-height: 760px;
+    padding: 36px 32px 126px;
+  }
+
+  .copyCard {
+    grid-column: 1;
+  }
+
+  .petStage {
+    grid-column: 2;
+  }
+
+  .petButton {
+    width: min(430px, 43vw);
+  }
+
+  .copyCard h1 {
+    font-size: clamp(2.5rem, 5vw, 3.7rem);
+  }
+}
+
+@media (max-width: 820px) {
+  .pageShell {
+    padding: 12px 14px 28px;
+  }
+
+  .stage {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 18px 128px;
+    border-radius: 26px;
+  }
+
+  .copyCard {
+    width: 100%;
+    max-width: none;
+    padding: 24px;
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+
+  .copyCard h1 {
+    max-width: 13ch;
+  }
+
+  .petStage {
+    width: 100%;
+  }
+
+  .petButton {
+    width: min(400px, 84vw);
+  }
+
+  .nextSteps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .stage {
+    padding-right: 12px;
+    padding-bottom: 116px;
+    padding-left: 12px;
+  }
+
+  .copyCard h1 {
+    font-size: clamp(2.25rem, 12vw, 3.25rem);
+  }
+
+  .copyCard p {
+    margin-top: 18px;
+  }
+
+  .copyActions {
+    align-items: stretch;
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  .textLink {
+    align-self: flex-start;
+  }
+
+  .liveBadge {
+    margin-right: 0;
+  }
+
+  .petName {
+    margin-top: -4px;
+  }
+
+  .petStatus {
+    min-height: 4.6em;
+    font-size: 0.86rem;
+  }
+
+  .modeDock {
+    bottom: 18px;
+    width: calc(100% - 24px);
+    padding: 6px;
+    border-radius: 18px;
+  }
+
+  .modeDock button {
+    min-height: 76px;
+    flex-direction: column;
+    gap: 5px;
+    padding: 6px 3px;
+    font-size: 0.82rem;
+  }
+
+  .modeDock button > span {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .nextCard {
+    grid-template-columns: auto 1fr;
+  }
+
+  .nextCard > a {
+    grid-column: 2;
+  }
+}

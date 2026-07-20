@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-20",
+  "languages": ["zh", "en"],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": ["idle", "running-right", "running-left", "waving", "jumping", "failed", "waiting", "running", "review", "look"],
+  "pet": {
+    "id": "gemini-twincrest-duck",
+    "status": "published",
+    "displayName": { "zh": "双子镜辉鸭", "en": "Gemini Twincrest Duck" },
+    "tagline": {
+      "zh": "灵光一闪时，它总在你身边。",
+      "en": "Beside you whenever an idea sparks."
+    },
+    "description": {
+      "zh": "原创双子座黄金甲守护鸭，明亮、灵动，随时准备加入 Codex。",
+      "en": "A bright, nimble Gemini guardian duck in original golden armor."
+    },
+    "personalityTags": [
+      { "zh": "灵动", "en": "Nimble" },
+      { "zh": "好奇", "en": "Curious" },
+      { "zh": "点子多", "en": "Inventive" }
+    ],
+    "badge": "TWIN 02",
+    "accent": "#ffce43",
+    "softAccent": "#fff0ad",
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/gemini-twincrest-duck/spritesheet.webp",
+    "manifestPath": "/pets/gemini-twincrest-duck/pet.json",
+    "downloadPath": "/downloads/gemini-twincrest-duck.zip",
+    "detailPath": "/api/v1/pets/gemini-twincrest-duck.json"
+  }
+}
+

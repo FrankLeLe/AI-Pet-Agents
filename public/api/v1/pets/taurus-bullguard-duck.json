@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-20",
+  "languages": ["zh", "en"],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": ["idle", "running-right", "running-left", "waving", "jumping", "failed", "waiting", "running", "review", "look"],
+  "pet": {
+    "id": "taurus-bullguard-duck",
+    "status": "published",
+    "displayName": { "zh": "金牛鎏甲鸭", "en": "Taurus Bullguard Duck" },
+    "tagline": {
+      "zh": "不催你，只稳稳陪你做到最后。",
+      "en": "Never rushing you, always staying to the end."
+    },
+    "description": {
+      "zh": "原创金牛座黄金甲守护鸭，稳重、可靠，是桌面的耐心搭子。",
+      "en": "A steady Taurus guardian duck in original golden armor."
+    },
+    "personalityTags": [
+      { "zh": "稳重", "en": "Steady" },
+      { "zh": "可靠", "en": "Reliable" },
+      { "zh": "有耐心", "en": "Patient" }
+    ],
+    "badge": "BULL 04",
+    "accent": "#38b98c",
+    "softAccent": "#c9f5e5",
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/taurus-bullguard-duck/spritesheet.webp",
+    "manifestPath": "/pets/taurus-bullguard-duck/pet.json",
+    "downloadPath": "/downloads/taurus-bullguard-duck.zip",
+    "detailPath": "/api/v1/pets/taurus-bullguard-duck.json"
+  }
+}
+

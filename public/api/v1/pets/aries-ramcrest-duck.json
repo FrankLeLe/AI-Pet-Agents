@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-20",
+  "languages": ["zh", "en"],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": ["idle", "running-right", "running-left", "waving", "jumping", "failed", "waiting", "running", "review", "look"],
+  "pet": {
+    "id": "aries-ramcrest-duck",
+    "status": "published",
+    "displayName": { "zh": "白羊金翎鸭", "en": "Aries Ramcrest Duck" },
+    "tagline": {
+      "zh": "先出发，再把难题一个个撞开。",
+      "en": "Start boldly, then break through each problem."
+    },
+    "description": {
+      "zh": "原创白羊座黄金甲守护鸭，热情、勇敢，又萌态十足。",
+      "en": "A spirited Aries guardian duck in original golden armor."
+    },
+    "personalityTags": [
+      { "zh": "热情", "en": "Spirited" },
+      { "zh": "果断", "en": "Decisive" },
+      { "zh": "行动派", "en": "Action-first" }
+    ],
+    "badge": "RAM 03",
+    "accent": "#ff6b58",
+    "softAccent": "#ffd8d2",
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/aries-ramcrest-duck/spritesheet.webp",
+    "manifestPath": "/pets/aries-ramcrest-duck/pet.json",
+    "downloadPath": "/downloads/aries-ramcrest-duck.zip",
+    "detailPath": "/api/v1/pets/aries-ramcrest-duck.json"
+  }
+}
+

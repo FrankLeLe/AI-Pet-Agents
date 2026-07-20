@@ -30,25 +30,30 @@ test("server-renders the complete Codex Pets landing page", async () => {
 
   const html = await response.text();
   assert.match(html, /<html[^>]*lang="zh-CN"/i);
-  assert.match(html, /<title>Codex Pets — Desktop companions hatched for work<\/title>/i);
+  assert.match(html, /<title>Codex Pets｜会回应工作的桌面搭子<\/title>/i);
   assert.match(html, /CODEX PETS/);
-  assert.match(html, /给 CODEX 的桌面/);
+  assert.match(html, /它会跟上 Codex 的每一次忙碌/);
   assert.match(html, /HATCH PET SKILL/);
-  assert.match(html, /http:\/\/localhost\/og\.png/);
+  assert.match(html, /http:\/\/localhost\/og-v2\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|Building your site/i);
 });
 
 test("removes all temporary starter preview infrastructure", async () => {
-  const [page, layout, packageJson] = await Promise.all([
+  const [page, homeExperience, spritePet, petData, layout, packageJson] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/_components/HomeExperience.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/_components/SpritePet.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../lib/pets.ts", import.meta.url), "utf8"),
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
     readFile(new URL("../package.json", import.meta.url), "utf8"),
   ]);
 
-  assert.match(page, /star-armor-tuantuan/);
-  assert.match(page, /spritesheet\.webp/);
+  assert.match(page, /HomeExperience/);
+  assert.match(homeExperience, /work.*wait.*done/s);
+  assert.match(spritePet, /spritesheet\.webp/);
+  assert.match(petData, /star-armor-tuantuan/);
   assert.match(layout, /generateMetadata/);
-  assert.match(layout, /og\.png/);
+  assert.match(layout, /og-v2\.png/);
   assert.doesNotMatch(page, /SkeletonPreview|codex-preview/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
@@ -81,7 +86,7 @@ test("ships four valid v2 pet packages and their downloads", async () => {
   const skillArchive = await stat(
     new URL("../public/downloads/hatch-pet.zip", import.meta.url),
   );
-  const socialCard = await stat(new URL("../public/og.png", import.meta.url));
+  const socialCard = await stat(new URL("../public/og-v2.png", import.meta.url));
 
   assert.equal(catalog.pets.length, 4);
   assert.equal(catalog.format.spriteVersionNumber, 2);

@@ -11,7 +11,7 @@
   },
   "routes": [
     {
-      "pattern": "pet.nanabananalanfu.com",
+      "pattern": "aipetsagent.com",
       "custom_domain": true
     }
   ],
