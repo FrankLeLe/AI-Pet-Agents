@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 
-import { ANIMATIONS } from "@/lib/pets";
-import type { AnimationKey, Language } from "@/lib/pets";
+import { ANIMATIONS } from "@/lib/pet-animation";
+import type { AnimationKey } from "@/lib/pet-animation";
+import type { Language } from "@/lib/pets";
 
+import { PetPreview } from "./PetPreview";
 import { SpritePet } from "./SpritePet";
-import styles from "./site-chrome.module.css";
+import styles from "./pet-playground.module.css";
 
 const ANIMATION_LABELS: Record<AnimationKey, { zh: string; en: string }> = {
   idle: { zh: "安静陪伴", en: "Idle" },
@@ -35,6 +37,7 @@ export function PetPlayground({
   initialAnimation = "idle",
 }: PetPlaygroundProps) {
   const [animation, setAnimation] = useState<AnimationKey>(initialAnimation);
+  const [isAwake, setIsAwake] = useState(false);
   const label = ANIMATION_LABELS[animation][language];
 
   return (
@@ -59,7 +62,10 @@ export function PetPlayground({
               type="button"
               className={animation === item.key ? styles.stateButtonActive : undefined}
               aria-pressed={animation === item.key}
-              onClick={() => setAnimation(item.key)}
+              onClick={() => {
+                setAnimation(item.key);
+                setIsAwake(true);
+              }}
               key={item.key}
             >
               {ANIMATION_LABELS[item.key][language]}
@@ -70,19 +76,36 @@ export function PetPlayground({
       <div className={styles.playgroundStage}>
         <div className={styles.stageStatus}>
           <span>{petName}</span>
-          <strong aria-live="polite">{label}</strong>
+          <strong aria-live="polite">
+            {isAwake
+              ? label
+              : language === "zh"
+                ? "选择一个状态唤醒它"
+                : "Choose a state to wake your pet"}
+          </strong>
         </div>
-        <SpritePet
-          petId={petId}
-          animation={animation}
-          eager
-          label={language === "zh" ? `${petName}正在${label}` : `${petName}: ${label}`}
-          className={styles.playgroundSprite}
-        />
+        {isAwake ? (
+          <SpritePet
+            petId={petId}
+            animation={animation}
+            label={language === "zh" ? `${petName}正在${label}` : `${petName}: ${label}`}
+            className={styles.playgroundSprite}
+          />
+        ) : (
+          <PetPreview
+            petId={petId}
+            label={language === "zh" ? `${petName}静态预览` : `${petName} preview`}
+            className={styles.playgroundSprite}
+          />
+        )}
         <p className={styles.stageHint}>
           {language === "zh"
-            ? "动画来自你下载到 Codex 的同一张 spritesheet。"
-            : "This animation comes from the same spritesheet you install in Codex."}
+            ? isAwake
+              ? "动画来自你下载到 Codex 的同一张 spritesheet。"
+              : "选择左侧任一状态后，才会加载完整动画。"
+            : isAwake
+              ? "This animation comes from the same spritesheet you install in Codex."
+              : "The full animation loads only after you choose a state."}
         </p>
       </div>
     </section>

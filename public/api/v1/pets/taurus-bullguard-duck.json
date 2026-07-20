@@ -1,7 +1,10 @@
 {
   "schemaVersion": 1,
   "updatedAt": "2026-07-20",
-  "languages": ["zh", "en"],
+  "languages": [
+    "zh",
+    "en"
+  ],
   "spriteFormat": {
     "spriteVersionNumber": 2,
     "atlasWidth": 1536,
@@ -11,32 +14,106 @@
     "cellWidth": 192,
     "cellHeight": 208
   },
-  "animationKeys": ["idle", "running-right", "running-left", "waving", "jumping", "failed", "waiting", "running", "review", "look"],
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
   "pet": {
     "id": "taurus-bullguard-duck",
+    "category": "zodiac-duck",
+    "zodiacOrder": 2,
+    "needs": [
+      "steady"
+    ],
+    "displayName": {
+      "zh": "金牛鎏甲鸭",
+      "en": "Taurus Bullguard Duck"
+    },
+    "badge": "TAURUS 02",
+    "accent": "#3db98d",
+    "softAccent": "#c9f5e5",
     "status": "published",
-    "displayName": { "zh": "金牛鎏甲鸭", "en": "Taurus Bullguard Duck" },
     "tagline": {
-      "zh": "不催你，只稳稳陪你做到最后。",
-      "en": "Never rushing you, always staying to the end."
+      "zh": "不催你，只稳稳陪你把事情做到最后。",
+      "en": "No rushing, no pressure—just steady company to the finish."
     },
     "description": {
-      "zh": "原创金牛座黄金甲守护鸭，稳重、可靠，是桌面的耐心搭子。",
-      "en": "A steady Taurus guardian duck in original golden armor."
+      "zh": "慢一点没有关系，稳定前进也是真正的前进。",
+      "en": "Slow is still movement when the pace is one you can sustain."
     },
     "personalityTags": [
-      { "zh": "稳重", "en": "Steady" },
-      { "zh": "可靠", "en": "Reliable" },
-      { "zh": "有耐心", "en": "Patient" }
+      {
+        "zh": "稳重",
+        "en": "Steady"
+      },
+      {
+        "zh": "可靠",
+        "en": "Reliable"
+      },
+      {
+        "zh": "有耐心",
+        "en": "Patient"
+      }
     ],
-    "badge": "BULL 04",
-    "accent": "#38b98c",
-    "softAccent": "#c9f5e5",
+    "editorial": {
+      "zodiacZh": "金牛座",
+      "zodiacEn": "Taurus",
+      "roleZh": "重力仓守护鸭",
+      "roleEn": "Keeper of Steady Progress",
+      "promiseZh": "不催你，只稳稳陪你把事情做到最后。",
+      "promiseEn": "No rushing, no pressure—just steady company to the finish.",
+      "storyTitleZh": "把很重的事，搬成一小块一小块",
+      "storyTitleEn": "The Harbor That Carries Heavy Things",
+      "storyZh": "金牛鎏甲鸭看守星铠港最深处的重力仓。那些被截止日期、反复修改和自我怀疑压得越来越沉的任务，来到这里都会被它放上缓慢转动的鎏金秤台。它不劝人一口气完成，也从不在身后催促，只把庞大的工作拆成今天能够搬动的一小块，再用厚实脚掌记下每一次真实进展。曾有一份搁置很久的工程图重到让整座仓库下沉，它花了许多个安静夜晚逐层整理，最终让图纸重新浮起。从那以后，它知道可靠不是永远不累，而是累了仍能找到合适的节奏。住进你的桌面后，它会守住那些看起来微不足道、其实正把你带向终点的日常。",
+      "storyEn": "Deep beneath Aster Dock, the Taurus Bullguard Duck tends a gravity storehouse where deadlines, revisions, and self-doubt make unfinished work feel impossibly heavy. It never asks anyone to lift everything at once. Instead, each project is divided into a piece that can be carried today, and every honest bit of progress is recorded under one broad, patient foot. Once, an abandoned set of plans grew so heavy that the whole chamber began to sink. Bullguard restored it layer by layer across many quiet nights. It learned that reliability is not endless energy; it is finding a pace that still works when energy runs low.",
+      "comfortZh": "慢一点没有关系，稳定前进也是真正的前进。",
+      "comfortEn": "Slow is still movement when the pace is one you can sustain.",
+      "moments": [
+        {
+          "titleZh": "任务太重",
+          "titleEn": "When the task feels heavy",
+          "bodyZh": "只挑出今天能搬动的一块，其余内容先安心留在仓里。",
+          "bodyEn": "Choose the one piece you can carry today and leave the rest safely stored."
+        },
+        {
+          "titleZh": "进度很慢",
+          "titleEn": "When progress feels slow",
+          "bodyZh": "鎏甲记得每次小修改；没有被看见的积累，也在改变结果。",
+          "bodyEn": "Bullguard remembers every small revision, including the progress no one else can see."
+        },
+        {
+          "titleZh": "快到终点",
+          "titleEn": "Near the finish",
+          "bodyZh": "把最后一段走稳，不必为了赶快结束而弄丢已经建立的节奏。",
+          "bodyEn": "Keep the final stretch steady instead of sacrificing the rhythm that brought you here."
+        }
+      ],
+      "traitsZh": [
+        "稳重",
+        "可靠",
+        "有耐心"
+      ],
+      "traitsEn": [
+        "Steady",
+        "Reliable",
+        "Patient"
+      ],
+      "matchZh": "适合长期项目、重复迭代，以及更需要稳定陪伴而不是强力催促的你。",
+      "matchEn": "Made for long projects, repeated iterations, and anyone who works better with patience than pressure."
+    },
     "spriteVersionNumber": 2,
     "spritesheetPath": "/pets/taurus-bullguard-duck/spritesheet.webp",
+    "previewPath": "/pets/taurus-bullguard-duck/preview.webp",
     "manifestPath": "/pets/taurus-bullguard-duck/pet.json",
     "downloadPath": "/downloads/taurus-bullguard-duck.zip",
     "detailPath": "/api/v1/pets/taurus-bullguard-duck.json"
   }
 }
-

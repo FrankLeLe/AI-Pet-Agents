@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import type { Language } from "@/lib/pets";
 
-import styles from "./site-chrome.module.css";
+import styles from "./install-command-panel.module.css";
 
 type Platform = "windows" | "unix";
 

@@ -1,0 +1,39 @@
+.spriteWindow,
+.previewWindow {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  aspect-ratio: 12 / 13;
+  place-items: center;
+}
+
+.spriteWindow {
+  overflow: hidden;
+}
+
+.spriteWindow img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 800%;
+  max-width: none;
+  height: 1100%;
+  transform: translate3d(var(--sprite-x), var(--sprite-y), 0);
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+}
+
+.previewWindow img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spriteWindow img {
+    will-change: auto;
+  }
+}

@@ -1,13 +1,22 @@
 import assert from "node:assert/strict";
 import { readFile, stat } from "node:fs/promises";
 import test from "node:test";
-import ts from "typescript";
+import { loadPetModule } from "../scripts/load-pet-module.mjs";
 
 const expectedIds = [
   "star-armor-tuantuan",
-  "gemini-twincrest-duck",
   "aries-ramcrest-duck",
   "taurus-bullguard-duck",
+  "gemini-twincrest-duck",
+  "cancer-shellguard-duck",
+  "leo-manehelm-duck",
+  "virgo-lotuscrest-duck",
+  "libra-balanceguard-duck",
+  "scorpio-stingtalon-duck",
+  "sagittarius-arrowwing-duck",
+  "capricorn-goathorn-duck",
+  "aquarius-vesselwing-duck",
+  "pisces-fintail-duck",
 ];
 
 const expectedAnimationKeys = [
@@ -29,28 +38,6 @@ async function readJson(relativePath) {
   );
 }
 
-async function importPetModule() {
-  const source = await readFile(
-    new URL("../lib/pets.ts", import.meta.url),
-    "utf8",
-  );
-  const result = ts.transpileModule(source, {
-    compilerOptions: {
-      module: ts.ModuleKind.ESNext,
-      target: ts.ScriptTarget.ES2022,
-    },
-    reportDiagnostics: true,
-  });
-  const errors = (result.diagnostics ?? []).filter(
-    (diagnostic) => diagnostic.category === ts.DiagnosticCategory.Error,
-  );
-
-  assert.deepEqual(errors, [], "lib/pets.ts must transpile without errors");
-
-  const encoded = Buffer.from(result.outputText).toString("base64");
-  return import(`data:text/javascript;base64,${encoded}`);
-}
-
 function assertLocalizedText(value, label) {
   assert.equal(typeof value, "object", `${label} must be an object`);
   assert.equal(typeof value.zh, "string", `${label}.zh must be a string`);
@@ -62,7 +49,7 @@ function assertLocalizedText(value, label) {
 test("keeps the TypeScript catalog and static v1 API in sync", async () => {
   const [catalog, petModule] = await Promise.all([
     readJson("../public/api/v1/catalog.json"),
-    importPetModule(),
+    loadPetModule(),
   ]);
 
   assert.equal(catalog.schemaVersion, 1);
@@ -95,13 +82,15 @@ test("publishes a self-consistent detail document for every pet", async () => {
     assert.equal(pet.spriteVersionNumber, 2);
     assert.equal(pet.manifestPath, `/pets/${pet.id}/pet.json`);
     assert.equal(pet.spritesheetPath, `/pets/${pet.id}/spritesheet.webp`);
+    assert.equal(pet.previewPath, `/pets/${pet.id}/preview.webp`);
     assert.equal(pet.downloadPath, `/downloads/${pet.id}.zip`);
     assert.equal(pet.detailPath, `/api/v1/pets/${pet.id}.json`);
 
-    const [detail, manifest, spritesheet, archive] = await Promise.all([
+    const [detail, manifest, spritesheet, preview, archive] = await Promise.all([
       readJson(`../public/api/v1/pets/${pet.id}.json`),
       readJson(`../public/pets/${pet.id}/pet.json`),
       stat(new URL(`../public/pets/${pet.id}/spritesheet.webp`, import.meta.url)),
+      stat(new URL(`../public/pets/${pet.id}/preview.webp`, import.meta.url)),
       stat(new URL(`../public/downloads/${pet.id}.zip`, import.meta.url)),
     ]);
 
@@ -116,6 +105,12 @@ test("publishes a self-consistent detail document for every pet", async () => {
     assert.equal(manifest.spriteVersionNumber, pet.spriteVersionNumber);
     assert.equal(manifest.spritesheetPath, "spritesheet.webp");
     assert.ok(spritesheet.size > 2_000_000);
+    assert.ok(preview.size > 20_000 && preview.size < 100_000);
     assert.ok(archive.size > 2_000_000);
+    assert.equal(pet.editorial.moments.length, 3);
+    assert.equal(pet.editorial.traitsZh.length, 3);
+    assert.equal(pet.editorial.traitsEn.length, 3);
+    assert.ok(pet.editorial.storyZh.length >= 180);
+    assert.ok(pet.editorial.storyEn.length >= 300);
   }
 });

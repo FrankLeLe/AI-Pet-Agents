@@ -1,4 +1,4 @@
-.pageShell {
+.homeMain {
   --route-ink: var(--ink);
   --route-cream: var(--paper);
   --route-paper: var(--paper-strong);
@@ -8,7 +8,7 @@
   --route-mint: var(--mint);
   width: min(var(--page-width), 100%);
   margin: 0 auto;
-  padding: 18px 22px 36px;
+  padding-bottom: 36px;
 }
 
 .stage {
@@ -308,8 +308,8 @@
 }
 
 @media (max-width: 820px) {
-  .pageShell {
-    padding: 12px 14px 28px;
+  .homeMain {
+    padding-bottom: 28px;
   }
 
   .stage {

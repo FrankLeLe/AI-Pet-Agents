@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-20",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "leo-manehelm-duck",
+    "category": "zodiac-duck",
+    "zodiacOrder": 5,
+    "needs": [
+      "create",
+      "start"
+    ],
+    "displayName": {
+      "zh": "狮子鬃焰鸭",
+      "en": "Leo Manehelm Duck"
+    },
+    "badge": "LEO 05",
+    "accent": "#ff9f2f",
+    "softAccent": "#ffe3b8",
+    "status": "published",
+    "tagline": {
+      "zh": "认真做出的东西，值得被世界看见。",
+      "en": "Work made with care deserves a chance to be seen."
+    },
+    "description": {
+      "zh": "紧张说明这件事对你重要，不说明你不配站到台前。",
+      "en": "Nerves mean this matters to you; they do not mean you do not belong in the spotlight."
+    },
+    "personalityTags": [
+      {
+        "zh": "自信",
+        "en": "Confident"
+      },
+      {
+        "zh": "温暖",
+        "en": "Warm"
+      },
+      {
+        "zh": "有感染力",
+        "en": "Encouraging"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "狮子座",
+      "zodiacEn": "Leo",
+      "roleZh": "公开台点灯守护鸭",
+      "roleEn": "Keeper of Brave Expression",
+      "promiseZh": "认真做出的东西，值得被世界看见。",
+      "promiseEn": "Work made with care deserves a chance to be seen.",
+      "storyTitleZh": "把作品从阴影里领出来",
+      "storyTitleEn": "Bringing Good Work Into the Light",
+      "storyZh": "狮子鬃焰鸭管理星铠港的公开台，那里本该展示新发明、新故事和刚刚完成的作品，却常有许多创作者在登台前悄悄退回阴影。鬃焰从不替谁夸大成果，也不会用热闹掩盖尚未准备好的部分。它只会把舞台灯调到刚好，让作品的真实轮廓被看见。一次重要演示前，主灯忽然熄灭，它便用冠羽里的暖光逐个照亮讲述者标出的关键细节，直到观众理解那份作品为何值得存在。从此，它守护的不是掌声，而是把心血交给他人观看的勇气。来到你的桌面，它会在提交、发布和展示之前，提醒你不必完美才有资格开口。",
+      "storyEn": "The Leo Manehelm Duck tends Aster Dock's presentation deck, a place built for new inventions, finished stories, and work ready to meet an audience. Many creators still retreat into the shadows just before their turn. Manehelm never exaggerates a result or hides unfinished edges behind spectacle; it simply adjusts the light until the work can be seen honestly. When the main lamps failed before an important demonstration, its warm crest illuminated each detail the nervous presenter cared about most. The audience understood. Since then, Manehelm has guarded something more valuable than applause: the courage to let thoughtful work leave the safety of its maker's hands.",
+      "comfortZh": "紧张说明这件事对你重要，不说明你不配站到台前。",
+      "comfortEn": "Nerves mean this matters to you; they do not mean you do not belong in the spotlight.",
+      "moments": [
+        {
+          "titleZh": "准备提交",
+          "titleEn": "Before submitting",
+          "bodyZh": "再确认一次核心价值，然后让作品离开草稿状态。",
+          "bodyEn": "Name the value once more, then allow the work to leave draft mode."
+        },
+        {
+          "titleZh": "害怕评价",
+          "titleEn": "When feedback feels scary",
+          "bodyZh": "评价会落在作品上，不会抹掉做出它的你的价值。",
+          "bodyEn": "Feedback can land on the work without reducing the worth of the person who made it."
+        },
+        {
+          "titleZh": "完成演示",
+          "titleEn": "After the presentation",
+          "bodyZh": "先承认自己已经勇敢地出现过，再去整理可以改进的地方。",
+          "bodyEn": "Acknowledge that you showed up bravely before sorting what to improve next."
+        }
+      ],
+      "traitsZh": [
+        "自信",
+        "温暖",
+        "有感染力"
+      ],
+      "traitsEn": [
+        "Confident",
+        "Warm",
+        "Encouraging"
+      ],
+      "matchZh": "适合准备发布、演示、作品评审，或需要一点表达勇气的你。",
+      "matchEn": "For launches, demos, reviews, and any moment that asks you to stand behind your work."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/leo-manehelm-duck/spritesheet.webp",
+    "previewPath": "/pets/leo-manehelm-duck/preview.webp",
+    "manifestPath": "/pets/leo-manehelm-duck/pet.json",
+    "downloadPath": "/downloads/leo-manehelm-duck.zip",
+    "detailPath": "/api/v1/pets/leo-manehelm-duck.json"
+  }
+}

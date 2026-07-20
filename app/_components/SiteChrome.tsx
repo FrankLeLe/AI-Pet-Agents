@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 import type { Language } from "@/lib/pets";
+import { normalizeLanguage, t, withLanguage } from "@/lib/i18n";
 
 import styles from "./site-chrome.module.css";
 
@@ -30,18 +31,7 @@ const FOOTER_ITEMS = [
   { href: "/install", zh: "安装", en: "Install" },
 ] as const;
 
-export function normalizeLanguage(value: string | string[] | undefined): Language {
-  return value === "en" ? "en" : "zh";
-}
-
-export function t(language: Language, zh: string, en: string) {
-  return language === "zh" ? zh : en;
-}
-
-export function withLanguage(path: string, language: Language) {
-  const separator = path.includes("?") ? "&" : "?";
-  return `${path}${separator}lang=${language}`;
-}
+export { normalizeLanguage, t, withLanguage };
 
 export function SiteHeader({ language, currentPath }: SiteHeaderProps) {
   return (
@@ -49,6 +39,7 @@ export function SiteHeader({ language, currentPath }: SiteHeaderProps) {
       <Link
         className={styles.brand}
         href={withLanguage("/", language)}
+        prefetch={false}
         aria-label={t(language, "Codex Pets 首页", "Codex Pets home")}
       >
         <span className={styles.brandMark} aria-hidden="true">
@@ -65,6 +56,7 @@ export function SiteHeader({ language, currentPath }: SiteHeaderProps) {
             <Link
               className={active ? styles.navActive : undefined}
               href={withLanguage(item.href, language)}
+              prefetch={false}
               aria-current={active ? "page" : undefined}
               key={item.href}
             >
@@ -79,6 +71,7 @@ export function SiteHeader({ language, currentPath }: SiteHeaderProps) {
           <Link
             className={language === "zh" ? styles.languageActive : undefined}
             href={withLanguage(currentPath, "zh")}
+            prefetch={false}
             lang="zh-CN"
             aria-current={language === "zh" ? "true" : undefined}
           >
@@ -87,6 +80,7 @@ export function SiteHeader({ language, currentPath }: SiteHeaderProps) {
           <Link
             className={language === "en" ? styles.languageActive : undefined}
             href={withLanguage(currentPath, "en")}
+            prefetch={false}
             lang="en"
             aria-current={language === "en" ? "true" : undefined}
           >
@@ -107,7 +101,7 @@ export function SiteFooter({ language }: SiteFooterProps) {
       </div>
       <nav aria-label={t(language, "页脚导航", "Footer navigation")}>
         {FOOTER_ITEMS.map((item) => (
-          <Link href={withLanguage(item.href, language)} key={item.href}>
+          <Link href={withLanguage(item.href, language)} prefetch={false} key={item.href}>
             {t(language, item.zh, item.en)}
           </Link>
         ))}
@@ -115,8 +109,8 @@ export function SiteFooter({ language }: SiteFooterProps) {
       <p>
         {t(
           language,
-          "无需登录即可浏览和下载。本项目独立制作，不代表 OpenAI 官方背书。",
-          "Browse and download without an account. This independent project is not officially endorsed by OpenAI.",
+          "© 2026 Codex Pets。角色与故事均为原创；无需登录即可浏览和下载。本项目独立制作，不代表 OpenAI 官方背书。",
+          "© 2026 Codex Pets. Characters and stories are original. Browse and download without an account. This independent project is not officially endorsed by OpenAI.",
         )}
       </p>
     </footer>
@@ -125,7 +119,7 @@ export function SiteFooter({ language }: SiteFooterProps) {
 
 export function PageShell({ language, currentPath, children }: PageShellProps) {
   return (
-    <div className={styles.pageShell}>
+    <div className={styles.pageShell} lang={language === "zh" ? "zh-CN" : "en"}>
       <a className={styles.skipLink} href="#main-content">
         {t(language, "跳到主要内容", "Skip to main content")}
       </a>

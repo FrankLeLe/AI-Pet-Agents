@@ -11,9 +11,11 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 
-import type { AnimationKey, Language } from "@/lib/pets";
+import { t, withLanguage } from "@/lib/i18n";
+import type { AnimationKey } from "@/lib/pet-animation";
+import type { Language } from "@/lib/pets";
 
-import { SiteFooter, SiteHeader, t, withLanguage } from "./SiteChrome";
+import { PetPreview } from "./PetPreview";
 import { SpritePet } from "./SpritePet";
 import styles from "../home.module.css";
 
@@ -65,20 +67,19 @@ const MODES: WorkMode[] = [
 
 export function HomeExperience({ language, petId, petName }: HomeExperienceProps) {
   const [activeMode, setActiveMode] = useState(0);
+  const [isAwake, setIsAwake] = useState(false);
   const mode = MODES[activeMode];
 
   function showNextReaction() {
+    if (!isAwake) {
+      setIsAwake(true);
+      return;
+    }
     setActiveMode((current) => (current + 1) % MODES.length);
   }
 
   return (
-    <div className={styles.pageShell}>
-      <a className="skip-link" href="#main-content">
-        {t(language, "跳到主要内容", "Skip to main content")}
-      </a>
-      <SiteHeader language={language} currentPath="/" />
-
-      <main id="main-content">
+      <main className={styles.homeMain} id="main-content">
         <section className={styles.stage} aria-labelledby="home-heading">
           <div className={styles.copyCard}>
             <span className={styles.eyebrow}>
@@ -94,8 +95,8 @@ export function HomeExperience({ language, petId, petName }: HomeExperienceProps
             <p>
               {t(
                 language,
-                "不是冰冷的进度条。它会陪你开工、等结果，也会把任务完成的小小胜利庆祝得更像一回事。",
-                "Not another cold progress bar. It works with you, waits with you, and makes a finished task feel worth celebrating.",
+                "来自星铠港的十三只桌面搭子，会陪你开工、等结果，也会把任务完成的小小胜利庆祝得更像一回事。",
+                "Thirteen companions from Aster Dock work with you, wait with you, and make a finished task feel worth celebrating.",
               )}
             </p>
             <div className={styles.copyActions}>
@@ -114,7 +115,7 @@ export function HomeExperience({ language, petId, petName }: HomeExperienceProps
           </div>
 
           <div className={styles.petStage}>
-            <span className={styles.liveBadge}>V2 PET · LIVE</span>
+            <span className={styles.liveBadge}>{isAwake ? "V2 PET · LIVE" : "TAP TO WAKE"}</span>
             <button
               className={styles.petButton}
               type="button"
@@ -125,13 +126,22 @@ export function HomeExperience({ language, petId, petName }: HomeExperienceProps
                 `Click ${petName} to see its next state`,
               )}
             >
-              <SpritePet
-                className={styles.heroPet}
-                petId={petId}
-                animation={mode.animation}
-                eager
-                label={`${petName} — ${t(language, mode.zhLabel, mode.enLabel)}`}
-              />
+              {isAwake ? (
+                <SpritePet
+                  className={styles.heroPet}
+                  petId={petId}
+                  animation={mode.animation}
+                  eager
+                  label={`${petName} — ${t(language, mode.zhLabel, mode.enLabel)}`}
+                />
+              ) : (
+                <PetPreview
+                  className={styles.heroPet}
+                  petId={petId}
+                  eager
+                  label={t(language, `${petName}静态预览`, `${petName} preview`)}
+                />
+              )}
             </button>
             <p className={styles.petName}>{petName}</p>
             <p className={styles.petStatus} aria-live="polite">
@@ -149,7 +159,10 @@ export function HomeExperience({ language, petId, petName }: HomeExperienceProps
                   className={active ? styles.modeActive : undefined}
                   type="button"
                   aria-pressed={active}
-                  onClick={() => setActiveMode(index)}
+                  onClick={() => {
+                    setIsAwake(true);
+                    setActiveMode(index);
+                  }}
                   key={item.key}
                 >
                   <span>
@@ -173,8 +186,8 @@ export function HomeExperience({ language, petId, petName }: HomeExperienceProps
               <p>
                 {t(
                   language,
-                  "四只原创 v2 宠物，先看性格和动作，再去安装。",
-                  "Meet four original v2 pets, preview their character, then install.",
+                  "十二只星域守护鸭与一只青铜见习守护猫，先看性格和故事，再去安装。",
+                  "Meet twelve zodiac guardian ducks and one bronze apprentice cat, then choose by character and story.",
                 )}
               </p>
             </div>
@@ -204,8 +217,5 @@ export function HomeExperience({ language, petId, petName }: HomeExperienceProps
           </article>
         </section>
       </main>
-
-      <SiteFooter language={language} />
-    </div>
   );
 }

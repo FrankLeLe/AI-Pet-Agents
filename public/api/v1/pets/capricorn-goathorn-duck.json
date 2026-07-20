@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-20",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "capricorn-goathorn-duck",
+    "category": "zodiac-duck",
+    "zodiacOrder": 10,
+    "needs": [
+      "steady"
+    ],
+    "displayName": {
+      "zh": "摩羯岩角鸭",
+      "en": "Capricorn Goathorn Duck"
+    },
+    "badge": "CAPRICORN 10",
+    "accent": "#b88754",
+    "softAccent": "#ecdbc7",
+    "status": "published",
+    "tagline": {
+      "zh": "没有捷径也没关系，每一级台阶都会留下。",
+      "en": "A lasting step matters, even when there is no shortcut."
+    },
+    "description": {
+      "zh": "你不必每天拼尽全力，能让明天继续的节奏才走得远。",
+      "en": "You do not need maximum effort every day; the pace that lets you return tomorrow travels farther."
+    },
+    "personalityTags": [
+      {
+        "zh": "自律",
+        "en": "Disciplined"
+      },
+      {
+        "zh": "务实",
+        "en": "Practical"
+      },
+      {
+        "zh": "有耐力",
+        "en": "Enduring"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "摩羯座",
+      "zodiacEn": "Capricorn",
+      "roleZh": "长坡阶梯守护鸭",
+      "roleEn": "Guardian of the Long Climb",
+      "promiseZh": "没有捷径也没关系，每一级台阶都会留下。",
+      "promiseEn": "A lasting step matters, even when there is no shortcut.",
+      "storyTitleZh": "把遥远的山顶，修成脚下的台阶",
+      "storyTitleEn": "Building Steps Up the Distant Mountain",
+      "storyZh": "摩羯岩角鸭住在星铠港背后的长坡工坊，专门为那些需要几个月甚至更久的工程铺设台阶。它不用宏大的口号鼓励远行者，只把每次提交、每份文档和每个已经验证的决定刻进岩阶，让缓慢进度拥有可以回望的形状。曾有一条通往高空观测站的道路因太陡而多年无人完成。岩角鸭每天只修一小段，遇到风雪便加固旧阶，而不是责怪自己没有更快。很多季节后，第一束观测光沿着完整台阶回到港口。它知道长期主义不是持续用力，而是让系统支持明天继续。来到你的桌面，它会守住节奏、记录里程碑，也提醒真正可贵的坚持应当允许休息。",
+      "storyEn": "The Capricorn Goathorn Duck works on the long slope behind Aster Dock, building steps for projects measured in months rather than afternoons. Each commit, useful document, and tested decision is carved into stone so gradual progress has a shape people can look back on. A road to the high observatory remained unfinished for years because the climb was too steep. Goathorn repaired only a short section each day, reinforcing old steps during storms instead of blaming itself for moving slowly. Seasons later, the first beam from the observatory traveled down a completed path. Its lesson is practical: long-term effort survives when the system makes tomorrow's return possible.",
+      "comfortZh": "你不必每天拼尽全力，能让明天继续的节奏才走得远。",
+      "comfortEn": "You do not need maximum effort every day; the pace that lets you return tomorrow travels farther.",
+      "moments": [
+        {
+          "titleZh": "项目很长",
+          "titleEn": "Inside a long project",
+          "bodyZh": "为本周留下一块可验证的成果，让远方不断变成脚下。",
+          "bodyEn": "Leave one verifiable result this week and turn a distant goal into ground beneath you."
+        },
+        {
+          "titleZh": "动力下降",
+          "titleEn": "When motivation fades",
+          "bodyZh": "回看已经留下的台阶，用证据而不是情绪判断自己是否前进。",
+          "bodyEn": "Look back at the steps already built and judge movement by evidence, not mood."
+        },
+        {
+          "titleZh": "需要休息",
+          "titleEn": "When rest is needed",
+          "bodyZh": "先加固交接点再离开，休息会成为路线的一部分。",
+          "bodyEn": "Secure a clean stopping point, then let rest become part of the route."
+        }
+      ],
+      "traitsZh": [
+        "自律",
+        "务实",
+        "有耐力"
+      ],
+      "traitsEn": [
+        "Disciplined",
+        "Practical",
+        "Enduring"
+      ],
+      "matchZh": "适合长期工程、持续学习、技术债治理，以及需要看见累积价值的你。",
+      "matchEn": "Built for long-running work, sustained learning, technical debt, and anyone who needs visible proof of accumulation."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/capricorn-goathorn-duck/spritesheet.webp",
+    "previewPath": "/pets/capricorn-goathorn-duck/preview.webp",
+    "manifestPath": "/pets/capricorn-goathorn-duck/pet.json",
+    "downloadPath": "/downloads/capricorn-goathorn-duck.zip",
+    "detailPath": "/api/v1/pets/capricorn-goathorn-duck.json"
+  }
+}

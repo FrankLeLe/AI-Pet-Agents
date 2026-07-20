@@ -40,7 +40,26 @@ const worker = {
       }, allowedWidths);
     }
 
-    return handler.fetch(request, env, ctx);
+    const response = await handler.fetch(request, env, ctx);
+
+    if (request.method !== "GET" && request.method !== "HEAD") {
+      return response;
+    }
+
+    const headers = new Headers(response.headers);
+    if (response.ok && (url.pathname.startsWith("/pets/") || url.pathname.startsWith("/downloads/"))) {
+      headers.set("Cache-Control", "public, max-age=604800, stale-while-revalidate=2592000");
+    } else if (response.ok && url.pathname.startsWith("/api/v1/")) {
+      headers.set("Cache-Control", "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400");
+    } else if (response.ok && headers.get("content-type")?.includes("text/html")) {
+      headers.set("Cache-Control", "public, max-age=0, s-maxage=300, stale-while-revalidate=86400");
+    }
+
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers,
+    });
   },
 };
 

@@ -2,7 +2,7 @@
 
 The MIT License in this repository applies to the site source code only.
 
-The character artwork, spritesheets, downloadable pet archives, and generated social-preview artwork under `public/pets`, the four pet ZIP files under `public/downloads`, and `public/og.png` are **not** covered by the MIT License. Unless a separate written license is added for a specific asset, those assets are provided for viewing and installation as Codex Desktop custom pets only; redistribution, resale, commercial use, model training, and creation of derivative asset packs are not granted.
+The character artwork, spritesheets, static previews, downloadable pet archives, and generated social-preview artwork under `public/pets`, the thirteen pet ZIP files under `public/downloads`, and `public/og-v2.png` are **not** covered by the MIT License. Unless a separate written license is added for a specific asset, those assets are provided for viewing and installation as Codex Desktop custom pets only; redistribution, resale, commercial use, model training, and creation of derivative asset packs are not granted.
 
 `public/downloads/hatch-pet.zip` is governed by the license included inside that archive.
 

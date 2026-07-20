@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-19",
+  "updatedAt": "2026-07-20",
   "format": {
     "spriteVersionNumber": 2,
     "atlasWidth": 1536,
@@ -13,23 +13,146 @@
   "pets": [
     {
       "id": "star-armor-tuantuan",
-      "displayName": { "zh": "星铠团团", "en": "Star-Armor Tuantuan" },
+      "category": "bronze-cat",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "星铠团团",
+        "en": "Star-Armor Tuantuan"
+      },
+      "preview": "/pets/star-armor-tuantuan/preview.webp",
       "download": "/downloads/star-armor-tuantuan.zip"
     },
     {
-      "id": "gemini-twincrest-duck",
-      "displayName": { "zh": "双子镜辉鸭", "en": "Gemini Twincrest Duck" },
-      "download": "/downloads/gemini-twincrest-duck.zip"
-    },
-    {
       "id": "aries-ramcrest-duck",
-      "displayName": { "zh": "白羊金翎鸭", "en": "Aries Ramcrest Duck" },
+      "category": "zodiac-duck",
+      "zodiacOrder": 1,
+      "displayName": {
+        "zh": "白羊金翎鸭",
+        "en": "Aries Ramcrest Duck"
+      },
+      "preview": "/pets/aries-ramcrest-duck/preview.webp",
       "download": "/downloads/aries-ramcrest-duck.zip"
     },
     {
       "id": "taurus-bullguard-duck",
-      "displayName": { "zh": "金牛鎏甲鸭", "en": "Taurus Bullguard Duck" },
+      "category": "zodiac-duck",
+      "zodiacOrder": 2,
+      "displayName": {
+        "zh": "金牛鎏甲鸭",
+        "en": "Taurus Bullguard Duck"
+      },
+      "preview": "/pets/taurus-bullguard-duck/preview.webp",
       "download": "/downloads/taurus-bullguard-duck.zip"
+    },
+    {
+      "id": "gemini-twincrest-duck",
+      "category": "zodiac-duck",
+      "zodiacOrder": 3,
+      "displayName": {
+        "zh": "双子镜辉鸭",
+        "en": "Gemini Twincrest Duck"
+      },
+      "preview": "/pets/gemini-twincrest-duck/preview.webp",
+      "download": "/downloads/gemini-twincrest-duck.zip"
+    },
+    {
+      "id": "cancer-shellguard-duck",
+      "category": "zodiac-duck",
+      "zodiacOrder": 4,
+      "displayName": {
+        "zh": "巨蟹甲壳鸭",
+        "en": "Cancer Shellguard Duck"
+      },
+      "preview": "/pets/cancer-shellguard-duck/preview.webp",
+      "download": "/downloads/cancer-shellguard-duck.zip"
+    },
+    {
+      "id": "leo-manehelm-duck",
+      "category": "zodiac-duck",
+      "zodiacOrder": 5,
+      "displayName": {
+        "zh": "狮子鬃焰鸭",
+        "en": "Leo Manehelm Duck"
+      },
+      "preview": "/pets/leo-manehelm-duck/preview.webp",
+      "download": "/downloads/leo-manehelm-duck.zip"
+    },
+    {
+      "id": "virgo-lotuscrest-duck",
+      "category": "zodiac-duck",
+      "zodiacOrder": 6,
+      "displayName": {
+        "zh": "处女莲冠鸭",
+        "en": "Virgo Lotuscrest Duck"
+      },
+      "preview": "/pets/virgo-lotuscrest-duck/preview.webp",
+      "download": "/downloads/virgo-lotuscrest-duck.zip"
+    },
+    {
+      "id": "libra-balanceguard-duck",
+      "category": "zodiac-duck",
+      "zodiacOrder": 7,
+      "displayName": {
+        "zh": "天秤衡光鸭",
+        "en": "Libra Balanceguard Duck"
+      },
+      "preview": "/pets/libra-balanceguard-duck/preview.webp",
+      "download": "/downloads/libra-balanceguard-duck.zip"
+    },
+    {
+      "id": "scorpio-stingtalon-duck",
+      "category": "zodiac-duck",
+      "zodiacOrder": 8,
+      "displayName": {
+        "zh": "天蝎针尾鸭",
+        "en": "Scorpio Stingtalon Duck"
+      },
+      "preview": "/pets/scorpio-stingtalon-duck/preview.webp",
+      "download": "/downloads/scorpio-stingtalon-duck.zip"
+    },
+    {
+      "id": "sagittarius-arrowwing-duck",
+      "category": "zodiac-duck",
+      "zodiacOrder": 9,
+      "displayName": {
+        "zh": "人马箭翼鸭",
+        "en": "Sagittarius Arrowwing Duck"
+      },
+      "preview": "/pets/sagittarius-arrowwing-duck/preview.webp",
+      "download": "/downloads/sagittarius-arrowwing-duck.zip"
+    },
+    {
+      "id": "capricorn-goathorn-duck",
+      "category": "zodiac-duck",
+      "zodiacOrder": 10,
+      "displayName": {
+        "zh": "摩羯岩角鸭",
+        "en": "Capricorn Goathorn Duck"
+      },
+      "preview": "/pets/capricorn-goathorn-duck/preview.webp",
+      "download": "/downloads/capricorn-goathorn-duck.zip"
+    },
+    {
+      "id": "aquarius-vesselwing-duck",
+      "category": "zodiac-duck",
+      "zodiacOrder": 11,
+      "displayName": {
+        "zh": "宝瓶澜甲鸭",
+        "en": "Aquarius Vesselwing Duck"
+      },
+      "preview": "/pets/aquarius-vesselwing-duck/preview.webp",
+      "download": "/downloads/aquarius-vesselwing-duck.zip"
+    },
+    {
+      "id": "pisces-fintail-duck",
+      "category": "zodiac-duck",
+      "zodiacOrder": 12,
+      "displayName": {
+        "zh": "双鱼鳍辉鸭",
+        "en": "Pisces Fintail Duck"
+      },
+      "preview": "/pets/pisces-fintail-duck/preview.webp",
+      "download": "/downloads/pisces-fintail-duck.zip"
     }
   ]
 }

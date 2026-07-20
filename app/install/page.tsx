@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { PETS } from "@/lib/pets";
 
-import { SpritePet } from "../_components/SpritePet";
+import { PetPreview } from "../_components/PetPreview";
 import { normalizeLanguage, PageShell, t, withLanguage } from "../_components/SiteChrome";
 import styles from "../_components/site-chrome.module.css";
 
@@ -83,16 +83,16 @@ export default async function InstallIndexPage({ searchParams }: InstallIndexPag
               <Link
                 className={styles.installPetCard}
                 href={withLanguage(`/install/${pet.id}`, language)}
+                prefetch={false}
                 style={{ "--pet-accent": pet.accent, "--pet-soft": pet.softAccent } as React.CSSProperties}
                 key={pet.id}
               >
-                <SpritePet
+                <PetPreview
                   petId={pet.id}
-                  animation="idle"
                   label={t(
                     language,
-                    `${pet.displayName.zh}待机动画`,
-                    `${pet.displayName.en} idle animation`,
+                    `${pet.displayName.zh}静态预览`,
+                    `${pet.displayName.en} preview`,
                   )}
                   className={styles.installPetSprite}
                 />

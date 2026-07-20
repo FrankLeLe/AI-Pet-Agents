@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-20",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "aquarius-vesselwing-duck",
+    "category": "zodiac-duck",
+    "zodiacOrder": 11,
+    "needs": [
+      "create",
+      "solve"
+    ],
+    "displayName": {
+      "zh": "宝瓶澜甲鸭",
+      "en": "Aquarius Vesselwing Duck"
+    },
+    "badge": "AQUARIUS 11",
+    "accent": "#39b8c8",
+    "softAccent": "#cff2f4",
+    "status": "published",
+    "tagline": {
+      "zh": "新方法不是为了炫耀，而是把时间还给真正重要的事。",
+      "en": "A better method should return time to what matters, not merely look clever."
+    },
+    "description": {
+      "zh": "你不必一直更努力，也可以让方法替你减少重复消耗。",
+      "en": "You do not always need to work harder; sometimes the method should remove the repetition."
+    },
+    "personalityTags": [
+      {
+        "zh": "独立",
+        "en": "Independent"
+      },
+      {
+        "zh": "前瞻",
+        "en": "Forward-looking"
+      },
+      {
+        "zh": "富有创造力",
+        "en": "Inventive"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "宝瓶座",
+      "zodiacEn": "Aquarius",
+      "roleZh": "未来水库守护鸭",
+      "roleEn": "Keeper of Useful Futures",
+      "promiseZh": "新方法不是为了炫耀，而是把时间还给真正重要的事。",
+      "promiseEn": "A better method should return time to what matters, not merely look clever.",
+      "storyTitleZh": "让旧水流向还没出现的花园",
+      "storyTitleEn": "Sending Old Water Toward New Gardens",
+      "storyZh": "宝瓶澜甲鸭管理星铠港的未来水库，收集重复劳动留下的旧水，并把它们过滤成自动化、模板和更轻盈的工作流。它喜欢新工具，却从不因为新而更换仍然好用的东西。每一条改造管线旁，都写着它要为谁省下时间。一次，水库设计出极其复杂的分流系统，运行得漂亮，却让维修者无从理解。澜甲鸭主动拆掉最耀眼的部分，保留一条人人都能接手的清楚水路。后来，这条简单管线浇活了港口第一座共享花园。它由此确认，未来感不来自复杂，而来自让更多人轻松抵达。来到你的桌面，它会邀请你自动化重复步骤，也会追问：这个改变是否真的让生活和创作更自由。",
+      "storyEn": "The Aquarius Vesselwing Duck manages Aster Dock's future reservoir, collecting the runoff of repetitive labor and filtering it into automation, reusable templates, and lighter workflows. It enjoys new tools but never replaces something merely because novelty has arrived. Every redesigned pipe must answer a simple question: whose time will this return? Vesselwing once built a brilliant but bewildering distribution system that no maintainer could understand. It removed the cleverest sections and kept one clear route that anyone could repair. That modest channel later sustained the harbor's first shared garden. For Vesselwing, the future is not complexity; it is making a better path available to more people.",
+      "comfortZh": "你不必一直更努力，也可以让方法替你减少重复消耗。",
+      "comfortEn": "You do not always need to work harder; sometimes the method should remove the repetition.",
+      "moments": [
+        {
+          "titleZh": "重复操作",
+          "titleEn": "During repetitive work",
+          "bodyZh": "先记录稳定出现的步骤，再判断哪些值得交给自动化。",
+          "bodyEn": "Notice the steps that repeat reliably, then decide which ones automation should carry."
+        },
+        {
+          "titleZh": "想换工具",
+          "titleEn": "Before changing tools",
+          "bodyZh": "先写下真正要改善的体验，别让新鲜感替代问题定义。",
+          "bodyEn": "Write down the experience you need to improve before novelty replaces the problem itself."
+        },
+        {
+          "titleZh": "完成改造",
+          "titleEn": "After an improvement",
+          "bodyZh": "确认后来的人也能理解和维护，才算把未来真正留下。",
+          "bodyEn": "Make sure the next person can understand and maintain it; that is how a useful future lasts."
+        }
+      ],
+      "traitsZh": [
+        "独立",
+        "前瞻",
+        "富有创造力"
+      ],
+      "traitsEn": [
+        "Independent",
+        "Forward-looking",
+        "Inventive"
+      ],
+      "matchZh": "适合自动化、重构、工具探索，以及想从重复劳动中拿回时间的你。",
+      "matchEn": "A match for automation, refactoring, tool exploration, and anyone reclaiming time from repetitive work."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/aquarius-vesselwing-duck/spritesheet.webp",
+    "previewPath": "/pets/aquarius-vesselwing-duck/preview.webp",
+    "manifestPath": "/pets/aquarius-vesselwing-duck/pet.json",
+    "downloadPath": "/downloads/aquarius-vesselwing-duck.zip",
+    "detailPath": "/api/v1/pets/aquarius-vesselwing-duck.json"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-20",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "libra-balanceguard-duck",
+    "category": "zodiac-duck",
+    "zodiacOrder": 7,
+    "needs": [
+      "solve",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "天秤衡光鸭",
+      "en": "Libra Balanceguard Duck"
+    },
+    "badge": "LIBRA 07",
+    "accent": "#a68cff",
+    "softAccent": "#e7e0ff",
+    "status": "published",
+    "tagline": {
+      "zh": "不替你决定，只把真正重要的代价照亮。",
+      "en": "It will not choose for you; it will make the tradeoffs visible."
+    },
+    "description": {
+      "zh": "难选不是因为你不够果断，而是因为两边都有你在意的东西。",
+      "en": "A hard choice often means both sides hold something you genuinely value."
+    },
+    "personalityTags": [
+      {
+        "zh": "理性",
+        "en": "Reasoned"
+      },
+      {
+        "zh": "公允",
+        "en": "Fair"
+      },
+      {
+        "zh": "善于权衡",
+        "en": "Discerning"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "天秤座",
+      "zodiacEn": "Libra",
+      "roleZh": "双塔衡光守护鸭",
+      "roleEn": "Keeper of Clear Choices",
+      "promiseZh": "不替你决定，只把真正重要的代价照亮。",
+      "promiseEn": "It will not choose for you; it will make the tradeoffs visible.",
+      "storyTitleZh": "当两边都重要，先看清重量",
+      "storyTitleEn": "When Both Sides Matter",
+      "storyZh": "天秤衡光鸭往返于星铠港的两座刻度塔，一座记录速度，一座记录质量。每当团队在方案之间僵持，它不会宣布哪一边获胜，而是把时间、风险、维护成本和真正想保护的体验分别放进光秤。曾经，两座塔因一项紧急工程同时拉响警报：快速上线会留下隐患，等待完善又会错过求助的人。衡光鸭没有寻找完美答案，而是帮大家划出不可牺牲的底线，再把其余部分安排进后续航程。选择因此不再像背叛另一种可能，而成为对当下负责。来到你的桌面，它会在选项太多时帮你看清优先级，让决定既有理由，也留有回头调整的余地。",
+      "storyEn": "The Libra Balanceguard Duck travels between Aster Dock's twin measure towers: one records speed, the other quality. When teams become trapped between plans, it does not declare a winner. Time, risk, maintenance, and the experience worth protecting are each placed on a scale of light. During an urgent repair, shipping quickly would leave debt behind, while waiting for perfection would leave people without help. Balanceguard helped define what could not be compromised, then scheduled everything else for a later passage. The choice stopped feeling like a betrayal of other possibilities and became a responsible response to the present.",
+      "comfortZh": "难选不是因为你不够果断，而是因为两边都有你在意的东西。",
+      "comfortEn": "A hard choice often means both sides hold something you genuinely value.",
+      "moments": [
+        {
+          "titleZh": "选项太多",
+          "titleEn": "When options pile up",
+          "bodyZh": "先写出这次决定最想保护的一件事，其他标准才有顺序。",
+          "bodyEn": "Name the one thing this decision must protect, then rank every other criterion around it."
+        },
+        {
+          "titleZh": "速度与质量",
+          "titleEn": "Speed versus quality",
+          "bodyZh": "划清不能退让的底线，再决定哪些部分可以分阶段完成。",
+          "bodyEn": "Set the non-negotiable floor, then decide what can be delivered in stages."
+        },
+        {
+          "titleZh": "决定之后",
+          "titleEn": "After deciding",
+          "bodyZh": "记录当时的理由，未来调整方向时就不必责怪过去的自己。",
+          "bodyEn": "Record why the choice made sense now, so a future change does not become self-blame."
+        }
+      ],
+      "traitsZh": [
+        "理性",
+        "公允",
+        "善于权衡"
+      ],
+      "traitsEn": [
+        "Reasoned",
+        "Fair",
+        "Discerning"
+      ],
+      "matchZh": "适合技术选型、优先级排序、团队讨论，以及容易被选择耗尽精力的你。",
+      "matchEn": "Useful for technical decisions, prioritization, team discussions, and anyone drained by too many choices."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/libra-balanceguard-duck/spritesheet.webp",
+    "previewPath": "/pets/libra-balanceguard-duck/preview.webp",
+    "manifestPath": "/pets/libra-balanceguard-duck/pet.json",
+    "downloadPath": "/downloads/libra-balanceguard-duck.zip",
+    "detailPath": "/api/v1/pets/libra-balanceguard-duck.json"
+  }
+}

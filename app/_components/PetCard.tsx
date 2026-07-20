@@ -4,7 +4,7 @@ import type { CSSProperties } from "react";
 
 import type { Language, Pet } from "@/lib/pets";
 
-import { SpritePet } from "./SpritePet";
+import { PetPreview } from "./PetPreview";
 import { t, withLanguage } from "./SiteChrome";
 import styles from "./site-chrome.module.css";
 
@@ -31,13 +31,13 @@ export function PetCard({ pet, language, compact = false }: PetCardProps) {
       <Link
         className={styles.petCardVisual}
         href={withLanguage(`/pets/${pet.id}`, language)}
+        prefetch={false}
         aria-label={t(language, `查看 ${name}`, `View ${name}`)}
       >
         <span className={styles.petBadge}>{pet.badge}</span>
-        <SpritePet
+        <PetPreview
           petId={pet.id}
-          animation="idle"
-          label={t(language, `${name}待机动画`, `${name} idle animation`)}
+          label={t(language, `${name}静态预览`, `${name} preview`)}
           className={styles.petCardSprite}
         />
       </Link>
@@ -46,11 +46,11 @@ export function PetCard({ pet, language, compact = false }: PetCardProps) {
         <h2>{name}</h2>
         <p>{pet.tagline[language]}</p>
         <div className={styles.cardActions}>
-          <Link className={styles.textLink} href={withLanguage(`/pets/${pet.id}`, language)}>
+          <Link className={styles.textLink} href={withLanguage(`/pets/${pet.id}`, language)} prefetch={false}>
             {t(language, "认识它", "Meet this pet")}
             <ArrowRight aria-hidden="true" size={18} strokeWidth={3} />
           </Link>
-          <Link className={styles.smallButton} href={withLanguage(`/install/${pet.id}`, language)}>
+          <Link className={styles.smallButton} href={withLanguage(`/install/${pet.id}`, language)} prefetch={false}>
             {t(language, "安装", "Install")}
           </Link>
         </div>

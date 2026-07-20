@@ -1,240 +1,214 @@
+import {
+  PET_EDITORIAL_CONTENT,
+  type PetEditorialContent,
+} from "./pet-content";
+import { SPRITE_FORMAT } from "./pet-animation";
+
+export {
+  ANIMATIONS,
+  ANIMATION_KEYS,
+  SPRITE_FORMAT,
+  type AnimationDefinition,
+  type AnimationKey,
+} from "./pet-animation";
+
 export const LANGUAGES = ["zh", "en"] as const;
 
 export type Language = (typeof LANGUAGES)[number];
 
 export type LocalizedText = Readonly<Record<Language, string>>;
 
-export const ANIMATION_KEYS = [
-  "idle",
-  "running-right",
-  "running-left",
-  "waving",
-  "jumping",
-  "failed",
-  "waiting",
-  "running",
-  "review",
-  "look",
-] as const;
+export const PET_NEEDS = ["start", "steady", "solve", "create", "comfort"] as const;
 
-export type AnimationKey = (typeof ANIMATION_KEYS)[number];
-
-export type AnimationDefinition = {
-  readonly key: AnimationKey;
-  readonly label: LocalizedText;
-  readonly row: number;
-  readonly frames: number;
-  readonly durations: readonly number[];
-};
-
-export const SPRITE_FORMAT = {
-  spriteVersionNumber: 2,
-  atlasWidth: 1536,
-  atlasHeight: 2288,
-  columns: 8,
-  rows: 11,
-  cellWidth: 192,
-  cellHeight: 208,
-} as const;
-
-export const ANIMATIONS = [
-  {
-    key: "idle",
-    label: { zh: "待机", en: "Idle" },
-    row: 0,
-    frames: 6,
-    durations: [280, 110, 110, 140, 140, 320],
-  },
-  {
-    key: "running-right",
-    label: { zh: "向右移动", en: "Move right" },
-    row: 1,
-    frames: 8,
-    durations: [120, 120, 120, 120, 120, 120, 120, 220],
-  },
-  {
-    key: "running-left",
-    label: { zh: "向左移动", en: "Move left" },
-    row: 2,
-    frames: 8,
-    durations: [120, 120, 120, 120, 120, 120, 120, 220],
-  },
-  {
-    key: "waving",
-    label: { zh: "挥手", en: "Wave" },
-    row: 3,
-    frames: 4,
-    durations: [140, 140, 140, 280],
-  },
-  {
-    key: "jumping",
-    label: { zh: "跳跃", en: "Jump" },
-    row: 4,
-    frames: 5,
-    durations: [140, 140, 140, 140, 280],
-  },
-  {
-    key: "failed",
-    label: { zh: "失败", en: "Failed" },
-    row: 5,
-    frames: 8,
-    durations: [140, 140, 140, 140, 140, 140, 140, 240],
-  },
-  {
-    key: "waiting",
-    label: { zh: "等待", en: "Waiting" },
-    row: 6,
-    frames: 6,
-    durations: [150, 150, 150, 150, 150, 260],
-  },
-  {
-    key: "running",
-    label: { zh: "工作中", en: "Working" },
-    row: 7,
-    frames: 6,
-    durations: [120, 120, 120, 120, 120, 220],
-  },
-  {
-    key: "review",
-    label: { zh: "审阅", en: "Review" },
-    row: 8,
-    frames: 6,
-    durations: [150, 150, 150, 150, 150, 280],
-  },
-  {
-    key: "look",
-    label: { zh: "环视", en: "Look around" },
-    row: 9,
-    frames: 16,
-    durations: [170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170],
-  },
-] as const satisfies readonly AnimationDefinition[];
+export type PetNeed = (typeof PET_NEEDS)[number];
 
 export type Pet = {
   readonly id: string;
   readonly status: "published";
+  readonly category: "bronze-cat" | "zodiac-duck";
+  readonly zodiacOrder: number | null;
+  readonly needs: readonly PetNeed[];
   readonly displayName: LocalizedText;
   readonly tagline: LocalizedText;
   readonly description: LocalizedText;
   readonly personalityTags: readonly LocalizedText[];
+  readonly editorial: PetEditorialContent;
   readonly badge: string;
   readonly accent: string;
   readonly softAccent: string;
   readonly spriteVersionNumber: typeof SPRITE_FORMAT.spriteVersionNumber;
   readonly spritesheetPath: string;
+  readonly previewPath: string;
   readonly manifestPath: string;
   readonly downloadPath: string;
   readonly detailPath: string;
 };
 
-export const PETS = [
+const PET_DEFINITIONS = [
   {
     id: "star-armor-tuantuan",
-    status: "published",
+    category: "bronze-cat",
+    zodiacOrder: null,
+    needs: ["comfort", "start"],
     displayName: { zh: "星铠团团", en: "Star-Armor Tuantuan" },
-    tagline: {
-      zh: "披着星光，陪你把难题走完。",
-      en: "Armored in starlight for every hard problem.",
-    },
-    description: {
-      zh: "穿着原创星座铠甲、勇敢又软萌的猫科星界守护宠物。",
-      en: "A brave, soft-hearted feline guardian in original constellation armor.",
-    },
-    personalityTags: [
-      { zh: "勇敢", en: "Brave" },
-      { zh: "软萌", en: "Soft-hearted" },
-      { zh: "守护型", en: "Protective" },
-    ],
-    badge: "HERO 01",
+    badge: "BRONZE 00",
     accent: "#4b68ff",
     softAccent: "#dfe5ff",
-    spriteVersionNumber: 2,
-    spritesheetPath: "/pets/star-armor-tuantuan/spritesheet.webp",
-    manifestPath: "/pets/star-armor-tuantuan/pet.json",
-    downloadPath: "/downloads/star-armor-tuantuan.zip",
-    detailPath: "/api/v1/pets/star-armor-tuantuan.json",
-  },
-  {
-    id: "gemini-twincrest-duck",
-    status: "published",
-    displayName: { zh: "双子镜辉鸭", en: "Gemini Twincrest Duck" },
-    tagline: {
-      zh: "灵光一闪时，它总在你身边。",
-      en: "Beside you whenever an idea sparks.",
-    },
-    description: {
-      zh: "原创双子座黄金甲守护鸭，明亮、灵动，随时准备加入 Codex。",
-      en: "A bright, nimble Gemini guardian duck in original golden armor.",
-    },
-    personalityTags: [
-      { zh: "灵动", en: "Nimble" },
-      { zh: "好奇", en: "Curious" },
-      { zh: "点子多", en: "Inventive" },
-    ],
-    badge: "TWIN 02",
-    accent: "#ffce43",
-    softAccent: "#fff0ad",
-    spriteVersionNumber: 2,
-    spritesheetPath: "/pets/gemini-twincrest-duck/spritesheet.webp",
-    manifestPath: "/pets/gemini-twincrest-duck/pet.json",
-    downloadPath: "/downloads/gemini-twincrest-duck.zip",
-    detailPath: "/api/v1/pets/gemini-twincrest-duck.json",
   },
   {
     id: "aries-ramcrest-duck",
-    status: "published",
+    category: "zodiac-duck",
+    zodiacOrder: 1,
+    needs: ["start"],
     displayName: { zh: "白羊金翎鸭", en: "Aries Ramcrest Duck" },
-    tagline: {
-      zh: "先出发，再把难题一个个撞开。",
-      en: "Start boldly, then break through each problem.",
-    },
-    description: {
-      zh: "原创白羊座黄金甲守护鸭，热情、勇敢，又萌态十足。",
-      en: "A spirited Aries guardian duck in original golden armor.",
-    },
-    personalityTags: [
-      { zh: "热情", en: "Spirited" },
-      { zh: "果断", en: "Decisive" },
-      { zh: "行动派", en: "Action-first" },
-    ],
-    badge: "RAM 03",
+    badge: "ARIES 01",
     accent: "#ff6b58",
     softAccent: "#ffd8d2",
-    spriteVersionNumber: 2,
-    spritesheetPath: "/pets/aries-ramcrest-duck/spritesheet.webp",
-    manifestPath: "/pets/aries-ramcrest-duck/pet.json",
-    downloadPath: "/downloads/aries-ramcrest-duck.zip",
-    detailPath: "/api/v1/pets/aries-ramcrest-duck.json",
   },
   {
     id: "taurus-bullguard-duck",
-    status: "published",
+    category: "zodiac-duck",
+    zodiacOrder: 2,
+    needs: ["steady"],
     displayName: { zh: "金牛鎏甲鸭", en: "Taurus Bullguard Duck" },
-    tagline: {
-      zh: "不催你，只稳稳陪你做到最后。",
-      en: "Never rushing you, always staying to the end.",
-    },
-    description: {
-      zh: "原创金牛座黄金甲守护鸭，稳重、可靠，是桌面的耐心搭子。",
-      en: "A steady Taurus guardian duck in original golden armor.",
-    },
-    personalityTags: [
-      { zh: "稳重", en: "Steady" },
-      { zh: "可靠", en: "Reliable" },
-      { zh: "有耐心", en: "Patient" },
-    ],
-    badge: "BULL 04",
-    accent: "#38b98c",
+    badge: "TAURUS 02",
+    accent: "#3db98d",
     softAccent: "#c9f5e5",
-    spriteVersionNumber: 2,
-    spritesheetPath: "/pets/taurus-bullguard-duck/spritesheet.webp",
-    manifestPath: "/pets/taurus-bullguard-duck/pet.json",
-    downloadPath: "/downloads/taurus-bullguard-duck.zip",
-    detailPath: "/api/v1/pets/taurus-bullguard-duck.json",
   },
-] as const satisfies readonly Pet[];
+  {
+    id: "gemini-twincrest-duck",
+    category: "zodiac-duck",
+    zodiacOrder: 3,
+    needs: ["solve", "create"],
+    displayName: { zh: "双子镜辉鸭", en: "Gemini Twincrest Duck" },
+    badge: "GEMINI 03",
+    accent: "#ffce43",
+    softAccent: "#fff0ad",
+  },
+  {
+    id: "cancer-shellguard-duck",
+    category: "zodiac-duck",
+    zodiacOrder: 4,
+    needs: ["comfort"],
+    displayName: { zh: "巨蟹甲壳鸭", en: "Cancer Shellguard Duck" },
+    badge: "CANCER 04",
+    accent: "#ff9c84",
+    softAccent: "#ffe0d7",
+  },
+  {
+    id: "leo-manehelm-duck",
+    category: "zodiac-duck",
+    zodiacOrder: 5,
+    needs: ["create", "start"],
+    displayName: { zh: "狮子鬃焰鸭", en: "Leo Manehelm Duck" },
+    badge: "LEO 05",
+    accent: "#ff9f2f",
+    softAccent: "#ffe3b8",
+  },
+  {
+    id: "virgo-lotuscrest-duck",
+    category: "zodiac-duck",
+    zodiacOrder: 6,
+    needs: ["solve", "steady"],
+    displayName: { zh: "处女莲冠鸭", en: "Virgo Lotuscrest Duck" },
+    badge: "VIRGO 06",
+    accent: "#6ecba8",
+    softAccent: "#d7f4e8",
+  },
+  {
+    id: "libra-balanceguard-duck",
+    category: "zodiac-duck",
+    zodiacOrder: 7,
+    needs: ["solve", "steady"],
+    displayName: { zh: "天秤衡光鸭", en: "Libra Balanceguard Duck" },
+    badge: "LIBRA 07",
+    accent: "#a68cff",
+    softAccent: "#e7e0ff",
+  },
+  {
+    id: "scorpio-stingtalon-duck",
+    category: "zodiac-duck",
+    zodiacOrder: 8,
+    needs: ["solve"],
+    displayName: { zh: "天蝎针尾鸭", en: "Scorpio Stingtalon Duck" },
+    badge: "SCORPIO 08",
+    accent: "#c75272",
+    softAccent: "#f3d4dc",
+  },
+  {
+    id: "sagittarius-arrowwing-duck",
+    category: "zodiac-duck",
+    zodiacOrder: 9,
+    needs: ["create", "start"],
+    displayName: { zh: "人马箭翼鸭", en: "Sagittarius Arrowwing Duck" },
+    badge: "SAGITTARIUS 09",
+    accent: "#4da7dc",
+    softAccent: "#d4ecf8",
+  },
+  {
+    id: "capricorn-goathorn-duck",
+    category: "zodiac-duck",
+    zodiacOrder: 10,
+    needs: ["steady"],
+    displayName: { zh: "摩羯岩角鸭", en: "Capricorn Goathorn Duck" },
+    badge: "CAPRICORN 10",
+    accent: "#b88754",
+    softAccent: "#ecdbc7",
+  },
+  {
+    id: "aquarius-vesselwing-duck",
+    category: "zodiac-duck",
+    zodiacOrder: 11,
+    needs: ["create", "solve"],
+    displayName: { zh: "宝瓶澜甲鸭", en: "Aquarius Vesselwing Duck" },
+    badge: "AQUARIUS 11",
+    accent: "#39b8c8",
+    softAccent: "#cff2f4",
+  },
+  {
+    id: "pisces-fintail-duck",
+    category: "zodiac-duck",
+    zodiacOrder: 12,
+    needs: ["create", "comfort"],
+    displayName: { zh: "双鱼鳍辉鸭", en: "Pisces Fintail Duck" },
+    badge: "PISCES 12",
+    accent: "#d36bc0",
+    softAccent: "#f4d8ee",
+  },
+] as const satisfies readonly {
+  id: string;
+  category: Pet["category"];
+  zodiacOrder: number | null;
+  needs: readonly PetNeed[];
+  displayName: LocalizedText;
+  badge: string;
+  accent: string;
+  softAccent: string;
+}[];
 
-export type PetId = (typeof PETS)[number]["id"];
+export type PetId = (typeof PET_DEFINITIONS)[number]["id"];
+
+export const PETS = PET_DEFINITIONS.map((definition) => {
+  const editorial = PET_EDITORIAL_CONTENT[definition.id];
+
+  return {
+    ...definition,
+    status: "published" as const,
+    tagline: { zh: editorial.promiseZh, en: editorial.promiseEn },
+    description: { zh: editorial.comfortZh, en: editorial.comfortEn },
+    personalityTags: editorial.traitsZh.map((zh, index) => ({
+      zh,
+      en: editorial.traitsEn[index] ?? editorial.traitsEn[0],
+    })),
+    editorial,
+    spriteVersionNumber: SPRITE_FORMAT.spriteVersionNumber,
+    spritesheetPath: `/pets/${definition.id}/spritesheet.webp`,
+    previewPath: `/pets/${definition.id}/preview.webp`,
+    manifestPath: `/pets/${definition.id}/pet.json`,
+    downloadPath: `/downloads/${definition.id}.zip`,
+    detailPath: `/api/v1/pets/${definition.id}.json`,
+  };
+}) satisfies readonly Pet[];
 
 export const DEFAULT_PET_ID: PetId = "star-armor-tuantuan";
 
@@ -245,4 +219,3 @@ export function getPetById(id: string): Pet | undefined {
 export function isPetId(id: string): id is PetId {
   return PETS.some((pet) => pet.id === id);
 }
-

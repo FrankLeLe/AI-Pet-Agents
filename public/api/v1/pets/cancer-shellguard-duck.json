@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-20",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "cancer-shellguard-duck",
+    "category": "zodiac-duck",
+    "zodiacOrder": 4,
+    "needs": [
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "巨蟹甲壳鸭",
+      "en": "Cancer Shellguard Duck"
+    },
+    "badge": "CANCER 04",
+    "accent": "#ff9c84",
+    "softAccent": "#ffe0d7",
+    "status": "published",
+    "tagline": {
+      "zh": "没有完成的尝试，也值得被好好接住。",
+      "en": "Unfinished attempts still deserve a safe place to land."
+    },
+    "description": {
+      "zh": "一次报错不会定义你，先让自己回到可以继续的位置。",
+      "en": "One error does not define you; first return to a place where continuing feels possible."
+    },
+    "personalityTags": [
+      {
+        "zh": "体贴",
+        "en": "Caring"
+      },
+      {
+        "zh": "包容",
+        "en": "Accepting"
+      },
+      {
+        "zh": "守护型",
+        "en": "Protective"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "巨蟹座",
+      "zodiacEn": "Cancer",
+      "roleZh": "草稿湾守护鸭",
+      "roleEn": "Guardian of Unfinished Work",
+      "promiseZh": "没有完成的尝试，也值得被好好接住。",
+      "promiseEn": "Unfinished attempts still deserve a safe place to land.",
+      "storyTitleZh": "草稿不会被潮水带走",
+      "storyTitleEn": "A Cove Where Drafts Stay Safe",
+      "storyZh": "星铠港北侧有一处安静的草稿湾，巨蟹甲壳鸭在那里收留被删掉的段落、失败的构建和不敢再打开的旧文件。它把这些尝试放进温暖甲壳下，不评价好坏，只替它们挡住匆忙结论的潮水。曾有一场数据风暴卷走许多尚未命名的作品，甲壳鸭沿岸寻找了整整一夜，把每一片残稿按原来的温度分类保存。第二天，创作者们发现有些碎片已经能长成新的方向。它因此明白，安全感不是保证永远成功，而是失败之后仍有地方重新开始。来到你的桌面，它会在报错或失落时安静守着，提醒你先保存、先呼吸，再决定下一步。",
+      "storyEn": "On the north side of Aster Dock lies Draft Cove, where the Cancer Shellguard Duck shelters deleted paragraphs, failed builds, and old files people are afraid to reopen. Nothing is judged there. Each attempt rests beneath a warm shell, protected from the tide of quick conclusions. During a data storm, many unnamed works were scattered across the shore. Shellguard searched until dawn and preserved every fragment according to the feeling it still carried. Some became the beginnings of entirely new work. That night taught the guardian that safety is not a promise of constant success; it is knowing you will have somewhere to begin again afterward.",
+      "comfortZh": "一次报错不会定义你，先让自己回到可以继续的位置。",
+      "comfortEn": "One error does not define you; first return to a place where continuing feels possible.",
+      "moments": [
+        {
+          "titleZh": "构建失败",
+          "titleEn": "After a failed build",
+          "bodyZh": "先保留现场和日志，别让慌乱替你删掉仍然有价值的线索。",
+          "bodyEn": "Save the state and the logs before frustration erases clues that still matter."
+        },
+        {
+          "titleZh": "想推倒重来",
+          "titleEn": "When you want to start over",
+          "bodyZh": "把可用的部分留在草稿湾，新版本不必否认之前付出的努力。",
+          "bodyEn": "Keep the useful pieces in Draft Cove; a new version need not deny the work before it."
+        },
+        {
+          "titleZh": "需要暂停",
+          "titleEn": "When you need a pause",
+          "bodyZh": "暂停不是放弃，甲壳会替你守住离开时的位置。",
+          "bodyEn": "A pause is not surrender. Shellguard will keep your place until you return."
+        }
+      ],
+      "traitsZh": [
+        "体贴",
+        "包容",
+        "守护型"
+      ],
+      "traitsEn": [
+        "Caring",
+        "Accepting",
+        "Protective"
+      ],
+      "matchZh": "适合经历失败、容易自责，或希望桌面上有一个安静安全角落的你。",
+      "matchEn": "A comforting match after setbacks, during self-doubt, or whenever your desktop needs a quiet safe corner."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/cancer-shellguard-duck/spritesheet.webp",
+    "previewPath": "/pets/cancer-shellguard-duck/preview.webp",
+    "manifestPath": "/pets/cancer-shellguard-duck/pet.json",
+    "downloadPath": "/downloads/cancer-shellguard-duck.zip",
+    "detailPath": "/api/v1/pets/cancer-shellguard-duck.json"
+  }
+}

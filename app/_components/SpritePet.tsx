@@ -3,10 +3,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 
-import { ANIMATIONS } from "@/lib/pets";
-import type { AnimationKey } from "@/lib/pets";
+import { ANIMATIONS } from "@/lib/pet-animation";
+import type { AnimationKey } from "@/lib/pet-animation";
 
-import styles from "./site-chrome.module.css";
+import styles from "./sprite-pet.module.css";
 
 type SpritePetProps = {
   petId: string;
@@ -14,11 +14,6 @@ type SpritePetProps = {
   eager?: boolean;
   label?: string;
   className?: string;
-};
-
-type SpriteStyle = CSSProperties & {
-  "--sprite-x": string;
-  "--sprite-y": string;
 };
 
 export function SpritePet({
@@ -29,17 +24,13 @@ export function SpritePet({
   className,
 }: SpritePetProps) {
   const rootRef = useRef<HTMLDivElement>(null);
-  const [playback, setPlayback] = useState<{ animation: AnimationKey; frame: number }>({
-    animation,
-    frame: 0,
-  });
+  const imageRef = useRef<HTMLImageElement>(null);
   const [canAnimate, setCanAnimate] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const config = useMemo(
     () => ANIMATIONS.find((item) => item.key === animation) ?? ANIMATIONS[0],
     [animation],
   );
-  const frame = playback.animation === animation ? playback.frame : 0;
 
   useEffect(() => {
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -68,6 +59,17 @@ export function SpritePet({
   }, []);
 
   useEffect(() => {
+    const image = imageRef.current;
+    if (!image) return;
+
+    const showFrame = (frame: number) => {
+      const row = animation === "look" && frame >= 8 ? 10 : config.row;
+      const column = animation === "look" ? frame % 8 : frame;
+      image.style.setProperty("--sprite-x", `-${column * 12.5}%`);
+      image.style.setProperty("--sprite-y", `-${row * (100 / 11)}%`);
+    };
+
+    showFrame(0);
     if (!canAnimate || !isVisible) return;
 
     let current = 0;
@@ -76,7 +78,7 @@ export function SpritePet({
       const delay = config.durations[current] ?? 170;
       timer = setTimeout(() => {
         current = (current + 1) % config.frames;
-        setPlayback({ animation, frame: current });
+        showFrame(current);
         tick();
       }, delay);
     };
@@ -84,13 +86,6 @@ export function SpritePet({
     tick();
     return () => clearTimeout(timer);
   }, [animation, canAnimate, config, isVisible]);
-
-  const row = animation === "look" && frame >= 8 ? 10 : config.row;
-  const column = animation === "look" ? frame % 8 : frame;
-  const spriteStyle: SpriteStyle = {
-    "--sprite-x": `-${column * 12.5}%`,
-    "--sprite-y": `-${row * (100 / 11)}%`,
-  };
 
   return (
     <div
@@ -102,13 +97,15 @@ export function SpritePet({
       {/* A raw img is required because the renderer crops one moving cell from the full atlas. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
+        ref={imageRef}
         src={`/pets/${petId}/spritesheet.webp`}
         alt=""
         aria-hidden="true"
         draggable={false}
         loading={eager ? "eager" : "lazy"}
         fetchPriority={eager ? "high" : "auto"}
-        style={spriteStyle}
+        decoding="async"
+        style={{ "--sprite-x": "0%", "--sprite-y": "0%" } as CSSProperties}
       />
     </div>
   );

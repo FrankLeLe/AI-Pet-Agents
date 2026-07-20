@@ -1,7 +1,10 @@
 {
   "schemaVersion": 1,
   "updatedAt": "2026-07-20",
-  "languages": ["zh", "en"],
+  "languages": [
+    "zh",
+    "en"
+  ],
   "spriteFormat": {
     "spriteVersionNumber": 2,
     "atlasWidth": 1536,
@@ -11,32 +14,106 @@
     "cellWidth": 192,
     "cellHeight": 208
   },
-  "animationKeys": ["idle", "running-right", "running-left", "waving", "jumping", "failed", "waiting", "running", "review", "look"],
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
   "pet": {
     "id": "aries-ramcrest-duck",
-    "status": "published",
-    "displayName": { "zh": "白羊金翎鸭", "en": "Aries Ramcrest Duck" },
-    "tagline": {
-      "zh": "先出发，再把难题一个个撞开。",
-      "en": "Start boldly, then break through each problem."
-    },
-    "description": {
-      "zh": "原创白羊座黄金甲守护鸭，热情、勇敢，又萌态十足。",
-      "en": "A spirited Aries guardian duck in original golden armor."
-    },
-    "personalityTags": [
-      { "zh": "热情", "en": "Spirited" },
-      { "zh": "果断", "en": "Decisive" },
-      { "zh": "行动派", "en": "Action-first" }
+    "category": "zodiac-duck",
+    "zodiacOrder": 1,
+    "needs": [
+      "start"
     ],
-    "badge": "RAM 03",
+    "displayName": {
+      "zh": "白羊金翎鸭",
+      "en": "Aries Ramcrest Duck"
+    },
+    "badge": "ARIES 01",
     "accent": "#ff6b58",
     "softAccent": "#ffd8d2",
+    "status": "published",
+    "tagline": {
+      "zh": "先不用想清所有答案，让第一步先发生。",
+      "en": "You do not need every answer before you begin."
+    },
+    "description": {
+      "zh": "卡住不代表你做不到，也许只是第一步还太大。",
+      "en": "Being stuck does not mean you cannot do it; the first step may simply be too large."
+    },
+    "personalityTags": [
+      {
+        "zh": "果断",
+        "en": "Decisive"
+      },
+      {
+        "zh": "热烈",
+        "en": "Spirited"
+      },
+      {
+        "zh": "行动派",
+        "en": "Action-first"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "白羊座",
+      "zodiacEn": "Aries",
+      "roleZh": "启程航标守护鸭",
+      "roleEn": "Guardian of First Steps",
+      "promiseZh": "先不用想清所有答案，让第一步先发生。",
+      "promiseEn": "You do not need every answer before you begin.",
+      "storyTitleZh": "第一盏灯，总要有人点亮",
+      "storyTitleEn": "The Keeper of the First Light",
+      "storyZh": "星铠港每次遭遇长夜，最先亮起的总是启程航标。白羊金翎鸭住在航标顶层，把用户迟迟没有落下的第一行字、第一张草图和第一条命令收进金色羽匣。它从不要求方向一开始就正确，只会在空白最让人犹豫的时候，用短促脚步敲出一个可以尝试的节拍。有一次，港口所有地图都被失序雾遮住，它没有等待完整路线，而是沿着眼前仍可看见的一小段路逐盏点灯。后来人们才明白，它守护的并非冲动，而是在不确定里仍愿意开始的勇气。来到你的桌面后，它会把闪烁的光标当作出发信号，提醒今天只需先完成第一步。",
+      "storyEn": "When a long night settles over Aster Dock, the Beacon of Beginnings is always the first to glow. The Aries Ramcrest Duck keeps a golden feather case filled with unwritten opening lines, untouched sketches, and commands people were almost ready to try. During one heavy fog, every complete map disappeared, so it lit the harbor one visible step at a time instead of waiting for certainty. That is its quiet gift: not reckless speed, but the courage to move while the route is still forming. On your desktop, a blinking cursor becomes its launch signal, and one small action is enough for today.",
+      "comfortZh": "卡住不代表你做不到，也许只是第一步还太大。",
+      "comfortEn": "Being stuck does not mean you cannot do it; the first step may simply be too large.",
+      "moments": [
+        {
+          "titleZh": "面对空白",
+          "titleEn": "At a blank page",
+          "bodyZh": "先写下一句不完美的话，让任务从想象变成可以修改的东西。",
+          "bodyEn": "Put down one imperfect line and turn the idea into something you can shape."
+        },
+        {
+          "titleZh": "迟迟没开始",
+          "titleEn": "When you keep delaying",
+          "bodyZh": "把目标缩成十分钟能完成的动作，金翎会陪你准时出发。",
+          "bodyEn": "Shrink the goal to a ten-minute action and let Ramcrest start beside you."
+        },
+        {
+          "titleZh": "有了小进展",
+          "titleEn": "After a small win",
+          "bodyZh": "别急着否定它，第一盏灯已经亮了，下一段路会因此出现。",
+          "bodyEn": "Do not dismiss it. The first light is on, and the next stretch can now appear."
+        }
+      ],
+      "traitsZh": [
+        "果断",
+        "热烈",
+        "行动派"
+      ],
+      "traitsEn": [
+        "Decisive",
+        "Spirited",
+        "Action-first"
+      ],
+      "matchZh": "适合正在启动新项目、对着空白页面犹豫，或需要找回行动感的你。",
+      "matchEn": "A strong match for new projects, intimidating blank pages, and days when momentum is missing."
+    },
     "spriteVersionNumber": 2,
     "spritesheetPath": "/pets/aries-ramcrest-duck/spritesheet.webp",
+    "previewPath": "/pets/aries-ramcrest-duck/preview.webp",
     "manifestPath": "/pets/aries-ramcrest-duck/pet.json",
     "downloadPath": "/downloads/aries-ramcrest-duck.zip",
     "detailPath": "/api/v1/pets/aries-ramcrest-duck.json"
   }
 }
-

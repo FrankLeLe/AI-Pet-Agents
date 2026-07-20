@@ -1,0 +1,141 @@
+.playground {
+  display: grid;
+  grid-template-columns: minmax(320px, 4fr) minmax(0, 8fr);
+  margin-top: clamp(78px, 9vw, 128px);
+  overflow: hidden;
+  border: 3px solid var(--route-ink);
+  border-radius: 22px;
+  background: var(--route-paper);
+  box-shadow: 7px 7px 0 var(--route-ink);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 950;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.playgroundCopy {
+  padding: clamp(26px, 4vw, 48px);
+  border-right: 3px solid var(--route-ink);
+}
+
+.playgroundCopy h2 {
+  margin: 18px 0 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Microsoft YaHei", sans-serif;
+  font-size: clamp(2.5rem, 4.6vw, 4.9rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.playgroundCopy > p:not(.eyebrow) {
+  margin: 22px 0 0;
+  font-weight: 650;
+  line-height: 1.7;
+}
+
+.stateButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.stateButtons button {
+  min-height: 42px;
+  padding: 8px 11px;
+  border: 2px solid var(--route-ink);
+  border-radius: 999px;
+  background: var(--route-cream);
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.stateButtons button.stateButtonActive {
+  background: var(--route-yellow);
+  box-shadow: 3px 3px 0 var(--route-ink);
+  transform: translate(-1px, -1px);
+}
+
+.playgroundStage {
+  position: relative;
+  display: grid;
+  min-height: 630px;
+  place-items: center;
+  padding: 24px;
+  overflow: hidden;
+  background: var(--route-blue);
+}
+
+.stageStatus {
+  position: absolute;
+  z-index: 3;
+  top: 20px;
+  right: 20px;
+  left: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.stageStatus span,
+.stageStatus strong,
+.stageHint {
+  padding: 8px 11px;
+  border: 2px solid var(--route-ink);
+  border-radius: 8px;
+  background: var(--route-paper);
+  box-shadow: 3px 3px 0 var(--route-ink);
+  color: var(--route-ink);
+  font-size: 0.7rem;
+  font-weight: 950;
+}
+
+.playgroundSprite {
+  width: min(380px, 64vw);
+  filter: drop-shadow(12px 14px 0 rgba(23, 23, 20, 0.25));
+}
+
+.stageHint {
+  position: absolute;
+  z-index: 3;
+  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 820px) {
+  .playground {
+    grid-template-columns: 1fr;
+  }
+
+  .playgroundCopy {
+    border-right: 0;
+    border-bottom: 3px solid var(--route-ink);
+  }
+}
+
+@media (max-width: 580px) {
+  .playgroundStage {
+    min-height: 500px;
+  }
+
+  .playgroundSprite {
+    width: min(280px, 72vw);
+    filter: drop-shadow(7px 8px 0 rgba(23, 23, 20, 0.22));
+  }
+
+  .stageStatus {
+    flex-wrap: wrap;
+  }
+
+  .stageHint {
+    font-size: 0.64rem;
+  }
+}

@@ -1,7 +1,10 @@
 {
   "schemaVersion": 1,
   "updatedAt": "2026-07-20",
-  "languages": ["zh", "en"],
+  "languages": [
+    "zh",
+    "en"
+  ],
   "spriteFormat": {
     "spriteVersionNumber": 2,
     "atlasWidth": 1536,
@@ -11,32 +14,107 @@
     "cellWidth": 192,
     "cellHeight": 208
   },
-  "animationKeys": ["idle", "running-right", "running-left", "waving", "jumping", "failed", "waiting", "running", "review", "look"],
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
   "pet": {
     "id": "star-armor-tuantuan",
-    "status": "published",
-    "displayName": { "zh": "星铠团团", "en": "Star-Armor Tuantuan" },
-    "tagline": {
-      "zh": "披着星光，陪你把难题走完。",
-      "en": "Armored in starlight for every hard problem."
-    },
-    "description": {
-      "zh": "穿着原创星座铠甲、勇敢又软萌的猫科星界守护宠物。",
-      "en": "A brave, soft-hearted feline guardian in original constellation armor."
-    },
-    "personalityTags": [
-      { "zh": "勇敢", "en": "Brave" },
-      { "zh": "软萌", "en": "Soft-hearted" },
-      { "zh": "守护型", "en": "Protective" }
+    "category": "bronze-cat",
+    "zodiacOrder": null,
+    "needs": [
+      "comfort",
+      "start"
     ],
-    "badge": "HERO 01",
+    "displayName": {
+      "zh": "星铠团团",
+      "en": "Star-Armor Tuantuan"
+    },
+    "badge": "BRONZE 00",
     "accent": "#4b68ff",
     "softAccent": "#dfe5ff",
+    "status": "published",
+    "tagline": {
+      "zh": "还没准备好也没关系，它会陪你一边走、一边长成。",
+      "en": "You do not have to feel ready; you can grow into the journey together."
+    },
+    "description": {
+      "zh": "你不需要先成为更好的自己，才值得有人陪着继续。",
+      "en": "You do not have to become a better version of yourself before you deserve company."
+    },
+    "personalityTags": [
+      {
+        "zh": "勇敢",
+        "en": "Brave"
+      },
+      {
+        "zh": "软萌",
+        "en": "Tender"
+      },
+      {
+        "zh": "愿意成长",
+        "en": "Ready to grow"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "星铠港",
+      "zodiacEn": "Aster Dock",
+      "roleZh": "青铜见习守护猫",
+      "roleEn": "Bronze Apprentice Guardian Cat",
+      "promiseZh": "还没准备好也没关系，它会陪你一边走、一边长成。",
+      "promiseEn": "You do not have to feel ready; you can grow into the journey together.",
+      "storyTitleZh": "一副由半途计划长成的青铜星铠",
+      "storyTitleEn": "The Bronze Armor Built From Second Chances",
+      "storyZh": "星铠团团并不属于任何一个星域。成为见习守护猫以前，它负责在星铠港清晨收集被人遗落的灵感星屑：写到一半的功能、没敢发送的提案，以及关闭窗口前仍舍不得删掉的草稿。它把这些微光藏进青铜星铠的缝隙，铠甲便随着一次次重新开始慢慢生长。第一次承担远途任务时，团团弄丢了送往十二座航标的信袋，只能沿路坦白错误并请求帮助。十二只守护鸭没有替它完成，而是各自教会它一种继续前进的方法。团团最终带回的不是完美记录，而是一条任何迷路者都能循光回来的路线。如今它住在你的桌面角落，为所有还没做好的人留灯，因为成长从来不是准备完毕后才开始。",
+      "storyEn": "Star-Armor Tuantuan belongs to no single zodiac region. Before becoming Aster Dock's bronze apprentice guardian cat, it collected idea sparks left behind at dawn: half-built features, unsent proposals, and drafts people could not quite delete before closing a window. Each rescued spark settled into a seam of its bronze armor, allowing the suit to grow whenever someone chose to begin again. On its first long delivery, Tuantuan lost a message bag meant for the twelve beacons. It admitted the mistake and asked for help along the route. The guardian ducks did not finish the task for it; each shared one way to keep moving. Tuantuan returned with something better than a flawless record—a trail of light that any lost traveler could follow home.",
+      "comfortZh": "你不需要先成为更好的自己，才值得有人陪着继续。",
+      "comfortEn": "You do not have to become a better version of yourself before you deserve company.",
+      "moments": [
+        {
+          "titleZh": "重新回来",
+          "titleEn": "When you return",
+          "bodyZh": "不用解释离开了多久，从眼前仍在发光的一小片开始。",
+          "bodyEn": "No explanation for the time away is required; begin with the small piece still glowing."
+        },
+        {
+          "titleZh": "犯了错误",
+          "titleEn": "After a mistake",
+          "bodyZh": "先承认、再求助，青铜星铠会把这次修正也变成成长的一部分。",
+          "bodyEn": "Acknowledge it, ask for help, and let the repair become part of the armor's growth."
+        },
+        {
+          "titleZh": "完成今天",
+          "titleEn": "At the end of today",
+          "bodyZh": "把一个小进展收进铠甲，不必等到宏大胜利才庆祝。",
+          "bodyEn": "Add one small win to the armor; celebration does not have to wait for a grand finish."
+        }
+      ],
+      "traitsZh": [
+        "勇敢",
+        "软萌",
+        "愿意成长"
+      ],
+      "traitsEn": [
+        "Brave",
+        "Tender",
+        "Ready to grow"
+      ],
+      "matchZh": "适合刚开始使用 Codex、重新拾起旧计划，或想要一位不评判成长速度的伙伴的你。",
+      "matchEn": "For Codex newcomers, returning projects, and anyone who wants a companion that never judges the pace of growth."
+    },
     "spriteVersionNumber": 2,
     "spritesheetPath": "/pets/star-armor-tuantuan/spritesheet.webp",
+    "previewPath": "/pets/star-armor-tuantuan/preview.webp",
     "manifestPath": "/pets/star-armor-tuantuan/pet.json",
     "downloadPath": "/downloads/star-armor-tuantuan.zip",
     "detailPath": "/api/v1/pets/star-armor-tuantuan.json"
   }
 }
-

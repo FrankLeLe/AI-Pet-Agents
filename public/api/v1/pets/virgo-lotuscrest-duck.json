@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-20",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "virgo-lotuscrest-duck",
+    "category": "zodiac-duck",
+    "zodiacOrder": 6,
+    "needs": [
+      "solve",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "处女莲冠鸭",
+      "en": "Virgo Lotuscrest Duck"
+    },
+    "badge": "VIRGO 06",
+    "accent": "#6ecba8",
+    "softAccent": "#d7f4e8",
+    "status": "published",
+    "tagline": {
+      "zh": "把混乱理成下一步，不把认真变成苛责。",
+      "en": "Turn the mess into a next step without turning care into criticism."
+    },
+    "description": {
+      "zh": "你可以认真，但不必用完美来证明自己的认真。",
+      "en": "You can care deeply without using perfection to prove that you care."
+    },
+    "personalityTags": [
+      {
+        "zh": "细致",
+        "en": "Thoughtful"
+      },
+      {
+        "zh": "清醒",
+        "en": "Clear-minded"
+      },
+      {
+        "zh": "有条理",
+        "en": "Organized"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "处女座",
+      "zodiacEn": "Virgo",
+      "roleZh": "校准温室守护鸭",
+      "roleEn": "Keeper of Gentle Clarity",
+      "promiseZh": "把混乱理成下一步，不把认真变成苛责。",
+      "promiseEn": "Turn the mess into a next step without turning care into criticism.",
+      "storyTitleZh": "允许一片叶子长得不那么整齐",
+      "storyTitleEn": "The Greenhouse That Leaves Room to Grow",
+      "storyZh": "处女莲冠鸭照料星铠港的校准温室，凌乱需求、散落注释和没有归类的待办会在这里长成一排排可以理解的植物。它擅长修剪多余枝叶、标记缺口，也曾经相信所有东西都必须排列得毫无偏差。直到一株总是向斜处生长的星藤，在一次停电中伸到窗外，接住了温室唯一的晨光。莲冠这才留下一角不被刻度限制的土壤，并学会在整洁与生命力之间保持空间。如今它整理，不是为了追求没有瑕疵，而是让每个人都看得见下一步。来到你的桌面，它会陪你审阅细节，也会在你反复打磨时提醒：足够清楚之后，作品还需要继续向前。",
+      "storyEn": "The Virgo Lotuscrest Duck cares for Aster Dock's calibration greenhouse, where scattered notes, tangled requirements, and unnamed tasks grow into rows that people can understand. It is gifted at pruning noise and marking gaps, but once believed every leaf had to align perfectly. Then a stubborn star-vine grew at an angle and reached the only morning light during a blackout. Lotuscrest set aside a patch of soil without measurement lines and learned that order must leave room for living things. It now organizes work to reveal the next step, not to erase every flaw. On your desktop, careful review comes with a gentle reminder to move forward when the work is clear enough.",
+      "comfortZh": "你可以认真，但不必用完美来证明自己的认真。",
+      "comfortEn": "You can care deeply without using perfection to prove that you care.",
+      "moments": [
+        {
+          "titleZh": "信息太乱",
+          "titleEn": "When everything feels messy",
+          "bodyZh": "先分出必须、可以和以后，再为今天保留一条清楚的路径。",
+          "bodyEn": "Sort the musts, maybes, and laters, then leave one clear path for today."
+        },
+        {
+          "titleZh": "进入审阅",
+          "titleEn": "During review",
+          "bodyZh": "一次只检查一种问题，细致不需要同时看见所有缺口。",
+          "bodyEn": "Review one kind of issue at a time; thoroughness does not require seeing every gap at once."
+        },
+        {
+          "titleZh": "反复打磨",
+          "titleEn": "When polishing never ends",
+          "bodyZh": "如果核心已经清楚，就给这版一个离开温室的机会。",
+          "bodyEn": "If the core is clear, give this version permission to leave the greenhouse."
+        }
+      ],
+      "traitsZh": [
+        "细致",
+        "清醒",
+        "有条理"
+      ],
+      "traitsEn": [
+        "Thoughtful",
+        "Clear-minded",
+        "Organized"
+      ],
+      "matchZh": "适合需求整理、代码审阅、内容校对，以及想摆脱完美主义压力的你。",
+      "matchEn": "A match for planning, code review, editing, and anyone learning to loosen perfectionism's grip."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/virgo-lotuscrest-duck/spritesheet.webp",
+    "previewPath": "/pets/virgo-lotuscrest-duck/preview.webp",
+    "manifestPath": "/pets/virgo-lotuscrest-duck/pet.json",
+    "downloadPath": "/downloads/virgo-lotuscrest-duck.zip",
+    "detailPath": "/api/v1/pets/virgo-lotuscrest-duck.json"
+  }
+}

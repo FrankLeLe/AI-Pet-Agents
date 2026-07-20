@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { headers } from "next/headers";
 import "./globals.css";
 
+const siteUrl = "https://aipetsagent.com";
 const title = "Codex Pets｜会回应工作的桌面搭子";
 const description =
-  "为 Codex Desktop 挑选、预览并安装一只会陪你工作、等待与庆祝完成的原创桌面宠物。";
+  "在星铠港遇见 12 只原创星座守护鸭与青铜见习守护猫，为 Codex Desktop 预览、下载并安装一只会陪你工作、等待与庆祝完成的桌面宠物。";
 
 export const viewport: Viewport = {
   themeColor: "#f7f1e5",
@@ -13,54 +13,43 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host =
-    requestHeaders.get("x-forwarded-host") ??
-    requestHeaders.get("host") ??
-    "localhost:3000";
-  const protocol =
-    requestHeaders.get("x-forwarded-proto") ??
-    (host.includes("localhost") ? "http" : "https");
-  const origin = `${protocol}://${host}`;
-
-  return {
-    metadataBase: new URL(origin),
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  keywords: [
+    "Codex Pets",
+    "Codex Desktop",
+    "AI desktop pet",
+    "桌面宠物",
+    "Hatch Pet Skill",
+  ],
+  authors: [{ name: "Codex Pets" }],
+  alternates: { canonical: siteUrl },
+  openGraph: {
     title,
     description,
-    keywords: [
-      "Codex Pets",
-      "Codex Desktop",
-      "AI desktop pet",
-      "桌面宠物",
-      "Hatch Pet Skill",
+    type: "website",
+    url: siteUrl,
+    locale: "zh_CN",
+    alternateLocale: ["en_US"],
+    images: [
+      {
+        url: "/og-v2.png",
+        width: 1600,
+        height: 900,
+        alt: "Codex Pets desktop companions",
+      },
     ],
-    authors: [{ name: "Codex Pets" }],
-    openGraph: {
-      title,
-      description,
-      type: "website",
-      url: origin,
-      locale: "zh_CN",
-      alternateLocale: ["en_US"],
-      images: [
-        {
-          url: `${origin}/og-v2.png`,
-          width: 1600,
-          height: 900,
-          alt: "Codex Pets desktop companions",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [`${origin}/og-v2.png`],
-    },
-    robots: { index: true, follow: true },
-  };
-}
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/og-v2.png"],
+  },
+  robots: { index: true, follow: true },
+};
 
 export default function RootLayout({
   children,

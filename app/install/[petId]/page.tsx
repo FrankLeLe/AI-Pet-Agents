@@ -6,7 +6,7 @@ import type { CSSProperties } from "react";
 import { getPetById, PETS } from "@/lib/pets";
 
 import { InstallCommandPanel } from "../../_components/InstallCommandPanel";
-import { SpritePet } from "../../_components/SpritePet";
+import { PetPreview } from "../../_components/PetPreview";
 import { normalizeLanguage, PageShell, t, withLanguage } from "../../_components/SiteChrome";
 import styles from "../../_components/site-chrome.module.css";
 
@@ -47,11 +47,10 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
 
         <section className={styles.installHero} style={accentStyle}>
           <div className={styles.installHeroPet}>
-            <SpritePet
+            <PetPreview
               petId={pet.id}
-              animation="waving"
               eager
-              label={t(language, `${name}正在挥手`, `${name} waving`)}
+              label={t(language, `${name}静态预览`, `${name} preview`)}
               className={styles.installHeroSprite}
             />
           </div>

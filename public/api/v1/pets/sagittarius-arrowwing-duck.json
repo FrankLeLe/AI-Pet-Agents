@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-20",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "sagittarius-arrowwing-duck",
+    "category": "zodiac-duck",
+    "zodiacOrder": 9,
+    "needs": [
+      "create",
+      "start"
+    ],
+    "displayName": {
+      "zh": "人马箭翼鸭",
+      "en": "Sagittarius Arrowwing Duck"
+    },
+    "badge": "SAGITTARIUS 09",
+    "accent": "#4da7dc",
+    "softAccent": "#d4ecf8",
+    "status": "published",
+    "tagline": {
+      "zh": "不用看见整张地图，也能先去往下一个坐标。",
+      "en": "You can move toward the next coordinate without seeing the whole map."
+    },
+    "description": {
+      "zh": "暂时不知道终点很正常，你只需要知道下一次尝试往哪里去。",
+      "en": "It is fine not to know the destination yet; you only need a direction for the next experiment."
+    },
+    "personalityTags": [
+      {
+        "zh": "乐观",
+        "en": "Optimistic"
+      },
+      {
+        "zh": "自由",
+        "en": "Independent"
+      },
+      {
+        "zh": "探索型",
+        "en": "Exploratory"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "人马座",
+      "zodiacEn": "Sagittarius",
+      "roleZh": "远途信标守护鸭",
+      "roleEn": "Keeper of Open Horizons",
+      "promiseZh": "不用看见整张地图，也能先去往下一个坐标。",
+      "promiseEn": "You can move toward the next coordinate without seeing the whole map.",
+      "storyTitleZh": "箭翼指向的不是终点，是下一处可抵达的光",
+      "storyTitleEn": "A Marker for the Next Reachable Light",
+      "storyZh": "人马箭翼鸭守护星铠港最外缘的远途信标。它背后的箭翼从来不是武器，而是一束束能够飞越未知海面的坐标光标。每当有人因为路线太多而停在原地，它便发出一枚光标，只标记下一个可以验证的方向。有一年，远航队计划寻找传说中的新航道，却在无数推演中错过了出发季。箭翼鸭没有给出保证，只把第一处安全补给点投向天际。队伍抵达后看见新的海流，原先不存在的路线也随之展开。它因此相信，探索不是盲目远行，而是用一次真实抵达换取更清楚的地图。来到你的桌面，它会陪你做小实验、开新分支，把未知从压力变回可能。",
+      "storyEn": "The Sagittarius Arrowwing Duck guards the farthest beacon of Aster Dock. Its radiant arrows are not weapons but coordinates that can cross uncharted water. Whenever too many possible routes leave an explorer motionless, Arrowwing sends one marker toward the next direction that can actually be tested. A crew once spent an entire season modeling a rumored passage and nearly missed the weather to depart. The guardian marked a safe supply point instead. From there, the crew observed a new current and discovered a route no prediction had shown. Arrowwing believes exploration is not wandering blindly; it is earning a clearer map through one real arrival.",
+      "comfortZh": "暂时不知道终点很正常，你只需要知道下一次尝试往哪里去。",
+      "comfortEn": "It is fine not to know the destination yet; you only need a direction for the next experiment.",
+      "moments": [
+        {
+          "titleZh": "想试新方向",
+          "titleEn": "Trying a new direction",
+          "bodyZh": "先设计一个代价很小的实验，让好奇心带回真实信息。",
+          "bodyEn": "Design a low-cost experiment and let curiosity return with real information."
+        },
+        {
+          "titleZh": "路线太多",
+          "titleEn": "When there are too many paths",
+          "bodyZh": "选择最容易验证的一条，不把今天的决定误当成永久承诺。",
+          "bodyEn": "Choose the easiest path to test without mistaking today's choice for a permanent commitment."
+        },
+        {
+          "titleZh": "探索有结果",
+          "titleEn": "After an experiment",
+          "bodyZh": "无论结果是否符合预期，都把新信息补回地图。",
+          "bodyEn": "Whether the result matched your hopes or not, add what you learned back to the map."
+        }
+      ],
+      "traitsZh": [
+        "乐观",
+        "自由",
+        "探索型"
+      ],
+      "traitsEn": [
+        "Optimistic",
+        "Independent",
+        "Exploratory"
+      ],
+      "matchZh": "适合技术探索、原型实验、新领域学习，以及被过度规划困住的你。",
+      "matchEn": "For technical exploration, prototypes, unfamiliar fields, and anyone trapped in too much planning."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/sagittarius-arrowwing-duck/spritesheet.webp",
+    "previewPath": "/pets/sagittarius-arrowwing-duck/preview.webp",
+    "manifestPath": "/pets/sagittarius-arrowwing-duck/pet.json",
+    "downloadPath": "/downloads/sagittarius-arrowwing-duck.zip",
+    "detailPath": "/api/v1/pets/sagittarius-arrowwing-duck.json"
+  }
+}

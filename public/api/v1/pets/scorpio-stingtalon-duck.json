@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-20",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "scorpio-stingtalon-duck",
+    "category": "zodiac-duck",
+    "zodiacOrder": 8,
+    "needs": [
+      "solve"
+    ],
+    "displayName": {
+      "zh": "天蝎针尾鸭",
+      "en": "Scorpio Stingtalon Duck"
+    },
+    "badge": "SCORPIO 08",
+    "accent": "#c75272",
+    "softAccent": "#f3d4dc",
+    "status": "published",
+    "tagline": {
+      "zh": "表面安静的时候，它仍会陪你找到藏得最深的原因。",
+      "en": "Even when the surface looks calm, it will stay until the hidden cause is found."
+    },
+    "description": {
+      "zh": "难题没有立刻回答你，不代表你没有在接近答案。",
+      "en": "A problem's silence does not mean you are failing to get closer to the answer."
+    },
+    "personalityTags": [
+      {
+        "zh": "敏锐",
+        "en": "Perceptive"
+      },
+      {
+        "zh": "专注",
+        "en": "Focused"
+      },
+      {
+        "zh": "有韧性",
+        "en": "Persistent"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "天蝎座",
+      "zodiacEn": "Scorpio",
+      "roleZh": "深层管线巡查鸭",
+      "roleEn": "Guardian of Root Causes",
+      "promiseZh": "表面安静的时候，它仍会陪你找到藏得最深的原因。",
+      "promiseEn": "Even when the surface looks calm, it will stay until the hidden cause is found.",
+      "storyTitleZh": "听见深处那一声很轻的异常",
+      "storyTitleEn": "The Quiet Signal Beneath the Surface",
+      "storyZh": "天蝎针尾鸭巡视星铠港最少有人进入的深层管线。它能从一片正常运转的嗡鸣里，听见某个错误极轻的回声，却从不急着用第一个解释填满未知。它会沿着日志、时间线和每次状态变化留下细小标记，直到线索自己连成原因。一次，港口照明每天都会短暂闪烁，所有设备检查都显示正常。针尾鸭连续守了七个夜晚，终于发现是一枚受潮的旧接头只在海雾最浓时失灵。它修好接头后没有庆祝，只把完整记录留给后来的人。来到你的桌面，它会在复杂问题旁保持耐心，提醒你深入并不等于紧绷，真正的专注也可以安静而有边界。",
+      "storyEn": "The Scorpio Stingtalon Duck patrols the deepest service lines beneath Aster Dock. It can hear a faint irregular note inside an otherwise healthy hum, yet refuses to fill uncertainty with the first convenient explanation. Logs, timelines, and state changes are marked until the clues can assemble themselves. When the harbor lights began flickering for a moment each night, every system reported normal. Stingtalon kept watch for seven evenings and found an old connector that failed only when the sea fog was at its thickest. It repaired the fault, left a complete record for the next investigator, and returned quietly to its rounds.",
+      "comfortZh": "难题没有立刻回答你，不代表你没有在接近答案。",
+      "comfortEn": "A problem's silence does not mean you are failing to get closer to the answer.",
+      "moments": [
+        {
+          "titleZh": "偶发错误",
+          "titleEn": "With an intermittent bug",
+          "bodyZh": "先记录发生条件，不急着改动，让规律有机会显现。",
+          "bodyEn": "Capture the conditions before changing anything and give the pattern room to appear."
+        },
+        {
+          "titleZh": "追查根因",
+          "titleEn": "While tracing the cause",
+          "bodyZh": "沿证据向下走，每次只验证一个假设，不让猜测制造新噪音。",
+          "bodyEn": "Follow evidence downward and test one hypothesis at a time without adding new noise."
+        },
+        {
+          "titleZh": "修复完成",
+          "titleEn": "After the fix",
+          "bodyZh": "留下能帮助后来者的记录，解决一次问题，也照亮下一次排查。",
+          "bodyEn": "Leave a trail for whoever comes next, so one fix improves the next investigation too."
+        }
+      ],
+      "traitsZh": [
+        "敏锐",
+        "专注",
+        "有韧性"
+      ],
+      "traitsEn": [
+        "Perceptive",
+        "Focused",
+        "Persistent"
+      ],
+      "matchZh": "适合疑难调试、根因分析、深度研究，以及愿意安静追踪证据的你。",
+      "matchEn": "Best for stubborn bugs, root-cause analysis, deep research, and patient evidence seekers."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/scorpio-stingtalon-duck/spritesheet.webp",
+    "previewPath": "/pets/scorpio-stingtalon-duck/preview.webp",
+    "manifestPath": "/pets/scorpio-stingtalon-duck/pet.json",
+    "downloadPath": "/downloads/scorpio-stingtalon-duck.zip",
+    "detailPath": "/api/v1/pets/scorpio-stingtalon-duck.json"
+  }
+}

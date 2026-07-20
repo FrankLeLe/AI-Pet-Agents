@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-20",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "pisces-fintail-duck",
+    "category": "zodiac-duck",
+    "zodiacOrder": 12,
+    "needs": [
+      "create",
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "双鱼鳍辉鸭",
+      "en": "Pisces Fintail Duck"
+    },
+    "badge": "PISCES 12",
+    "accent": "#d36bc0",
+    "softAccent": "#f4d8ee",
+    "status": "published",
+    "tagline": {
+      "zh": "那些还说不清的感受，也可以慢慢长成作品。",
+      "en": "A feeling does not need a name before it can begin becoming a work."
+    },
+    "description": {
+      "zh": "现在说不清也没关系，先把那一点感觉留下来。",
+      "en": "It is all right if you cannot explain it yet; save the feeling before it disappears."
+    },
+    "personalityTags": [
+      {
+        "zh": "温柔",
+        "en": "Gentle"
+      },
+      {
+        "zh": "敏感",
+        "en": "Sensitive"
+      },
+      {
+        "zh": "富有想象力",
+        "en": "Imaginative"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "双鱼座",
+      "zodiacEn": "Pisces",
+      "roleZh": "灵感潮汐守护鸭",
+      "roleEn": "Guardian of Fleeting Ideas",
+      "promiseZh": "那些还说不清的感受，也可以慢慢长成作品。",
+      "promiseEn": "A feeling does not need a name before it can begin becoming a work.",
+      "storyTitleZh": "在灵感沉下去以前，先替它留住一点光",
+      "storyTitleEn": "A Light for Ideas Before They Sink",
+      "storyZh": "双鱼鳍辉鸭生活在星铠港下方的灵感潮汐里，那里漂着还没有名字的画面、语气和一闪而过的情绪。它不会急着把它们解释成结论，而是用柔亮鳍尾围出一小片安静水域，让模糊的感受有时间显出自己的形状。一次，潮汐带来一段谁也听不懂的低声旋律，维修队认为它只是噪声。鳍辉鸭却连续数日跟随节奏，发现那是远处浮标发来的微弱求助。被救回的记录后来变成港口最温柔的一首归航曲。它因此相信，共情不是替别人解释，而是愿意多听一会儿。来到你的桌面，它会陪伴写作、设计和所有难以命名的创作时刻，把感受轻轻带到可以表达的岸边。",
+      "storyEn": "The Pisces Fintail Duck lives in the inspiration tide beneath Aster Dock, among unnamed images, half-heard tones, and feelings that vanish when chased too quickly. Rather than forcing them into conclusions, it circles a quiet pool with its luminous fins and waits for each impression to find its own shape. A strange low melody once arrived with the current and was dismissed as noise. Fintail followed its rhythm for days and discovered a distant buoy calling weakly for help. The recovered signal later became the harbor's gentlest homecoming song. Its empathy is never an explanation imposed on someone else; it is the willingness to listen a little longer.",
+      "comfortZh": "现在说不清也没关系，先把那一点感觉留下来。",
+      "comfortEn": "It is all right if you cannot explain it yet; save the feeling before it disappears.",
+      "moments": [
+        {
+          "titleZh": "灵感闪过",
+          "titleEn": "When inspiration flickers",
+          "bodyZh": "先记下颜色、声音或一句话，不必立即证明它有什么用。",
+          "bodyEn": "Capture a color, sound, or phrase without demanding that it be useful immediately."
+        },
+        {
+          "titleZh": "表达困难",
+          "titleEn": "When expression feels difficult",
+          "bodyZh": "从最接近的比喻开始，让语言慢慢靠近真实感受。",
+          "bodyEn": "Begin with the nearest metaphor and let language approach the feeling gradually."
+        },
+        {
+          "titleZh": "情绪疲惫",
+          "titleEn": "When you feel emotionally tired",
+          "bodyZh": "允许作品先轻一点，恢复感受力也是创作的一部分。",
+          "bodyEn": "Let the work become lighter for now; restoring sensitivity is part of making things too."
+        }
+      ],
+      "traitsZh": [
+        "温柔",
+        "敏感",
+        "富有想象力"
+      ],
+      "traitsEn": [
+        "Gentle",
+        "Sensitive",
+        "Imaginative"
+      ],
+      "matchZh": "适合写作、设计、概念创作，以及需要被理解而不是被催促的你。",
+      "matchEn": "For writing, design, concept work, and moments that need understanding rather than urgency."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/pisces-fintail-duck/spritesheet.webp",
+    "previewPath": "/pets/pisces-fintail-duck/preview.webp",
+    "manifestPath": "/pets/pisces-fintail-duck/pet.json",
+    "downloadPath": "/downloads/pisces-fintail-duck.zip",
+    "detailPath": "/api/v1/pets/pisces-fintail-duck.json"
+  }
+}

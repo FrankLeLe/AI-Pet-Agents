@@ -1,5 +1,5 @@
 import { HomeExperience } from "./_components/HomeExperience";
-import { normalizeLanguage } from "./_components/SiteChrome";
+import { normalizeLanguage, PageShell } from "./_components/SiteChrome";
 import { getPetById, PETS } from "@/lib/pets";
 
 type HomePageProps = {
@@ -16,10 +16,12 @@ export default async function Home({ searchParams }: HomePageProps) {
   const pet = (requestedPet && getPetById(requestedPet)) || PETS[0];
 
   return (
-    <HomeExperience
-      language={language}
-      petId={pet.id}
-      petName={pet.displayName[language]}
-    />
+    <PageShell language={language} currentPath="/">
+      <HomeExperience
+        language={language}
+        petId={pet.id}
+        petName={pet.displayName[language]}
+      />
+    </PageShell>
   );
 }

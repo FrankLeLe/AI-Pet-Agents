@@ -1,7 +1,10 @@
 {
   "schemaVersion": 1,
   "updatedAt": "2026-07-20",
-  "languages": ["zh", "en"],
+  "languages": [
+    "zh",
+    "en"
+  ],
   "spriteFormat": {
     "spriteVersionNumber": 2,
     "atlasWidth": 1536,
@@ -11,32 +14,107 @@
     "cellWidth": 192,
     "cellHeight": 208
   },
-  "animationKeys": ["idle", "running-right", "running-left", "waving", "jumping", "failed", "waiting", "running", "review", "look"],
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
   "pet": {
     "id": "gemini-twincrest-duck",
-    "status": "published",
-    "displayName": { "zh": "双子镜辉鸭", "en": "Gemini Twincrest Duck" },
-    "tagline": {
-      "zh": "灵光一闪时，它总在你身边。",
-      "en": "Beside you whenever an idea sparks."
-    },
-    "description": {
-      "zh": "原创双子座黄金甲守护鸭，明亮、灵动，随时准备加入 Codex。",
-      "en": "A bright, nimble Gemini guardian duck in original golden armor."
-    },
-    "personalityTags": [
-      { "zh": "灵动", "en": "Nimble" },
-      { "zh": "好奇", "en": "Curious" },
-      { "zh": "点子多", "en": "Inventive" }
+    "category": "zodiac-duck",
+    "zodiacOrder": 3,
+    "needs": [
+      "solve",
+      "create"
     ],
-    "badge": "TWIN 02",
+    "displayName": {
+      "zh": "双子镜辉鸭",
+      "en": "Gemini Twincrest Duck"
+    },
+    "badge": "GEMINI 03",
     "accent": "#ffce43",
     "softAccent": "#fff0ad",
+    "status": "published",
+    "tagline": {
+      "zh": "答案没变，也许只是问题需要换个方向看。",
+      "en": "When the answer will not move, turn the question around."
+    },
+    "description": {
+      "zh": "想法互相冲突并不可怕，它们可能正在帮你找到真正的问题。",
+      "en": "Conflicting ideas are not a failure; they may be pointing toward the real question."
+    },
+    "personalityTags": [
+      {
+        "zh": "好奇",
+        "en": "Curious"
+      },
+      {
+        "zh": "灵动",
+        "en": "Nimble"
+      },
+      {
+        "zh": "善于联想",
+        "en": "Associative"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "双子座",
+      "zodiacEn": "Gemini",
+      "roleZh": "双镜观测守护鸭",
+      "roleEn": "Keeper of New Angles",
+      "promiseZh": "答案没变，也许只是问题需要换个方向看。",
+      "promiseEn": "When the answer will not move, turn the question around.",
+      "storyTitleZh": "两面星镜之间，藏着第三条路",
+      "storyTitleEn": "A Third Path Between Two Mirrors",
+      "storyZh": "双子镜辉鸭的冠羽里藏着两面星镜：一面照见已经说出口的答案，另一面照见还没有被问出的疑问。它负责巡查星铠港的岔路台，把争论不休的方案、反复出现的错误和突然断掉的灵感放到两面镜子之间。镜子从不替人裁决，却会让同一件事显出不同轮廓。一次，港口的导航程序同时给出两条相反路线，所有人都忙着证明其中一条正确，镜辉却发现真正的问题是目的地写错了。那天以后，它更愿意收集好问题，而不是漂亮答案。来到你的桌面，它会在思路打结时轻轻偏头，邀请你换一个角色、一个顺序，或一句更准确的提问。",
+      "storyEn": "The Gemini Twincrest Duck carries two star mirrors in its crest. One reflects the answers already spoken; the other reveals the questions no one has thought to ask. At Aster Dock's crossing platform, it places stubborn bugs, competing plans, and interrupted ideas between them until a new outline appears. When the navigation system once produced two opposite routes, everyone argued over which path was correct. Twincrest noticed that the destination itself had been entered incorrectly. Since then, it has valued a precise question more than an impressive answer. On your desktop, its curious tilt is an invitation to change perspective, reorder the problem, and ask again.",
+      "comfortZh": "想法互相冲突并不可怕，它们可能正在帮你找到真正的问题。",
+      "comfortEn": "Conflicting ideas are not a failure; they may be pointing toward the real question.",
+      "moments": [
+        {
+          "titleZh": "方案僵住",
+          "titleEn": "When a plan stalls",
+          "bodyZh": "把限制条件倒过来读一次，也许会看见之前被忽略的入口。",
+          "bodyEn": "Read the constraints in reverse and look for the entrance you previously missed."
+        },
+        {
+          "titleZh": "调试无果",
+          "titleEn": "During a stubborn debug",
+          "bodyZh": "先验证问题是否描述正确，再继续追逐那个看似合理的答案。",
+          "bodyEn": "Confirm that the problem is described correctly before chasing another plausible answer."
+        },
+        {
+          "titleZh": "灵感太多",
+          "titleEn": "When ideas multiply",
+          "bodyZh": "不用立刻删掉另一种可能，先让两条思路各自说完。",
+          "bodyEn": "Do not erase the second possibility yet; let both ideas finish making their case."
+        }
+      ],
+      "traitsZh": [
+        "好奇",
+        "灵动",
+        "善于联想"
+      ],
+      "traitsEn": [
+        "Curious",
+        "Nimble",
+        "Associative"
+      ],
+      "matchZh": "适合头脑风暴、方案比较、复杂调试，以及喜欢从多个角度理解问题的你。",
+      "matchEn": "Ideal for brainstorming, comparing approaches, difficult debugging, and minds that enjoy multiple perspectives."
+    },
     "spriteVersionNumber": 2,
     "spritesheetPath": "/pets/gemini-twincrest-duck/spritesheet.webp",
+    "previewPath": "/pets/gemini-twincrest-duck/preview.webp",
     "manifestPath": "/pets/gemini-twincrest-duck/pet.json",
     "downloadPath": "/downloads/gemini-twincrest-duck.zip",
     "detailPath": "/api/v1/pets/gemini-twincrest-duck.json"
   }
 }
-
