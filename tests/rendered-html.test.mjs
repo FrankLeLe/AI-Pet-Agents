@@ -57,6 +57,10 @@ test("server-renders all thirteen lightweight roster cards", async () => {
 test("gives every pet page an editorial story and an on-demand playground", async () => {
   const response = await render("/pets/star-armor-tuantuan?lang=zh");
   assert.equal(response.status, 200);
+  assert.equal(
+    response.headers.get("cache-control"),
+    "public, max-age=0, s-maxage=300, stale-while-revalidate=86400",
+  );
 
   const html = await response.text();
   assert.match(html, /青铜见习守护猫/);
