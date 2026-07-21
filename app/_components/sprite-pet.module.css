@@ -15,10 +15,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 800%;
+  width: calc(var(--sprite-columns) * 100%);
   max-width: none;
-  height: 1100%;
-  transform: translate3d(var(--sprite-x), var(--sprite-y), 0);
+  height: 100%;
+  transform: translate3d(var(--sprite-x), 0, 0);
   pointer-events: none;
   user-select: none;
   will-change: transform;

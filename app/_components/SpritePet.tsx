@@ -16,6 +16,11 @@ type SpritePetProps = {
   className?: string;
 };
 
+type SpriteStyle = CSSProperties & {
+  "--sprite-columns": number;
+  "--sprite-x": string;
+};
+
 export function SpritePet({
   petId,
   animation = "idle",
@@ -63,10 +68,10 @@ export function SpritePet({
     if (!image) return;
 
     const showFrame = (frame: number) => {
-      const row = animation === "look" && frame >= 8 ? 10 : config.row;
-      const column = animation === "look" ? frame % 8 : frame;
-      image.style.setProperty("--sprite-x", `-${column * 12.5}%`);
-      image.style.setProperty("--sprite-y", `-${row * (100 / 11)}%`);
+      image.style.setProperty(
+        "--sprite-x",
+        `-${frame * (100 / config.frames)}%`,
+      );
     };
 
     showFrame(0);
@@ -98,14 +103,19 @@ export function SpritePet({
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         ref={imageRef}
-        src={`/pets/${petId}/spritesheet.webp`}
+        src={`/pets/${petId}/web/animations/${animation}.webp`}
         alt=""
         aria-hidden="true"
         draggable={false}
         loading={eager ? "eager" : "lazy"}
-        fetchPriority={eager ? "high" : "auto"}
+        fetchPriority={eager ? "high" : "low"}
         decoding="async"
-        style={{ "--sprite-x": "0%", "--sprite-y": "0%" } as CSSProperties}
+        style={
+          {
+            "--sprite-columns": config.frames,
+            "--sprite-x": "0%",
+          } as SpriteStyle
+        }
       />
     </div>
   );

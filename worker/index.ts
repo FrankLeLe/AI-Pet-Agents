@@ -53,9 +53,33 @@ const worker = {
     if (response.ok && (isPetAsset || url.pathname.startsWith("/downloads/"))) {
       headers.set("Cache-Control", "public, max-age=604800, stale-while-revalidate=2592000");
     } else if (response.ok && url.pathname.startsWith("/api/v1/")) {
-      headers.set("Cache-Control", "public, max-age=300, s-maxage=3600, stale-while-revalidate=86400");
-    } else if (response.ok && contentType.includes("text/html")) {
-      headers.set("Cache-Control", "public, max-age=0, s-maxage=300, stale-while-revalidate=86400");
+      headers.set("Cache-Control", "public, max-age=300");
+      headers.set(
+        "Cloudflare-CDN-Cache-Control",
+        "public, max-age=3600, stale-while-revalidate=86400, stale-if-error=86400",
+      );
+    } else if (
+      response.ok &&
+      (contentType.includes("text/html") ||
+        contentType.includes("text/x-component"))
+    ) {
+      headers.set("Cache-Control", "public, max-age=0, must-revalidate");
+      headers.set(
+        "Cloudflare-CDN-Cache-Control",
+        "public, max-age=300, stale-while-revalidate=86400, stale-if-error=86400",
+      );
+    } else if (
+      response.ok &&
+      (url.pathname === "/robots.txt" || url.pathname === "/sitemap.xml")
+    ) {
+      headers.set("Cache-Control", "public, max-age=3600");
+      headers.set(
+        "Cloudflare-CDN-Cache-Control",
+        "public, max-age=86400, stale-while-revalidate=604800, stale-if-error=604800",
+      );
+    } else {
+      headers.set("Cache-Control", "private, no-store");
+      headers.delete("Cloudflare-CDN-Cache-Control");
     }
 
     return new Response(response.body, {

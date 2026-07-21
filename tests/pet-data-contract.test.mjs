@@ -108,6 +108,25 @@ test("publishes a self-consistent detail document for every pet", async () => {
     assert.ok(spritesheet.size > 2_000_000);
     assert.ok(preview.size > 20_000 && preview.size < 100_000);
     assert.ok(archive.size > 2_000_000);
+    const webPreview = await stat(
+      new URL(`../public/pets/${pet.id}/web/preview.webp`, import.meta.url),
+    );
+    assert.ok(
+      webPreview.size < preview.size,
+      `${pet.id} web preview must be smaller than its source`,
+    );
+    for (const animationKey of expectedAnimationKeys) {
+      const strip = await stat(
+        new URL(
+          `../public/pets/${pet.id}/web/animations/${animationKey}.webp`,
+          import.meta.url,
+        ),
+      );
+      assert.ok(
+        strip.size < 300_000,
+        `${pet.id}/${animationKey} web strip exceeds the 300KB budget`,
+      );
+    }
     assert.equal(pet.editorial.moments.length, 3);
     assert.equal(pet.editorial.traitsZh.length, 3);
     assert.equal(pet.editorial.traitsEn.length, 3);

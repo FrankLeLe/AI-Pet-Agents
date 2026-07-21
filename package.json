@@ -6,9 +6,10 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "dev": "vinext dev",
+    "dev": "npm run data:sync && npm run assets:web && vinext dev",
+    "assets:web": "node scripts/build-web-pet-assets.mjs",
     "data:sync": "node scripts/sync-pet-catalogs.mjs",
-    "build": "npm run data:sync && vinext build",
+    "build": "npm run data:sync && npm run assets:web && vinext build",
     "start": "vinext start",
     "deploy": "npm run build && wrangler deploy --config wrangler.jsonc",
     "test": "npm run build && node --test tests/rendered-html.test.mjs tests/pet-data-contract.test.mjs",
@@ -34,6 +35,7 @@
     "eslint": "9.39.4",
     "eslint-config-next": "16.2.6",
     "react-server-dom-webpack": "19.2.6",
+    "sharp": "0.34.5",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3",
     "vinext": "0.0.50",

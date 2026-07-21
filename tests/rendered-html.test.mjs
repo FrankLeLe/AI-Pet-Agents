@@ -135,7 +135,11 @@ test("gives every pet page a product profile and an on-demand action playground"
   assert.equal(response.status, 200);
   assert.equal(
     response.headers.get("cache-control"),
-    "public, max-age=0, s-maxage=300, stale-while-revalidate=86400",
+    "public, max-age=0, must-revalidate",
+  );
+  assert.equal(
+    response.headers.get("cloudflare-cdn-cache-control"),
+    "public, max-age=300, stale-while-revalidate=86400, stale-if-error=86400",
   );
 
   const html = await response.text();
@@ -198,6 +202,19 @@ test("keeps mobile conversion paths ahead of supporting explanation", async () =
   assert.match(globals, /--page-width:\s*1440px/);
 });
 
+test("enables Worker response caching while keeping static assets asset-first", async () => {
+  const [wrangler, staticHeaders] = await Promise.all([
+    readFile(new URL("../wrangler.jsonc", import.meta.url), "utf8"),
+    readFile(new URL("../public/_headers", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(wrangler, /"cache"\s*:\s*\{\s*"enabled"\s*:\s*true/s);
+  assert.doesNotMatch(wrangler, /run_worker_first/);
+  assert.match(staticHeaders, /\/pets\/\*/);
+  assert.match(staticHeaders, /\/downloads\/\*/);
+  assert.match(staticHeaders, /\/api\/v1\/\*/);
+});
+
 test("offers manual and Codex-assisted installation with pinned safety boundaries", async () => {
   const response = await render("/install/aries-ramcrest-duck?lang=zh");
   assert.equal(response.status, 200);
@@ -232,7 +249,7 @@ test("removes all temporary starter preview infrastructure", async () => {
   assert.match(homeExperience, /href="#characters"/);
   assert.match(homeExperience, /member\.specialty/);
   assert.match(homeExperience, /onKeyDown=\{handleMemberKeys\}/);
-  assert.match(spritePet, /spritesheet\.webp/);
+  assert.match(spritePet, /web\/animations\/\$\{animation\}\.webp/);
   assert.match(petData, /star-armor-tuantuan/);
   assert.match(layout, /export const metadata/);
   assert.match(layout, /og-series\.png/);

@@ -1,0 +1,8 @@
+/pets/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=2592000
+
+/downloads/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=2592000
+
+/api/v1/*
+  Cache-Control: public, max-age=300
