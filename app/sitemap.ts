@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
 import { PETS } from "@/lib/pets";
+import { PET_SERIES } from "@/lib/series";
 
 const origin = "https://aipetsagent.com";
 
@@ -11,8 +12,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     `/pets/${pet.id}`,
     `/install/${pet.id}`,
   ]);
+  const seriesPaths = PET_SERIES.map((series) => `/series/${series.id}`);
 
-  return [...corePaths, ...petPaths].map((path, index) => ({
+  return [...corePaths, ...seriesPaths, ...petPaths].map((path, index) => ({
     url: `${origin}${path}`,
     lastModified: updated,
     changeFrequency: index === 0 ? "weekly" : "monthly",

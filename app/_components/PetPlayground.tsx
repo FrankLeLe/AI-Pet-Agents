@@ -11,15 +11,15 @@ import { SpritePet } from "./SpritePet";
 import styles from "./pet-playground.module.css";
 
 const ANIMATION_LABELS: Record<AnimationKey, { zh: string; en: string }> = {
-  idle: { zh: "安静陪伴", en: "Idle" },
+  idle: { zh: "待机", en: "Idle" },
   "running-right": { zh: "向右出发", en: "Move right" },
   "running-left": { zh: "向左出发", en: "Move left" },
   waving: { zh: "打个招呼", en: "Wave" },
-  jumping: { zh: "开心一下", en: "Jump" },
-  failed: { zh: "遇到难题", en: "A setback" },
-  waiting: { zh: "等你回应", en: "Waiting" },
-  running: { zh: "认真工作", en: "Working" },
-  review: { zh: "仔细检查", en: "Review" },
+  jumping: { zh: "跳跃", en: "Jump" },
+  failed: { zh: "出错", en: "Error" },
+  waiting: { zh: "等待", en: "Waiting" },
+  running: { zh: "工作", en: "Working" },
+  review: { zh: "检查", en: "Review" },
   look: { zh: "看看四周", en: "Look around" },
 };
 
@@ -43,14 +43,14 @@ export function PetPlayground({
   return (
     <section className={styles.playground} aria-labelledby="playground-title">
       <div className={styles.playgroundCopy}>
-        <p className={styles.eyebrow}>LIVE PLAYGROUND</p>
+        <p className={styles.eyebrow}>ACTION PLAYGROUND</p>
         <h2 id="playground-title">
-          {language === "zh" ? "看看它如何回应你" : "SEE HOW YOUR PET RESPONDS"}
+          {language === "zh" ? "动作试玩" : "TRY THE ACTIONS"}
         </h2>
         <p>
           {language === "zh"
-            ? "点一下状态，不用读说明书。工作、等待、失败和完成，都有自己的小动作。"
-            : "Choose a state and skip the manual. Work, waiting, setbacks, and small wins each have their own motion."}
+            ? "选择一种状态，查看角色在 Codex 里的对应动作。"
+            : "Choose a state to preview the character's matching action in Codex."}
         </p>
         <div
           className={styles.stateButtons}
@@ -80,8 +80,8 @@ export function PetPlayground({
             {isAwake
               ? label
               : language === "zh"
-                ? "选择一个状态唤醒它"
-                : "Choose a state to wake your pet"}
+                ? "选择一个动作开始试玩"
+                : "Choose an action to begin"}
           </strong>
         </div>
         {isAwake ? (
@@ -101,11 +101,11 @@ export function PetPlayground({
         <p className={styles.stageHint}>
           {language === "zh"
             ? isAwake
-              ? "动画来自你下载到 Codex 的同一张 spritesheet。"
-              : "选择左侧任一状态后，才会加载完整动画。"
+              ? "这就是角色安装到 Codex 后的动作效果。"
+              : "完整动画会在你选择动作后加载。"
             : isAwake
-              ? "This animation comes from the same spritesheet you install in Codex."
-              : "The full animation loads only after you choose a state."}
+              ? "This is how the character moves after installation."
+              : "The full animation loads after you choose an action."}
         </p>
       </div>
     </section>

@@ -6,6 +6,13 @@ import type { CSSProperties } from "react";
 import { ANIMATIONS } from "@/lib/pet-animation";
 import type { AnimationKey } from "@/lib/pet-animation";
 import { getPetById, PETS } from "@/lib/pets";
+import {
+  GUIDE_PET_ID,
+  GUIDE_PROFILE,
+  getMemberProfile,
+  getProductName,
+  getSeriesForPet,
+} from "@/lib/series";
 
 import { PetCard } from "../../_components/PetCard";
 import { PetPlayground } from "../../_components/PetPlayground";
@@ -33,11 +40,15 @@ export async function generateMetadata({ params, searchParams }: PetDetailPagePr
   if (!pet) return {};
 
   const language = normalizeLanguage(query.lang);
-  const name = pet.displayName[language];
-  const description = `${pet.tagline[language]} ${t(language, pet.editorial.matchZh, pet.editorial.matchEn)}`;
+  const profile = getMemberProfile(pet.id);
+  const isGuide = pet.id === GUIDE_PET_ID;
+  const name = getProductName(pet, language);
+  const description = isGuide
+    ? GUIDE_PROFILE.description[language]
+    : profile?.specialty[language] ?? pet.tagline[language];
 
   return {
-    title: t(language, `${name}｜Codex Pets 角色专栏`, `${name} | Codex Pets character story`),
+    title: t(language, `${name}｜Codex Pets 角色页`, `${name} | Codex Pets character`),
     description,
     alternates: {
       canonical: withLanguage(`/pets/${pet.id}`, language),
@@ -64,15 +75,34 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
   const initialAnimation = ANIMATIONS.some((item) => item.key === requestedState)
     ? (requestedState as AnimationKey)
     : "idle";
-  const name = pet.displayName[language];
-  const editorial = pet.editorial;
-  const relatedPets = PETS.filter((item) => item.id !== pet.id)
-    .sort((left, right) => {
-      const rightScore = right.needs.filter((need) => pet.needs.includes(need)).length;
-      const leftScore = left.needs.filter((need) => pet.needs.includes(need)).length;
-      return rightScore - leftScore;
-    })
-    .slice(0, 3);
+  const profile = getMemberProfile(pet.id);
+  const series = getSeriesForPet(pet.id);
+  const isGuide = pet.id === GUIDE_PET_ID;
+  const name = getProductName(pet, language);
+  const role = isGuide
+    ? GUIDE_PROFILE.title[language]
+    : profile?.role[language] ?? pet.editorial.roleZh;
+  const identity = isGuide
+    ? GUIDE_PROFILE.role[language]
+    : profile?.zodiac[language] ?? pet.displayName[language];
+  const specialty = isGuide
+    ? GUIDE_PROFILE.description[language]
+    : profile?.specialty[language] ?? pet.tagline[language];
+  const storyTitle = isGuide
+    ? GUIDE_PROFILE.storyTitle[language]
+    : profile?.name[language] ?? pet.editorial.storyTitleZh;
+  const story = isGuide
+    ? GUIDE_PROFILE.story[language]
+    : profile?.vignette[language] ?? pet.description[language];
+  const relatedPets = series
+    ? series.members
+        .filter((member) => member.petId !== pet.id)
+        .slice(0, 3)
+        .flatMap((member) => {
+          const related = getPetById(member.petId);
+          return related ? [related] : [];
+        })
+    : PETS.filter((item) => item.id !== pet.id && item.category === "zodiac-duck").slice(0, 3);
   const accentStyle: PetAccentStyle = {
     "--pet-accent": pet.accent,
     "--pet-soft": pet.softAccent,
@@ -81,7 +111,7 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name,
-    description: pet.tagline[language],
+    description: specialty,
     applicationCategory: "DesktopEnhancementApplication",
     operatingSystem: "Windows, macOS, Linux",
     url: `https://aipetsagent.com${withLanguage(`/pets/${pet.id}`, language)}`,
@@ -102,95 +132,90 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
         />
 
         <nav className={styles.breadcrumbs} aria-label={t(language, "面包屑导航", "Breadcrumb")}>
-          <Link href={withLanguage("/pets", language)}>{t(language, "全部宠物", "All pets")}</Link>
+          <Link href={withLanguage("/pets", language)}>{t(language, "宠物图鉴", "Pet index")}</Link>
+          {series ? (
+            <>
+              <span aria-hidden="true">/</span>
+              <Link href={withLanguage(`/series/${series.id}`, language)}>{series.name[language]}</Link>
+            </>
+          ) : null}
           <span aria-hidden="true">/</span>
           <span aria-current="page">{name}</span>
         </nav>
 
         <section className={styles.petDetailHero} style={accentStyle}>
           <div className={styles.petDetailCopy}>
-            <p className={styles.eyebrow}>{pet.badge} / ASTER DOCK ARCHIVE</p>
+            <p className={styles.eyebrow}>{identity}</p>
             <h1>{name}</h1>
-            <p className={styles.petRole}>
-              {t(language, editorial.zodiacZh, editorial.zodiacEn)} · {t(language, editorial.roleZh, editorial.roleEn)}
-            </p>
-            <p className={styles.petTagline}>{t(language, editorial.promiseZh, editorial.promiseEn)}</p>
-            <p className={styles.petDescription}>{t(language, editorial.comfortZh, editorial.comfortEn)}</p>
-            <ul className={styles.tagList} aria-label={t(language, "性格标签", "Personality tags")}>
-              {pet.personalityTags.map((tag) => (
-                <li key={tag.en}>{tag[language]}</li>
-              ))}
-            </ul>
+            <p className={styles.petRole}>{role}</p>
+            <p className={styles.petTagline}>{specialty}</p>
+            <p className={styles.petDescription}>{story}</p>
             <div className={styles.heroActions}>
               <Link className={styles.primaryButton} href={withLanguage(`/install/${pet.id}`, language)}>
-                {t(language, "免费带它回 Codex", "Bring it to Codex for free")}
+                {t(language, "安装到 Codex", "Install in Codex")}
               </Link>
-              <a className={styles.secondaryButton} href={pet.downloadPath} download>
-                {t(language, "直接下载 ZIP", "Download ZIP")}
+              <a className={styles.secondaryButton} href="#playground">
+                {t(language, "先试试动作", "Try the actions")}
               </a>
             </div>
             <p className={styles.microcopy}>
-              {t(language, "无需账号 · 免费下载 · v2 格式 · 本地安装", "No account · Free download · v2 format · Local install")}
+              {t(language, "无需登录 · 免费下载 · 本地安装", "No account · Free download · Local install")}
             </p>
           </div>
           <div className={styles.petPortrait}>
-            <span>{t(language, "你的桌面搭子", "YOUR DESK COMPANION")}</span>
+            <span>{role}</span>
             <PetPreview
               petId={pet.id}
               eager
               label={t(language, `${name}静态预览`, `${name} preview`)}
               className={styles.detailSprite}
             />
-            <strong>{pet.id}</strong>
+            <strong>{identity}</strong>
           </div>
         </section>
 
         <section className={styles.storyFeature} aria-labelledby="story-heading" style={accentStyle}>
           <article className={styles.storyNarrative}>
-            <p className={styles.eyebrow}>ASTER DOCK / CHARACTER STORY</p>
-            <h2 id="story-heading">
-              {t(language, editorial.storyTitleZh, editorial.storyTitleEn)}
-            </h2>
-            <p>{t(language, editorial.storyZh, editorial.storyEn)}</p>
+            <p className={styles.eyebrow}>{isGuide ? "GUIDE NOTE" : "CHARACTER NOTE"}</p>
+            <h2 id="story-heading">{storyTitle}</h2>
+            <p>{story}</p>
           </article>
-          <aside className={styles.storyDossier} aria-label={t(language, "角色档案", "Character dossier")}>
+          <aside className={styles.storyDossier} aria-label={t(language, "角色档案", "Character profile")}>
             <div>
-              <span>{t(language, "守护身份", "ROLE")}</span>
-              <strong>{t(language, editorial.roleZh, editorial.roleEn)}</strong>
+              <span>{t(language, "角色职责", "ROLE")}</span>
+              <strong>{role}</strong>
             </div>
             <div>
-              <span>{t(language, "它想告诉你", "A NOTE FOR YOU")}</span>
-              <strong>{t(language, editorial.comfortZh, editorial.comfortEn)}</strong>
+              <span>{t(language, "擅长", "SPECIALTY")}</span>
+              <strong>{specialty}</strong>
             </div>
-            <div>
-              <span>{t(language, "适合这样的你", "A GOOD MATCH IF")}</span>
-              <strong>{t(language, editorial.matchZh, editorial.matchEn)}</strong>
-            </div>
+            {series ? (
+              <div>
+                <span>{t(language, "所属系列", "SERIES")}</span>
+                <strong>{series.name[language]}</strong>
+              </div>
+            ) : null}
           </aside>
         </section>
 
-        <PetPlayground
-          language={language}
-          petId={pet.id}
-          petName={name}
-          initialAnimation={initialAnimation}
-        />
-
-        <section className={styles.emotionGrid} aria-label={t(language, "三个陪伴时刻", "Three companion moments")}>
-          {editorial.moments.map((moment, index) => (
-            <article key={moment.titleEn}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <h2>{t(language, moment.titleZh, moment.titleEn)}</h2>
-              <p>{t(language, moment.bodyZh, moment.bodyEn)}</p>
-            </article>
-          ))}
-        </section>
+        <div id="playground">
+          <PetPlayground
+            language={language}
+            petId={pet.id}
+            petName={name}
+            initialAnimation={initialAnimation}
+          />
+        </div>
 
         <section className={styles.contentSection} aria-labelledby="more-pets-heading">
           <div className={styles.sectionHeading}>
             <div>
-              <p className={styles.eyebrow}>SAME NEED, DIFFERENT COMPANY</p>
-              <h2 id="more-pets-heading">{t(language, "也看看懂你此刻的它们", "MEET ANOTHER KIND OF SUPPORT")}</h2>
+              <p className={styles.eyebrow}>{series ? "FROM THE SAME SERIES" : "START A SERIES"}</p>
+              <h2 id="more-pets-heading">
+                {series
+                  ? t(language, "同一星轨上的其他角色", "OTHER CHARACTERS ON THIS ROUTE")
+                  : t(language, "从金羽十二星继续", "CONTINUE WITH GOLDEN FEATHER CONSTELLATION")}
+              </h2>
             </div>
           </div>
           <div className={styles.petGridThree}>

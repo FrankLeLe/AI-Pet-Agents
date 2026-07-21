@@ -21,9 +21,9 @@ type PageShellProps = SiteHeaderProps & {
 };
 
 const NAV_ITEMS = [
-  { href: "/pets", zh: "宠物", en: "Pets" },
-  { href: "/hatch", zh: "孵化", en: "Hatch" },
-  { href: "/help", zh: "帮助", en: "Help" },
+  { href: "/pets", zh: "宠物图鉴", en: "Pet Index" },
+  { href: "/hatch", zh: "造宠工坊", en: "Pet Workshop" },
+  { href: "/help", zh: "安装帮助", en: "Install Help" },
 ] as const;
 
 const FOOTER_ITEMS = [
@@ -97,7 +97,7 @@ export function SiteFooter({ language }: SiteFooterProps) {
     <footer className={styles.siteFooter}>
       <div>
         <strong>CODEX PETS</strong>
-        <span>{t(language, "给认真工作的人，一点会动的陪伴。", "A little moving company for focused work.")}</span>
+        <span>{t(language, "让 Codex 桌面多一个会动的角色。", "Add a living character to your Codex desktop.")}</span>
       </div>
       <nav aria-label={t(language, "页脚导航", "Footer navigation")}>
         {FOOTER_ITEMS.map((item) => (

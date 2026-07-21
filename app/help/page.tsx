@@ -27,16 +27,24 @@ export default async function HelpPage({ searchParams }: HelpPageProps) {
       question: t(language, "同一个宠物可以重新安装吗？", "Can I reinstall the same pet?"),
       answer: t(
         language,
-        "可以，但同 ID 文件会被替换。如果你修改过 pet.json 或图集，请先复制一份备份。",
-        "Yes, but files with the same ID are replaced. Back up pet.json or the spritesheet first if you edited them.",
+        "可以。先把现有同名文件夹改名或备份，再重新安装。本站提供的安装指令遇到同名目录会先停止，不会静默覆盖。",
+        "Yes. Rename or back up the existing folder first. The install request provided here stops at a name conflict and never overwrites silently.",
       ),
     },
     {
       question: t(language, "macOS 和 Linux 的路径在哪里？", "Where is the path on macOS and Linux?"),
       answer: t(
         language,
-        "默认使用 ${CODEX_HOME:-$HOME/.codex}/pets/<pet-id>。实际支持仍取决于你使用的 Codex Desktop 版本。",
-        "The default is ${CODEX_HOME:-$HOME/.codex}/pets/<pet-id>. Actual availability still depends on your Codex Desktop version.",
+        "默认路径是 ~/.codex/pets。若你设置了 CODEX_HOME，则使用 CODEX_HOME/pets。",
+        "The default path is ~/.codex/pets. If CODEX_HOME is set, use CODEX_HOME/pets instead.",
+      ),
+    },
+    {
+      question: t(language, "为什么会出现两层同名文件夹？", "Why do I have two folders with the same name?"),
+      answer: t(
+        language,
+        "ZIP 里面已经包含完整的宠物文件夹。请把 ZIP 内那一整层文件夹放入 pets，不要先解压到另一个同名目录。最终应直接看到 pets/<pet-id>/pet.json。",
+        "The ZIP already contains the complete pet folder. Move that whole folder into pets instead of extracting it into another folder with the same name. The final path should be pets/<pet-id>/pet.json.",
       ),
     },
     {
@@ -117,9 +125,11 @@ export default async function HelpPage({ searchParams }: HelpPageProps) {
           </div>
         </section>
 
+        <details className={styles.advancedFormat}>
+          <summary>{t(language, "宠物文件说明（高级）", "Pet file details (advanced)")}</summary>
         <section className={styles.formatSection} aria-labelledby="format-title">
           <div className={styles.formatCopy}>
-            <p className={styles.eyebrow}>V2 FILE CONTRACT</p>
+            <p className={styles.eyebrow}>ADVANCED / PET FILES</p>
             <h2 id="format-title">{t(language, "两个文件，结构要准确", "TWO FILES. ONE PRECISE STRUCTURE.")}</h2>
             <p>
               {t(
@@ -149,6 +159,7 @@ export default async function HelpPage({ searchParams }: HelpPageProps) {
             </div>
           </dl>
         </section>
+        </details>
 
         <aside className={styles.repoStrip}>
           <div>

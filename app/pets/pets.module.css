@@ -1,0 +1,329 @@
+.main {
+  width: min(var(--page-width), 100%);
+  margin: 0 auto;
+  padding: 24px 0 48px;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.55fr);
+  gap: 30px;
+  align-items: end;
+  padding: clamp(25px, 4vw, 54px);
+  border: var(--border);
+  border-radius: 24px;
+  background: var(--paper-strong);
+  box-shadow: var(--shadow);
+}
+
+.intro span,
+.sectionHeading span,
+.guideCopy > span,
+.seriesCardHeader span,
+.seriesCardHeader p,
+.memberCard small,
+.storyEntry span {
+  font-size: 0.7rem;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.intro h1,
+.sectionHeading h2,
+.guideCopy h2,
+.seriesCardHeader h3 {
+  font-family: Impact, "Arial Black", "Microsoft YaHei", sans-serif;
+  letter-spacing: -0.025em;
+  line-height: 0.95;
+}
+
+.intro h1 {
+  margin: 8px 0 0;
+  font-size: clamp(3.5rem, 8vw, 7.7rem);
+}
+
+.intro > p {
+  margin: 0;
+  font-weight: 720;
+  line-height: 1.7;
+}
+
+.guideCard {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.6fr) minmax(0, 1.4fr);
+  min-height: 310px;
+  margin-top: 26px;
+  overflow: hidden;
+  border: var(--border);
+  border-radius: 22px;
+  background: var(--blue);
+  box-shadow: var(--shadow);
+}
+
+.guideVisual {
+  display: grid;
+  align-items: end;
+  padding: 10px 24px 0;
+  border-right: var(--border);
+}
+
+.guideImage {
+  width: min(100%, 280px);
+  margin: 0 auto;
+  filter: drop-shadow(0 16px 12px rgb(8 24 87 / 0.45));
+}
+
+.guideCopy {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: clamp(26px, 4vw, 54px);
+  background: var(--yellow);
+}
+
+.guideCopy h2 {
+  margin: 8px 0 0;
+  font-size: clamp(2.6rem, 5.5vw, 5.3rem);
+}
+
+.guideCopy > strong {
+  margin-top: 12px;
+  font-size: 1.15rem;
+}
+
+.guideCopy > p {
+  max-width: 43rem;
+  margin: 12px 0 0;
+  font-weight: 720;
+  line-height: 1.65;
+}
+
+.guideCopy > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.guideCopy a,
+.seriesCardHeader > a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 7px;
+  padding: 0 12px;
+  border: 2px solid var(--ink);
+  border-radius: 9px;
+  background: white;
+  box-shadow: 4px 4px 0 var(--ink);
+  font-size: 0.75rem;
+  font-weight: 950;
+}
+
+.seriesSection {
+  margin-top: 42px;
+}
+
+.sectionHeading h2 {
+  max-width: 18ch;
+  margin: 7px 0 0;
+  font-size: clamp(2.4rem, 5vw, 5rem);
+}
+
+.seriesList {
+  display: grid;
+  gap: 24px;
+  margin-top: 22px;
+}
+
+.seriesCard {
+  overflow: hidden;
+  border: var(--border);
+  border-radius: 24px;
+  background: var(--paper-strong);
+  box-shadow: var(--shadow);
+}
+
+.seriesCardHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 22px;
+  align-items: end;
+  padding: clamp(26px, 4vw, 52px);
+  border-bottom: var(--border);
+  background: var(--yellow);
+}
+
+.seriesCardHeader span {
+  display: inline-flex;
+  padding: 7px 9px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--mint);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.seriesCardHeader p {
+  margin: 18px 0 7px;
+}
+
+.seriesCardHeader h3 {
+  margin: 0;
+  font-size: clamp(3.2rem, 7vw, 7.1rem);
+}
+
+.seriesCardHeader strong {
+  display: block;
+  max-width: 40rem;
+  margin-top: 16px;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.memberGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: clamp(18px, 3vw, 34px);
+  background: var(--blue);
+}
+
+.memberCard {
+  display: grid;
+  min-width: 0;
+  min-height: 220px;
+  grid-template-rows: 118px 1fr;
+  overflow: hidden;
+  border: var(--border);
+  border-radius: 13px;
+  background: var(--member-soft);
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.memberCard:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.memberImage {
+  width: 124px;
+  margin: -4px auto -8px;
+}
+
+.memberCard > span {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 12px;
+  border-top: 2px solid var(--ink);
+  background: white;
+}
+
+.memberCard strong {
+  margin-top: 4px;
+  font-size: 1rem;
+  font-weight: 950;
+}
+
+.memberCard em {
+  margin-top: 5px;
+  color: #525762;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.storyEntry {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 18px;
+  align-items: center;
+  min-height: 86px;
+  padding: 17px clamp(20px, 3vw, 34px);
+  border-top: var(--border);
+  background: var(--mint);
+}
+
+.storyEntry strong {
+  font-size: 1.15rem;
+  font-weight: 950;
+}
+
+@media (max-width: 980px) {
+  .memberGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .intro,
+  .seriesCardHeader {
+    grid-template-columns: 1fr;
+  }
+
+  .guideCard {
+    grid-template-columns: 0.75fr 1.25fr;
+  }
+
+  .guideCopy {
+    padding: 25px 20px;
+  }
+
+  .memberGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .main {
+    padding-top: 16px;
+  }
+
+  .intro {
+    padding: 25px 18px;
+  }
+
+  .guideCard {
+    grid-template-columns: 1fr;
+  }
+
+  .guideVisual {
+    min-height: 235px;
+    border-right: 0;
+    border-bottom: var(--border);
+  }
+
+  .memberGrid {
+    grid-template-columns: 1fr;
+    padding: 14px;
+  }
+
+  .memberCard {
+    grid-template-columns: 125px 1fr;
+    grid-template-rows: 1fr;
+    min-height: 138px;
+  }
+
+  .memberCard > span {
+    justify-content: center;
+    border-top: 0;
+    border-left: 2px solid var(--ink);
+  }
+
+  .storyEntry {
+    grid-template-columns: 1fr auto;
+  }
+
+  .storyEntry span {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .memberCard {
+    transition: none;
+  }
+}

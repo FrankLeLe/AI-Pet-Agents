@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFile, stat } from "node:fs/promises";
 import test from "node:test";
-import { loadPetModule } from "../scripts/load-pet-module.mjs";
+import { loadPetModule, loadPetReleaseModule } from "../scripts/load-pet-module.mjs";
 
 const expectedIds = [
   "star-armor-tuantuan",
@@ -113,4 +114,39 @@ test("publishes a self-consistent detail document for every pet", async () => {
     assert.ok(pet.editorial.storyZh.length >= 180);
     assert.ok(pet.editorial.storyEn.length >= 300);
   }
+});
+
+test("pins every install archive to its published size and SHA-256", async () => {
+  const releaseModule = await loadPetReleaseModule();
+  assert.equal(releaseModule.PET_RELEASE_COMMIT, "6bfce72ca689966918c3bb85c68007914a27f54c");
+
+  for (const id of expectedIds) {
+    const archiveUrl = new URL(`../public/downloads/${id}.zip`, import.meta.url);
+    const [archive, archiveStat] = await Promise.all([
+      readFile(archiveUrl),
+      stat(archiveUrl),
+    ]);
+    const expectedRelease = releaseModule.PET_RELEASES[id];
+
+    assert.ok(expectedRelease, `${id} release metadata is missing`);
+    assert.equal(expectedRelease.sizeBytes, archiveStat.size, `${id} size changed`);
+    assert.equal(
+      expectedRelease.sha256,
+      createHash("sha256").update(archive).digest("hex"),
+      `${id} SHA-256 changed`,
+    );
+    assert.match(releaseModule.getPetPackageUrl(id), new RegExp(`${releaseModule.PET_RELEASE_COMMIT}.+${id}\\.zip$`));
+  }
+});
+
+test("advanced install commands stop on conflicts and never force an overwrite", async () => {
+  const installPanel = await readFile(
+    new URL("../app/_components/InstallCommandPanel.tsx", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(installPanel, /Test-Path -LiteralPath \$target/);
+  assert.match(installPanel, /\[ -e "\$target" \]/);
+  assert.doesNotMatch(installPanel, /Expand-Archive[^\n]*-Force/);
+  assert.doesNotMatch(installPanel, /unzip -o/);
 });

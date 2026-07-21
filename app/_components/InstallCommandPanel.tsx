@@ -19,14 +19,20 @@ function getCommands(mode: "pet" | "skill", petId?: string) {
     return {
       windows: `$codexRoot = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $env:USERPROFILE ".codex" }
 $skillsRoot = Join-Path $codexRoot "skills"
+$target = Join-Path $skillsRoot "hatch-pet"
+$archive = Join-Path $env:USERPROFILE "Downloads\\hatch-pet.zip"
 
+if (Test-Path -LiteralPath $target) { throw "hatch-pet already exists. Stop and review it before replacing anything." }
 New-Item -ItemType Directory -Force -Path $skillsRoot | Out-Null
-Expand-Archive -LiteralPath (Join-Path $env:USERPROFILE "Downloads\\hatch-pet.zip") -DestinationPath $skillsRoot -Force`,
+Expand-Archive -LiteralPath $archive -DestinationPath $skillsRoot`,
       unix: `codex_root="\${CODEX_HOME:-$HOME/.codex}"
 skills_root="$codex_root/skills"
+target="$skills_root/hatch-pet"
+archive="$HOME/Downloads/hatch-pet.zip"
 
+[ -e "$target" ] && { echo "hatch-pet already exists. Stop and review it before replacing anything."; exit 1; }
 mkdir -p "$skills_root"
-unzip -o "$HOME/Downloads/hatch-pet.zip" -d "$skills_root"`,
+unzip "$archive" -d "$skills_root"`,
     };
   }
 
@@ -34,15 +40,21 @@ unzip -o "$HOME/Downloads/hatch-pet.zip" -d "$skills_root"`,
     windows: `$petId = "${petId ?? "pet-id"}"
 $codexRoot = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $env:USERPROFILE ".codex" }
 $petsRoot = Join-Path $codexRoot "pets"
+$target = Join-Path $petsRoot $petId
+$archive = Join-Path $env:USERPROFILE "Downloads\\$petId.zip"
 
+if (Test-Path -LiteralPath $target) { throw "$petId already exists. Stop and review it before replacing anything." }
 New-Item -ItemType Directory -Force -Path $petsRoot | Out-Null
-Expand-Archive -LiteralPath (Join-Path $env:USERPROFILE "Downloads\\$petId.zip") -DestinationPath $petsRoot -Force`,
+Expand-Archive -LiteralPath $archive -DestinationPath $petsRoot`,
     unix: `pet_id="${petId ?? "pet-id"}"
 codex_root="\${CODEX_HOME:-$HOME/.codex}"
 pets_root="$codex_root/pets"
+target="$pets_root/$pet_id"
+archive="$HOME/Downloads/$pet_id.zip"
 
+[ -e "$target" ] && { echo "$pet_id already exists. Stop and review it before replacing anything."; exit 1; }
 mkdir -p "$pets_root"
-unzip -o "$HOME/Downloads/$pet_id.zip" -d "$pets_root"`,
+unzip "$archive" -d "$pets_root"`,
   };
 }
 

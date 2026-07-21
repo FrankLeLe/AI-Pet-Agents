@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 import { PETS } from "@/lib/pets";
+import { GUIDE_PET_ID, GUIDE_PROFILE, getMemberProfile, getProductName } from "@/lib/series";
 
 import { PetPreview } from "../_components/PetPreview";
 import { normalizeLanguage, PageShell, t, withLanguage } from "../_components/SiteChrome";
@@ -21,13 +22,13 @@ export default async function InstallIndexPage({ searchParams }: InstallIndexPag
         <section className={`${styles.pageIntro} ${styles.pageIntroBlue}`}>
           <div>
             <p className={styles.eyebrow}>INSTALL / NO ACCOUNT REQUIRED</p>
-            <h1>{t(language, "三步，让桌面有个伴。", "THREE STEPS TO A LESS LONELY DESKTOP.")}</h1>
+            <h1>{t(language, "选好角色，再选安装方式。", "PICK A CHARACTER, THEN AN INSTALL ROUTE.")}</h1>
           </div>
           <p>
             {t(
               language,
-              "先选宠物，再按你的系统复制命令。文件只会进入本机的 Codex 宠物目录，不需要注册或上传资料。",
-              "Choose a pet, then copy the command for your system. Files stay in your local Codex pets folder—no signup or upload required.",
+              "每个角色都提供两条路径：下载 ZIP 自己安装，或复制一段安全请求让 Codex 协助安装。",
+              "Every character offers two routes: download the ZIP yourself, or copy a safe request for Codex to install it.",
             )}
           </p>
         </section>
@@ -36,7 +37,7 @@ export default async function InstallIndexPage({ searchParams }: InstallIndexPag
           <div className={styles.sectionHeading}>
             <div>
               <p className={styles.eyebrow}>HOW IT WORKS</p>
-              <h2 id="install-steps-title">{t(language, "过程很短，也很透明", "SHORT, LOCAL, AND EASY TO CHECK")}</h2>
+              <h2 id="install-steps-title">{t(language, "安装流程", "INSTALL FLOW")}</h2>
             </div>
           </div>
           <ol className={styles.stepGrid}>
@@ -44,14 +45,14 @@ export default async function InstallIndexPage({ searchParams }: InstallIndexPag
               <strong>01</strong>
               <div>
                 <h3>{t(language, "选择宠物", "Choose a pet")}</h3>
-                <p>{t(language, "进入专属安装页并下载 ZIP。", "Open its install page and download the ZIP.")}</p>
+                <p>{t(language, "先从图鉴中进入角色安装页。", "Open a character install page from the index.")}</p>
               </div>
             </li>
             <li>
               <strong>02</strong>
               <div>
-                <h3>{t(language, "复制命令", "Copy the command")}</h3>
-                <p>{t(language, "选择 Windows、macOS 或 Linux。", "Choose Windows, macOS, or Linux.")}</p>
+                <h3>{t(language, "选择方式", "Choose a route")}</h3>
+                <p>{t(language, "下载 ZIP，或复制给 Codex。", "Download the ZIP, or copy a request for Codex.")}</p>
               </div>
             </li>
             <li>
@@ -67,19 +68,25 @@ export default async function InstallIndexPage({ searchParams }: InstallIndexPag
         <section className={styles.contentSection} aria-labelledby="choose-install-pet">
           <div className={styles.sectionHeading}>
             <div>
-              <p className={styles.eyebrow}>CHOOSE YOUR DOWNLOAD</p>
-              <h2 id="choose-install-pet">{t(language, "选好搭子，开始安装", "PICK YOUR COMPANION TO BEGIN")}</h2>
+              <p className={styles.eyebrow}>CHOOSE A CHARACTER</p>
+              <h2 id="choose-install-pet">{t(language, "从角色开始", "START WITH A CHARACTER")}</h2>
             </div>
             <p>
               {t(
                 language,
-                "每个安装页都已经带入正确的宠物 ID，复制命令前不用手动修改。",
-                "Each install page already includes the correct pet ID, so there is nothing to edit before copying.",
+                "安装页会带入对应下载包、校验值和目标目录。",
+                "Each install page includes the matching package, checksum, and target folder.",
               )}
             </p>
           </div>
           <div className={styles.installPetGrid}>
-            {PETS.map((pet) => (
+            {PETS.map((pet) => {
+              const profile = getMemberProfile(pet.id);
+              const isGuide = pet.id === GUIDE_PET_ID;
+              const name = getProductName(pet, language);
+              const label = isGuide ? GUIDE_PROFILE.role[language] : profile?.role[language] ?? pet.badge;
+
+              return (
               <Link
                 className={styles.installPetCard}
                 href={withLanguage(`/install/${pet.id}`, language)}
@@ -91,21 +98,22 @@ export default async function InstallIndexPage({ searchParams }: InstallIndexPag
                   petId={pet.id}
                   label={t(
                     language,
-                    `${pet.displayName.zh}静态预览`,
-                    `${pet.displayName.en} preview`,
+                    `${name}静态预览`,
+                    `${name} preview`,
                   )}
                   className={styles.installPetSprite}
                 />
                 <span>
-                  <small>{pet.badge}</small>
-                  <strong>{pet.displayName[language]}</strong>
+                  <small>{label}</small>
+                  <strong>{name}</strong>
                   <em>
                     {t(language, "打开安装页", "Open install guide")}
                     <ArrowRight aria-hidden="true" size={17} strokeWidth={3} />
                   </em>
                 </span>
               </Link>
-            ))}
+              );
+            })}
           </div>
         </section>
 

@@ -30,17 +30,18 @@ test("server-renders the complete Codex Pets landing page", async () => {
 
   const html = await response.text();
   assert.match(html, /<html[^>]*lang="zh-CN"/i);
-  assert.match(html, /<title>Codex Pets｜会回应工作的桌面搭子<\/title>/i);
+  assert.match(html, /<title>Codex Pets｜给 Codex 选一位会动的伙伴<\/title>/i);
   assert.match(html, /CODEX PETS/);
-  assert.match(html, /它会跟上 Codex 的每一次忙碌/);
-  assert.match(html, /HATCH PET SKILL/);
+  assert.match(html, /团团向导/);
+  assert.match(html, /金羽十二星/);
+  assert.match(html, /星轨纪事/);
   assert.match(html, /preview\.webp/);
   assert.doesNotMatch(html, /spritesheet\.webp/);
-  assert.match(html, /https:\/\/aipetsagent\.com\/og-v2\.png/);
+  assert.match(html, /https:\/\/aipetsagent\.com\/og-series\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|Building your site/i);
 });
 
-test("server-renders all thirteen lightweight roster cards", async () => {
+test("server-renders the guide and the series hierarchy without fixed roster copy", async () => {
   const response = await render("/pets?lang=zh");
   assert.equal(response.status, 200);
 
@@ -49,12 +50,13 @@ test("server-renders all thirteen lightweight roster cards", async () => {
   assert.ok(previewReferences.length >= 13);
   assert.doesNotMatch(html, /spritesheet\.webp/);
   assert.match(html, /星铠团团/);
-  assert.match(html, /白羊金翎鸭/);
-  assert.match(html, /双鱼鳍辉鸭/);
-  assert.match(html, /13 份性格，13 种回应/);
+  assert.match(html, /白羊·金翎/);
+  assert.match(html, /双鱼·梦鳍/);
+  assert.match(html, /金羽十二星/);
+  assert.doesNotMatch(html, /13 份性格|ROSTER \/ 13|为你找到 13/);
 });
 
-test("gives every pet page an editorial story and an on-demand playground", async () => {
+test("gives every pet page a product profile and an on-demand action playground", async () => {
   const response = await render("/pets/star-armor-tuantuan?lang=zh");
   assert.equal(response.status, 200);
   assert.equal(
@@ -63,10 +65,10 @@ test("gives every pet page an editorial story and an on-demand playground", asyn
   );
 
   const html = await response.text();
-  assert.match(html, /青铜见习守护猫/);
-  assert.match(html, /一副由半途计划长成的青铜星铠/);
-  assert.match(html, /LIVE PLAYGROUND/);
-  assert.match(html, /选择一个状态唤醒它/);
+  assert.match(html, /团团向导/);
+  assert.match(html, /团团的第一班岗/);
+  assert.match(html, /ACTION PLAYGROUND/);
+  assert.match(html, /选择一个动作开始试玩/);
   assert.match(html, /preview\.webp/);
   assert.doesNotMatch(html, /spritesheet\.webp/);
 });
@@ -76,10 +78,37 @@ test("renders the English pet edition with localized metadata", async () => {
   assert.equal(response.status, 200);
 
   const html = await response.text();
-  assert.match(html, /<title>Star-Armor Tuantuan \| Codex Pets character story<\/title>/);
+  assert.match(html, /<title>Star-Armor Tuantuan \| Codex Pets character<\/title>/);
   assert.match(html, /lang="en"/);
-  assert.match(html, /The Bronze Armor Built From Second Chances/);
+  assert.match(html, /Tuantuan&#x27;s First Watch|Tuantuan's First Watch/);
   assert.doesNotMatch(html, /spritesheet\.webp/);
+});
+
+test("renders a series page with independent character entries and shared story", async () => {
+  const response = await render("/series/golden-feather-constellation?lang=zh");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /金羽十二星/);
+  assert.match(html, /星轨纪事/);
+  assert.match(html, /白羊·金翎/);
+  assert.match(html, /金牛·鎏甲/);
+  assert.match(html, /把空白拆成第一步/);
+  assert.doesNotMatch(html, /ROSTER|spritesheet\.webp/);
+});
+
+test("offers manual and Codex-assisted installation with pinned safety boundaries", async () => {
+  const response = await render("/install/aries-ramcrest-duck?lang=zh");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /下载 ZIP，自己安装/);
+  assert.match(html, /让 Codex 帮我安装/);
+  assert.match(html, /复制给 Codex/);
+  assert.match(html, /6bfce72ca689966918c3bb85c68007914a27f54c/);
+  assert.match(html, /fe8374142c5cf7e0203556b1376f5b403f02ce2674bc38575b165b903bcdd916/);
+  assert.match(html, /禁止静默覆盖/);
+  assert.match(html, /pets\/aries-ramcrest-duck\/pet\.json/);
 });
 
 test("removes all temporary starter preview infrastructure", async () => {
@@ -93,11 +122,11 @@ test("removes all temporary starter preview infrastructure", async () => {
   ]);
 
   assert.match(page, /HomeExperience/);
-  assert.match(homeExperience, /work.*wait.*done/s);
+  assert.match(homeExperience, /series.*motion.*install/s);
   assert.match(spritePet, /spritesheet\.webp/);
   assert.match(petData, /star-armor-tuantuan/);
   assert.match(layout, /export const metadata/);
-  assert.match(layout, /og-v2\.png/);
+  assert.match(layout, /og-series\.png/);
   assert.doesNotMatch(page, /SkeletonPreview|codex-preview/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
@@ -141,7 +170,7 @@ test("ships thirteen valid v2 pet packages and their downloads", async () => {
   const skillArchive = await stat(
     new URL("../public/downloads/hatch-pet.zip", import.meta.url),
   );
-  const socialCard = await stat(new URL("../public/og-v2.png", import.meta.url));
+  const socialCard = await stat(new URL("../public/og-series.png", import.meta.url));
 
   assert.equal(catalog.pets.length, 13);
   assert.equal(catalog.format.spriteVersionNumber, 2);

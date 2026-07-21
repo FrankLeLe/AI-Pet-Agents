@@ -2,9 +2,9 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const siteUrl = "https://aipetsagent.com";
-const title = "Codex Pets｜会回应工作的桌面搭子";
+const title = "Codex Pets｜给 Codex 选一位会动的伙伴";
 const description =
-  "在星铠港遇见 12 只原创星座守护鸭与青铜见习守护猫，为 Codex Desktop 预览、下载并安装一只会陪你工作、等待与庆祝完成的桌面宠物。";
+  "浏览原创 Codex 桌面伙伴系列，试玩角色动作，并通过 ZIP 或 Codex 协助方式安全安装。";
 
 export const viewport: Viewport = {
   themeColor: "#f7f1e5",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     alternateLocale: ["en_US"],
     images: [
       {
-        url: "/og-v2.png",
-        width: 1600,
-        height: 900,
+        url: "/og-series.png",
+        width: 1672,
+        height: 941,
         alt: "Codex Pets desktop companions",
       },
     ],
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/og-v2.png"],
+    images: ["/og-series.png"],
   },
   robots: { index: true, follow: true },
 };

@@ -44,3 +44,8 @@ export async function loadPetModule() {
 
   return import(toDataUrl(linkedPetsSource));
 }
+
+export async function loadPetReleaseModule() {
+  const releaseSource = await transpile("pet-releases.ts");
+  return import(toDataUrl(releaseSource));
+}

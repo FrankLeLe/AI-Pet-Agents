@@ -18,12 +18,12 @@ export default async function HatchPage({ searchParams }: HatchPageProps) {
         <section className={styles.hatchHero}>
           <div className={styles.hatchHeroCopy}>
             <p className={styles.eyebrow}>HATCH PET / CODEX SKILL</p>
-            <h1>{t(language, "把喜欢的角色，孵成会陪你工作的宠物。", "TURN A CHARACTER YOU LOVE INTO A WORKING COMPANION.")}</h1>
+            <h1>{t(language, "给一张角色图，做成会动的 Codex 宠物。", "TURN A CHARACTER IMAGE INTO A MOVING CODEX PET.")}</h1>
             <p>
               {t(
                 language,
-                "Hatch Pet 会带 Codex 走完整套流程：理解角色、生成图集、检查动作、修复问题，再打包成 v2 宠物。你负责描述想要的感觉。",
-                "Hatch Pet guides Codex through the whole process: understand the character, make the atlas, inspect motion, repair issues, and package a v2 pet. You describe the feeling you want.",
+                "Hatch Pet Skill 会引导 Codex 理解角色、制作动作、检查结果并打包。你只需要提供参考图和清楚的角色设定。",
+                "Hatch Pet Skill guides Codex through character analysis, motion creation, checks, and packaging. You provide a reference image and a clear character brief.",
               )}
             </p>
             <div className={styles.heroActions}>
@@ -54,8 +54,8 @@ export default async function HatchPage({ searchParams }: HatchPageProps) {
             <p>
               {t(
                 language,
-                "这不是“随便丢张图就一定成功”。参考越清楚，性格越具体，最后的宠物越像你心里的那一只。",
-                "This is not a one-click promise for any image. Clearer references and a more specific personality make the result feel more like yours.",
+                "轮廓清楚的参考图和具体的动作设定，会直接影响最终效果。",
+                "A clear silhouette and specific motion notes directly improve the final result.",
               )}
             </p>
           </div>
@@ -68,12 +68,12 @@ export default async function HatchPage({ searchParams }: HatchPageProps) {
             <article>
               <span>02</span>
               <h3>{t(language, "说出性格", "Describe the personality")}</h3>
-              <p>{t(language, "别只说“可爱”。告诉它安静、勇敢、黏人，还是有点嘴硬。", "Go beyond “cute.” Say whether it is quiet, brave, clingy, or secretly soft-hearted.")}</p>
+              <p>{t(language, "说明角色的动作节奏、姿态和最重要的识别特征。", "Describe the motion rhythm, posture, and most important identifying features.")}</p>
             </article>
             <article>
               <span>03</span>
-              <h3>{t(language, "让 QA 跑完", "Let QA finish")}</h3>
-              <p>{t(language, "等待动作、透明边缘和打包检查完成，再安装最终 ZIP。", "Wait for motion, transparency, and packaging checks before installing the final ZIP.")}</p>
+              <h3>{t(language, "确认效果", "Review the result")}</h3>
+              <p>{t(language, "检查动作、透明边缘和角色轮廓，再安装最终 ZIP。", "Check the motion, transparent edges, and silhouette before installing the final ZIP.")}</p>
             </article>
           </div>
         </section>
@@ -92,8 +92,8 @@ export default async function HatchPage({ searchParams }: HatchPageProps) {
             <blockquote>
               {t(
                 language,
-                "使用 $hatch-pet，根据这张角色参考图创建一个 Codex v2 宠物。名字叫「云朵」，性格安静但很黏人，风格为软胶贴纸。",
-                "Use $hatch-pet to turn this character reference into a Codex v2 pet named Cloudy. Quiet but affectionate, in a soft vinyl sticker style.",
+                "使用 $hatch-pet，根据这张角色参考图创建一个 Codex 宠物。名字叫「云朵」，待机时轻轻摇尾巴，工作时向右小跑，风格为软胶贴纸。",
+                "Use $hatch-pet to turn this character reference into a Codex pet named Cloudy. Its tail sways while idle and it trots right while working, in a soft vinyl sticker style.",
               )}
             </blockquote>
           </div>
@@ -103,7 +103,7 @@ export default async function HatchPage({ searchParams }: HatchPageProps) {
         <aside className={styles.helpStrip}>
           <div>
             <strong>{t(language, "只是想先选一只现成的？", "Prefer a ready-made companion?")}</strong>
-            <p>{t(language, "四只宠物已经完成动画 QA，可以直接预览和安装。", "Four pets have already passed animation QA and are ready to preview and install.")}</p>
+            <p>{t(language, "从宠物图鉴挑选现成角色，先试玩动作，再选择安装方式。", "Choose a ready-made character from the pet index, try its actions, then pick an install route.")}</p>
           </div>
           <Link className={styles.darkButton} href={withLanguage("/pets", language)}>
             {t(language, "浏览现有宠物", "Browse ready-made pets")}
