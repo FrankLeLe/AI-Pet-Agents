@@ -32,13 +32,80 @@ test("server-renders the complete Codex Pets landing page", async () => {
   assert.match(html, /<html[^>]*lang="zh-CN"/i);
   assert.match(html, /<title>Codex Pets｜给 Codex 选一位会动的伙伴<\/title>/i);
   assert.match(html, /CODEX PETS/);
-  assert.match(html, /团团向导/);
+  assert.match(html, /选宠向导/);
   assert.match(html, /金羽十二星/);
   assert.match(html, /星轨纪事/);
   assert.match(html, /preview\.webp/);
   assert.doesNotMatch(html, /spritesheet\.webp/);
   assert.match(html, /https:\/\/aipetsagent\.com\/og-series\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|Building your site/i);
+});
+
+test("funnels both home editions from character choice to preview and local install", async () => {
+  const [zhResponse, enResponse] = await Promise.all([
+    render("/?lang=zh"),
+    render("/?lang=en"),
+  ]);
+  assert.equal(zhResponse.status, 200);
+  assert.equal(enResponse.status, 200);
+
+  const [zhHtml, enHtml] = await Promise.all([
+    zhResponse.text(),
+    enResponse.text(),
+  ]);
+
+  assert.equal((zhHtml.match(/<h1\b/g) ?? []).length, 1);
+  assert.match(zhHtml, /给 Codex Desktop 装一只会动的/);
+  assert.match(zhHtml, /桌面宠物/);
+  assert.match(zhHtml, /先试玩/);
+  assert.match(zhHtml, /再本地安装。/);
+  assert.match(zhHtml, /<h2[^>]*>金羽十二星<\/h2>/);
+  assert.match(zhHtml, /href="#characters"/);
+  assert.match(zhHtml, /id="characters"/);
+  assert.match(zhHtml, /开始选择宠物/);
+  assert.match(zhHtml, /先看安装方式/);
+  assert.match(zhHtml, /它会带你逛遍所有系列；下方从“金羽十二星”开始/);
+  assert.match(zhHtml, /无需登录，免费下载/);
+  assert.match(zhHtml, /本地 ZIP 安装，无需运行安装程序/);
+  assert.match(zhHtml, /只添加宠物文件，不改 Codex 设置/);
+  assert.match(zhHtml, /适合想痛快开个头的时候/);
+  assert.match(zhHtml, /适合需要一点柔软想象的时候/);
+  assert.match(zhHtml, /系列世界观/);
+  assert.match(zhHtml, /读系列故事/);
+  assert.ok(
+    zhHtml.indexOf('id="characters"') < zhHtml.indexOf("系列世界观"),
+    "character selection should appear before the optional story",
+  );
+  assert.equal(
+    (
+      zhHtml.match(
+        /href="\/series\/golden-feather-constellation\?lang=zh#story"/g,
+      ) ?? []
+    ).length,
+    1,
+  );
+  assert.doesNotMatch(
+    zhHtml,
+    /开始挑选|选择宠物并安装|怎么安装|查看全部角色|从序章开始/,
+  );
+
+  assert.equal((enHtml.match(/<h1\b/g) ?? []).length, 1);
+  assert.match(
+    enHtml,
+    /Add an animated pet to Codex Desktop—preview it first, then install it locally\./,
+  );
+  assert.match(enHtml, /<h2[^>]*>Golden Feather Constellation<\/h2>/);
+  assert.match(enHtml, /Start choosing a pet/);
+  assert.match(enHtml, /See install options/);
+  assert.match(
+    enHtml,
+    /It helps you explore every collection\. Golden Feather Constellation begins below/,
+  );
+  assert.match(enHtml, /No account, free download/);
+  assert.match(enHtml, /Local ZIP install, no installer to run/);
+  assert.match(enHtml, /Adds only pet files; Codex settings stay unchanged/);
+  assert.match(enHtml, /For getting started without overthinking/);
+  assert.match(enHtml, /For a softer, more imaginative mood/);
 });
 
 test("server-renders the guide and the series hierarchy without fixed roster copy", async () => {
@@ -50,13 +117,15 @@ test("server-renders the guide and the series hierarchy without fixed roster cop
   assert.ok(previewReferences.length >= 13);
   assert.doesNotMatch(html, /spritesheet\.webp/);
   assert.match(html, /星铠团团/);
+  assert.match(html, /它会带你认识宠物系列、试玩角色动作，再找到合适的安装方式/);
+  assert.doesNotMatch(html, /下方从“金羽十二星”开始/);
   assert.match(html, /白羊·金翎/);
   assert.match(html, /双鱼·梦鳍/);
   assert.match(html, /金羽十二星/);
   assert.match(html, /横向滑动查看更多角色/);
   assert.doesNotMatch(html, /13 份性格|ROSTER \/ 13|为你找到 13/);
   assert.ok(
-    html.indexOf("从一个世界开始") < html.indexOf("团团向导"),
+    html.indexOf("从一个世界开始") < html.indexOf("选宠向导"),
     "the series catalog should appear before the secondary Tuantuan guide card",
   );
 });
@@ -70,7 +139,7 @@ test("gives every pet page a product profile and an on-demand action playground"
   );
 
   const html = await response.text();
-  assert.match(html, /团团向导/);
+  assert.match(html, /选宠向导/);
   assert.match(html, /团团的第一班岗/);
   assert.match(html, /ACTION PLAYGROUND/);
   assert.match(html, /选择一个动作开始试玩/);
@@ -98,7 +167,7 @@ test("renders a series page with independent character entries and shared story"
   assert.match(html, /星轨纪事/);
   assert.match(html, /白羊·金翎/);
   assert.match(html, /金牛·鎏甲/);
-  assert.match(html, /把空白拆成第一步/);
+  assert.match(html, /适合想痛快开个头的时候/);
   assert.match(html, /横向滑动查看更多角色/);
   assert.doesNotMatch(html, /ROSTER|spritesheet\.webp/);
   assert.ok(
@@ -122,7 +191,8 @@ test("keeps mobile conversion paths ahead of supporting explanation", async () =
     "character install choices should appear before the three-step explanation",
   );
   assert.doesNotMatch(petDetailPage, /className=\{styles\.petDescription\}>\{story\}/);
-  assert.doesNotMatch(homeCss, /\.seriesHeader h1\s*\{[^}]*white-space:\s*nowrap/s);
+  assert.doesNotMatch(homeCss, /\.heroCopy h1\s*\{[^}]*white-space:\s*nowrap/s);
+  assert.doesNotMatch(homeCss, /\.seriesCopy h2\s*\{[^}]*white-space:\s*nowrap/s);
   assert.doesNotMatch(seriesCss, /\.heroCopy h1\s*\{[^}]*white-space:\s*nowrap/s);
   assert.doesNotMatch(installCss, /\.heroCopy h1\s*\{[^}]*white-space:\s*nowrap/s);
   assert.match(globals, /--page-width:\s*1440px/);
@@ -159,7 +229,9 @@ test("removes all temporary starter preview infrastructure", async () => {
   ]);
 
   assert.match(page, /HomeExperience/);
-  assert.match(homeExperience, /series.*motion.*install/s);
+  assert.match(homeExperience, /href="#characters"/);
+  assert.match(homeExperience, /member\.specialty/);
+  assert.match(homeExperience, /onKeyDown=\{handleMemberKeys\}/);
   assert.match(spritePet, /spritesheet\.webp/);
   assert.match(petData, /star-armor-tuantuan/);
   assert.match(layout, /export const metadata/);

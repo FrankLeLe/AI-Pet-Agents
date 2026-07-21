@@ -2057,6 +2057,24 @@
   }
 }
 
+@media (max-width: 340px) {
+  .brand {
+    gap: 7px;
+    font-size: 1.23rem;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+
+  .brandMark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .languageSwitch a {
+    min-width: 40px;
+  }
+}
+
 .advancedFormat {
   margin-top: 30px;
   overflow: hidden;

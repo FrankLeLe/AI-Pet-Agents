@@ -39,9 +39,12 @@ export default async function Home({ searchParams }: HomePageProps) {
         guide={{
           petId: guide.id,
           name: GUIDE_PROFILE.name[language],
-          title: GUIDE_PROFILE.title[language],
+          title: GUIDE_PROFILE.name[language],
           role: GUIDE_PROFILE.role[language],
-          description: GUIDE_PROFILE.description[language],
+          description:
+            language === "zh"
+              ? "它会带你逛遍所有系列；下方从“金羽十二星”开始。"
+              : "It helps you explore every collection. Golden Feather Constellation begins below.",
         }}
         series={{
           id: series.id,

@@ -97,7 +97,7 @@ export function SiteFooter({ language }: SiteFooterProps) {
     <footer className={styles.siteFooter}>
       <div>
         <strong>CODEX PETS</strong>
-        <span>{t(language, "让 Codex 桌面多一个会动的角色。", "Add a living character to your Codex desktop.")}</span>
+        <span>{t(language, "给 Codex 桌面加一位会动的伙伴。", "Add an animated companion to your Codex desktop.")}</span>
       </div>
       <nav aria-label={t(language, "页脚导航", "Footer navigation")}>
         {FOOTER_ITEMS.map((item) => (

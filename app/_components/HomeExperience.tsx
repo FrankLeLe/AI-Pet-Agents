@@ -2,15 +2,15 @@
 
 import {
   ArrowRight,
+  Check,
   BookOpenText,
-  Download,
+  ChevronLeft,
+  ChevronRight,
   MousePointerClick,
-  Play,
-  Route,
 } from "lucide-react";
 import Link from "next/link";
-import type { CSSProperties } from "react";
-import { useState } from "react";
+import type { CSSProperties, KeyboardEvent } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { t, withLanguage } from "@/lib/i18n";
 import type { AnimationKey } from "@/lib/pet-animation";
@@ -56,204 +56,307 @@ type HomeExperienceProps = {
   series: HomeSeries;
 };
 
-type GuideStop = {
-  key: "series" | "motion" | "install";
-  animation: AnimationKey;
-  zhLabel: string;
-  enLabel: string;
-  zhMessage: string;
-  enMessage: string;
-  icon: typeof Route;
-};
-
-const GUIDE_STOPS: readonly GuideStop[] = [
-  {
-    key: "series",
-    animation: "waving",
-    zhLabel: "先看系列",
-    enLabel: "See series",
-    zhMessage: "从主题和角色职责开始，挑一个最合拍的。",
-    enMessage: "Start with the theme and roles, then choose the best match.",
-    icon: Route,
-  },
-  {
-    key: "motion",
-    animation: "running",
-    zhLabel: "再试动作",
-    enLabel: "Try actions",
-    zhMessage: "进入角色页，工作、等待和完成动作都能现场试玩。",
-    enMessage: "Open a character page to try work, wait, and done actions live.",
-    icon: Play,
-  },
-  {
-    key: "install",
-    animation: "review",
-    zhLabel: "最后安装",
-    enLabel: "Install",
-    zhMessage: "选好后，下载 ZIP 或把安全安装指令交给 Codex。",
-    enMessage: "When ready, use the ZIP or hand Codex a safe install request.",
-    icon: Download,
-  },
-];
-
 type MemberStyle = CSSProperties & {
   "--member-accent": string;
   "--member-soft": string;
 };
 
-export function HomeExperience({ language, guide, series }: HomeExperienceProps) {
-  const [activeStop, setActiveStop] = useState(0);
-  const [guideAwake, setGuideAwake] = useState(false);
-  const stop = GUIDE_STOPS[activeStop];
-  const GuideIcon = stop.icon;
-  const featuredMembers = series.members.slice(0, 3);
+const GUIDE_DEMOS: readonly {
+  animation: AnimationKey;
+  zhLabel: string;
+  enLabel: string;
+}[] = [
+  { animation: "waving", zhLabel: "挥手", enLabel: "Wave" },
+  { animation: "running", zhLabel: "工作", enLabel: "Work" },
+  { animation: "review", zhLabel: "检查", enLabel: "Review" },
+];
 
-  function showNextGuideStop() {
-    setGuideAwake(true);
-    setActiveStop((current) => (current + 1) % GUIDE_STOPS.length);
+export function HomeExperience({ language, guide, series }: HomeExperienceProps) {
+  const memberStripRef = useRef<HTMLDivElement>(null);
+  const [guideDemoIndex, setGuideDemoIndex] = useState<number | null>(null);
+  const [memberBounds, setMemberBounds] = useState({ atStart: true, atEnd: false });
+  const guideDemo = GUIDE_DEMOS[guideDemoIndex ?? 0];
+
+  useEffect(() => {
+    const strip = memberStripRef.current;
+    if (!strip) return;
+
+    const updateBounds = () => {
+      const maxScroll = Math.max(strip.scrollWidth - strip.clientWidth, 0);
+      setMemberBounds({
+        atStart: strip.scrollLeft <= 2,
+        atEnd: strip.scrollLeft >= maxScroll - 2,
+      });
+    };
+
+    updateBounds();
+    strip.addEventListener("scroll", updateBounds, { passive: true });
+    window.addEventListener("resize", updateBounds);
+
+    return () => {
+      strip.removeEventListener("scroll", updateBounds);
+      window.removeEventListener("resize", updateBounds);
+    };
+  }, []);
+
+  function showNextGuideDemo() {
+    setGuideDemoIndex((current) =>
+      current === null ? 0 : (current + 1) % GUIDE_DEMOS.length,
+    );
+  }
+
+  function scrollMembers(direction: -1 | 1) {
+    const strip = memberStripRef.current;
+    if (!strip) return;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+
+    strip.scrollBy({
+      left: direction * Math.max(strip.clientWidth * 0.82, 240),
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
+  }
+
+  function handleMemberKeys(event: KeyboardEvent<HTMLDivElement>) {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      scrollMembers(-1);
+    }
+
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      scrollMembers(1);
+    }
   }
 
   return (
     <main className={styles.homeMain} id="main-content">
-      <section className={styles.heroGrid} aria-labelledby="home-heading">
-        <aside className={styles.guideRail} aria-labelledby="guide-heading">
-          <span className={styles.guideLabel}>{guide.title}</span>
+      <section className={styles.heroPanel} aria-labelledby="home-heading">
+        <div className={styles.heroCopy}>
+          <span className={styles.eyebrow}>CODEX PETS · DESKTOP COMPANIONS</span>
+          <h1 id="home-heading">
+            {language === "zh" ? (
+              <>
+                给 Codex Desktop 装一只会动的
+                <span className={styles.noBreak}>桌面宠物</span>
+                ：<span className={styles.noBreak}>先试玩</span>，再本地安装。
+              </>
+            ) : (
+              "Add an animated pet to Codex Desktop—preview it first, then install it locally."
+            )}
+          </h1>
 
-          <div className={styles.guideSpeech} aria-live="polite">
-            <span>{guide.role}</span>
-            <h2 id="guide-heading">
-              {t(language, "给 Codex 挑一位会动的桌面伙伴", "Pick a moving companion for Codex")}
-            </h2>
-            <p>{guideAwake ? t(language, stop.zhMessage, stop.enMessage) : guide.description}</p>
+          <ol className={styles.pathSteps} aria-label={t(language, "安装路径", "Install path")}>
+            <li>{t(language, "选宠", "Choose")}</li>
+            <li>{t(language, "试玩", "Preview")}</li>
+            <li>{t(language, "安装", "Install")}</li>
+          </ol>
+
+          <div className={styles.heroActions}>
+            <a className={styles.primaryCta} href="#characters">
+              {t(language, "开始选择宠物", "Start choosing a pet")}
+              <ArrowRight aria-hidden="true" size={20} strokeWidth={3} />
+            </a>
+            <Link className={styles.installLink} href={withLanguage("/install", language)}>
+              {t(language, "先看安装方式", "See install options")}
+              <ArrowRight aria-hidden="true" size={17} strokeWidth={3} />
+            </Link>
           </div>
+        </div>
 
+        <aside className={styles.guideCard} aria-labelledby="guide-heading">
+          <div className={styles.guideCopy}>
+            <span>{guide.role}</span>
+            <strong id="guide-heading">{guide.title}</strong>
+            <p>{guide.description}</p>
+          </div>
           <button
             className={styles.guidePetButton}
             type="button"
-            onClick={showNextGuideStop}
-            aria-label={t(language, `点一下 ${guide.name}，看看下一条建议`, `Ask ${guide.name} for another suggestion`)}
+            onClick={showNextGuideDemo}
+            aria-label={t(
+              language,
+              guideDemoIndex === null
+                ? `点击${guide.name}试玩下一个动作`
+                : `当前动作：${guideDemo.zhLabel}。点击试玩下一个动作`,
+              guideDemoIndex === null
+                ? `Click ${guide.name} to preview the next motion`
+                : `Current motion: ${guideDemo.enLabel}. Click to preview the next motion`,
+            )}
           >
-            {guideAwake ? (
-              <SpritePet
-                className={styles.guidePet}
-                petId={guide.petId}
-                animation={stop.animation}
-                eager
-                label={`${guide.name} — ${t(language, stop.zhLabel, stop.enLabel)}`}
-              />
-            ) : (
+            {guideDemoIndex === null ? (
               <PetPreview
                 className={styles.guidePet}
                 petId={guide.petId}
                 eager
                 label={t(language, `${guide.name}静态预览`, `${guide.name} preview`)}
               />
+            ) : (
+              <SpritePet
+                className={styles.guidePet}
+                petId={guide.petId}
+                animation={guideDemo.animation}
+                eager
+                label={`${guide.name} — ${t(language, guideDemo.zhLabel, guideDemo.enLabel)}`}
+              />
             )}
-            <span className={styles.tapHint}>
-              <GuideIcon aria-hidden="true" size={17} strokeWidth={3} />
-              {t(language, stop.zhLabel, stop.enLabel)}
+            <span className={styles.guideMotionHint}>
               <MousePointerClick aria-hidden="true" size={16} strokeWidth={3} />
+              {guideDemoIndex === null
+                ? t(language, "试玩动作", "Preview animation")
+                : t(language, guideDemo.zhLabel, guideDemo.enLabel)}
             </span>
           </button>
-
-          <div className={styles.guideActions}>
-            <Link href={withLanguage(`/series/${series.id}`, language)}>
-              {t(language, "开始挑选", "Start choosing")}
-              <ArrowRight aria-hidden="true" size={20} strokeWidth={3} />
-            </Link>
-            <Link href={withLanguage("/install", language)}>
-              {t(language, "怎么安装", "How to install")}
-            </Link>
-          </div>
+          <span className={styles.srOnly} role="status" aria-live="polite">
+            {guideDemoIndex === null
+              ? ""
+              : t(
+                  language,
+                  `${guide.name}正在${guideDemo.zhLabel}`,
+                  `${guide.name} is showing ${guideDemo.enLabel.toLowerCase()}`,
+                )}
+          </span>
         </aside>
+      </section>
 
-        <section className={styles.seriesBoard} aria-labelledby="home-heading">
-          <header className={styles.seriesHeader}>
-            <div className={styles.seriesCopy}>
-              <span className={styles.statusPill}>{series.status}</span>
-              <h1 id="home-heading">{series.name}</h1>
-              <p className={styles.seriesSubtitle}>{series.subtitle}</p>
-              <p className={styles.seriesDescription}>{series.description}</p>
-            </div>
-            <div className={styles.seriesVisual} aria-label={t(language, "系列角色预览", "Series character preview")}>
-              {featuredMembers.map((member, index) => (
-                <Link
-                  href={withLanguage(`/pets/${member.petId}`, language)}
-                  style={{ "--feature-index": index } as CSSProperties}
-                  key={member.petId}
-                >
-                  <PetPreview
-                    className={styles.seriesPet}
-                    petId={member.petId}
-                    eager
-                    label={t(language, `${member.name}静态预览`, `${member.name} preview`)}
-                  />
-                </Link>
-              ))}
-            </div>
-          </header>
+      <section className={styles.seriesBoard} aria-labelledby="series-heading">
+        <header className={styles.seriesHeader}>
+          <div>
+            <span className={styles.statusPill}>{series.status}</span>
+            <span className={styles.seriesKicker}>{t(language, "宠物系列", "PET COLLECTION")}</span>
+          </div>
+          <div className={styles.seriesCopy}>
+            <h2 id="series-heading">{series.name}</h2>
+            <p className={styles.seriesSubtitle}>{series.subtitle}</p>
+            <p className={styles.seriesDescription}>{series.description}</p>
+          </div>
+        </header>
 
-          <section className={styles.characterIndex} aria-labelledby="character-index-heading">
-            <div className={styles.indexHeading}>
-              <div>
-                <span>CHARACTER INDEX</span>
-                <h2 id="character-index-heading">{t(language, "角色索引", "Character index")}</h2>
+        <section
+          className={styles.characterIndex}
+          id="characters"
+          aria-labelledby="character-index-heading"
+        >
+          <div className={styles.indexHeading}>
+            <div>
+              <span>CHOOSE · PREVIEW · INSTALL</span>
+              <h3 id="character-index-heading">
+                {t(language, "选择一位桌面伙伴", "Choose your desktop companion")}
+              </h3>
+            </div>
+            <span className={styles.desktopHint}>
+              {t(language, "使用左右按钮或方向键浏览", "Use the buttons or arrow keys")}
+            </span>
+          </div>
+
+          <p className={styles.mobileHint}>
+            {t(language, "横向滑动查看更多角色", "Swipe sideways for more characters")}
+            <ChevronRight aria-hidden="true" size={17} strokeWidth={3} />
+          </p>
+
+          <div className={styles.characterCarousel}>
+            <button
+              className={styles.carouselButton}
+              type="button"
+              onClick={() => scrollMembers(-1)}
+              disabled={memberBounds.atStart}
+              aria-controls="home-character-strip"
+              aria-label={t(language, "查看上一组角色", "Show previous characters")}
+            >
+              <ChevronLeft aria-hidden="true" size={24} strokeWidth={3} />
+            </button>
+
+            <div className={styles.memberViewport}>
+              <div
+                className={styles.memberStrip}
+                id="home-character-strip"
+                ref={memberStripRef}
+                role="region"
+                tabIndex={0}
+                onKeyDown={handleMemberKeys}
+                aria-label={t(language, "可横向浏览的角色列表", "Scrollable character list")}
+              >
+                {series.members.map((member) => (
+                  <Link
+                    className={styles.memberCard}
+                    href={withLanguage(`/pets/${member.petId}`, language)}
+                    style={{
+                      "--member-accent": member.accent,
+                      "--member-soft": member.softAccent,
+                    } as MemberStyle}
+                    key={member.petId}
+                  >
+                    <PetPreview
+                      className={styles.memberImage}
+                      petId={member.petId}
+                      label={t(language, `${member.name}静态预览`, `${member.name} preview`)}
+                    />
+                    <span className={styles.memberCopy}>
+                      <strong>{member.name}</strong>
+                      <small className={styles.memberRole}>{member.role}</small>
+                      <small className={styles.memberSpecialty}>{member.specialty}</small>
+                    </span>
+                  </Link>
+                ))}
               </div>
-              <span>{t(language, "横向滑动查看更多", "Scroll sideways for more")}</span>
             </div>
 
-            <div className={styles.memberStrip}>
-              {series.members.map((member) => (
-                <Link
-                  className={styles.memberCard}
-                  href={withLanguage(`/pets/${member.petId}`, language)}
-                  style={{
-                    "--member-accent": member.accent,
-                    "--member-soft": member.softAccent,
-                  } as MemberStyle}
-                  key={member.petId}
-                >
-                  <PetPreview
-                    className={styles.memberImage}
-                    petId={member.petId}
-                    label={t(language, `${member.name}静态预览`, `${member.name} preview`)}
-                  />
-                  <span>
-                    <strong>{member.name}</strong>
-                    <small>{member.role}</small>
-                  </span>
-                </Link>
+            <button
+              className={styles.carouselButton}
+              type="button"
+              onClick={() => scrollMembers(1)}
+              disabled={memberBounds.atEnd}
+              aria-controls="home-character-strip"
+              aria-label={t(language, "查看下一组角色", "Show next characters")}
+            >
+              <ChevronRight aria-hidden="true" size={24} strokeWidth={3} />
+            </button>
+          </div>
+        </section>
+
+        <div className={styles.supportRow}>
+          <section className={styles.installTrust} aria-labelledby="install-trust-heading">
+            <span>{t(language, "下载与安装", "DOWNLOAD & INSTALL")}</span>
+            <h3 id="install-trust-heading">
+              {t(language, "安装前先看清楚", "Know before you install")}
+            </h3>
+            <ul>
+              {[
+                t(language, "无需登录，免费下载", "No account, free download"),
+                t(
+                  language,
+                  "本地 ZIP 安装，无需运行安装程序",
+                  "Local ZIP install, no installer to run",
+                ),
+                t(
+                  language,
+                  "只添加宠物文件，不改 Codex 设置",
+                  "Adds only pet files; Codex settings stay unchanged",
+                ),
+              ].map((promise) => (
+                <li key={promise}>
+                  <Check aria-hidden="true" size={18} strokeWidth={3} />
+                  {promise}
+                </li>
               ))}
-            </div>
+            </ul>
           </section>
 
           <Link className={styles.storyCard} href={withLanguage(`/series/${series.id}#story`, language)}>
-            <span className={styles.storyIcon}>
-              <BookOpenText aria-hidden="true" size={28} strokeWidth={3} />
-            </span>
+            <BookOpenText aria-hidden="true" size={24} strokeWidth={2.6} />
             <span>
-              <small>{series.storyChapter}</small>
+              <small>{t(language, "系列世界观", "SERIES LORE")}</small>
               <strong>{series.storyTitle}</strong>
-              <em>{series.story}</em>
+              <em>{t(language, "想了解这些角色从哪里来？", "Curious where these characters came from?")}</em>
             </span>
             <span className={styles.storyLink}>
-              {t(language, "从序章开始", "Start with the prologue")}
-              <ArrowRight aria-hidden="true" size={18} strokeWidth={3} />
+              {t(language, "读系列故事", "Read the series story")}
+              <ArrowRight aria-hidden="true" size={17} strokeWidth={3} />
             </span>
           </Link>
-
-          <footer className={styles.boardFooter}>
-            <Link href={withLanguage(`/series/${series.id}#characters`, language)}>
-              {t(language, "查看全部角色", "View all characters")}
-              <ArrowRight aria-hidden="true" size={19} strokeWidth={3} />
-            </Link>
-            <Link href={withLanguage(`/series/${series.id}#story`, language)}>
-              <BookOpenText aria-hidden="true" size={19} strokeWidth={3} />
-              {t(language, "系列故事", "Series story")}
-              <ArrowRight aria-hidden="true" size={19} strokeWidth={3} />
-            </Link>
-          </footer>
-        </section>
+        </div>
       </section>
     </main>
   );
