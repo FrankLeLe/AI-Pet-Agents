@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
@@ -87,14 +87,20 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
               {name}
             </h1>
             <p>{description}</p>
-            <a href="#install-routes">
-              {t(language, "选择安装方式", "Choose an install route")}
-              <ArrowRight aria-hidden="true" size={19} strokeWidth={3} />
-            </a>
+            <div className={styles.heroActions}>
+              <a href={pet.downloadPath} download>
+                <Download aria-hidden="true" size={19} strokeWidth={3} />
+                {t(language, "下载 ZIP", "Download ZIP")}
+              </a>
+              <a href="#codex-install">
+                {t(language, "让 Codex 安装", "Let Codex install")}
+                <ArrowRight aria-hidden="true" size={19} strokeWidth={3} />
+              </a>
+            </div>
           </div>
         </section>
 
-        <div id="install-routes">
+        <div className={styles.installRoutes} id="install-routes">
           <InstallChoices
             language={language}
             petId={pet.id}

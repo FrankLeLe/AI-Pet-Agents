@@ -44,35 +44,6 @@ export default async function PetsPage({ searchParams }: PetsPageProps) {
           </p>
         </section>
 
-        {guide ? (
-          <section className={styles.guideCard} aria-labelledby="guide-card-heading">
-            <div className={styles.guideVisual}>
-              <PetPreview
-                petId={guide.id}
-                eager
-                className={styles.guideImage}
-                label={t(language, "星铠团团静态预览", "Star-Armor Tuantuan preview")}
-              />
-            </div>
-            <div className={styles.guideCopy}>
-              <span>{GUIDE_PROFILE.role[language]}</span>
-              <h2 id="guide-card-heading">{GUIDE_PROFILE.title[language]}</h2>
-              <strong>{GUIDE_PROFILE.name[language]}</strong>
-              <p>{GUIDE_PROFILE.description[language]}</p>
-              <div>
-                <Link href={withLanguage(`/pets/${guide.id}`, language)}>
-                  <Compass aria-hidden="true" size={18} strokeWidth={3} />
-                  {t(language, "认识团团", "Meet Tuantuan")}
-                </Link>
-                <Link href={withLanguage(`/install/${guide.id}`, language)}>
-                  <Download aria-hidden="true" size={17} strokeWidth={3} />
-                  {t(language, "安装团团", "Install Tuantuan")}
-                </Link>
-              </div>
-            </div>
-          </section>
-        ) : null}
-
         <section className={styles.seriesSection} aria-labelledby="series-heading">
           <header className={styles.sectionHeading}>
             <span>COLLECTIONS</span>
@@ -96,6 +67,10 @@ export default async function PetsPage({ searchParams }: PetsPageProps) {
                       <ArrowRight aria-hidden="true" size={19} strokeWidth={3} />
                     </Link>
                   </header>
+
+                  <p className={styles.memberScrollHint}>
+                    {t(language, "横向滑动查看更多角色", "Swipe sideways to see more characters")}
+                  </p>
 
                   <div className={styles.memberGrid}>
                     {members.map(({ pet, profile }) => (
@@ -129,6 +104,35 @@ export default async function PetsPage({ searchParams }: PetsPageProps) {
             })}
           </div>
         </section>
+
+        {guide ? (
+          <section className={styles.guideCard} aria-labelledby="guide-card-heading">
+            <div className={styles.guideVisual}>
+              <PetPreview
+                petId={guide.id}
+                eager
+                className={styles.guideImage}
+                label={t(language, "星铠团团静态预览", "Star-Armor Tuantuan preview")}
+              />
+            </div>
+            <div className={styles.guideCopy}>
+              <span>{GUIDE_PROFILE.role[language]}</span>
+              <h2 id="guide-card-heading">{GUIDE_PROFILE.title[language]}</h2>
+              <strong>{GUIDE_PROFILE.name[language]}</strong>
+              <p>{GUIDE_PROFILE.description[language]}</p>
+              <div>
+                <Link href={withLanguage(`/pets/${guide.id}`, language)}>
+                  <Compass aria-hidden="true" size={18} strokeWidth={3} />
+                  {t(language, "认识团团", "Meet Tuantuan")}
+                </Link>
+                <Link href={withLanguage(`/install/${guide.id}`, language)}>
+                  <Download aria-hidden="true" size={17} strokeWidth={3} />
+                  {t(language, "安装团团", "Install Tuantuan")}
+                </Link>
+              </div>
+            </div>
+          </section>
+        ) : null}
       </main>
     </PageShell>
   );

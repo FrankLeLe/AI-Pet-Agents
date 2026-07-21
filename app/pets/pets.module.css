@@ -41,6 +41,8 @@
 .intro h1 {
   margin: 8px 0 0;
   font-size: clamp(3.5rem, 8vw, 7.7rem);
+  overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 .intro > p {
@@ -171,6 +173,8 @@
 .seriesCardHeader h3 {
   margin: 0;
   font-size: clamp(3.2rem, 7vw, 7.1rem);
+  overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 .seriesCardHeader strong {
@@ -187,6 +191,10 @@
   gap: 12px;
   padding: clamp(18px, 3vw, 34px);
   background: var(--blue);
+}
+
+.memberScrollHint {
+  display: none;
 }
 
 .memberCard {
@@ -287,24 +295,66 @@
   }
 
   .guideCard {
-    grid-template-columns: 1fr;
+    min-height: 0;
+    grid-template-columns: minmax(110px, 0.55fr) minmax(0, 1.45fr);
   }
 
   .guideVisual {
-    min-height: 235px;
-    border-right: 0;
-    border-bottom: var(--border);
+    min-height: 210px;
+    padding: 8px 8px 0;
+    border-right: var(--border);
+  }
+
+  .guideCopy {
+    padding: 18px 14px;
+  }
+
+  .guideCopy h2 {
+    font-size: clamp(1.75rem, 9vw, 2.4rem);
+  }
+
+  .guideCopy > p {
+    font-size: 0.72rem;
+    line-height: 1.45;
+  }
+
+  .guideCopy > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .guideCopy a {
+    justify-content: center;
+    font-size: 0.68rem;
   }
 
   .memberGrid {
-    grid-template-columns: 1fr;
-    padding: 14px;
+    grid-template-columns: none;
+    grid-auto-columns: minmax(270px, 82vw);
+    grid-auto-flow: column;
+    padding: 8px 14px 14px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+  }
+
+  .memberScrollHint {
+    display: block;
+    margin: 0;
+    padding: 12px 14px 5px;
+    background: var(--blue);
+    color: white;
+    font-size: 0.68rem;
+    font-weight: 900;
   }
 
   .memberCard {
     grid-template-columns: 125px 1fr;
     grid-template-rows: 1fr;
     min-height: 138px;
+    scroll-snap-align: start;
   }
 
   .memberCard > span {

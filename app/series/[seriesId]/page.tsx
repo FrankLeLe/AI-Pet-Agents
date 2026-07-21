@@ -95,18 +95,6 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
           </div>
         </section>
 
-        <section className={styles.story} id="story" aria-labelledby="story-heading">
-          <div className={styles.storyMarker}>
-            <BookOpenText aria-hidden="true" size={30} strokeWidth={3} />
-            <span>STORY</span>
-          </div>
-          <div>
-            <p>{series.storyChapter[language]}</p>
-            <h2 id="story-heading">{series.storyTitle[language]}</h2>
-            <blockquote>{series.story[language]}</blockquote>
-          </div>
-        </section>
-
         <section className={styles.characters} id="characters" aria-labelledby="characters-heading">
           <header className={styles.sectionHeading}>
             <div>
@@ -115,6 +103,10 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
             </div>
             <p>{t(language, "点进角色页，可以现场试动作，再决定是否安装。", "Open a character page to try its actions before installing.")}</p>
           </header>
+
+          <p className={styles.scrollHint}>
+            {t(language, "横向滑动查看更多角色", "Swipe sideways to see more characters")}
+          </p>
 
           <div className={styles.characterGrid}>
             {members.map(({ pet, profile }) => (
@@ -152,6 +144,18 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className={styles.story} id="story" aria-labelledby="story-heading">
+          <div className={styles.storyMarker}>
+            <BookOpenText aria-hidden="true" size={30} strokeWidth={3} />
+            <span>STORY</span>
+          </div>
+          <div>
+            <p>{series.storyChapter[language]}</p>
+            <h2 id="story-heading">{series.storyTitle[language]}</h2>
+            <blockquote>{series.story[language]}</blockquote>
           </div>
         </section>
       </main>

@@ -46,6 +46,7 @@
 .codexCard {
   background: var(--blue);
   color: white;
+  scroll-margin-top: 112px;
 }
 
 .choiceTitle {
@@ -248,6 +249,10 @@
 @media (max-width: 850px) {
   .choiceGrid {
     grid-template-columns: 1fr;
+  }
+
+  .codexCard {
+    scroll-margin-top: 18px;
   }
 }
 

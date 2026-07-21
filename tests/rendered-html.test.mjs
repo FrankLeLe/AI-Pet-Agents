@@ -53,7 +53,12 @@ test("server-renders the guide and the series hierarchy without fixed roster cop
   assert.match(html, /白羊·金翎/);
   assert.match(html, /双鱼·梦鳍/);
   assert.match(html, /金羽十二星/);
+  assert.match(html, /横向滑动查看更多角色/);
   assert.doesNotMatch(html, /13 份性格|ROSTER \/ 13|为你找到 13/);
+  assert.ok(
+    html.indexOf("从一个世界开始") < html.indexOf("团团向导"),
+    "the series catalog should appear before the secondary Tuantuan guide card",
+  );
 });
 
 test("gives every pet page a product profile and an on-demand action playground", async () => {
@@ -94,7 +99,33 @@ test("renders a series page with independent character entries and shared story"
   assert.match(html, /白羊·金翎/);
   assert.match(html, /金牛·鎏甲/);
   assert.match(html, /把空白拆成第一步/);
+  assert.match(html, /横向滑动查看更多角色/);
   assert.doesNotMatch(html, /ROSTER|spritesheet\.webp/);
+  assert.ok(
+    html.indexOf('id="characters"') < html.indexOf('id="story"'),
+    "character selection should appear before the long-form series story",
+  );
+});
+
+test("keeps mobile conversion paths ahead of supporting explanation", async () => {
+  const [installPage, petDetailPage, homeCss, seriesCss, installCss, globals] = await Promise.all([
+    readFile(new URL("../app/install/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/pets/[petId]/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/home.module.css", import.meta.url), "utf8"),
+    readFile(new URL("../app/series/[seriesId]/series.module.css", import.meta.url), "utf8"),
+    readFile(new URL("../app/install/[petId]/install.module.css", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+  ]);
+
+  assert.ok(
+    installPage.indexOf("styles.contentSection") < installPage.indexOf("styles.stepsSection"),
+    "character install choices should appear before the three-step explanation",
+  );
+  assert.doesNotMatch(petDetailPage, /className=\{styles\.petDescription\}>\{story\}/);
+  assert.doesNotMatch(homeCss, /\.seriesHeader h1\s*\{[^}]*white-space:\s*nowrap/s);
+  assert.doesNotMatch(seriesCss, /\.heroCopy h1\s*\{[^}]*white-space:\s*nowrap/s);
+  assert.doesNotMatch(installCss, /\.heroCopy h1\s*\{[^}]*white-space:\s*nowrap/s);
+  assert.match(globals, /--page-width:\s*1440px/);
 });
 
 test("offers manual and Codex-assisted installation with pinned safety boundaries", async () => {
@@ -105,6 +136,12 @@ test("offers manual and Codex-assisted installation with pinned safety boundarie
   assert.match(html, /下载 ZIP，自己安装/);
   assert.match(html, /让 Codex 帮我安装/);
   assert.match(html, /复制给 Codex/);
+  assert.match(html, /href="#codex-install"/);
+  assert.match(html, /id="codex-install"/);
+  assert.ok(
+    html.indexOf('href="#codex-install"') < html.indexOf('id="install-routes"'),
+    "the hero should expose the Codex-assisted route before the detailed install cards",
+  );
   assert.match(html, /6bfce72ca689966918c3bb85c68007914a27f54c/);
   assert.match(html, /fe8374142c5cf7e0203556b1376f5b403f02ce2674bc38575b165b903bcdd916/);
   assert.match(html, /禁止静默覆盖/);

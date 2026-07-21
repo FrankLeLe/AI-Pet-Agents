@@ -6,15 +6,25 @@
 
 .breadcrumbs {
   display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
   align-items: center;
   gap: 9px;
   margin: 0 0 18px;
   font-size: 0.78rem;
   font-weight: 850;
+  line-height: 1.45;
 }
 
 .breadcrumbs a {
+  min-width: 0;
   border-bottom: 2px solid currentColor;
+  overflow-wrap: anywhere;
+}
+
+.breadcrumbs [aria-current="page"] {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .hero {
@@ -31,6 +41,7 @@
 .heroCopy {
   z-index: 2;
   display: flex;
+  min-width: 0;
   flex-direction: column;
   justify-content: center;
   padding: clamp(28px, 4.5vw, 68px);
@@ -65,12 +76,14 @@
 }
 
 .heroCopy h1 {
-  max-width: 8ch;
+  max-width: 100%;
   margin: 0;
   font-family: Impact, "Arial Black", "Microsoft YaHei", sans-serif;
   font-size: clamp(4rem, 7vw, 7.5rem);
   letter-spacing: -0.04em;
   line-height: 0.84;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 .heroCopy > strong {
@@ -168,6 +181,8 @@
   font-family: Impact, "Arial Black", "Microsoft YaHei", sans-serif;
   letter-spacing: -0.02em;
   line-height: 1;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 .story h2 {
@@ -212,6 +227,10 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
   margin-top: 24px;
+}
+
+.scrollHint {
+  display: none;
 }
 
 .characterCard {
@@ -294,7 +313,7 @@
 
 .characterBody a {
   display: inline-flex;
-  min-height: 40px;
+  min-height: 44px;
   align-items: center;
   gap: 6px;
   padding: 0 10px;
@@ -342,8 +361,8 @@
   }
 
   .heroCopy h1 {
-    font-size: clamp(3rem, 15vw, 4.2rem);
-    white-space: nowrap;
+    font-size: clamp(2.55rem, 13vw, 4rem);
+    line-height: 0.92;
   }
 
   .heroPets {
@@ -367,7 +386,7 @@
   }
 
   .heroPets {
-    min-height: 300px;
+    min-height: 260px;
     padding: 5px;
   }
 
@@ -375,12 +394,43 @@
     padding: 22px 18px;
   }
 
+  .scrollHint {
+    display: inline-flex;
+    margin: 16px 0 0;
+    padding: 6px 9px;
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    background: var(--yellow);
+    box-shadow: 3px 3px 0 var(--ink);
+    font-size: 0.68rem;
+    font-weight: 900;
+  }
+
   .characterGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: none;
+    grid-auto-columns: minmax(280px, 82vw);
+    grid-auto-flow: column;
+    margin-top: 12px;
+    padding: 0 5px 12px 0;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+  }
+
+  .characterCard {
+    scroll-snap-align: start;
   }
 
   .characterVisual {
-    min-height: 220px;
+    min-height: 190px;
+  }
+
+  .characterBody > p:not(:first-child) {
+    display: -webkit-box;
+    min-height: 0;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
   }
 }
 

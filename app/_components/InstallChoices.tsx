@@ -137,7 +137,7 @@ export function InstallChoices({
           </p>
         </article>
 
-        <article className={styles.codexCard}>
+        <article className={styles.codexCard} id="codex-install">
           <div className={styles.choiceTitle}>
             <span>02</span>
             <div>

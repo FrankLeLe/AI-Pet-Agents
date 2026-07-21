@@ -1,5 +1,5 @@
 .homeMain {
-  width: min(1480px, 100%);
+  width: min(var(--page-width), 100%);
   margin: 0 auto;
   padding: 22px 0 46px;
 }
@@ -71,6 +71,7 @@
   font-weight: 950;
   letter-spacing: -0.025em;
   line-height: 1.2;
+  text-wrap: balance;
 }
 
 .guideSpeech p {
@@ -168,6 +169,7 @@
 }
 
 .seriesCopy {
+  min-width: 0;
   padding: clamp(28px, 4vw, 52px);
 }
 
@@ -176,11 +178,14 @@
 }
 
 .seriesHeader h1 {
+  max-width: 100%;
   margin: 20px 0 0;
   font-family: Impact, "Arial Black", "Microsoft YaHei", sans-serif;
   font-size: clamp(4rem, 6.4vw, 7.1rem);
   letter-spacing: -0.04em;
   line-height: 0.83;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 .seriesSubtitle {
@@ -450,20 +455,63 @@
   }
 
   .guideRail {
-    display: flex;
-    padding: 18px 16px;
+    display: grid;
+    grid-template-columns: minmax(112px, 0.72fr) minmax(0, 1.28fr);
+    gap: 10px 12px;
+    padding: 16px 12px;
   }
 
   .guideSpeech {
-    margin-top: 18px;
+    grid-row: 1 / span 2;
+    margin-top: 0;
+    padding: 14px 12px;
+  }
+
+  .guideSpeech h2 {
+    margin-top: 6px;
+    font-size: clamp(1.18rem, 5.5vw, 1.45rem);
+    line-height: 1.12;
   }
 
   .guideSpeech p {
     min-height: 0;
+    margin-top: 8px;
+    font-size: 0.7rem;
+    line-height: 1.42;
   }
 
   .guidePetButton {
-    min-height: 300px;
+    min-height: 185px;
+  }
+
+  .guidePet {
+    width: min(100%, 145px);
+    margin-bottom: 34px;
+  }
+
+  .tapHint {
+    right: 0;
+    bottom: 0;
+    min-height: 32px;
+    gap: 4px;
+    padding: 0 6px;
+    font-size: 0.59rem;
+    white-space: nowrap;
+  }
+
+  .tapHint svg:last-child {
+    display: none;
+  }
+
+  .guideActions {
+    gap: 8px;
+    margin-top: 0;
+  }
+
+  .guideActions a {
+    min-height: 44px;
+    padding: 0 9px;
+    font-size: 0.7rem;
   }
 
   .seriesHeader {
@@ -475,8 +523,8 @@
   }
 
   .seriesHeader h1 {
-    font-size: clamp(3rem, 15vw, 4.2rem);
-    white-space: nowrap;
+    font-size: clamp(2.55rem, 13vw, 3.65rem);
+    line-height: 0.92;
   }
 
   .seriesVisual {

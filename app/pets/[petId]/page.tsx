@@ -149,7 +149,6 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
             <h1>{name}</h1>
             <p className={styles.petRole}>{role}</p>
             <p className={styles.petTagline}>{specialty}</p>
-            <p className={styles.petDescription}>{story}</p>
             <div className={styles.heroActions}>
               <Link className={styles.primaryButton} href={withLanguage(`/install/${pet.id}`, language)}>
                 {t(language, "安装到 Codex", "Install in Codex")}

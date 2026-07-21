@@ -33,38 +33,6 @@ export default async function InstallIndexPage({ searchParams }: InstallIndexPag
           </p>
         </section>
 
-        <section className={styles.stepsSection} aria-labelledby="install-steps-title">
-          <div className={styles.sectionHeading}>
-            <div>
-              <p className={styles.eyebrow}>HOW IT WORKS</p>
-              <h2 id="install-steps-title">{t(language, "安装流程", "INSTALL FLOW")}</h2>
-            </div>
-          </div>
-          <ol className={styles.stepGrid}>
-            <li>
-              <strong>01</strong>
-              <div>
-                <h3>{t(language, "选择宠物", "Choose a pet")}</h3>
-                <p>{t(language, "先从图鉴中进入角色安装页。", "Open a character install page from the index.")}</p>
-              </div>
-            </li>
-            <li>
-              <strong>02</strong>
-              <div>
-                <h3>{t(language, "选择方式", "Choose a route")}</h3>
-                <p>{t(language, "下载 ZIP，或复制给 Codex。", "Download the ZIP, or copy a request for Codex.")}</p>
-              </div>
-            </li>
-            <li>
-              <strong>03</strong>
-              <div>
-                <h3>{t(language, "重启 Codex", "Restart Codex")}</h3>
-                <p>{t(language, "完整退出，再重新打开并选择宠物。", "Fully quit, reopen, and choose your pet.")}</p>
-              </div>
-            </li>
-          </ol>
-        </section>
-
         <section className={styles.contentSection} aria-labelledby="choose-install-pet">
           <div className={styles.sectionHeading}>
             <div>
@@ -115,6 +83,38 @@ export default async function InstallIndexPage({ searchParams }: InstallIndexPag
               );
             })}
           </div>
+        </section>
+
+        <section className={styles.stepsSection} aria-labelledby="install-steps-title">
+          <div className={styles.sectionHeading}>
+            <div>
+              <p className={styles.eyebrow}>HOW IT WORKS</p>
+              <h2 id="install-steps-title">{t(language, "三步完成安装", "INSTALL IN THREE STEPS")}</h2>
+            </div>
+          </div>
+          <ol className={styles.stepGrid}>
+            <li>
+              <strong>01</strong>
+              <div>
+                <h3>{t(language, "选择宠物", "Choose a pet")}</h3>
+                <p>{t(language, "从上方角色入口进入对应安装页。", "Open the matching install page from the character list above.")}</p>
+              </div>
+            </li>
+            <li>
+              <strong>02</strong>
+              <div>
+                <h3>{t(language, "选择方式", "Choose a route")}</h3>
+                <p>{t(language, "下载 ZIP，或复制给 Codex。", "Download the ZIP, or copy a request for Codex.")}</p>
+              </div>
+            </li>
+            <li>
+              <strong>03</strong>
+              <div>
+                <h3>{t(language, "重启 Codex", "Restart Codex")}</h3>
+                <p>{t(language, "完整退出，再重新打开并选择宠物。", "Fully quit, reopen, and choose your pet.")}</p>
+              </div>
+            </li>
+          </ol>
         </section>
 
         <aside className={styles.helpStrip}>
