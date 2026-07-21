@@ -11,6 +11,10 @@
   color: var(--route-ink);
 }
 
+.pageShell :where(#main-content, #characters, #story, #playground, #codex-install, #install-routes) {
+  scroll-margin-top: 122px;
+}
+
 .skipLink {
   position: fixed;
   z-index: 100;
@@ -1669,6 +1673,10 @@
     padding: 14px 14px 30px;
   }
 
+  .pageShell :where(#main-content, #characters, #story, #playground, #codex-install, #install-routes) {
+    scroll-margin-top: 24px;
+  }
+
   .siteHeader {
     position: relative;
     top: 0;
@@ -2072,6 +2080,13 @@
 
   .languageSwitch a {
     min-width: 40px;
+  }
+
+  .primaryNav a {
+    padding-inline: 1px;
+    font-size: 0.84rem;
+    letter-spacing: 0.025em;
+    overflow-wrap: anywhere;
   }
 }
 

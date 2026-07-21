@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://aipetsagent.com/sitemap.xml

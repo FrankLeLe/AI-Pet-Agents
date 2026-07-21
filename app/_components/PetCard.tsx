@@ -39,11 +39,8 @@ export function PetCard({ pet, language, compact = false }: PetCardProps) {
 
   return (
     <article className={`${styles.petCard} ${compact ? styles.petCardCompact : ""}`} style={style}>
-      <Link
+      <div
         className={styles.petCardVisual}
-        href={withLanguage(`/pets/${pet.id}`, language)}
-        prefetch={false}
-        aria-label={t(language, `查看 ${name}`, `View ${name}`)}
       >
         <span className={styles.petBadge}>{label}</span>
         <PetPreview
@@ -51,7 +48,7 @@ export function PetCard({ pet, language, compact = false }: PetCardProps) {
           label={t(language, `${name}静态预览`, `${name} preview`)}
           className={styles.petCardSprite}
         />
-      </Link>
+      </div>
       <div className={styles.petCardBody}>
         <p className={styles.monoLabel}>
           {isGuide ? GUIDE_PROFILE.title[language] : profile?.zodiac[language]}

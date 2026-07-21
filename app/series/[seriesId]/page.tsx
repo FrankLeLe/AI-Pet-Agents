@@ -55,7 +55,7 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
   const members = getSeriesPets(series);
 
   return (
-    <PageShell language={language} currentPath="/pets">
+    <PageShell language={language} currentPath={`/series/${series.id}`}>
       <main className={styles.main} id="main-content">
         <nav className={styles.breadcrumbs} aria-label={t(language, "面包屑导航", "Breadcrumb")}>
           <Link href={withLanguage("/pets", language)}>{t(language, "宠物图鉴", "Pet index")}</Link>
@@ -118,14 +118,14 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
                 } as MemberStyle}
                 key={pet.id}
               >
-                <Link className={styles.characterVisual} href={withLanguage(`/pets/${pet.id}`, language)}>
+                <div className={styles.characterVisual}>
                   <PetPreview
                     petId={pet.id}
                     className={styles.characterImage}
                     label={t(language, `${profile.name.zh}静态预览`, `${profile.name.en} preview`)}
                   />
                   <span>{profile.role[language]}</span>
-                </Link>
+                </div>
                 <div className={styles.characterBody}>
                   <p>{profile.zodiac[language]}</p>
                   <h3>{profile.name[language]}</h3>

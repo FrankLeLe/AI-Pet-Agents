@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { HomeExperience } from "./_components/HomeExperience";
 import { normalizeLanguage, PageShell } from "./_components/SiteChrome";
 import { getPetById } from "@/lib/pets";
@@ -13,6 +15,22 @@ type HomePageProps = {
     lang?: string | string[];
   }>;
 };
+
+export async function generateMetadata({ searchParams }: HomePageProps): Promise<Metadata> {
+  const query = await searchParams;
+  const language = normalizeLanguage(query.lang);
+
+  return {
+    alternates: {
+      canonical: language === "en" ? "/?lang=en" : "/",
+      languages: {
+        "zh-CN": "/?lang=zh",
+        en: "/?lang=en",
+        "x-default": "/",
+      },
+    },
+  };
+}
 
 export default async function Home({ searchParams }: HomePageProps) {
   const query = await searchParams;

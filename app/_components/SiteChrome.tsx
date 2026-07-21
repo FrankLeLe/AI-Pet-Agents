@@ -5,6 +5,11 @@ import type { ReactNode } from "react";
 import type { Language } from "@/lib/pets";
 import { normalizeLanguage, t, withLanguage } from "@/lib/i18n";
 
+import {
+  DocumentLanguage,
+  HashScrollRestorer,
+  LanguageSwitch,
+} from "./NavigationEnhancements";
 import styles from "./site-chrome.module.css";
 
 type SiteHeaderProps = {
@@ -23,15 +28,23 @@ type PageShellProps = SiteHeaderProps & {
 const NAV_ITEMS = [
   { href: "/pets", zh: "宠物图鉴", en: "Pet Index" },
   { href: "/hatch", zh: "造宠工坊", en: "Pet Workshop" },
-  { href: "/help", zh: "安装帮助", en: "Install Help" },
+  { href: "/install", zh: "安装", en: "Install" },
 ] as const;
 
 const FOOTER_ITEMS = [
   ...NAV_ITEMS,
-  { href: "/install", zh: "安装", en: "Install" },
+  { href: "/help", zh: "安装帮助", en: "Install Help" },
 ] as const;
 
 export { normalizeLanguage, t, withLanguage };
+
+function isNavItemActive(currentPath: string, itemHref: string) {
+  if (itemHref === "/pets" && currentPath.startsWith("/series/")) {
+    return true;
+  }
+
+  return currentPath === itemHref || currentPath.startsWith(`${itemHref}/`);
+}
 
 export function SiteHeader({ language, currentPath }: SiteHeaderProps) {
   return (
@@ -39,7 +52,6 @@ export function SiteHeader({ language, currentPath }: SiteHeaderProps) {
       <Link
         className={styles.brand}
         href={withLanguage("/", language)}
-        prefetch={false}
         aria-label={t(language, "Codex Pets 首页", "Codex Pets home")}
       >
         <span className={styles.brandMark} aria-hidden="true">
@@ -50,13 +62,12 @@ export function SiteHeader({ language, currentPath }: SiteHeaderProps) {
 
       <nav className={styles.primaryNav} aria-label={t(language, "主要导航", "Primary navigation")}>
         {NAV_ITEMS.map((item) => {
-          const active = currentPath === item.href || currentPath.startsWith(`${item.href}/`);
+          const active = isNavItemActive(currentPath, item.href);
 
           return (
             <Link
               className={active ? styles.navActive : undefined}
               href={withLanguage(item.href, language)}
-              prefetch={false}
               aria-current={active ? "page" : undefined}
               key={item.href}
             >
@@ -67,26 +78,7 @@ export function SiteHeader({ language, currentPath }: SiteHeaderProps) {
       </nav>
 
       <div className={styles.headerActions}>
-        <div className={styles.languageSwitch} aria-label={t(language, "选择语言", "Choose language")}>
-          <Link
-            className={language === "zh" ? styles.languageActive : undefined}
-            href={withLanguage(currentPath, "zh")}
-            prefetch={false}
-            lang="zh-CN"
-            aria-current={language === "zh" ? "true" : undefined}
-          >
-            中
-          </Link>
-          <Link
-            className={language === "en" ? styles.languageActive : undefined}
-            href={withLanguage(currentPath, "en")}
-            prefetch={false}
-            lang="en"
-            aria-current={language === "en" ? "true" : undefined}
-          >
-            EN
-          </Link>
-        </div>
+        <LanguageSwitch language={language} currentPath={currentPath} />
       </div>
     </header>
   );
@@ -123,6 +115,8 @@ export function PageShell({ language, currentPath, children }: PageShellProps) {
       <a className={styles.skipLink} href="#main-content">
         {t(language, "跳到主要内容", "Skip to main content")}
       </a>
+      <DocumentLanguage language={language} />
+      <HashScrollRestorer routeKey={`${currentPath}:${language}`} />
       <SiteHeader language={language} currentPath={currentPath} />
       {children}
       <SiteFooter language={language} />

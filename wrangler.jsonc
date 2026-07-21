@@ -10,7 +10,8 @@
   "no_bundle": true,
   "assets": {
     "directory": "./dist/client",
-    "binding": "ASSETS"
+    "binding": "ASSETS",
+    "run_worker_first": ["/downloads/*"]
   },
   "routes": [
     {

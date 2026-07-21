@@ -66,9 +66,9 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
         <nav className={styles.breadcrumbs} aria-label={t(language, "面包屑导航", "Breadcrumb")}>
           <Link href={withLanguage("/pets", language)}>{t(language, "宠物图鉴", "Pet index")}</Link>
           <span aria-hidden="true">/</span>
-          <Link href={withLanguage(`/pets/${pet.id}`, language)}>{name}</Link>
+          <Link href={withLanguage("/install", language)}>{t(language, "安装中心", "Install center")}</Link>
           <span aria-hidden="true">/</span>
-          <span aria-current="page">{t(language, "安装", "Install")}</span>
+          <span aria-current="page">{t(language, `安装 ${name}`, `Install ${name}`)}</span>
         </nav>
 
         <section className={styles.hero} style={accentStyle}>
@@ -142,6 +142,9 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
           </a>
           <Link href={withLanguage("/help", language)}>
             {t(language, "宠物没有出现？", "Pet not showing?")}
+          </Link>
+          <Link href={withLanguage(`/pets/${pet.id}`, language)}>
+            {t(language, "返回角色页", "Back to character")}
           </Link>
         </aside>
       </main>

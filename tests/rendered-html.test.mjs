@@ -8,7 +8,7 @@ async function render(path = "/") {
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
-    new Request(new URL(path, "http://localhost/"), {
+    new Request(new URL(path, "https://localhost/"), {
       headers: { accept: "text/html", host: "localhost" },
     }),
     {
@@ -21,6 +21,12 @@ async function render(path = "/") {
       passThroughOnException() {},
     },
   );
+}
+
+async function loadWorker() {
+  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
+  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}-${Math.random()}`);
+  return (await import(workerUrl.href)).default;
 }
 
 test("server-renders the complete Codex Pets landing page", async () => {
@@ -90,6 +96,9 @@ test("funnels both home editions from character choice to preview and local inst
   );
 
   assert.equal((enHtml.match(/<h1\b/g) ?? []).length, 1);
+  assert.match(enHtml, /<html[^>]*lang="en"/i);
+  assert.match(enHtml, /rel="canonical" href="https:\/\/aipetsagent\.com\/\?lang=en"/);
+  assert.match(enHtml, /hrefLang="zh-CN" href="https:\/\/aipetsagent\.com\/\?lang=zh"/);
   assert.match(
     enHtml,
     /Add an animated pet to Codex Desktop—preview it first, then install it locally\./,
@@ -141,6 +150,10 @@ test("gives every pet page a product profile and an on-demand action playground"
     response.headers.get("cloudflare-cdn-cache-control"),
     "public, max-age=300, stale-while-revalidate=86400, stale-if-error=86400",
   );
+  assert.equal(
+    response.headers.get("strict-transport-security"),
+    "max-age=31536000; includeSubDomains",
+  );
 
   const html = await response.text();
   assert.match(html, /选宠向导/);
@@ -174,6 +187,16 @@ test("renders a series page with independent character entries and shared story"
   assert.match(html, /适合想痛快开个头的时候/);
   assert.match(html, /横向滑动查看更多角色/);
   assert.doesNotMatch(html, /ROSTER|spritesheet\.webp/);
+  assert.match(
+    html,
+    /href="\/series\/golden-feather-constellation\?lang=en"/,
+    "the language switch should stay on the current series",
+  );
+  assert.match(
+    html,
+    /href="\/pets\?lang=zh"[^>]*aria-current="page"/,
+    "the parent pet index should remain active on a series page",
+  );
   assert.ok(
     html.indexOf('id="characters"') < html.indexOf('id="story"'),
     "character selection should appear before the long-form series story",
@@ -209,10 +232,107 @@ test("enables Worker response caching while keeping static assets asset-first", 
   ]);
 
   assert.match(wrangler, /"cache"\s*:\s*\{\s*"enabled"\s*:\s*true/s);
-  assert.doesNotMatch(wrangler, /run_worker_first/);
+  assert.match(wrangler, /"run_worker_first"\s*:\s*\["\/downloads\/\*"\]/);
+  assert.doesNotMatch(wrangler, /run_worker_first[^\n]*\/pets\/\*/);
+  assert.match(staticHeaders, /\/assets\/\*[\s\S]*max-age=31536000, immutable/);
+  assert.match(staticHeaders, /Strict-Transport-Security: max-age=31536000; includeSubDomains/);
   assert.match(staticHeaders, /\/pets\/\*/);
   assert.match(staticHeaders, /\/downloads\/\*/);
   assert.match(staticHeaders, /\/api\/v1\/\*/);
+});
+
+test("ships crawler metadata and restores deferred hash targets", async () => {
+  const [robots, navigationEnhancements, siteChrome] = await Promise.all([
+    readFile(new URL("../public/robots.txt", import.meta.url), "utf8"),
+    readFile(new URL("../app/_components/NavigationEnhancements.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/_components/SiteChrome.tsx", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(robots, /Sitemap: https:\/\/aipetsagent\.com\/sitemap\.xml/);
+  assert.match(navigationEnhancements, /window\.location\.hash/);
+  assert.match(navigationEnhancements, /window\.location\.search/);
+  assert.match(navigationEnhancements, /searchParams\.set\("lang", nextLanguage\)/);
+  assert.match(navigationEnhancements, /scrollIntoView/);
+  assert.match(navigationEnhancements, /focus\(\{ preventScroll: true \}\)/);
+  assert.match(navigationEnhancements, /hashchange/);
+  assert.match(siteChrome, /HashScrollRestorer/);
+  assert.match(siteChrome, /DocumentLanguage/);
+  assert.match(siteChrome, /\{ href: "\/install", zh: "安装", en: "Install" \}/);
+});
+
+test("redirects insecure traffic and supports resumable pet downloads", async () => {
+  const worker = await loadWorker();
+  const executionContext = {
+    waitUntil() {},
+    passThroughOnException() {},
+  };
+  const assetBytes = new Uint8Array(2048).map((_, index) => index % 251);
+  const env = {
+    ASSETS: {
+      fetch: async () =>
+        new Response(assetBytes, {
+          headers: {
+            "content-length": String(assetBytes.byteLength),
+            "content-type": "application/zip",
+          },
+        }),
+    },
+  };
+
+  const redirect = await worker.fetch(
+    new Request("http://aipetsagent.com/pets?lang=zh"),
+    env,
+    executionContext,
+  );
+  assert.equal(redirect.status, 308);
+  assert.equal(redirect.headers.get("location"), "https://aipetsagent.com/pets?lang=zh");
+
+  const localDevelopment = await worker.fetch(
+    new Request("http://localhost/pets?lang=zh", {
+      headers: { accept: "text/html", host: "localhost" },
+    }),
+    {
+      ...env,
+      ASSETS: {
+        fetch: async () => new Response("<!doctype html><html lang=\"zh-CN\"><body>local</body></html>", {
+          headers: { "content-type": "text/html" },
+        }),
+      },
+    },
+    executionContext,
+  );
+  assert.equal(localDevelopment.status, 200);
+
+  const partial = await worker.fetch(
+    new Request("https://aipetsagent.com/downloads/example.zip", {
+      headers: { range: "bytes=128-383" },
+    }),
+    env,
+    executionContext,
+  );
+  assert.equal(partial.status, 206);
+  assert.equal(partial.headers.get("accept-ranges"), "bytes");
+  assert.equal(partial.headers.get("cache-control"), "public, max-age=0, must-revalidate");
+  assert.equal(
+    partial.headers.get("cloudflare-cdn-cache-control"),
+    "public, max-age=300, must-revalidate",
+  );
+  assert.equal(partial.headers.get("content-range"), "bytes 128-383/2048");
+  assert.equal(partial.headers.get("content-length"), "256");
+  assert.equal((await partial.arrayBuffer()).byteLength, 256);
+
+  const changedArchive = await worker.fetch(
+    new Request("https://aipetsagent.com/downloads/example.zip", {
+      headers: {
+        range: "bytes=128-383",
+        "if-range": '"outdated-etag"',
+      },
+    }),
+    env,
+    executionContext,
+  );
+  assert.equal(changedArchive.status, 200);
+  assert.equal((await changedArchive.arrayBuffer()).byteLength, 2048);
 });
 
 test("offers manual and Codex-assisted installation with pinned safety boundaries", async () => {
