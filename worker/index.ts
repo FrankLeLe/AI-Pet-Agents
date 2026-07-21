@@ -144,12 +144,6 @@ async function localizeDocumentLanguage(response: Response, language: string): P
 const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
-    const isLocalHost = ["localhost", "127.0.0.1", "[::1]"].includes(url.hostname);
-
-    if (url.protocol === "http:" && !isLocalHost) {
-      url.protocol = "https:";
-      return Response.redirect(url.toString(), 308);
-    }
 
     if (
       url.pathname.startsWith("/downloads/") &&

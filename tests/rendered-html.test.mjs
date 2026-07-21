@@ -260,7 +260,7 @@ test("ships crawler metadata and restores deferred hash targets", async () => {
   assert.match(siteChrome, /\{ href: "\/install", zh: "安装", en: "Install" \}/);
 });
 
-test("redirects insecure traffic and supports resumable pet downloads", async () => {
+test("leaves HTTPS redirects to the edge and supports resumable pet downloads", async () => {
   const worker = await loadWorker();
   const executionContext = {
     waitUntil() {},
@@ -279,29 +279,13 @@ test("redirects insecure traffic and supports resumable pet downloads", async ()
     },
   };
 
-  const redirect = await worker.fetch(
+  const edgeManagedRedirect = await worker.fetch(
     new Request("http://aipetsagent.com/pets?lang=zh"),
     env,
     executionContext,
   );
-  assert.equal(redirect.status, 308);
-  assert.equal(redirect.headers.get("location"), "https://aipetsagent.com/pets?lang=zh");
-
-  const localDevelopment = await worker.fetch(
-    new Request("http://localhost/pets?lang=zh", {
-      headers: { accept: "text/html", host: "localhost" },
-    }),
-    {
-      ...env,
-      ASSETS: {
-        fetch: async () => new Response("<!doctype html><html lang=\"zh-CN\"><body>local</body></html>", {
-          headers: { "content-type": "text/html" },
-        }),
-      },
-    },
-    executionContext,
-  );
-  assert.equal(localDevelopment.status, 200);
+  assert.equal(edgeManagedRedirect.status, 200);
+  assert.equal(edgeManagedRedirect.headers.get("location"), null);
 
   const partial = await worker.fetch(
     new Request("https://aipetsagent.com/downloads/example.zip", {
