@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -35,6 +36,48 @@ type PetAccentStyle = CSSProperties & {
 
 export function generateStaticParams() {
   return PETS.map((pet) => ({ petId: pet.id }));
+}
+
+export async function generateMetadata({ params, searchParams }: PetInstallPageProps): Promise<Metadata> {
+  const [{ petId }, query] = await Promise.all([params, searchParams]);
+  const pet = getPetById(petId);
+  if (!pet || !getPetRelease(petId)) return {};
+
+  const language = normalizeLanguage(query.lang);
+  const name = getProductName(pet, language);
+  const title = t(language, `安装 ${name}｜Codex Pets`, `Install ${name} | Codex Pets`);
+  const description = t(
+    language,
+    `在 Codex 中安装「${name}」。复制安装指令或下载宠物 ZIP，选择适合你的安装方式。`,
+    `Bring ${name} into Codex. Copy the installation prompt or download the pet ZIP and choose the method that suits you.`,
+  );
+  const path = `/install/${pet.id}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: withLanguage(path, language),
+      languages: {
+        "zh-CN": withLanguage(path, "zh"),
+        en: withLanguage(path, "en"),
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: withLanguage(path, language),
+      locale: language === "en" ? "en_US" : "zh_CN",
+      alternateLocale: [language === "en" ? "zh_CN" : "en_US"],
+      images: [{ url: "/og-series.png", width: 1672, height: 941, alt: "Codex Pets desktop companions" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/og-series.png"],
+    },
+  };
 }
 
 export default async function PetInstallPage({ params, searchParams }: PetInstallPageProps) {

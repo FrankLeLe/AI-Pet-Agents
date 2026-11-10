@@ -552,6 +552,34 @@ test("leaves HTTPS redirects to the edge", async () => {
   );
 });
 
+test("localizes metadata and canonical URLs for every pet installation page", async () => {
+  const catalog = JSON.parse(await readFile(new URL("../public/api/v1/catalog.json", import.meta.url), "utf8"));
+  assert.equal(catalog.pets.length, 37);
+
+  for (const pet of catalog.pets) {
+    for (const language of ["zh", "en"]) {
+      const path = `/install/${pet.id}?lang=${language}`;
+      const response = await render(path);
+      assert.equal(response.status, 200, path);
+      const html = await response.text();
+      const heading = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)?.[1] ?? "";
+      const name = heading.replace(/<span\b[^>]*>[\s\S]*?<\/span>/, "").replace(/<[^>]*>/g, "").trim();
+      assert.ok(name.length > 0, `${path} must identify its pet`);
+      const title = language === "zh" ? `安装 ${name}｜Codex Pets` : `Install ${name} | Codex Pets`;
+      assert.ok(html.includes(`<title>${title}</title>`), `${path} must localize its pet-specific title`);
+      assert.ok(html.includes(`rel="canonical" href="https://aipetsagent.com${path}"`), `${path} must canonicalize to itself`);
+      for (const [locale, targetLanguage] of [["zh-CN", "zh"], ["en", "en"]]) {
+        assert.ok(html.includes(`hrefLang="${locale}" href="https://aipetsagent.com/install/${pet.id}?lang=${targetLanguage}"`), `${path} must link its ${locale} edition`);
+      }
+      assert.ok(html.includes(`property="og:title" content="${title}"`));
+      assert.ok(html.includes(`property="og:url" content="https://aipetsagent.com${path}"`));
+      assert.ok(html.includes(`property="og:locale" content="${language === "en" ? "en_US" : "zh_CN"}"`));
+      assert.ok(html.includes(`name="twitter:title" content="${title}"`));
+      assert.match(html, language === "en" ? /Copy the installation prompt or download the pet ZIP/ : /复制安装指令或下载宠物 ZIP/);
+    }
+  }
+});
+
 test("renders one primary Codex action and keeps manual ZIP installation secondary", async () => {
   const [response, englishResponse, installChoices] = await Promise.all([
     render("/install/aries-ramcrest-duck?lang=zh"),
