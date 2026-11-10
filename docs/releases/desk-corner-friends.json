@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "series": "desk-corner-friends",
+  "title": {
+    "zh": "桌角小居民",
+    "en": "Desk Corner Friends"
+  },
+  "createdAt": "2026-11-10T23:48:22.216183+00:00",
+  "status": "assets-accepted",
+  "artMethod": "Built-in imagegen canonical references and independent state strips; deterministic bundled extraction, registration, composition, validation and preview pipeline.",
+  "scope": "Three original characters, nine state animations and sixteen look directions each.",
+  "pets": [
+    {
+      "id": "foldlume",
+      "displayName": {
+        "zh": "折灯",
+        "en": "Foldlume"
+      },
+      "atlasSha256": "fdf5452efb8dadd05dc1455c5b3a61d62c728253ae8520248592263d2a35a249",
+      "atlasBytes": 1980820,
+      "zipSha256": "541de43ba9c7831642a6a0bcc6eb271f6ce40f48171c43251251707826a6dd75",
+      "zipBytes": 1976324,
+      "manifestSha256": "43edc72b7179942da6c1362e204611331bda54f76fb156f689fbf025c86270b3",
+      "previewSha256": "da060424e44d57256780b836e3815305bd80681e0c83eff0f4ce01f0b66aec23",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 197,
+        "jump_baselines": [
+          197,
+          187,
+          172,
+          184,
+          197
+        ],
+        "airborne_lift_pixels": 25,
+        "landing_delta_pixels": 0
+      },
+      "evidence": {
+        "quality": "work/desk-corner-friends/foldlume/qa/pet-quality.json",
+        "atlasValidation": "work/desk-corner-friends/foldlume/final/validation-extended.json",
+        "preflight": "work/desk-corner-friends/foldlume/qa/pets-preflight.json",
+        "blind": "work/desk-corner-friends/foldlume/qa/blind-validation.json",
+        "visual": "work/desk-corner-friends/foldlume/qa/final-visual-review.json"
+      }
+    },
+    {
+      "id": "eavie",
+      "displayName": {
+        "zh": "檐豆",
+        "en": "Eavie"
+      },
+      "atlasSha256": "7221f3fd22a3016de983b021801be2efc08d398b6d7509459d6a8b95c8cd553e",
+      "atlasBytes": 1815128,
+      "zipSha256": "52ded776286d3f9c373aa3e36bcdc4f94feaa0d6e55b6dd87e810821dd056b77",
+      "zipBytes": 1808042,
+      "manifestSha256": "7f0001e0f7776173aa15c2b53c5e177750382edb383e526fc37476c2bd84e688",
+      "previewSha256": "4b8300b4fa52ffe01fdf04cd9c986f6d4c51f280820897138dc7e2f6d13704e9",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 167,
+        "jump_baselines": [
+          168,
+          148,
+          120,
+          140,
+          168
+        ],
+        "airborne_lift_pixels": 48,
+        "landing_delta_pixels": 1
+      },
+      "evidence": {
+        "quality": "work/desk-corner-friends/eavie/qa/pet-quality-webp.json",
+        "atlasValidation": "work/desk-corner-friends/eavie/final/validation-webp.json",
+        "preflight": "work/desk-corner-friends/eavie/qa/pets-preflight-webp.json",
+        "blind": "work/desk-corner-friends/eavie/qa/blind-validation.json",
+        "visual": "work/desk-corner-friends/eavie/qa/final-visual-review.json"
+      }
+    },
+    {
+      "id": "mendmoth",
+      "displayName": {
+        "zh": "补补",
+        "en": "Mendmoth"
+      },
+      "atlasSha256": "96a800bfd9bda244bd73cabebcb15e52275c9447c8232f0d6297741376d750d9",
+      "atlasBytes": 1639994,
+      "zipSha256": "958e81d4d048f2b1b35ea5c9aedea50094f22dbd6a57f4879b395572835d9b66",
+      "zipBytes": 1635416,
+      "manifestSha256": "92bdbf2b0eeac36effc9c82c30fe1dbc2f43306147a9bbca723babc0a9a00076",
+      "previewSha256": "56e6042cfc5c691ac17a002884f23891f324318fbec3badf65170f24b506532b",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 190,
+        "jump_baselines": [
+          190,
+          166,
+          142,
+          164,
+          190
+        ],
+        "airborne_lift_pixels": 48,
+        "landing_delta_pixels": 0
+      },
+      "evidence": {
+        "quality": "work/desk-corner-friends/mendmoth/qa/pet-quality.json",
+        "atlasValidation": "work/desk-corner-friends/mendmoth/final/validation-extended.json",
+        "preflight": "work/desk-corner-friends/mendmoth/qa/mcp-preflight.json",
+        "blind": "work/desk-corner-friends/mendmoth/qa/blind-validation.json",
+        "visual": "work/desk-corner-friends/mendmoth/qa/final-visual-review.json"
+      }
+    }
+  ]
+}
