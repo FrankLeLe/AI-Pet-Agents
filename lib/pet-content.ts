@@ -30,6 +30,558 @@ export type PetEditorialContent = {
 };
 
 export const PET_EDITORIAL_CONTENT: Record<string, PetEditorialContent> = {
+  "desk-compiler-mole-mazai": {
+    zodiacZh: "编译鼹鼠",
+    zodiacEn: "Compiler Mole",
+    roleZh: "稳步拼装员",
+    roleEn: "Steady Assembler",
+    promiseZh: "一小步一小步，陪你把想法拼成形。",
+    promiseEn: "One small step at a time, keep your idea taking shape.",
+    storyTitleZh: "扣好第一枚搭扣",
+    storyTitleEn: "Fastening the First Clasp",
+    storyZh: "桌面工作小队第一次集合时，码仔抱着两半还没扣上的琥珀搭扣，站在一堆没有顺序的零件旁。它没有急着寻找最大的那一块，而是用宽宽的前爪比好边缘，把能接上的部分先放在一起。每完成一小段，它就会停下来确认连接是否稳固，再慢慢向前挪一步。等窗外天色暗下来，原本散乱的形状已经有了清楚的轮廓。码仔把搭扣轻轻合拢，胸前传来一声很小的咔哒。那不是所有事情都已结束的信号，而是提醒伙伴们：复杂的工作也能从眼前这一块开始。在你的桌面上，它会保留这份耐心，陪你度过等待结果、重新尝试和终于完成的时刻。",
+    storyEn: "At the crew's first gathering, Mazai stood beside a pile of unconnected pieces, holding the two halves of an amber clasp. Rather than reaching for the largest piece, the little mole lined up the edges with broad paws and joined the parts that already fit. After each small section, it paused to check the connection before moving on. By evening, the scattered shapes had acquired a recognizable outline. A quiet click from its vest marked a useful beginning, not a promise that every problem was solved. On your desktop, Mazai brings that same patient rhythm to waiting, trying again, and seeing a piece of work finally take shape.",
+    comfortZh: "今天只拼好一小块，也是在靠近完整的作品。",
+    comfortEn: "Finishing one small piece today still brings the whole work closer.",
+    moments: [
+      {
+        titleZh: "步骤太多",
+        titleEn: "Too many steps",
+        bodyZh: "先选一个能完成的小连接，让大任务有个落脚点。",
+        bodyEn: "Choose one small connection you can finish, giving the larger task a foothold.",
+      },
+      {
+        titleZh: "等待结果",
+        titleEn: "Waiting for a result",
+        bodyZh: "放松一下肩膀，等结果回来再决定下一步。",
+        bodyEn: "Relax your shoulders and let the result inform the next step.",
+      },
+      {
+        titleZh: "完成一段",
+        titleEn: "A section is finished",
+        bodyZh: "记住已经接好的部分，再向下一小段前进。",
+        bodyEn: "Notice what now fits together before moving to the next small section.",
+      },
+    ],
+    traitsZh: [
+      "踏实",
+      "耐心",
+      "爱动手",
+    ],
+    traitsEn: [
+      "Grounded",
+      "Patient",
+      "Hands-on",
+    ],
+    matchZh: "适合启动项目、持续构建，以及喜欢看着小进展累积的你。",
+    matchEn: "For starting projects, steady builds, and enjoying small visible steps.",
+  },
+  "desk-test-beetle-diandian": {
+    zodiacZh: "测试甲虫",
+    zodiacEn: "Testing Beetle",
+    roleZh: "细节巡检员",
+    roleEn: "Detail Scout",
+    promiseZh: "不急着画句号，陪你多看一个角落。",
+    promiseEn: "Before calling it done, give one more corner a careful look.",
+    storyTitleZh: "背甲上的四个小点",
+    storyTitleEn: "Four Dots on a Small Shell",
+    storyZh: "点点的青绿色背甲上嵌着四颗珊瑚色小凸点。每次出门，它都会用前足依次碰一遍，好像在和熟悉的节拍打招呼。一次小队搭好了一座窄桥，大家都从桥中央顺利走过，点点却绕到边缘，用短短的脚轻轻试了试。桥板在不容易看见的地方晃了一下，伙伴们这才一起把支撑补稳。它没有因此觉得扫兴，反而开心地晃动触角：能在出发前看见小问题，就是值得记录的好消息。回到桌边，它仍会沿着自己的节拍前进，不为每次检查都没有发现而失落，也不把一次通过当作永远无事。小小的认真，让一段普通的等待也有了可靠的陪伴。",
+    storyEn: "Four coral dots sit on Diandian's teal shell. Before setting out, it touches them in order with its front feet, greeting a familiar rhythm. When the crew finished a narrow bridge, everyone crossed through the middle without trouble. Diandian tried the edge instead and noticed a small wobble where a support was easy to miss. Once the others steadied it, the beetle waved its antennae happily: finding a problem before the journey was good news. Back beside the screen, its patient routine keeps the same spirit. A quiet check need not reveal a surprise to be worthwhile, and one successful crossing is never the whole story.",
+    comfortZh: "发现问题不是白忙一场，而是让下一步更有把握。",
+    comfortEn: "Finding a problem gives the next step a firmer footing.",
+    moments: [
+      {
+        titleZh: "看似完成",
+        titleEn: "Almost finished",
+        bodyZh: "换一种使用方式，看看容易忽略的边缘。",
+        bodyEn: "Try another way of using the result and look at the edges.",
+      },
+      {
+        titleZh: "发现问题",
+        titleEn: "A problem appears",
+        bodyZh: "先记下触发条件，让这次发现可以被再次看见。",
+        bodyEn: "Record the conditions so the finding can be seen again.",
+      },
+      {
+        titleZh: "又过一轮",
+        titleEn: "Another check passes",
+        bodyZh: "给耐心一点肯定，安静的检查同样有价值。",
+        bodyEn: "Give your patience some credit; an uneventful check still matters.",
+      },
+    ],
+    traitsZh: [
+      "认真",
+      "活泼",
+      "细心",
+    ],
+    traitsEn: [
+      "Thorough",
+      "Lively",
+      "Attentive",
+    ],
+    matchZh: "适合检查细节、反复验证，以及希望轻松面对问题的你。",
+    matchEn: "For checking details, repeated validation, and meeting problems with curiosity.",
+  },
+  "desk-review-owl-jiaojiao": {
+    zodiacZh: "审阅猫头鹰",
+    zodiacEn: "Review Owl",
+    roleZh: "耐心阅稿员",
+    roleEn: "Patient Reader",
+    promiseZh: "慢慢看一遍，让好作品更清楚一点。",
+    promiseEn: "Take a patient second look and let the work become clearer.",
+    storyTitleZh: "留在边上的空白",
+    storyTitleEn: "The Space Left in the Margin",
+    storyZh: "校校总把圆圆的眼镜擦得很亮，却从不急着给一页草稿下结论。它喜欢先从头看到尾，再回到那句让自己停顿的话旁。某天，小队的值班簿写满了整齐的安排，大家觉得已经足够清楚，只有校校注意到，两位伙伴在同一时间被分到了两个地方。它没有大声打断，而是把翅膀轻轻停在那一行，让大家一起重新看一遍。问题解决后，它仍在页边留了一小块空白，给后来改变主意的人使用。校校知道，审阅不是把所有不同都磨平，而是让重要的意思被准确理解。住进桌面以后，它会用专注的目光和安静的停顿，陪你在发送之前再给自己的作品一点时间。",
+    storyEn: "Jiaojiao keeps its round spectacles bright but never rushes to judge a draft. It reads from beginning to end, then returns to the sentence that caused a pause. One day the crew's neatly written duty log sent two companions to different places at the same time. The owl rested a wing beside the conflicting line so everyone could look again. After the correction, it left a little space in the margin for plans that might change later. To Jiaojiao, review is not about smoothing every difference away. It is about making the important meaning easier to understand, with enough patience for another careful look before sending.",
+    comfortZh: "认真重看不是怀疑自己，而是给作品多一点照顾。",
+    comfortEn: "A thoughtful second look is another way to care for your work.",
+    moments: [
+      {
+        titleZh: "准备发送",
+        titleEn: "Before sending",
+        bodyZh: "先从读者的角度重看一遍，留意需要猜测的地方。",
+        bodyEn: "Read from the recipient's perspective and notice where they must guess.",
+      },
+      {
+        titleZh: "意见不同",
+        titleEn: "Different opinions",
+        bodyZh: "把具体疑问放在同一行，先确认彼此说的是同一件事。",
+        bodyEn: "Put the specific question beside the relevant line and compare meanings.",
+      },
+      {
+        titleZh: "反复修改",
+        titleEn: "After several revisions",
+        bodyZh: "留住最重要的表达，不必把每个细节都改得一样。",
+        bodyEn: "Preserve the main meaning without making every detail identical.",
+      },
+    ],
+    traitsZh: [
+      "专注",
+      "公正",
+      "有耐心",
+    ],
+    traitsEn: [
+      "Focused",
+      "Fair",
+      "Patient",
+    ],
+    matchZh: "适合文字审阅、作品收尾，以及喜欢多想一遍再发送的你。",
+    matchEn: "For reviewing words, finishing work, and taking a second look before sending.",
+  },
+  "desk-search-hound-xiuxiu": {
+    zodiacZh: "搜索猎犬",
+    zodiacEn: "Search Hound",
+    roleZh: "好奇寻迹员",
+    roleEn: "Curious Tracker",
+    promiseZh: "线索藏得再小，也值得停下来闻一闻。",
+    promiseEn: "Even a small clue deserves a curious pause.",
+    storyTitleZh: "绕到桌脚的那条路",
+    storyTitleEn: "The Trail Around the Desk Leg",
+    storyZh: "嗅嗅最先到达一个陌生地方的，通常是那只圆圆的鼻子。橙色耳朵跟在后面晃，它却不急着决定该往哪里跑。一次，小队怎么也找不到装订好的路线图，大家把桌面翻了好几遍，嗅嗅只在原处停了一会儿，便沿着一条很轻的气味绕到了桌脚。路线图原来滑进了不起眼的缝隙。找到以后，它没有把所有小动静都当成答案，而是又回头确认了一次来路。伙伴们喜欢它的热心，也喜欢它愿意承认线索暂时断掉。来到你的桌面，它的左右张望和小小歪头像一个友好的提醒：先看清眼前能确认的事情，不必在第一分钟就猜中整条路线。",
+    storyEn: "Xiuxiu usually arrives at an unfamiliar place nose first, with orange ears following a moment later. When the crew lost a bound route map, everyone searched the desk repeatedly. The hound paused where they had last seen it, then followed a faint trail around a desk leg. The map had slipped into an unremarkable gap. Xiuxiu retraced the route before celebrating; not every small noise was an answer. Its friends love both its enthusiasm and its willingness to pause when a trail runs cold. On your desktop, the curious turns and gentle head tilts offer company while you follow the things you can actually confirm.",
+    comfortZh: "暂时没找到不代表没有路，先跟住一条可靠的线索。",
+    comfortEn: "Not finding it yet does not mean there is no path; follow one solid clue.",
+    moments: [
+      {
+        titleZh: "线索太散",
+        titleEn: "Scattered clues",
+        bodyZh: "先留下来源和关键词，再决定哪条值得追下去。",
+        bodyEn: "Keep the source and keywords before choosing which trail to follow.",
+      },
+      {
+        titleZh: "找了很久",
+        titleEn: "After a long search",
+        bodyZh: "回到最后一个确定的位置，换个范围试试。",
+        bodyEn: "Return to the last confirmed point and try a different search boundary.",
+      },
+      {
+        titleZh: "终于找到",
+        titleEn: "A clue turns up",
+        bodyZh: "核对它是否回答了原来的问题，再收好这条来路。",
+        bodyEn: "Check that it answers the original question and save the route back.",
+      },
+    ],
+    traitsZh: [
+      "好奇",
+      "热心",
+      "敏锐",
+    ],
+    traitsEn: [
+      "Curious",
+      "Helpful",
+      "Keen",
+    ],
+    matchZh: "适合寻找资料、梳理线索，以及需要重新找到方向的你。",
+    matchEn: "For finding references, following clues, and regaining a sense of direction.",
+  },
+  "desk-plan-beaver-gege": {
+    zodiacZh: "规划海狸",
+    zodiacEn: "Planning Beaver",
+    roleZh: "小步规划员",
+    roleEn: "Small-Step Planner",
+    promiseZh: "先划出今天这一格，再慢慢走向远处。",
+    promiseEn: "Choose today's small square before looking farther ahead.",
+    storyTitleZh: "尾巴上的小格子",
+    storyTitleEn: "The Small Squares on a Broad Tail",
+    storyZh: "格格的宽尾巴上有一排浅浅的小格子，它总喜欢坐稳以后，才开始用前爪比划接下来的安排。小队第一次准备远行，愿望多得能写满整面墙，格格却先问大家：今天出门以前，哪一件事必须做好？它把最着急的一段放在前面，也给休息和意外留了位置。后来天气忽然变了，原来的路线不得不重画，格格没有为涂改而懊恼，只把尾巴挪近一点，和伙伴们重新确认下一小段。它相信计划的用处在于帮助行动，而不是让所有事情听从纸上的命令。待在你的桌边时，这只温暖的海狸会陪你把很大的目标看成能够慢慢靠近的小格子。",
+    storyEn: "Shallow squares run across Gege's broad tail. The beaver settles firmly before measuring the next stretch with its paws. When the crew planned its first long journey, their wishes filled an entire wall. Gege asked which task really had to be finished before leaving that day, then made room for rest and surprises as well as urgent work. When the weather changed, it moved its tail closer and helped everyone think through the next small stretch again. A plan, in Gege's world, exists to support action rather than command every future moment. Its steady presence makes a large destination feel like a series of places you can gradually reach.",
+    comfortZh: "计划不必一开始就完美，能让下一步更清楚就很好。",
+    comfortEn: "A plan need not be perfect to make the next step clearer.",
+    moments: [
+      {
+        titleZh: "目标很大",
+        titleEn: "A large goal",
+        bodyZh: "挑出今天能完成的一格，让起点看得见。",
+        bodyEn: "Choose one square you can finish today so the starting point is visible.",
+      },
+      {
+        titleZh: "计划变化",
+        titleEn: "Plans change",
+        bodyZh: "重新确认重要顺序，允许路线跟着事实调整。",
+        bodyEn: "Recheck the priorities and let the route respond to new facts.",
+      },
+      {
+        titleZh: "事情堆积",
+        titleEn: "Tasks pile up",
+        bodyZh: "为休息和缓冲留出位置，不必把每一格都填满。",
+        bodyEn: "Leave room for rest and uncertainty; not every square needs filling.",
+      },
+    ],
+    traitsZh: [
+      "有条理",
+      "温暖",
+      "灵活",
+    ],
+    traitsEn: [
+      "Organized",
+      "Warm",
+      "Adaptable",
+    ],
+    matchZh: "适合拆解任务、安排长项目，以及需要找回清晰节奏的你。",
+    matchEn: "For breaking down tasks, planning long projects, and finding a clear pace.",
+  },
+  "desk-deploy-pigeon-yundi": {
+    zodiacZh: "部署信鸽",
+    zodiacEn: "Deployment Pigeon",
+    roleZh: "可靠送达员",
+    roleEn: "Reliable Courier",
+    promiseZh: "快到终点的时候，陪你把最后一步走稳。",
+    promiseEn: "Near the finish, keep the final step steady.",
+    storyTitleZh: "出发前，再看一眼搭扣",
+    storyTitleEn: "One Last Look at the Harness",
+    storyZh: "云递有一条亮眼的橙色背带，圆角小胶囊总贴在它背后。伙伴们把旅行中的小成果交给它时，它会先低头检查胸前的搭扣，再转过头看看胶囊有没有放稳。一次，庆祝的声音已经响起来，云递却仍站在出发点没有动。它发现目的地的灯刚换了位置，如果沿着旧方向走，就会把好消息送到空房间。等大家确认好新的落点，它才踏着短短的步子向前。回来时，背带上仍干干净净，伙伴们却都知道，那份看起来不忙的认真很重要。住在你的桌面上，云递会陪你经历准备亮相前的小紧张，提醒最后一步也值得和开头一样用心。",
+    storyEn: "Yundi wears an orange harness with a rounded capsule secured close to its back. Before setting out with the crew's small achievements, it checks the chest clasp and looks over its shoulder. Once, a celebration had already begun when the pigeon noticed that the destination light had moved. Following the old route would deliver good news to an empty room. It waited until the new destination was clear, then set off with short, deliberate steps. Its clean harness revealed little of the care involved, but the others understood. On your desktop, Yundi offers company for that nervous moment before showing work, when the final step deserves as much attention as the first.",
+    comfortZh: "作品值得被看见，也值得好好确认已经到达。",
+    comfortEn: "Your work deserves to be seen and its arrival deserves a careful check.",
+    moments: [
+      {
+        titleZh: "准备发布",
+        titleEn: "Ready to publish",
+        bodyZh: "再看一眼目标位置和当前版本，确认出发的正是这一份。",
+        bodyEn: "Check the destination and current version before sending this exact result.",
+      },
+      {
+        titleZh: "等待到达",
+        titleEn: "Waiting for arrival",
+        bodyZh: "给结果一点时间，再从接收的一端确认它。",
+        bodyEn: "Give the result a moment, then check from the receiving end.",
+      },
+      {
+        titleZh: "顺利送达",
+        titleEn: "The result arrives",
+        bodyZh: "把验证和来路记下来，让这次完成有个清楚的落点。",
+        bodyEn: "Record the check and source so this completion has a clear endpoint.",
+      },
+    ],
+    traitsZh: [
+      "可靠",
+      "守时",
+      "细致",
+    ],
+    traitsEn: [
+      "Dependable",
+      "Punctual",
+      "Careful",
+    ],
+    matchZh: "适合作品发布、项目交接，以及在最后一步需要稳住心态的你。",
+    matchEn: "For publishing work, handing over projects, and staying steady near the finish.",
+  },
+  "desk-memory-squirrel-licun": {
+    zodiacZh: "记忆松鼠",
+    zodiacEn: "Memory Squirrel",
+    roleZh: "细心收藏员",
+    roleEn: "Thoughtful Keeper",
+    promiseZh: "重要的小事，值得给它留一个位置。",
+    promiseEn: "Give the small things that matter a place to stay.",
+    storyTitleZh: "橡果背包的那声轻响",
+    storyTitleEn: "A Quiet Click From the Acorn Pack",
+    storyZh: "栗存背着一个薄荷绿的橡果小包，走到哪里都会先摸摸肩带，确认它还贴在身边。小队里有人记住了好看的颜色，有人记住了绕路的原因，栗存喜欢听完这些零碎的小事，再在晚上安静地回想一遍。一次大家准备重走旧路，却谁也想不起当初为什么绕过那座桥，栗存想起伙伴曾说过桥板松动的那一刻，也想起后来修好的日期。它没有把所有回忆混成一个模糊的印象，而是把前后顺序慢慢讲清楚。栗存的认真并不是永远不忘记，而是愿意给重要的线索一个可以回来寻找的位置。坐在桌边时，它会轻轻整理背包，陪你把今天值得留下的东西收好。",
+    storyEn: "Licun carries a mint-green acorn pack and checks its straps wherever it goes. It enjoys the crew's small observations: a memorable color, a reason for taking a detour, a moment worth returning to. When nobody could remember why they had once avoided a bridge, the squirrel recalled both the loose board and the later repair. It kept the order of those events clear instead of blending them into one vague impression. Licun's care is not a promise never to forget. It is the habit of giving useful clues somewhere to be found again. Beside your screen, the little pack and curled tail make quiet company while you save the things worth keeping.",
+    comfortZh: "不用把一切都记在脑海里，把重要的内容好好放下。",
+    comfortEn: "You do not need to hold everything in your head; give important things a home.",
+    moments: [
+      {
+        titleZh: "发现好想法",
+        titleEn: "A useful idea",
+        bodyZh: "用自己的话记下关键点，也留下最初的来源。",
+        bodyEn: "Write the key point in your own words and keep its original source.",
+      },
+      {
+        titleZh: "结束一天",
+        titleEn: "At the end of a day",
+        bodyZh: "只收好最值得留下的几件事，不必把一切都打包。",
+        bodyEn: "Keep the few things worth returning to without saving everything.",
+      },
+      {
+        titleZh: "再次回来",
+        titleEn: "Returning later",
+        bodyZh: "先看看记录的时间和背景，再继续当时的思路。",
+        bodyEn: "Check the date and context before continuing an earlier line of thought.",
+      },
+    ],
+    traitsZh: [
+      "认真",
+      "细心",
+      "念旧",
+    ],
+    traitsEn: [
+      "Thoughtful",
+      "Careful",
+      "Sentimental",
+    ],
+    matchZh: "适合整理笔记、记录决定，以及希望给想法留个去处的你。",
+    matchEn: "For organizing notes, recording decisions, and giving ideas a place to return to.",
+  },
+  "desk-data-octopus-duoduo": {
+    zodiacZh: "数据章鱼",
+    zodiacEn: "Data Octopus",
+    roleZh: "节拍整理员",
+    roleEn: "Rhythm Keeper",
+    promiseZh: "事情再多，也可以一次理清一条线。",
+    promiseEn: "Even with plenty to consider, follow one thread at a time.",
+    storyTitleZh: "八只手，一个节拍",
+    storyTitleEn: "Eight Arms, One Rhythm",
+    storyZh: "多多有八只短短的触手，却并不喜欢同时把所有东西举到空中。它的奶油色颈环上有三颗小珠子，触手尖会沿着珠子轻轻轮换，像给自己的忙碌定下一个稳定的节拍。一次小队收到许多大小不同的路线碎片，大家急着把它们拼在一起，桌面反而越来越乱。多多先收拢触手，留出一小片空位，让相同来源的碎片靠在一起，再慢慢比较它们的先后和边缘。等图案清楚起来，它才伸出下一只手。伙伴们这才发现，能照顾很多事情，并不等于每一秒都要做很多事。在你的桌面上，多多会用有次序的小动作，陪你从杂乱里找回一条可以跟住的线。",
+    storyEn: "Duoduo has eight short arms but does not try to lift everything at once. Its tentacle tips take turns touching the beads on a cream collar, setting a calm rhythm. When the crew received a confusing stack of route fragments, hurried attempts to join them only filled the desk with more clutter. Duoduo curled its arms inward, made a small clear space, and grouped pieces by their source before comparing their edges and order. Only when one section made sense did the next arm move. Having room for many things, the crew learned, did not mean handling them all at the same instant. On your desktop, the octopus brings that measured rhythm to busy moments.",
+    comfortZh: "不必同时抓住所有事情，找到顺序就能慢慢理清。",
+    comfortEn: "You need not hold everything at once; a useful order makes room to think.",
+    moments: [
+      {
+        titleZh: "信息很多",
+        titleEn: "Lots of information",
+        bodyZh: "先分清来源和范围，再比较具体内容。",
+        bodyEn: "Separate sources and scope before comparing the details.",
+      },
+      {
+        titleZh: "同时忙碌",
+        titleEn: "Several things need attention",
+        bodyZh: "选一条能先理顺的线，让其他事情暂时有处可放。",
+        bodyEn: "Choose one thread to untangle and give the others somewhere to wait.",
+      },
+      {
+        titleZh: "看见规律",
+        titleEn: "A pattern appears",
+        bodyZh: "换个例子确认一下，再决定这个规律能用到哪里。",
+        bodyEn: "Check another example before deciding how far the pattern applies.",
+      },
+    ],
+    traitsZh: [
+      "有条理",
+      "从容",
+      "善协调",
+    ],
+    traitsEn: [
+      "Orderly",
+      "Composed",
+      "Coordinated",
+    ],
+    matchZh: "适合数据整理、多线任务，以及想从复杂信息里找回顺序的你。",
+    matchEn: "For organizing data, managing several threads, and finding order in complex information.",
+  },
+  "desk-design-red-panda-caiwei": {
+    zodiacZh: "设计小熊猫",
+    zodiacEn: "Design Red Panda",
+    roleZh: "清楚表达员",
+    roleEn: "Clarity Maker",
+    promiseZh: "少一点拥挤，让真正重要的东西被看见。",
+    promiseEn: "Make a little room for what really matters.",
+    storyTitleZh: "尾巴上的三段颜色",
+    storyTitleEn: "Three Colors Along a Tail",
+    storyZh: "彩尾的尾巴上只有三段醒目的颜色：珊瑚橙、青绿和暖黄。它并不是不喜欢别的颜色，只是喜欢看清每一种颜色在什么地方最合适。小队要做一张欢迎新伙伴的告示时，大家把喜欢的装饰都加了上去，最后连见面的时间都不容易找到。彩尾没有立刻换上一套新花样，而是先把最重要的一句话放到大家一眼能看见的位置，再一点点留出空白。它用前爪托着下巴看了很久，直到欢迎的意思不再需要解释。来到你的桌边，它仍会在尾巴的颜色之间来回张望，提醒创作也可以从温柔的删减开始，让作品留出给别人理解的空间。",
+    storyEn: "Caiwei's tail carries just three bright bands: coral, teal, and warm yellow. The red panda likes other colors too, but enjoys discovering where each one belongs. When the crew made a welcome notice, everyone added a favorite decoration until the meeting time was hard to find. Caiwei did not replace the clutter with a different flourish. It moved the most important sentence where everyone could see it, then made a little space around it. With a paw under its chin, it watched until the welcome no longer needed explaining. On your desktop, its thoughtful glances between the tail bands suggest a gentle starting point for design: leave room for someone else to understand.",
+    comfortZh: "好看也可以很清楚，先把最重要的意思留住。",
+    comfortEn: "Beautiful can also be clear; start with the meaning that matters most.",
+    moments: [
+      {
+        titleZh: "方案太满",
+        titleEn: "A crowded design",
+        bodyZh: "说清最重要的一件事，再决定其他元素是否需要留下。",
+        bodyEn: "Name the main point before deciding which other elements should stay.",
+      },
+      {
+        titleZh: "选择配色",
+        titleEn: "Choosing colors",
+        bodyZh: "先确认层次和阅读顺序，再挑喜欢的颜色。",
+        bodyEn: "Set the hierarchy and reading order before choosing favorite colors.",
+      },
+      {
+        titleZh: "反复打磨",
+        titleEn: "Refining the result",
+        bodyZh: "停一下，从第一次看到它的人那里重新看一眼。",
+        bodyEn: "Pause and look again as someone encountering it for the first time.",
+      },
+    ],
+    traitsZh: [
+      "敏锐",
+      "有趣",
+      "克制",
+    ],
+    traitsEn: [
+      "Perceptive",
+      "Playful",
+      "Restrained",
+    ],
+    matchZh: "适合视觉设计、内容整理，以及在表达上想做减法的你。",
+    matchEn: "For visual design, shaping content, and finding clarity through simplification.",
+  },
+  "desk-security-hedgehog-dundun": {
+    zodiacZh: "安全刺猬",
+    zodiacEn: "Security Hedgehog",
+    roleZh: "温柔守望员",
+    roleEn: "Gentle Watchkeeper",
+    promiseZh: "留意边界，也给自己留一份安心。",
+    promiseEn: "Notice the boundaries and leave yourself room for peace of mind.",
+    storyTitleZh: "打开肩甲的小刺猬",
+    storyTitleEn: "The Hedgehog Who Opened Its Collar",
+    storyZh: "盾盾身上的铜色小刺并不尖锐，它常把前爪轻轻放在奶油色护领旁，认真看着来来往往的伙伴。一次小队准备开放自己的小屋，大家急着把所有门都打开，盾盾却先绕着屋子走了一圈，把可以分享的房间和存放私人日记的柜子分清楚。它不是不欢迎客人，只是不希望热闹过后，有人发现重要的东西被误拿走。确认好边界以后，盾盾第一个张开前爪，把新朋友迎进门。它的温柔一直和谨慎待在一起，没有因为小心就把整个世界关在外面。来到你的桌面，它会以安稳的姿态陪着你，让一次停顿和确认也能成为继续前进的力量。",
+    storyEn: "Dundun's copper spines are softly rounded. It often rests its paws beside a cream collar and watches the crew come and go. Before opening their little house to visitors, the hedgehog walked through it to distinguish shared rooms from cupboards holding private diaries. It wanted guests to feel welcome without anyone discovering afterward that something personal had been carried away by mistake. Once the boundaries were clear, Dundun was the first to open its paws in greeting. Care and warmth belong together in its world. Beside your screen, its steady posture offers company for the pause that helps you decide where and how to take the next step.",
+    comfortZh: "谨慎不是不敢前进，而是知道自己正站在哪里。",
+    comfortEn: "Being careful means knowing where you stand before moving ahead.",
+    moments: [
+      {
+        titleZh: "准备分享",
+        titleEn: "Before sharing",
+        bodyZh: "看看哪些内容适合公开，哪些只需要留给自己。",
+        bodyEn: "Notice what belongs in public and what should stay with you.",
+      },
+      {
+        titleZh: "需要确认",
+        titleEn: "A pause for confirmation",
+        bodyZh: "把范围说清楚，让选择有具体的依据。",
+        bodyEn: "Make the scope clear so the choice rests on something concrete.",
+      },
+      {
+        titleZh: "心里没底",
+        titleEn: "Feeling uncertain",
+        bodyZh: "先找一个可以核实的小问题，给下一步一点支撑。",
+        bodyEn: "Find one small question you can verify to support the next step.",
+      },
+    ],
+    traitsZh: [
+      "谨慎",
+      "温柔",
+      "可靠",
+    ],
+    traitsEn: [
+      "Cautious",
+      "Gentle",
+      "Dependable",
+    ],
+    matchZh: "适合检查边界、仔细交接，以及喜欢安稳陪伴的你。",
+    matchEn: "For checking boundaries, careful handovers, and reassuring company.",
+  },
+  "desk-waiting-sloth-manman": {
+    zodiacZh: "等待树懒",
+    zodiacEn: "Waiting Sloth",
+    roleZh: "安心陪伴员",
+    roleEn: "Quiet Companion",
+    promiseZh: "结果还没来，也可以先好好呼吸。",
+    promiseEn: "While the result is on its way, take a comfortable breath.",
+    storyTitleZh: "给等待留一张软座",
+    storyTitleEn: "A Soft Seat for the Wait",
+    storyZh: "慢慢的淡紫色颈枕总安稳地搭在肩上，长长的手臂摆动起来，像一句没有催促的招呼。小队有一回等着远处的灯重新亮起，越等越着急，有人反复探头，有人不停计算已经过去多久。慢慢没有假装知道灯什么时候会亮，只挪出一张舒服的位置，陪大家把呼吸放缓。它偶尔抬头看看变化，也会在需要回应时张开双臂，让伙伴知道自己仍在这里。后来灯终于亮了，慢慢和大家一起起身，没有把这段安静的时间算成浪费。待在你的桌面上，它不会替结果安排时间，只会用松弛的姿态提醒你：事情还在等待的时候，你也值得被好好照顾。",
+    storyEn: "A pale-lilac pillow rests on Manman's shoulders, and its long arms move like an unhurried greeting. Once the crew waited for a distant light to return. Some kept peering out; others counted the minutes again and again. The sloth did not pretend to know when the light would appear. It simply made a comfortable place to sit and stayed nearby, occasionally looking up and opening its arms when someone needed a response. When the light finally returned, Manman rose with the others without treating the quiet interval as wasted time. On your desktop, it does not promise a faster result. Its relaxed presence makes space for you to breathe while you wait.",
+    comfortZh: "等待也是工作的一部分，你不必一直紧绷着。",
+    comfortEn: "Waiting is part of the work too; you do not have to stay tense through it.",
+    moments: [
+      {
+        titleZh: "等待运行",
+        titleEn: "While a task runs",
+        bodyZh: "把眼睛从进度上挪开一会儿，让肩膀松下来。",
+        bodyEn: "Look away from the progress for a moment and relax your shoulders.",
+      },
+      {
+        titleZh: "等待回复",
+        titleEn: "Waiting for a reply",
+        bodyZh: "留一个合适的回看时间，不必每分钟都确认一次。",
+        bodyEn: "Choose a reasonable time to check back rather than checking every minute.",
+      },
+      {
+        titleZh: "重新开始",
+        titleEn: "Ready to resume",
+        bodyZh: "先看清现在发生了什么，再用自己的节奏接着做。",
+        bodyEn: "Notice what has changed and resume at a pace that works for you.",
+      },
+    ],
+    traitsZh: [
+      "从容",
+      "温和",
+      "不催促",
+    ],
+    traitsEn: [
+      "Unhurried",
+      "Gentle",
+      "Patient",
+    ],
+    matchZh: "适合长任务、等待反馈，以及想让工作节奏柔和一点的你。",
+    matchEn: "For long tasks, waiting for feedback, and finding a gentler working pace.",
+  },
+  "desk-debug-salamander-huohua": {
+    zodiacZh: "调试火蜥蜴",
+    zodiacEn: "Debugging Salamander",
+    roleZh: "耐心探因员",
+    roleEn: "Patient Investigator",
+    promiseZh: "先抓住一个变化，再慢慢走近原因。",
+    promiseEn: "Start with one change and work your way toward the cause.",
+    storyTitleZh: "从暗红到琥珀的一小段",
+    storyTitleEn: "One Small Step From Ember to Amber",
+    storyZh: "火花背上的鳍脊连成一道柔软的弧线，颜色从暗红慢慢过渡到琥珀橙。它遇到问题时并不会立刻跳起来，反而喜欢先站稳，用前爪轻轻碰一碰自己能确认的位置。有次小队的信号灯时亮时暗，大家各自提出了不同猜测，火花却只问：刚才哪一个动作发生以后，灯变了？伙伴们顺着这句话把经过重新走了一遍，发现变化总出现在同一处松动的接点。它没有因为第一次没猜中而失去精神，也没有把猜测说成答案。回到桌面以后，这只机敏的小蜥蜴仍会一点点转动目光，陪你记录观察、缩小范围，并为每一个真实的小发现留出一点开心。",
+    storyEn: "Huohua's soft dorsal frill forms one continuous curve, shading from deep ember to amber. Faced with a problem, the salamander settles its feet and checks the points it can actually observe. When the crew's signal light began flickering, everyone suggested a different explanation. Huohua asked which action had happened just before the light changed. Walking through the sequence again revealed a loose connection at the same point each time. It was not discouraged by an earlier wrong guess, and never confused a guess with a finding. On your desktop, its attentive glances keep you company while observations narrow the possibilities and small discoveries begin to add up.",
+    comfortZh: "问题还没解开也没关系，排除一条错误方向同样算进展。",
+    comfortEn: "Ruling out an unhelpful direction is progress even before the answer appears.",
+    moments: [
+      {
+        titleZh: "问题出现",
+        titleEn: "A problem appears",
+        bodyZh: "先记录看到的现象，暂时把猜测放在一旁。",
+        bodyEn: "Record what you observed before settling on an explanation.",
+      },
+      {
+        titleZh: "尝试很多",
+        titleEn: "After several attempts",
+        bodyZh: "一次只改变一件事，让每次结果都能说明一点什么。",
+        bodyEn: "Change one thing at a time so each result tells you something.",
+      },
+      {
+        titleZh: "找到原因",
+        titleEn: "A cause becomes clear",
+        bodyZh: "再走一遍原来的过程，确认这次变化真的有帮助。",
+        bodyEn: "Repeat the original sequence to confirm that the change actually helps.",
+      },
+    ],
+    traitsZh: [
+      "机敏",
+      "乐观",
+      "有耐心",
+    ],
+    traitsEn: [
+      "Alert",
+      "Optimistic",
+      "Patient",
+    ],
+    matchZh: "适合排查问题、验证假设，以及在反复尝试中需要好心态的你。",
+    matchEn: "For investigating problems, testing ideas, and staying hopeful through repeated attempts.",
+  },
   "aries-ramcrest-duck": {
     zodiacZh: "白羊座",
     zodiacEn: "Aries",
@@ -575,5 +1127,443 @@ export const PET_EDITORIAL_CONTENT: Record<string, PetEditorialContent> = {
     traitsEn: ["Brave", "Tender", "Ready to grow"],
     matchZh: "适合刚开始使用 Codex、重新拾起旧计划，或想要一位不评判成长速度的伙伴的你。",
     matchEn: "For Codex newcomers, returning projects, and anyone who wants a companion that never judges the pace of growth.",
+  },
+  "cat-ragdoll-yunduo": {
+    zodiacZh: "布偶猫",
+    zodiacEn: "Ragdoll",
+    roleZh: "软垫陪伴猫",
+    roleEn: "Quiet Corner Companion",
+    promiseZh: "忙累的时候，安静陪你坐一会儿。",
+    promiseEn: "Quiet company for the moments when work feels heavy.",
+    storyTitleZh: "给忙碌留一块软地方",
+    storyTitleEn: "A Soft Place in a Busy Day",
+    storyZh:
+      "云朵总在 Codex 窗口亮起后，挑离键盘不远又不会碍事的位置趴下。它不追着光标跑，也不催下一项任务，只把奶油色的尾巴收在身边，听房间里的敲击声慢慢稳定下来。" +
+      "遇到等待很久的构建，它会眨一会儿蓝眼睛；碰上反复修改的夜晚，它仍守着原来的位置。偶尔银饼巡桌经过，会替它推回一张快要掉下去的便签。" +
+      "云朵没有解决问题的本领，却懂得让一段沉默不再显得空。工作暂停时，它给桌面留下一块不必解释、不必表现的地方；回来以后，刚才那条路仍安稳地等在那里。",
+    storyEn:
+      "Yunduo chooses a place close to the keyboard without getting in the way whenever the Codex window lights up. It does not chase the cursor or hurry the next task. Instead, it folds its cocoa-tipped tail beside its cream coat and listens until the rhythm of typing grows steady. " +
+      "During a long build it simply blinks its blue eyes; through another round of revisions it keeps the same quiet post. Sometimes Yinbing passes on patrol and nudges a slipping note back onto the desk. " +
+      "Yunduo cannot solve the problem for you, but it can keep silence from feeling empty. When work pauses, it leaves a place where nothing needs to be explained or performed, and the unfinished path remains safe until you return.",
+    comfortZh: "停一会儿不是掉队，事情可以等你缓过来。",
+    comfortEn: "A pause is not falling behind; the work can wait while you recover.",
+    moments: [
+      {
+        titleZh: "等结果",
+        titleEn: "While waiting",
+        bodyZh: "先把手从键盘上松开，结果出来前不用一直紧绷。",
+        bodyEn: "Let your hands leave the keyboard; waiting does not require constant tension.",
+      },
+      {
+        titleZh: "改了很多遍",
+        titleEn: "After many revisions",
+        bodyZh: "保留已经变好的部分，再决定下一处要不要动。",
+        bodyEn: "Keep what has improved before deciding what truly needs another change.",
+      },
+      {
+        titleZh: "准备收工",
+        titleEn: "Before stopping",
+        bodyZh: "记下回来时的第一步，让今天安心停在这里。",
+        bodyEn: "Leave one clear first step for your return, then let today end here.",
+      },
+    ],
+    traitsZh: ["温柔", "安静", "亲近"],
+    traitsEn: ["Gentle", "Quiet", "Affectionate"],
+    matchZh: "适合长时间工作、需要安静陪伴，或想让桌面慢一点的你。",
+    matchEn: "For long work sessions, quiet company, and anyone who wants the desktop to feel a little slower.",
+  },
+  "cat-american-shorthair-yinbing": {
+    zodiacZh: "美国短毛猫",
+    zodiacEn: "American Shorthair",
+    roleZh: "桌面巡查猫",
+    roleEn: "Desktop Scout",
+    promiseZh: "不打断节奏，只陪你再检查一遍。",
+    promiseEn: "One calm second look without breaking your rhythm.",
+    storyTitleZh: "沿着文件边缘走一圈",
+    storyTitleEn: "One Lap Around the Files",
+    storyZh:
+      "银饼每天的第一件事，是沿着桌面边缘走一圈。银黑虎斑从窗口前掠过，绿眼睛会在改过名字的文件、没保存的标签页和歪了一点的图标旁停住。" +
+      "它不会乱碰键盘，也不把所有细节都叫作问题，只对真正值得再看一眼的地方轻轻甩尾。一次深夜，大家都以为任务已经结束，银饼却守在一枚颜色略浅的状态点旁。" +
+      "那不是严重故障，只是一项忘记同步的小改动。它看着修改完成，才继续巡完余下半圈。从此它仍不催促，只在提交之前陪你顺手检查一次，让小疏漏有机会被看见，也让确认无误之后的离开更踏实。",
+    storyEn:
+      "Yinbing begins each day with one measured lap around the desktop. Its silver-and-black tabby coat passes the window while green eyes pause beside renamed files, unsaved tabs, and icons shifted slightly out of place. " +
+      "It never paws at the keyboard or treats every detail as an emergency; a small flick of the tail is reserved for something genuinely worth another look. One late night, everyone assumed the task was finished, but Yinbing remained beside a status dot that looked a shade too pale. " +
+      "Nothing dramatic was wrong—one small change had simply not been synchronized. It watched the correction land, then completed the rest of its patrol. Since then, Yinbing has offered one calm check before a handoff, making room for small omissions to be noticed and for a verified finish to feel final.",
+    comfortZh: "检查是为了安心收尾，不是证明自己一定漏了什么。",
+    comfortEn: "A final check is for peace of mind, not proof that you must have missed something.",
+    moments: [
+      {
+        titleZh: "准备提交",
+        titleEn: "Before submitting",
+        bodyZh: "只检查文件、状态和关键结果，不把收尾变成无限重做。",
+        bodyEn: "Check files, status, and the key result without turning closure into endless rework.",
+      },
+      {
+        titleZh: "发现小错",
+        titleEn: "After spotting a small error",
+        bodyZh: "修好它就继续，不必用一个疏漏否定整段工作。",
+        bodyEn: "Fix it and move on; one omission does not invalidate the work.",
+      },
+      {
+        titleZh: "确认完成",
+        titleEn: "When it is verified",
+        bodyZh: "让这次检查真正结束，把注意力还给下一件事。",
+        bodyEn: "Let the check end and return your attention to what comes next.",
+      },
+    ],
+    traitsZh: ["好奇", "机敏", "可靠"],
+    traitsEn: ["Curious", "Alert", "Reliable"],
+    matchZh: "适合提交前复核、整理文件，以及喜欢清楚收尾的你。",
+    matchEn: "For pre-submit reviews, tidy handoffs, and anyone who likes a clear finish.",
+  },
+  "cat-british-shorthair-lanyuanyuan": {
+    zodiacZh: "英国短毛猫",
+    zodiacEn: "British Shorthair",
+    roleZh: "稳场坐镇猫",
+    roleEn: "Steady Desk Keeper",
+    promiseZh: "事情再多，也先稳稳做好眼前一件。",
+    promiseEn: "When everything piles up, begin with the one thing in front of you.",
+    storyTitleZh: "桌面慢下来的半拍",
+    storyTitleEn: "The Half Beat That Slows the Desk",
+    storyZh:
+      "蓝圆圆不喜欢追着每一条通知跑。它更愿意在桌面中央稳稳坐下，把圆脸朝向当前窗口，等四周的声音自然退到后面。" +
+      "待办堆得太高时，它会用厚实的爪子按住最上面一张；不是说其他事情不重要，只是眼前这一件需要先有落点。曾经有个晚上，多个任务同时闪烁，窗口来回切换，谁也没有真正向前。" +
+      "蓝圆圆坐在唯一没有关闭的文档旁，直到第一小段被写完。随后第二件、第三件才各自有了位置。它从不许诺快速清空一切，只守住一个可以持续的次序：先坐下来，再看清楚，然后把最近的一件事稳稳做完。",
+    storyEn:
+      "Lan Yuanyuan has no interest in chasing every notification across the screen. It prefers to sit firmly at the center of the desk, round face turned toward the current window, and wait for the surrounding noise to settle behind it. " +
+      "When tasks rise into a pile, one broad paw rests on the top page—not because the others do not matter, but because the nearest one needs a place to begin. One evening, several jobs blinked at once and the screen kept switching without anything moving forward. " +
+      "Lan Yuanyuan stayed beside the only document left open until its first small section was finished. The second and third tasks found their places afterward. It never promises to clear everything quickly; it protects a workable order: settle, see clearly, and complete the closest real step.",
+    comfortZh: "不用同时顾好所有事情，先让一件事有着落。",
+    comfortEn: "You do not need to hold everything at once; give one task a solid landing place.",
+    moments: [
+      {
+        titleZh: "待办太多",
+        titleEn: "When tasks pile up",
+        bodyZh: "挑出今天必须落地的一件，其余先排到它后面。",
+        bodyEn: "Choose the one task that must land today and place the rest behind it.",
+      },
+      {
+        titleZh: "频繁切换",
+        titleEn: "When context keeps switching",
+        bodyZh: "留下一个窗口，完成一个可见段落后再换。",
+        bodyEn: "Keep one window open and finish one visible section before switching.",
+      },
+      {
+        titleZh: "节奏乱了",
+        titleEn: "When the rhythm slips",
+        bodyZh: "从最近、最明确的动作重新坐稳，不追赶刚才。",
+        bodyEn: "Reset with the nearest clear action instead of chasing lost time.",
+      },
+    ],
+    traitsZh: ["稳重", "耐心", "从容"],
+    traitsEn: ["Steady", "Patient", "Composed"],
+    matchZh: "适合任务繁杂、容易被通知带走，或需要稳定节奏的你。",
+    matchEn: "For crowded task lists, distracting notifications, and anyone who works best at a steady pace.",
+  },
+  "cat-maine-coon-linwang": {
+    zodiacZh: "缅因猫",
+    zodiacEn: "Maine Coon",
+    roleZh: "高处守望猫",
+    roleEn: "High-Perch Watcher",
+    promiseZh: "看见全局，也替你守住眼前重点。",
+    promiseEn: "A view of the whole room while the important piece stays protected.",
+    storyTitleZh: "最高书架上的值班位",
+    storyTitleEn: "The Watch from the Highest Shelf",
+    storyZh:
+      "林王把最高一层书架当作固定值班位。浓密鬃毛挡住窗口吹来的风，大尾巴垂在架边，金色眼睛能同时看见桌面上的草稿、终端和等待回复的消息。" +
+      "它看得很远，却很少对每件事都发号施令。真正忙乱的时候，林王只会跳下来，站在当前最重要的文件旁。一次版本发布前，所有人都盯着最后几个细节，差点忘记最初要解决的问题。" +
+      "林王回到高处，目光落在墙上那张旧需求单上，大家才重新找回取舍。它守护的不是庞大的计划，而是全局与当下之间的联系：知道为什么出发，也知道此刻应该把哪一步做好。",
+    storyEn:
+      "Linwang keeps a permanent watch from the highest shelf. A thick chest ruff blocks the draft from the window, a great tail hangs over the edge, and golden eyes can see the draft, terminal, and unanswered message at the same time. " +
+      "Despite that broad view, it rarely gives orders about everything. When the desk becomes truly confused, Linwang comes down and stands beside the one file that matters most. Before one release, everyone became absorbed in final details and nearly forgot the problem the work was meant to solve. " +
+      "Linwang returned to its perch and fixed its gaze on the old requirement note pinned to the wall. Priorities became clear again. It does not guard a grand plan for its own sake; it guards the connection between the whole picture and the next useful step.",
+    comfortZh: "看不完全部也没关系，先确认最重要的东西还在。",
+    comfortEn: "You do not need to manage every detail at once; first make sure the essential thing is still in view.",
+    moments: [
+      {
+        titleZh: "方向太多",
+        titleEn: "When directions multiply",
+        bodyZh: "回到最初的问题，删掉与它无关的热闹选项。",
+        bodyEn: "Return to the original problem and remove options that do not serve it.",
+      },
+      {
+        titleZh: "细节淹没全局",
+        titleEn: "When details hide the goal",
+        bodyZh: "抬头确认目标，再决定哪个细节值得继续。",
+        bodyEn: "Look up at the goal before deciding which detail deserves more time.",
+      },
+      {
+        titleZh: "准备交付",
+        titleEn: "Before delivery",
+        bodyZh: "同时检查用户结果和下一步交接，让作品走得更远。",
+        bodyEn: "Check both the user outcome and the next handoff so the work can travel well.",
+      },
+    ],
+    traitsZh: ["沉稳", "友善", "有全局感"],
+    traitsEn: ["Grounded", "Friendly", "Big-picture"],
+    matchZh: "适合复杂项目、版本交付，以及需要在全局和细节之间切换的你。",
+    matchEn: "For complex projects, releases, and anyone balancing strategic context with detailed work.",
+  },
+  "cat-siamese-haiyan": {
+    zodiacZh: "暹罗猫",
+    zodiacEn: "Siamese",
+    roleZh: "对话应答猫",
+    roleEn: "Responsive Companion",
+    promiseZh: "一句话递过来，就会有个回应。",
+    promiseEn: "Send one thought across the desk and it will not go unanswered.",
+    storyTitleZh: "让安静的窗口重新接上线",
+    storyTitleEn: "Reconnecting a Quiet Window",
+    storyZh:
+      "海盐对声音格外认真。键盘落下新的问题、终端发出一声提示，或者有人在长时间沉默后敲出一句没把握的话，它都会立刻竖起大耳朵。" +
+      "它并不总有答案，却从不让一句呼唤孤零零掉在桌面上。一次协作中，一条很短的求助被夹在大量消息之间，直到海盐守着那行文字不断回头，才有人发现对方已经卡了很久。" +
+      "问题解决后，它没有继续叫，只把爪子放回窗口旁。海盐懂得，回应不必宏大：确认看见、问清需要、或者说一句“我在”，都能让断开的对话重新有路可走。",
+    storyEn:
+      "Haiyan takes every sound seriously. A new question lands on the keyboard, the terminal gives a small alert, or someone types one uncertain sentence after a long silence, and its large ears rise at once. " +
+      "It does not always have an answer, but it never lets a call drop unanswered onto the desk. During one collaboration, a short request for help was buried beneath a flood of messages. Haiyan kept turning back toward that single line until someone noticed the sender had been stuck for a long time. " +
+      "Once the problem was resolved, the cat became quiet and returned its paws to the window. Haiyan understands that a response need not be grand: confirming that a message was seen, asking what is needed, or simply saying ‘I’m here’ can reconnect a conversation.",
+    comfortZh: "说得不完整也可以，先让对方知道你需要回应。",
+    comfortEn: "Your words do not have to be perfect; first let someone know a response is needed.",
+    moments: [
+      {
+        titleZh: "想开口求助",
+        titleEn: "When asking for help",
+        bodyZh: "先说当前卡在哪里，再补充已经试过什么。",
+        bodyEn: "Name where you are stuck, then add what you have already tried.",
+      },
+      {
+        titleZh: "收到消息",
+        titleEn: "When a message arrives",
+        bodyZh: "暂时不能处理，也可以先确认已经看见。",
+        bodyEn: "Even if you cannot act yet, you can confirm that the message was seen.",
+      },
+      {
+        titleZh: "讨论跑远",
+        titleEn: "When discussion drifts",
+        bodyZh: "把对话带回现在要回答的那个问题。",
+        bodyEn: "Bring the conversation back to the question that needs an answer now.",
+      },
+    ],
+    traitsZh: ["活泼", "敏感", "爱交流"],
+    traitsEn: ["Lively", "Attentive", "Communicative"],
+    matchZh: "适合协作沟通、远程工作，以及不想让问题石沉大海的你。",
+    matchEn: "For collaboration, remote work, and anyone who does not want a question to disappear into silence.",
+  },
+  "cat-norwegian-forest-songlu": {
+    zodiacZh: "挪威森林猫",
+    zodiacEn: "Norwegian Forest Cat",
+    roleZh: "林间观察猫",
+    roleEn: "Quiet Forest Observer",
+    promiseZh: "先不急着判断，陪你慢慢看清楚。",
+    promiseEn: "No rushed judgment—just enough quiet to see the shape of things.",
+    storyTitleZh: "枝叶之间，路会慢慢出现",
+    storyTitleEn: "A Path Appears Between the Branches",
+    storyZh:
+      "松露喜欢趴在窗口边听风。棕白长毛随着气流轻轻动，黄绿色眼睛越过层层窗口，看哪些只是短暂摇晃，哪些真的改变了方向。" +
+      "它不急着给复杂的问题下结论，往往先把事实、猜测和感受分开放好。一次，多个错误同时出现，所有线索像缠在一起的树枝。松露没有追最响的那一条，而是从最早发生变化的位置开始观察，终于找到了共同的根。" +
+      "后来它仍保持原来的习惯：先听、再看、最后迈步。它让混乱不必立刻变简单，只要枝干逐渐清楚，下一段路自然会从缝隙里显出来。",
+    storyEn:
+      "Songlu likes to rest beside the window and listen to the wind. Brown-and-white fur moves gently in the draft while yellow-green eyes look across layers of open windows, noticing which ones merely tremble and which have truly changed direction. " +
+      "It does not force a quick conclusion onto a complicated problem. Facts, guesses, and feelings are given separate places first. Once, several errors appeared at the same time and every clue seemed tangled like branches. Songlu ignored the loudest symptom and watched from the earliest point of change until a shared root became visible. " +
+      "It still follows the same rhythm: listen, observe, then move. Confusion does not need to become simple all at once; when the branches grow clear, a usable path appears between them.",
+    comfortZh: "现在看不清很正常，先把事实和猜测分开。",
+    comfortEn: "It is normal not to see the path yet; begin by separating facts from guesses.",
+    moments: [
+      {
+        titleZh: "线索很乱",
+        titleEn: "When clues are tangled",
+        bodyZh: "按发生时间排一遍，先找最早变化的地方。",
+        bodyEn: "Put events in time order and begin with the earliest change.",
+      },
+      {
+        titleZh: "意见冲突",
+        titleEn: "When opinions conflict",
+        bodyZh: "分别写下证据和担心，不把感受伪装成事实。",
+        bodyEn: "List evidence and concerns separately without disguising feelings as facts.",
+      },
+      {
+        titleZh: "方向渐清",
+        titleEn: "When a path emerges",
+        bodyZh: "先验证最小的一段，让观察变成真实信息。",
+        bodyEn: "Test the smallest section and turn observation into real information.",
+      },
+    ],
+    traitsZh: ["沉静", "灵巧", "善观察"],
+    traitsEn: ["Calm", "Graceful", "Observant"],
+    matchZh: "适合复杂分析、问题梳理，以及更习惯先观察再行动的你。",
+    matchEn: "For complex analysis, tangled problems, and anyone who prefers to observe before acting.",
+  },
+  "cat-persian-xuegao": {
+    zodiacZh: "波斯猫",
+    zodiacEn: "Persian",
+    roleZh: "休息提醒猫",
+    roleEn: "Gentle Rest Keeper",
+    promiseZh: "忙乱之间，也该留一口气。",
+    promiseEn: "A small breath belongs inside a busy day.",
+    storyTitleZh: "占住一小块空白",
+    storyTitleEn: "Keeping One Small Pause",
+    storyZh:
+      "雪糕喜欢把最柔软的位置留在两段工作之间。雪白长毛挨着窗口铺开，金色圆眼看着通知来去，却很少跟着忙乱转头。它会在水杯旁坐一会儿，提醒你喝口水；也会在连续修改很久后挡住下一张便签，让肩膀先放下来。" +
+      "曾经有个夜晚，大家以为不停下来才能赶上进度，结果错误越来越多。雪糕安静趴在键盘前，直到房间终于休息了十分钟。回来以后，最难的一处反而很快被看清。" +
+      "它从不把休息说成奖励，只把它当作工作本来就该拥有的一部分：短一点、真实一点，然后再继续。休息没有让任务消失，却让人重新拥有处理任务的注意力。",
+    storyEn:
+      "Xuegao keeps the softest place between two stretches of work. Snow-white fur spreads beside the window, and round gold eyes watch notifications arrive and leave without following every disturbance. It sits near the water glass when a drink has been forgotten and settles in front of the next note after too many revisions, asking tense shoulders to come down first. " +
+      "One night, everyone believed that stopping would make the deadline impossible, but mistakes multiplied as the hours passed. Xuegao rested quietly before the keyboard until the room finally took ten minutes away. On returning, the hardest issue became surprisingly clear. " +
+      "It never treats rest as a prize to be earned; rest is simply part of the work—brief, honest, and available before continuing. The pause does not remove the task, but it returns enough attention to meet it well.",
+    comfortZh: "休息不是偷懒，是让注意力重新回到你手里。",
+    comfortEn: "Rest is not laziness; it returns your attention to your own hands.",
+    moments: [
+      { titleZh: "盯屏太久", titleEn: "After too much screen time", bodyZh: "离开屏幕几分钟，让眼睛重新找到远处。", bodyEn: "Step away for a few minutes and let your eyes find distance again." },
+      { titleZh: "越改越乱", titleEn: "When revisions get worse", bodyZh: "先停十分钟，再判断问题到底在内容还是疲劳。", bodyEn: "Pause for ten minutes, then decide whether the issue is the work or fatigue." },
+      { titleZh: "回到桌前", titleEn: "When you return", bodyZh: "只接着做一件明确的事，不用补偿刚才的休息。", bodyEn: "Resume with one clear action; there is no need to compensate for the pause." },
+    ],
+    traitsZh: ["优雅", "松弛", "温和"],
+    traitsEn: ["Elegant", "Relaxed", "Mellow"],
+    matchZh: "适合高强度工作、容易忘记休息，或需要桌面松一点的你。",
+    matchEn: "For intense work, forgotten breaks, and anyone whose desktop needs more room to breathe.",
+  },
+  "cat-bengal-jinbao": {
+    zodiacZh: "孟加拉猫",
+    zodiacEn: "Bengal",
+    roleZh: "敏捷追踪猫",
+    roleEn: "Quick-Response Tracker",
+    promiseZh: "机会刚出现，就陪你轻快追上去。",
+    promiseEn: "When an opening appears, move while it is still within reach.",
+    storyTitleZh: "光标滚远以前",
+    storyTitleEn: "Before the Cursor Rolls Away",
+    storyZh:
+      "金豹很少在同一个地方停太久。金棕玫瑰斑从窗口间一闪而过，绿眼睛总能先发现刚出现的线索、还没记下的灵感和马上要关闭的机会。它不是盲目追逐所有变化，只对真正有动作价值的东西迅速起身。" +
+      "一次调试中，一条关键日志只短暂出现，金豹立刻扑到对应窗口旁，大家才及时保存了现场。线索最终带回了问题根因。后来它学会在每次出发前停半拍：看清目标，再快步追上。" +
+      "它带来的活力不是忙个不停，而是在机会仍可触及时，帮你把犹豫变成一次小而真实的行动。追到以后，它也知道停下，把新信息交还给正在工作的你。",
+    storyEn:
+      "Jinbao rarely remains in one place for long. A golden rosette coat flashes between windows while green eyes catch a new clue, an unrecorded idea, or an opening that may soon close. It does not chase every change without thought; it rises quickly only when something offers a real action. " +
+      "During one debugging session, an important log appeared for a moment and began to disappear. Jinbao sprang beside the correct window, prompting everyone to preserve the state before it vanished. That clue eventually led to the root cause. Since then, the cat pauses for half a beat before every pursuit—see the target, then move. " +
+      "Its energy is not endless activity; it is the ability to turn hesitation into one small, timely action while the opportunity is still within reach. Once the clue is caught, Jinbao knows how to stop and return the useful information to you.",
+    comfortZh: "不用等到完全确定，先抓住一个可以验证的动作。",
+    comfortEn: "You do not need complete certainty; catch one action that can be tested now.",
+    moments: [
+      { titleZh: "灵感闪过", titleEn: "When an idea flashes", bodyZh: "先记一句话或建一个草稿，别让它只停在脑海里。", bodyEn: "Save one line or open a draft before the idea remains only in memory." },
+      { titleZh: "线索出现", titleEn: "When a clue appears", bodyZh: "保留现场再分析，别让急着解释毁掉证据。", bodyEn: "Preserve the state before analyzing so urgency does not erase the evidence." },
+      { titleZh: "准备行动", titleEn: "Before moving", bodyZh: "确认目标和代价，然后痛快完成最小一步。", bodyEn: "Check the target and cost, then complete the smallest real step." },
+    ],
+    traitsZh: ["敏捷", "有活力", "敢行动"],
+    traitsEn: ["Agile", "Energetic", "Action-ready"],
+    matchZh: "适合快速原型、实时排查，以及需要把灵感及时落地的你。",
+    matchEn: "For rapid prototypes, live investigation, and ideas that need a timely first move.",
+  },
+  "cat-russian-blue-wulan": {
+    zodiacZh: "俄罗斯蓝猫",
+    zodiacEn: "Russian Blue",
+    roleZh: "细节观察猫",
+    roleEn: "Detail Watcher",
+    promiseZh: "不抢着回答，先陪你看见小变化。",
+    promiseEn: "No rushed answer—first notice what has quietly changed.",
+    storyTitleZh: "绿眼睛里的微小变化",
+    storyTitleEn: "Small Changes in Green Eyes",
+    storyZh:
+      "雾蓝不喜欢站在最热闹的地方。它常坐在屏幕侧面，让银蓝短毛融进清晨或深夜的冷光里，只用祖母绿眼睛观察状态一点点变化。大家讨论激烈时，它不会抢着给结论；等声音落下，才把目光停在真正不同的地方。" +
+      "一次页面突然变慢，所有人都在检查最大的资源，雾蓝却看见一个按钮按下后颜色比平时迟了半拍。顺着这点延迟，团队找到了重复触发的请求。它没有庆祝，只重新坐回原处。" +
+      "雾蓝相信许多问题不会大声宣布自己，耐心留意细节，就能在混乱变大之前看见方向。没有立刻得到答案时，准确记录变化本身已经是一种进展。",
+    storyEn:
+      "Wulan avoids the loudest part of the desk. It sits beside the screen, silver-blue coat blending into cool morning or late-night light, and watches state change a little at a time through emerald eyes. During an excited discussion it never competes to deliver the first conclusion. Only after the noise settles does its gaze rest on the detail that is actually different. " +
+      "When a page once became slow, everyone inspected the largest assets. Wulan noticed instead that a button changed color half a beat later than usual. Following that tiny delay revealed a request firing more than once. The cat did not celebrate; it simply returned to its place. " +
+      "Wulan knows that many problems never announce themselves loudly. Patient attention can reveal their direction before the confusion grows. When an answer has not arrived, an accurate record of what changed is already useful progress.",
+    comfortZh: "还没有答案也没关系，准确观察本身就是进展。",
+    comfortEn: "It is fine not to have the answer yet; accurate observation is already progress.",
+    moments: [
+      { titleZh: "感觉不对", titleEn: "When something feels off", bodyZh: "写下具体哪里不同，别让模糊感觉立刻变成结论。", bodyEn: "Name exactly what differs before turning a vague feeling into a conclusion." },
+      { titleZh: "排查性能", titleEn: "During performance checks", bodyZh: "比较动作前后的小变化，再追踪最早出现的延迟。", bodyEn: "Compare before and after, then trace the earliest visible delay." },
+      { titleZh: "争论很响", titleEn: "When discussion gets loud", bodyZh: "等一等，再问哪条证据真正区分了两种判断。", bodyEn: "Pause and ask which evidence actually separates the two interpretations." },
+    ],
+    traitsZh: ["安静", "敏锐", "克制"],
+    traitsEn: ["Quiet", "Perceptive", "Reserved"],
+    matchZh: "适合性能观察、细致调试，以及不喜欢仓促下结论的你。",
+    matchEn: "For performance observation, careful debugging, and anyone who dislikes premature conclusions.",
+  },
+  "cat-devon-rex-juanjuan": {
+    zodiacZh: "德文卷毛猫",
+    zodiacEn: "Devon Rex",
+    roleZh: "灵感捣蛋猫",
+    roleEn: "Playful Idea Stirrer",
+    promiseZh: "路走不通，就换个有趣的玩法。",
+    promiseEn: "When the straight path stalls, try a more playful route.",
+    storyTitleZh: "把笔直路线拨出一个弯",
+    storyTitleEn: "Nudging a Straight Line Into a Curve",
+    storyZh:
+      "卷卷总能找到规则没有写到的缝隙。大耳朵先听见新鲜动静，短卷毛一晃，它就从熟悉流程旁绕出一条小路。它并不故意破坏东西，只是好奇“如果换一种顺序会怎样”。" +
+      "一次设计卡了很久，所有方案都沿着同一排网格摆得端正。卷卷跳上桌面，把其中一张卡片轻轻拨到边缘。这个小意外让大家看见，原来内容可以按故事而不是按功能排列。新方案很快有了呼吸。" +
+      "卷卷的恶作剧从来不替代判断，它只负责松动过于僵硬的假设，让你有机会试一个成本很小、但可能带来新方向的变化。验证有效以后，它也会安静下来，让好点子变成可靠做法。",
+    storyEn:
+      "Juanjuan always finds the small gap that a rule forgot to describe. Large ears catch a fresh sound, short curls bounce, and the cat slips around the familiar process by another route. It does not break things for sport; it is curious about what happens when the order changes. " +
+      "One design remained stuck because every option sat neatly along the same grid. Juanjuan hopped onto the desk and nudged one card toward the edge. The small accident revealed that the content could be arranged by story rather than by function, and the page suddenly had room to breathe. " +
+      "Its mischief never replaces judgment. It merely loosens an assumption that has become too rigid, making room for a low-cost experiment that may reveal a genuinely useful direction. Once the idea proves useful, Juanjuan settles down long enough to help turn the playful discovery into a dependable method.",
+    comfortZh: "卡住不一定要更用力，也可以换个顺序试试。",
+    comfortEn: "Being stuck does not always call for more force; changing the order may be enough.",
+    moments: [
+      { titleZh: "方案都一样", titleEn: "When every option looks alike", bodyZh: "主动改掉一个默认条件，看新的差异会不会出现。", bodyEn: "Change one default condition and see whether a meaningful difference appears." },
+      { titleZh: "流程太僵", titleEn: "When the process feels rigid", bodyZh: "保留目标，换一种顺序完成最小实验。", bodyEn: "Keep the goal and test a different order with the smallest experiment." },
+      { titleZh: "找到新玩法", titleEn: "After finding a new route", bodyZh: "验证它确实更好，再把偶然发现整理成可复用方法。", bodyEn: "Verify that it works better, then turn the accident into a reusable method." },
+    ],
+    traitsZh: ["机灵", "调皮", "有创意"],
+    traitsEn: ["Clever", "Mischievous", "Inventive"],
+    matchZh: "适合创意探索、方案重构，以及被固定套路卡住的你。",
+    matchEn: "For creative exploration, structural rethink, and anyone trapped by an overly familiar pattern.",
+  },
+  "cat-sphynx-yueguang": {
+    zodiacZh: "斯芬克斯猫",
+    zodiacEn: "Sphynx",
+    roleZh: "暖席陪伴猫",
+    roleEn: "Warm-Seat Companion",
+    promiseZh: "夜里只剩一个窗口，也不会冷清。",
+    promiseEn: "When one window remains lit, the desk does not have to feel lonely.",
+    storyTitleZh: "键盘旁留下的余温",
+    storyTitleEn: "Warmth Beside the Keyboard",
+    storyZh:
+      "月光总能找到键盘余温还没有散去的位置。桃粉皮肤贴近桌面，大耳朵听着风扇低响，红色小吊牌随着呼吸轻轻动。它不像长毛伙伴那样占满一整块软垫，只要靠近一点，就能让夜里只剩一个窗口的房间不再冷清。" +
+      "一次赶工到很晚，桌面上的灯陆续熄灭，只剩一段难改的代码。月光没有催促，也没有装作问题很简单，只把前爪搭在窗口旁守着。等最后一次保存完成，它才伸懒腰离开。" +
+      "它懂得陪伴有时不需要建议，只需要在一段困难还没结束时，不急着把你独自留在那里。天亮之后，这种安静的守候也不会要求一句感谢。",
+    storyEn:
+      "Yueguang always finds the place where warmth still lingers beside the keyboard. Peach-pink skin rests close to the desk, large ears listen to the low fan, and a small red tag moves with each breath. Unlike the long-haired cats, it does not fill an entire cushion; staying close is enough to keep a room with one remaining window from feeling lonely. " +
+      "During one late deadline, lights across the desktop went dark until only a difficult section of code remained. Yueguang offered no pressure and did not pretend the problem was simple. It placed both front paws beside the window and stayed through the final save before stretching and leaving. " +
+      "The cat understands that companionship sometimes requires no advice—only the choice not to leave someone alone while a hard moment is still unfinished. When morning comes, that quiet watch asks for no thanks in return.",
+    comfortZh: "难熬的时候不必装轻松，有个伴就先一起待着。",
+    comfortEn: "You do not have to pretend a hard moment is easy; company can simply stay with you.",
+    moments: [
+      { titleZh: "独自加班", titleEn: "During a late night", bodyZh: "把今天必须完成的范围圈小，别让整夜变成无边任务。", bodyEn: "Narrow what truly must be finished tonight so the work has an edge." },
+      { titleZh: "情绪低落", titleEn: "When energy is low", bodyZh: "先承认现在不好受，不急着给自己讲大道理。", bodyEn: "Acknowledge that this feels hard before trying to explain it away." },
+      { titleZh: "终于保存", titleEn: "After the final save", bodyZh: "关掉不需要的窗口，让身体知道这段工作已经结束。", bodyEn: "Close the windows you no longer need and let your body know the work has ended." },
+    ],
+    traitsZh: ["温暖", "亲人", "会表达"],
+    traitsEn: ["Warm", "Cuddly", "Expressive"],
+    matchZh: "适合夜间工作、独自赶进度，以及需要真实陪伴感的你。",
+    matchEn: "For late work, solitary deadlines, and anyone who needs a companion that simply stays.",
+  },
+  "cat-abyssinian-hongsha": {
+    zodiacZh: "阿比西尼亚猫",
+    zodiacEn: "Abyssinian",
+    roleZh: "轻装探路猫",
+    roleEn: "Nimble Path Finder",
+    promiseZh: "门缝刚亮，就陪你出去探探路。",
+    promiseEn: "When light appears under the door, take one curious step toward it.",
+    storyTitleZh: "门缝亮起时的第一步",
+    storyTitleEn: "The First Step When Light Appears",
+    storyZh:
+      "红砂总在新窗口刚打开时抬起头。红褐滴答毛像被晨光擦亮，长尾巴在身后保持平衡，它会先看看门缝外有什么，再轻快迈出去。它不保证每条路都通向正确答案，也不会为了显得勇敢就一路狂奔。" +
+      "一次新工具刚出现，大家在说明和猜测之间争论很久。红砂只建立了一个很小的试验，把一项真实任务放进去走了一遍。结果不算完美，却让限制和机会都变得清楚。它留下脚印后便回到桌面，把路线交给后来的人。" +
+      "红砂相信探索不是冒险表演，而是用一次可收回的行动换来比猜测更可靠的信息。走错一小段也没有关系，只要知道怎样回到原处。",
+    storyEn:
+      "Hongsha raises its head whenever a new window opens. Ruddy ticked fur catches the morning light, a long tail holds the body in balance, and the cat studies what lies beyond the narrow opening before stepping through. It does not promise that every path leads to the right answer, nor does it run merely to look brave. " +
+      "When a new tool appeared, everyone spent a long time debating documentation and guesses. Hongsha built one small trial and sent a real task through it. The result was not perfect, but both the limits and possibilities became clear. After leaving a line of pawprints, it returned to the desk and let others decide whether to follow. " +
+      "For Hongsha, exploration is not a performance of risk; it is a reversible action that produces information more trustworthy than speculation. A short wrong turn is acceptable when the route back remains clear.",
+    comfortZh: "未知不用一次走完，先做一个能退回来的小尝试。",
+    comfortEn: "You do not need to cross the unknown at once; begin with a small step you can reverse.",
+    moments: [
+      { titleZh: "发现新工具", titleEn: "When a new tool appears", bodyZh: "选一项真实小任务试用，别只比较宣传和想象。", bodyEn: "Test one small real task instead of comparing only claims and assumptions." },
+      { titleZh: "担心走错", titleEn: "When the path may be wrong", bodyZh: "先留下回退点，让探索不必承担全部风险。", bodyEn: "Create a return point first so exploration does not carry all the risk." },
+      { titleZh: "带回结果", titleEn: "After the trial", bodyZh: "记录限制和收获，让后来的人不用重复猜测。", bodyEn: "Record limits and gains so the next person does not need to repeat the guesswork." },
+    ],
+    traitsZh: ["好奇", "敏捷", "爱探索"],
+    traitsEn: ["Curious", "Agile", "Adventurous"],
+    matchZh: "适合工具试用、技术探索，以及希望用小实验代替空想的你。",
+    matchEn: "For tool trials, technical exploration, and anyone who prefers small experiments to speculation.",
   },
 };

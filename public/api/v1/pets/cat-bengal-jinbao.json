@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "cat-bengal-jinbao",
+    "category": "breed-cat",
+    "zodiacOrder": null,
+    "needs": [
+      "start",
+      "create"
+    ],
+    "displayName": {
+      "zh": "金豹",
+      "en": "Jinbao"
+    },
+    "badge": "BENGAL 08",
+    "accent": "#cf8d32",
+    "softAccent": "#f5e1bd",
+    "status": "published",
+    "tagline": {
+      "zh": "机会刚出现，就陪你轻快追上去。",
+      "en": "When an opening appears, move while it is still within reach."
+    },
+    "description": {
+      "zh": "不用等到完全确定，先抓住一个可以验证的动作。",
+      "en": "You do not need complete certainty; catch one action that can be tested now."
+    },
+    "personalityTags": [
+      {
+        "zh": "敏捷",
+        "en": "Agile"
+      },
+      {
+        "zh": "有活力",
+        "en": "Energetic"
+      },
+      {
+        "zh": "敢行动",
+        "en": "Action-ready"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "孟加拉猫",
+      "zodiacEn": "Bengal",
+      "roleZh": "敏捷追踪猫",
+      "roleEn": "Quick-Response Tracker",
+      "promiseZh": "机会刚出现，就陪你轻快追上去。",
+      "promiseEn": "When an opening appears, move while it is still within reach.",
+      "storyTitleZh": "光标滚远以前",
+      "storyTitleEn": "Before the Cursor Rolls Away",
+      "storyZh": "金豹很少在同一个地方停太久。金棕玫瑰斑从窗口间一闪而过，绿眼睛总能先发现刚出现的线索、还没记下的灵感和马上要关闭的机会。它不是盲目追逐所有变化，只对真正有动作价值的东西迅速起身。一次调试中，一条关键日志只短暂出现，金豹立刻扑到对应窗口旁，大家才及时保存了现场。线索最终带回了问题根因。后来它学会在每次出发前停半拍：看清目标，再快步追上。它带来的活力不是忙个不停，而是在机会仍可触及时，帮你把犹豫变成一次小而真实的行动。追到以后，它也知道停下，把新信息交还给正在工作的你。",
+      "storyEn": "Jinbao rarely remains in one place for long. A golden rosette coat flashes between windows while green eyes catch a new clue, an unrecorded idea, or an opening that may soon close. It does not chase every change without thought; it rises quickly only when something offers a real action. During one debugging session, an important log appeared for a moment and began to disappear. Jinbao sprang beside the correct window, prompting everyone to preserve the state before it vanished. That clue eventually led to the root cause. Since then, the cat pauses for half a beat before every pursuit—see the target, then move. Its energy is not endless activity; it is the ability to turn hesitation into one small, timely action while the opportunity is still within reach. Once the clue is caught, Jinbao knows how to stop and return the useful information to you.",
+      "comfortZh": "不用等到完全确定，先抓住一个可以验证的动作。",
+      "comfortEn": "You do not need complete certainty; catch one action that can be tested now.",
+      "moments": [
+        {
+          "titleZh": "灵感闪过",
+          "titleEn": "When an idea flashes",
+          "bodyZh": "先记一句话或建一个草稿，别让它只停在脑海里。",
+          "bodyEn": "Save one line or open a draft before the idea remains only in memory."
+        },
+        {
+          "titleZh": "线索出现",
+          "titleEn": "When a clue appears",
+          "bodyZh": "保留现场再分析，别让急着解释毁掉证据。",
+          "bodyEn": "Preserve the state before analyzing so urgency does not erase the evidence."
+        },
+        {
+          "titleZh": "准备行动",
+          "titleEn": "Before moving",
+          "bodyZh": "确认目标和代价，然后痛快完成最小一步。",
+          "bodyEn": "Check the target and cost, then complete the smallest real step."
+        }
+      ],
+      "traitsZh": [
+        "敏捷",
+        "有活力",
+        "敢行动"
+      ],
+      "traitsEn": [
+        "Agile",
+        "Energetic",
+        "Action-ready"
+      ],
+      "matchZh": "适合快速原型、实时排查，以及需要把灵感及时落地的你。",
+      "matchEn": "For rapid prototypes, live investigation, and ideas that need a timely first move."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/cat-bengal-jinbao/spritesheet.webp",
+    "previewPath": "/pets/cat-bengal-jinbao/preview.webp",
+    "manifestPath": "/pets/cat-bengal-jinbao/pet.json",
+    "downloadPath": "/downloads/cat-bengal-jinbao.zip",
+    "detailPath": "/api/v1/pets/cat-bengal-jinbao.json"
+  }
+}

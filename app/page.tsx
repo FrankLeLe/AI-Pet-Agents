@@ -6,8 +6,8 @@ import { getPetById } from "@/lib/pets";
 import {
   GUIDE_PET_ID,
   GUIDE_PROFILE,
+  getEditorialSeries,
   getSeriesPets,
-  PET_SERIES,
 } from "@/lib/series";
 
 type HomePageProps = {
@@ -36,19 +36,9 @@ export default async function Home({ searchParams }: HomePageProps) {
   const query = await searchParams;
   const language = normalizeLanguage(query.lang);
   const guide = getPetById(GUIDE_PET_ID);
-  const series = PET_SERIES[0];
+  const series = getEditorialSeries();
 
-  if (!guide) return null;
-
-  const members = getSeriesPets(series).map(({ pet, profile }) => ({
-    petId: pet.id,
-    name: profile.name[language],
-    zodiac: profile.zodiac[language],
-    role: profile.role[language],
-    specialty: profile.specialty[language],
-    accent: pet.accent,
-    softAccent: pet.softAccent,
-  }));
+  if (!guide || series.length === 0) return null;
 
   return (
     <PageShell language={language} currentPath="/">
@@ -61,20 +51,29 @@ export default async function Home({ searchParams }: HomePageProps) {
           role: GUIDE_PROFILE.role[language],
           description:
             language === "zh"
-              ? "它会带你逛遍所有系列；下方从“金羽十二星”开始。"
-              : "It helps you explore every collection. Golden Feather Constellation begins below.",
+              ? "任务很长的时候，它负责让等待没那么安静。"
+              : "When a task runs long, it makes the waiting feel less quiet.",
         }}
-        series={{
-          id: series.id,
-          name: series.name[language],
-          subtitle: series.subtitle[language],
-          status: series.status[language],
-          description: series.description[language],
-          storyTitle: series.storyTitle[language],
-          storyChapter: series.storyChapter[language],
-          story: series.story[language],
-          members,
-        }}
+        series={series.map((collection) => ({
+          id: collection.id,
+          name: collection.name[language],
+          subtitle: collection.subtitle[language],
+          status: collection.status[language],
+          description: collection.description[language],
+          selectionTitle: collection.selectionTitle[language],
+          storyTitle: collection.storyTitle[language],
+          storyChapter: collection.storyChapter[language],
+          story: collection.story[language],
+          members: getSeriesPets(collection).map(({ pet, profile }) => ({
+            petId: pet.id,
+            name: profile.name[language],
+            zodiac: profile.zodiac[language],
+            role: profile.role[language],
+            specialty: profile.specialty[language],
+            accent: pet.accent,
+            softAccent: pet.softAccent,
+          })),
+        }))}
       />
     </PageShell>
   );

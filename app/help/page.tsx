@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react";
+import { FileText } from "lucide-react";
 import Link from "next/link";
 
 import { SPRITE_FORMAT } from "@/lib/pets";
@@ -59,8 +59,8 @@ export default async function HelpPage({ searchParams }: HelpPageProps) {
       question: t(language, "素材可以重新分发或商用吗？", "Can I redistribute or commercialize the artwork?"),
       answer: t(
         language,
-        "网站代码与宠物素材采用不同授权。重新使用前请查看 GitHub 仓库中的 LICENSE 与 ASSET-LICENSE.md。",
-        "The site code and pet artwork use different terms. Review LICENSE and ASSET-LICENSE.md in the GitHub repository before reuse.",
+        "网站代码与宠物素材采用不同授权。重新使用前请查看本站的素材授权说明。",
+        "The site code and pet artwork use different terms. Review the asset license published on this site before reuse.",
       ),
     },
   ];
@@ -70,14 +70,16 @@ export default async function HelpPage({ searchParams }: HelpPageProps) {
       <main className={styles.mainContent} id="main-content">
         <section className={`${styles.pageIntro} ${styles.pageIntroYellow}`}>
           <div>
-            <p className={styles.eyebrow}>HELP / ONE-MINUTE CHECKLIST</p>
-            <h1>{t(language, "先别重装，通常只是差一层目录。", "DON'T REINSTALL YET. IT'S USUALLY ONE FOLDER DEEP.")}</h1>
+            <p className={styles.eyebrow}>HELP</p>
+            <h1 data-copy-role="page-headline">
+              {t(language, "宠物没出现？", "PET MISSING?")}
+            </h1>
           </div>
           <p>
             {t(
               language,
-              "从文件位置、重启方式到格式说明，答案都放在这里。先做最短的检查，再决定下一步。",
-              "File location, restart steps, and format details live here. Run the shortest checks first, then decide what to do next.",
+              "文件位置、目录层级和重启方式，最容易藏住问题。",
+              "File location, folder depth, and restart behavior are the most common places to look.",
             )}
           </p>
         </section>
@@ -85,7 +87,9 @@ export default async function HelpPage({ searchParams }: HelpPageProps) {
         <section className={styles.quickCheck} aria-labelledby="quick-check-title">
           <div>
             <p className={styles.eyebrow}>CHECK THESE FIRST</p>
-            <h2 id="quick-check-title">{t(language, "一分钟排查", "THE ONE-MINUTE CHECK")}</h2>
+            <h2 id="quick-check-title" data-copy-role="card-headline">
+              {t(language, "先检查三处", "CHECK 3")}
+            </h2>
           </div>
           <ol>
             <li>
@@ -109,8 +113,10 @@ export default async function HelpPage({ searchParams }: HelpPageProps) {
         <section className={styles.helpLayout} aria-labelledby="faq-title">
           <div className={styles.helpAside}>
             <p className={styles.eyebrow}>FAQ</p>
-            <h2 id="faq-title">{t(language, "问题不藏在盔甲里", "QUESTIONS, OUT IN THE OPEN")}</h2>
-            <p>{t(language, "点开问题就能看到答案，全部无需登录。", "Open any question for a direct answer. No login required.")}</p>
+            <h2 id="faq-title" data-copy-role="card-headline">
+              {t(language, "常见问题", "COMMON QUESTIONS")}
+            </h2>
+            <p>{t(language, "安装、路径和素材授权都可以在这里查到。", "Find answers about installation, paths, and artwork licenses.")}</p>
           </div>
           <div className={styles.faqList}>
             {faqs.map((item, index) => (
@@ -130,7 +136,9 @@ export default async function HelpPage({ searchParams }: HelpPageProps) {
         <section className={styles.formatSection} aria-labelledby="format-title">
           <div className={styles.formatCopy}>
             <p className={styles.eyebrow}>ADVANCED / PET FILES</p>
-            <h2 id="format-title">{t(language, "两个文件，结构要准确", "TWO FILES. ONE PRECISE STRUCTURE.")}</h2>
+            <h2 id="format-title" data-copy-role="card-headline">
+              {t(language, "文件结构", "PET FILES")}
+            </h2>
             <p>
               {t(
                 language,
@@ -164,16 +172,18 @@ export default async function HelpPage({ searchParams }: HelpPageProps) {
         <aside className={styles.repoStrip}>
           <div>
             <p className={styles.eyebrow}>SOURCE & LICENSES</p>
-            <h2>{t(language, "代码、宠物数据与授权说明都在 GitHub。", "CODE, PET DATA, AND LICENSE NOTES LIVE ON GITHUB.")}</h2>
+            <h2 data-copy-role="card-headline">
+              {t(language, "素材授权", "ASSET LICENSE")}
+            </h2>
           </div>
           <a
             className={styles.darkButton}
-            href="https://github.com/FrankLeLe/AI-Pet-Agents"
+            href="/licenses/ASSET-LICENSE.txt"
             target="_blank"
             rel="noreferrer"
           >
-            {t(language, "打开 GitHub", "Open GitHub")}
-            <ExternalLink aria-hidden="true" size={17} strokeWidth={3} />
+            {t(language, "查看授权说明", "View asset license")}
+            <FileText aria-hidden="true" size={17} strokeWidth={3} />
           </a>
         </aside>
       </main>

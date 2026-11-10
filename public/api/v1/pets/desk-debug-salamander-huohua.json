@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "desk-debug-salamander-huohua",
+    "category": "desktop-work",
+    "zodiacOrder": null,
+    "needs": [
+      "solve",
+      "start"
+    ],
+    "displayName": {
+      "zh": "火花 · 调试火蜥蜴",
+      "en": "Huohua · Debugging Salamander"
+    },
+    "badge": "DEBUG 12",
+    "accent": "#bd5945",
+    "softAccent": "#f3d9d1",
+    "status": "published",
+    "tagline": {
+      "zh": "先抓住一个变化，再慢慢走近原因。",
+      "en": "Start with one change and work your way toward the cause."
+    },
+    "description": {
+      "zh": "问题还没解开也没关系，排除一条错误方向同样算进展。",
+      "en": "Ruling out an unhelpful direction is progress even before the answer appears."
+    },
+    "personalityTags": [
+      {
+        "zh": "机敏",
+        "en": "Alert"
+      },
+      {
+        "zh": "乐观",
+        "en": "Optimistic"
+      },
+      {
+        "zh": "有耐心",
+        "en": "Patient"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "调试火蜥蜴",
+      "zodiacEn": "Debugging Salamander",
+      "roleZh": "耐心探因员",
+      "roleEn": "Patient Investigator",
+      "promiseZh": "先抓住一个变化，再慢慢走近原因。",
+      "promiseEn": "Start with one change and work your way toward the cause.",
+      "storyTitleZh": "从暗红到琥珀的一小段",
+      "storyTitleEn": "One Small Step From Ember to Amber",
+      "storyZh": "火花背上的鳍脊连成一道柔软的弧线，颜色从暗红慢慢过渡到琥珀橙。它遇到问题时并不会立刻跳起来，反而喜欢先站稳，用前爪轻轻碰一碰自己能确认的位置。有次小队的信号灯时亮时暗，大家各自提出了不同猜测，火花却只问：刚才哪一个动作发生以后，灯变了？伙伴们顺着这句话把经过重新走了一遍，发现变化总出现在同一处松动的接点。它没有因为第一次没猜中而失去精神，也没有把猜测说成答案。回到桌面以后，这只机敏的小蜥蜴仍会一点点转动目光，陪你记录观察、缩小范围，并为每一个真实的小发现留出一点开心。",
+      "storyEn": "Huohua's soft dorsal frill forms one continuous curve, shading from deep ember to amber. Faced with a problem, the salamander settles its feet and checks the points it can actually observe. When the crew's signal light began flickering, everyone suggested a different explanation. Huohua asked which action had happened just before the light changed. Walking through the sequence again revealed a loose connection at the same point each time. It was not discouraged by an earlier wrong guess, and never confused a guess with a finding. On your desktop, its attentive glances keep you company while observations narrow the possibilities and small discoveries begin to add up.",
+      "comfortZh": "问题还没解开也没关系，排除一条错误方向同样算进展。",
+      "comfortEn": "Ruling out an unhelpful direction is progress even before the answer appears.",
+      "moments": [
+        {
+          "titleZh": "问题出现",
+          "titleEn": "A problem appears",
+          "bodyZh": "先记录看到的现象，暂时把猜测放在一旁。",
+          "bodyEn": "Record what you observed before settling on an explanation."
+        },
+        {
+          "titleZh": "尝试很多",
+          "titleEn": "After several attempts",
+          "bodyZh": "一次只改变一件事，让每次结果都能说明一点什么。",
+          "bodyEn": "Change one thing at a time so each result tells you something."
+        },
+        {
+          "titleZh": "找到原因",
+          "titleEn": "A cause becomes clear",
+          "bodyZh": "再走一遍原来的过程，确认这次变化真的有帮助。",
+          "bodyEn": "Repeat the original sequence to confirm that the change actually helps."
+        }
+      ],
+      "traitsZh": [
+        "机敏",
+        "乐观",
+        "有耐心"
+      ],
+      "traitsEn": [
+        "Alert",
+        "Optimistic",
+        "Patient"
+      ],
+      "matchZh": "适合排查问题、验证假设，以及在反复尝试中需要好心态的你。",
+      "matchEn": "For investigating problems, testing ideas, and staying hopeful through repeated attempts."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/desk-debug-salamander-huohua/spritesheet.webp",
+    "previewPath": "/pets/desk-debug-salamander-huohua/preview.webp",
+    "manifestPath": "/pets/desk-debug-salamander-huohua/pet.json",
+    "downloadPath": "/downloads/desk-debug-salamander-huohua.zip",
+    "detailPath": "/api/v1/pets/desk-debug-salamander-huohua.json"
+  }
+}

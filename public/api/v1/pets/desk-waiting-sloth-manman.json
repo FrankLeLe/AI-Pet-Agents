@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "desk-waiting-sloth-manman",
+    "category": "desktop-work",
+    "zodiacOrder": null,
+    "needs": [
+      "comfort",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "慢慢 · 等待树懒",
+      "en": "Manman · Waiting Sloth"
+    },
+    "badge": "WAIT 11",
+    "accent": "#8b9274",
+    "softAccent": "#e7eadc",
+    "status": "published",
+    "tagline": {
+      "zh": "结果还没来，也可以先好好呼吸。",
+      "en": "While the result is on its way, take a comfortable breath."
+    },
+    "description": {
+      "zh": "等待也是工作的一部分，你不必一直紧绷着。",
+      "en": "Waiting is part of the work too; you do not have to stay tense through it."
+    },
+    "personalityTags": [
+      {
+        "zh": "从容",
+        "en": "Unhurried"
+      },
+      {
+        "zh": "温和",
+        "en": "Gentle"
+      },
+      {
+        "zh": "不催促",
+        "en": "Patient"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "等待树懒",
+      "zodiacEn": "Waiting Sloth",
+      "roleZh": "安心陪伴员",
+      "roleEn": "Quiet Companion",
+      "promiseZh": "结果还没来，也可以先好好呼吸。",
+      "promiseEn": "While the result is on its way, take a comfortable breath.",
+      "storyTitleZh": "给等待留一张软座",
+      "storyTitleEn": "A Soft Seat for the Wait",
+      "storyZh": "慢慢的淡紫色颈枕总安稳地搭在肩上，长长的手臂摆动起来，像一句没有催促的招呼。小队有一回等着远处的灯重新亮起，越等越着急，有人反复探头，有人不停计算已经过去多久。慢慢没有假装知道灯什么时候会亮，只挪出一张舒服的位置，陪大家把呼吸放缓。它偶尔抬头看看变化，也会在需要回应时张开双臂，让伙伴知道自己仍在这里。后来灯终于亮了，慢慢和大家一起起身，没有把这段安静的时间算成浪费。待在你的桌面上，它不会替结果安排时间，只会用松弛的姿态提醒你：事情还在等待的时候，你也值得被好好照顾。",
+      "storyEn": "A pale-lilac pillow rests on Manman's shoulders, and its long arms move like an unhurried greeting. Once the crew waited for a distant light to return. Some kept peering out; others counted the minutes again and again. The sloth did not pretend to know when the light would appear. It simply made a comfortable place to sit and stayed nearby, occasionally looking up and opening its arms when someone needed a response. When the light finally returned, Manman rose with the others without treating the quiet interval as wasted time. On your desktop, it does not promise a faster result. Its relaxed presence makes space for you to breathe while you wait.",
+      "comfortZh": "等待也是工作的一部分，你不必一直紧绷着。",
+      "comfortEn": "Waiting is part of the work too; you do not have to stay tense through it.",
+      "moments": [
+        {
+          "titleZh": "等待运行",
+          "titleEn": "While a task runs",
+          "bodyZh": "把眼睛从进度上挪开一会儿，让肩膀松下来。",
+          "bodyEn": "Look away from the progress for a moment and relax your shoulders."
+        },
+        {
+          "titleZh": "等待回复",
+          "titleEn": "Waiting for a reply",
+          "bodyZh": "留一个合适的回看时间，不必每分钟都确认一次。",
+          "bodyEn": "Choose a reasonable time to check back rather than checking every minute."
+        },
+        {
+          "titleZh": "重新开始",
+          "titleEn": "Ready to resume",
+          "bodyZh": "先看清现在发生了什么，再用自己的节奏接着做。",
+          "bodyEn": "Notice what has changed and resume at a pace that works for you."
+        }
+      ],
+      "traitsZh": [
+        "从容",
+        "温和",
+        "不催促"
+      ],
+      "traitsEn": [
+        "Unhurried",
+        "Gentle",
+        "Patient"
+      ],
+      "matchZh": "适合长任务、等待反馈，以及想让工作节奏柔和一点的你。",
+      "matchEn": "For long tasks, waiting for feedback, and finding a gentler working pace."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/desk-waiting-sloth-manman/spritesheet.webp",
+    "previewPath": "/pets/desk-waiting-sloth-manman/preview.webp",
+    "manifestPath": "/pets/desk-waiting-sloth-manman/pet.json",
+    "downloadPath": "/downloads/desk-waiting-sloth-manman.zip",
+    "detailPath": "/api/v1/pets/desk-waiting-sloth-manman.json"
+  }
+}

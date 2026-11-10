@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "desk-test-beetle-diandian",
+    "category": "desktop-work",
+    "zodiacOrder": null,
+    "needs": [
+      "solve",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "点点 · 测试甲虫",
+      "en": "Diandian · Testing Beetle"
+    },
+    "badge": "TEST 02",
+    "accent": "#168b90",
+    "softAccent": "#d4eeee",
+    "status": "published",
+    "tagline": {
+      "zh": "不急着画句号，陪你多看一个角落。",
+      "en": "Before calling it done, give one more corner a careful look."
+    },
+    "description": {
+      "zh": "发现问题不是白忙一场，而是让下一步更有把握。",
+      "en": "Finding a problem gives the next step a firmer footing."
+    },
+    "personalityTags": [
+      {
+        "zh": "认真",
+        "en": "Thorough"
+      },
+      {
+        "zh": "活泼",
+        "en": "Lively"
+      },
+      {
+        "zh": "细心",
+        "en": "Attentive"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "测试甲虫",
+      "zodiacEn": "Testing Beetle",
+      "roleZh": "细节巡检员",
+      "roleEn": "Detail Scout",
+      "promiseZh": "不急着画句号，陪你多看一个角落。",
+      "promiseEn": "Before calling it done, give one more corner a careful look.",
+      "storyTitleZh": "背甲上的四个小点",
+      "storyTitleEn": "Four Dots on a Small Shell",
+      "storyZh": "点点的青绿色背甲上嵌着四颗珊瑚色小凸点。每次出门，它都会用前足依次碰一遍，好像在和熟悉的节拍打招呼。一次小队搭好了一座窄桥，大家都从桥中央顺利走过，点点却绕到边缘，用短短的脚轻轻试了试。桥板在不容易看见的地方晃了一下，伙伴们这才一起把支撑补稳。它没有因此觉得扫兴，反而开心地晃动触角：能在出发前看见小问题，就是值得记录的好消息。回到桌边，它仍会沿着自己的节拍前进，不为每次检查都没有发现而失落，也不把一次通过当作永远无事。小小的认真，让一段普通的等待也有了可靠的陪伴。",
+      "storyEn": "Four coral dots sit on Diandian's teal shell. Before setting out, it touches them in order with its front feet, greeting a familiar rhythm. When the crew finished a narrow bridge, everyone crossed through the middle without trouble. Diandian tried the edge instead and noticed a small wobble where a support was easy to miss. Once the others steadied it, the beetle waved its antennae happily: finding a problem before the journey was good news. Back beside the screen, its patient routine keeps the same spirit. A quiet check need not reveal a surprise to be worthwhile, and one successful crossing is never the whole story.",
+      "comfortZh": "发现问题不是白忙一场，而是让下一步更有把握。",
+      "comfortEn": "Finding a problem gives the next step a firmer footing.",
+      "moments": [
+        {
+          "titleZh": "看似完成",
+          "titleEn": "Almost finished",
+          "bodyZh": "换一种使用方式，看看容易忽略的边缘。",
+          "bodyEn": "Try another way of using the result and look at the edges."
+        },
+        {
+          "titleZh": "发现问题",
+          "titleEn": "A problem appears",
+          "bodyZh": "先记下触发条件，让这次发现可以被再次看见。",
+          "bodyEn": "Record the conditions so the finding can be seen again."
+        },
+        {
+          "titleZh": "又过一轮",
+          "titleEn": "Another check passes",
+          "bodyZh": "给耐心一点肯定，安静的检查同样有价值。",
+          "bodyEn": "Give your patience some credit; an uneventful check still matters."
+        }
+      ],
+      "traitsZh": [
+        "认真",
+        "活泼",
+        "细心"
+      ],
+      "traitsEn": [
+        "Thorough",
+        "Lively",
+        "Attentive"
+      ],
+      "matchZh": "适合检查细节、反复验证，以及希望轻松面对问题的你。",
+      "matchEn": "For checking details, repeated validation, and meeting problems with curiosity."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/desk-test-beetle-diandian/spritesheet.webp",
+    "previewPath": "/pets/desk-test-beetle-diandian/preview.webp",
+    "manifestPath": "/pets/desk-test-beetle-diandian/pet.json",
+    "downloadPath": "/downloads/desk-test-beetle-diandian.zip",
+    "detailPath": "/api/v1/pets/desk-test-beetle-diandian.json"
+  }
+}

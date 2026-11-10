@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "cat-american-shorthair-yinbing",
+    "category": "breed-cat",
+    "zodiacOrder": null,
+    "needs": [
+      "solve",
+      "start"
+    ],
+    "displayName": {
+      "zh": "银饼",
+      "en": "Yinbing"
+    },
+    "badge": "AMERICAN SHORTHAIR 02",
+    "accent": "#7d8797",
+    "softAccent": "#e4e7ec",
+    "status": "published",
+    "tagline": {
+      "zh": "不打断节奏，只陪你再检查一遍。",
+      "en": "One calm second look without breaking your rhythm."
+    },
+    "description": {
+      "zh": "检查是为了安心收尾，不是证明自己一定漏了什么。",
+      "en": "A final check is for peace of mind, not proof that you must have missed something."
+    },
+    "personalityTags": [
+      {
+        "zh": "好奇",
+        "en": "Curious"
+      },
+      {
+        "zh": "机敏",
+        "en": "Alert"
+      },
+      {
+        "zh": "可靠",
+        "en": "Reliable"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "美国短毛猫",
+      "zodiacEn": "American Shorthair",
+      "roleZh": "桌面巡查猫",
+      "roleEn": "Desktop Scout",
+      "promiseZh": "不打断节奏，只陪你再检查一遍。",
+      "promiseEn": "One calm second look without breaking your rhythm.",
+      "storyTitleZh": "沿着文件边缘走一圈",
+      "storyTitleEn": "One Lap Around the Files",
+      "storyZh": "银饼每天的第一件事，是沿着桌面边缘走一圈。银黑虎斑从窗口前掠过，绿眼睛会在改过名字的文件、没保存的标签页和歪了一点的图标旁停住。它不会乱碰键盘，也不把所有细节都叫作问题，只对真正值得再看一眼的地方轻轻甩尾。一次深夜，大家都以为任务已经结束，银饼却守在一枚颜色略浅的状态点旁。那不是严重故障，只是一项忘记同步的小改动。它看着修改完成，才继续巡完余下半圈。从此它仍不催促，只在提交之前陪你顺手检查一次，让小疏漏有机会被看见，也让确认无误之后的离开更踏实。",
+      "storyEn": "Yinbing begins each day with one measured lap around the desktop. Its silver-and-black tabby coat passes the window while green eyes pause beside renamed files, unsaved tabs, and icons shifted slightly out of place. It never paws at the keyboard or treats every detail as an emergency; a small flick of the tail is reserved for something genuinely worth another look. One late night, everyone assumed the task was finished, but Yinbing remained beside a status dot that looked a shade too pale. Nothing dramatic was wrong—one small change had simply not been synchronized. It watched the correction land, then completed the rest of its patrol. Since then, Yinbing has offered one calm check before a handoff, making room for small omissions to be noticed and for a verified finish to feel final.",
+      "comfortZh": "检查是为了安心收尾，不是证明自己一定漏了什么。",
+      "comfortEn": "A final check is for peace of mind, not proof that you must have missed something.",
+      "moments": [
+        {
+          "titleZh": "准备提交",
+          "titleEn": "Before submitting",
+          "bodyZh": "只检查文件、状态和关键结果，不把收尾变成无限重做。",
+          "bodyEn": "Check files, status, and the key result without turning closure into endless rework."
+        },
+        {
+          "titleZh": "发现小错",
+          "titleEn": "After spotting a small error",
+          "bodyZh": "修好它就继续，不必用一个疏漏否定整段工作。",
+          "bodyEn": "Fix it and move on; one omission does not invalidate the work."
+        },
+        {
+          "titleZh": "确认完成",
+          "titleEn": "When it is verified",
+          "bodyZh": "让这次检查真正结束，把注意力还给下一件事。",
+          "bodyEn": "Let the check end and return your attention to what comes next."
+        }
+      ],
+      "traitsZh": [
+        "好奇",
+        "机敏",
+        "可靠"
+      ],
+      "traitsEn": [
+        "Curious",
+        "Alert",
+        "Reliable"
+      ],
+      "matchZh": "适合提交前复核、整理文件，以及喜欢清楚收尾的你。",
+      "matchEn": "For pre-submit reviews, tidy handoffs, and anyone who likes a clear finish."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/cat-american-shorthair-yinbing/spritesheet.webp",
+    "previewPath": "/pets/cat-american-shorthair-yinbing/preview.webp",
+    "manifestPath": "/pets/cat-american-shorthair-yinbing/pet.json",
+    "downloadPath": "/downloads/cat-american-shorthair-yinbing.zip",
+    "detailPath": "/api/v1/pets/cat-american-shorthair-yinbing.json"
+  }
+}

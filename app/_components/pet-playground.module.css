@@ -31,12 +31,6 @@
   text-transform: uppercase;
 }
 
-.playgroundCopy > p:not(.eyebrow) {
-  margin: 22px 0 0;
-  font-weight: 650;
-  line-height: 1.7;
-}
-
 .stateButtons {
   display: flex;
   flex-wrap: wrap;
@@ -61,12 +55,18 @@
   transform: translate(-1px, -1px);
 }
 
+.stateButtons button[data-motion-pending="true"] {
+  cursor: progress;
+  outline: 3px solid var(--route-blue);
+  outline-offset: 2px;
+}
+
 .playgroundStage {
   position: relative;
   display: grid;
   min-height: 630px;
   place-items: center;
-  padding: 24px;
+  padding: 78px 24px 20px;
   overflow: hidden;
   background: var(--route-blue);
 }
@@ -83,8 +83,7 @@
 }
 
 .stageStatus span,
-.stageStatus strong,
-.stageHint {
+.stageStatus strong {
   padding: 8px 11px;
   border: 2px solid var(--route-ink);
   border-radius: 8px;
@@ -100,14 +99,28 @@
   filter: drop-shadow(12px 14px 0 rgba(23, 23, 20, 0.25));
 }
 
-.stageHint {
+.installCta {
   position: absolute;
-  z-index: 3;
   right: 20px;
   bottom: 20px;
   left: 20px;
-  margin: 0;
-  text-align: center;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 2px solid var(--route-ink);
+  border-radius: 10px;
+  background: var(--route-yellow);
+  box-shadow: 3px 3px 0 var(--route-ink);
+  color: var(--route-ink);
+  font-size: 0.75rem;
+  font-weight: 950;
+}
+
+.installCta:hover {
+  transform: translate(-1px, -1px);
 }
 
 @media (max-width: 820px) {
@@ -135,7 +148,4 @@
     flex-wrap: wrap;
   }
 
-  .stageHint {
-    font-size: 0.64rem;
-  }
 }

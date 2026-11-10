@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "desk-plan-beaver-gege",
+    "category": "desktop-work",
+    "zodiacOrder": null,
+    "needs": [
+      "steady",
+      "start"
+    ],
+    "displayName": {
+      "zh": "格格 · 规划海狸",
+      "en": "Gege · Planning Beaver"
+    },
+    "badge": "PLAN 05",
+    "accent": "#6e906a",
+    "softAccent": "#e0ecda",
+    "status": "published",
+    "tagline": {
+      "zh": "先划出今天这一格，再慢慢走向远处。",
+      "en": "Choose today's small square before looking farther ahead."
+    },
+    "description": {
+      "zh": "计划不必一开始就完美，能让下一步更清楚就很好。",
+      "en": "A plan need not be perfect to make the next step clearer."
+    },
+    "personalityTags": [
+      {
+        "zh": "有条理",
+        "en": "Organized"
+      },
+      {
+        "zh": "温暖",
+        "en": "Warm"
+      },
+      {
+        "zh": "灵活",
+        "en": "Adaptable"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "规划海狸",
+      "zodiacEn": "Planning Beaver",
+      "roleZh": "小步规划员",
+      "roleEn": "Small-Step Planner",
+      "promiseZh": "先划出今天这一格，再慢慢走向远处。",
+      "promiseEn": "Choose today's small square before looking farther ahead.",
+      "storyTitleZh": "尾巴上的小格子",
+      "storyTitleEn": "The Small Squares on a Broad Tail",
+      "storyZh": "格格的宽尾巴上有一排浅浅的小格子，它总喜欢坐稳以后，才开始用前爪比划接下来的安排。小队第一次准备远行，愿望多得能写满整面墙，格格却先问大家：今天出门以前，哪一件事必须做好？它把最着急的一段放在前面，也给休息和意外留了位置。后来天气忽然变了，原来的路线不得不重画，格格没有为涂改而懊恼，只把尾巴挪近一点，和伙伴们重新确认下一小段。它相信计划的用处在于帮助行动，而不是让所有事情听从纸上的命令。待在你的桌边时，这只温暖的海狸会陪你把很大的目标看成能够慢慢靠近的小格子。",
+      "storyEn": "Shallow squares run across Gege's broad tail. The beaver settles firmly before measuring the next stretch with its paws. When the crew planned its first long journey, their wishes filled an entire wall. Gege asked which task really had to be finished before leaving that day, then made room for rest and surprises as well as urgent work. When the weather changed, it moved its tail closer and helped everyone think through the next small stretch again. A plan, in Gege's world, exists to support action rather than command every future moment. Its steady presence makes a large destination feel like a series of places you can gradually reach.",
+      "comfortZh": "计划不必一开始就完美，能让下一步更清楚就很好。",
+      "comfortEn": "A plan need not be perfect to make the next step clearer.",
+      "moments": [
+        {
+          "titleZh": "目标很大",
+          "titleEn": "A large goal",
+          "bodyZh": "挑出今天能完成的一格，让起点看得见。",
+          "bodyEn": "Choose one square you can finish today so the starting point is visible."
+        },
+        {
+          "titleZh": "计划变化",
+          "titleEn": "Plans change",
+          "bodyZh": "重新确认重要顺序，允许路线跟着事实调整。",
+          "bodyEn": "Recheck the priorities and let the route respond to new facts."
+        },
+        {
+          "titleZh": "事情堆积",
+          "titleEn": "Tasks pile up",
+          "bodyZh": "为休息和缓冲留出位置，不必把每一格都填满。",
+          "bodyEn": "Leave room for rest and uncertainty; not every square needs filling."
+        }
+      ],
+      "traitsZh": [
+        "有条理",
+        "温暖",
+        "灵活"
+      ],
+      "traitsEn": [
+        "Organized",
+        "Warm",
+        "Adaptable"
+      ],
+      "matchZh": "适合拆解任务、安排长项目，以及需要找回清晰节奏的你。",
+      "matchEn": "For breaking down tasks, planning long projects, and finding a clear pace."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/desk-plan-beaver-gege/spritesheet.webp",
+    "previewPath": "/pets/desk-plan-beaver-gege/preview.webp",
+    "manifestPath": "/pets/desk-plan-beaver-gege/pet.json",
+    "downloadPath": "/downloads/desk-plan-beaver-gege.zip",
+    "detailPath": "/api/v1/pets/desk-plan-beaver-gege.json"
+  }
+}

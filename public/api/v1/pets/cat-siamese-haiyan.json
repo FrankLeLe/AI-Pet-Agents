@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "cat-siamese-haiyan",
+    "category": "breed-cat",
+    "zodiacOrder": null,
+    "needs": [
+      "start",
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "海盐",
+      "en": "Haiyan"
+    },
+    "badge": "SIAMESE 05",
+    "accent": "#705f6c",
+    "softAccent": "#e8dfe4",
+    "status": "published",
+    "tagline": {
+      "zh": "一句话递过来，就会有个回应。",
+      "en": "Send one thought across the desk and it will not go unanswered."
+    },
+    "description": {
+      "zh": "说得不完整也可以，先让对方知道你需要回应。",
+      "en": "Your words do not have to be perfect; first let someone know a response is needed."
+    },
+    "personalityTags": [
+      {
+        "zh": "活泼",
+        "en": "Lively"
+      },
+      {
+        "zh": "敏感",
+        "en": "Attentive"
+      },
+      {
+        "zh": "爱交流",
+        "en": "Communicative"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "暹罗猫",
+      "zodiacEn": "Siamese",
+      "roleZh": "对话应答猫",
+      "roleEn": "Responsive Companion",
+      "promiseZh": "一句话递过来，就会有个回应。",
+      "promiseEn": "Send one thought across the desk and it will not go unanswered.",
+      "storyTitleZh": "让安静的窗口重新接上线",
+      "storyTitleEn": "Reconnecting a Quiet Window",
+      "storyZh": "海盐对声音格外认真。键盘落下新的问题、终端发出一声提示，或者有人在长时间沉默后敲出一句没把握的话，它都会立刻竖起大耳朵。它并不总有答案，却从不让一句呼唤孤零零掉在桌面上。一次协作中，一条很短的求助被夹在大量消息之间，直到海盐守着那行文字不断回头，才有人发现对方已经卡了很久。问题解决后，它没有继续叫，只把爪子放回窗口旁。海盐懂得，回应不必宏大：确认看见、问清需要、或者说一句“我在”，都能让断开的对话重新有路可走。",
+      "storyEn": "Haiyan takes every sound seriously. A new question lands on the keyboard, the terminal gives a small alert, or someone types one uncertain sentence after a long silence, and its large ears rise at once. It does not always have an answer, but it never lets a call drop unanswered onto the desk. During one collaboration, a short request for help was buried beneath a flood of messages. Haiyan kept turning back toward that single line until someone noticed the sender had been stuck for a long time. Once the problem was resolved, the cat became quiet and returned its paws to the window. Haiyan understands that a response need not be grand: confirming that a message was seen, asking what is needed, or simply saying ‘I’m here’ can reconnect a conversation.",
+      "comfortZh": "说得不完整也可以，先让对方知道你需要回应。",
+      "comfortEn": "Your words do not have to be perfect; first let someone know a response is needed.",
+      "moments": [
+        {
+          "titleZh": "想开口求助",
+          "titleEn": "When asking for help",
+          "bodyZh": "先说当前卡在哪里，再补充已经试过什么。",
+          "bodyEn": "Name where you are stuck, then add what you have already tried."
+        },
+        {
+          "titleZh": "收到消息",
+          "titleEn": "When a message arrives",
+          "bodyZh": "暂时不能处理，也可以先确认已经看见。",
+          "bodyEn": "Even if you cannot act yet, you can confirm that the message was seen."
+        },
+        {
+          "titleZh": "讨论跑远",
+          "titleEn": "When discussion drifts",
+          "bodyZh": "把对话带回现在要回答的那个问题。",
+          "bodyEn": "Bring the conversation back to the question that needs an answer now."
+        }
+      ],
+      "traitsZh": [
+        "活泼",
+        "敏感",
+        "爱交流"
+      ],
+      "traitsEn": [
+        "Lively",
+        "Attentive",
+        "Communicative"
+      ],
+      "matchZh": "适合协作沟通、远程工作，以及不想让问题石沉大海的你。",
+      "matchEn": "For collaboration, remote work, and anyone who does not want a question to disappear into silence."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/cat-siamese-haiyan/spritesheet.webp",
+    "previewPath": "/pets/cat-siamese-haiyan/preview.webp",
+    "manifestPath": "/pets/cat-siamese-haiyan/pet.json",
+    "downloadPath": "/downloads/cat-siamese-haiyan.zip",
+    "detailPath": "/api/v1/pets/cat-siamese-haiyan.json"
+  }
+}

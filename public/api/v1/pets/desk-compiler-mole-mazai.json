@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "desk-compiler-mole-mazai",
+    "category": "desktop-work",
+    "zodiacOrder": null,
+    "needs": [
+      "steady",
+      "start"
+    ],
+    "displayName": {
+      "zh": "码仔 · 编译鼹鼠",
+      "en": "Mazai · Compiler Mole"
+    },
+    "badge": "BUILD 01",
+    "accent": "#aa773b",
+    "softAccent": "#f0dfc7",
+    "status": "published",
+    "tagline": {
+      "zh": "一小步一小步，陪你把想法拼成形。",
+      "en": "One small step at a time, keep your idea taking shape."
+    },
+    "description": {
+      "zh": "今天只拼好一小块，也是在靠近完整的作品。",
+      "en": "Finishing one small piece today still brings the whole work closer."
+    },
+    "personalityTags": [
+      {
+        "zh": "踏实",
+        "en": "Grounded"
+      },
+      {
+        "zh": "耐心",
+        "en": "Patient"
+      },
+      {
+        "zh": "爱动手",
+        "en": "Hands-on"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "编译鼹鼠",
+      "zodiacEn": "Compiler Mole",
+      "roleZh": "稳步拼装员",
+      "roleEn": "Steady Assembler",
+      "promiseZh": "一小步一小步，陪你把想法拼成形。",
+      "promiseEn": "One small step at a time, keep your idea taking shape.",
+      "storyTitleZh": "扣好第一枚搭扣",
+      "storyTitleEn": "Fastening the First Clasp",
+      "storyZh": "桌面工作小队第一次集合时，码仔抱着两半还没扣上的琥珀搭扣，站在一堆没有顺序的零件旁。它没有急着寻找最大的那一块，而是用宽宽的前爪比好边缘，把能接上的部分先放在一起。每完成一小段，它就会停下来确认连接是否稳固，再慢慢向前挪一步。等窗外天色暗下来，原本散乱的形状已经有了清楚的轮廓。码仔把搭扣轻轻合拢，胸前传来一声很小的咔哒。那不是所有事情都已结束的信号，而是提醒伙伴们：复杂的工作也能从眼前这一块开始。在你的桌面上，它会保留这份耐心，陪你度过等待结果、重新尝试和终于完成的时刻。",
+      "storyEn": "At the crew's first gathering, Mazai stood beside a pile of unconnected pieces, holding the two halves of an amber clasp. Rather than reaching for the largest piece, the little mole lined up the edges with broad paws and joined the parts that already fit. After each small section, it paused to check the connection before moving on. By evening, the scattered shapes had acquired a recognizable outline. A quiet click from its vest marked a useful beginning, not a promise that every problem was solved. On your desktop, Mazai brings that same patient rhythm to waiting, trying again, and seeing a piece of work finally take shape.",
+      "comfortZh": "今天只拼好一小块，也是在靠近完整的作品。",
+      "comfortEn": "Finishing one small piece today still brings the whole work closer.",
+      "moments": [
+        {
+          "titleZh": "步骤太多",
+          "titleEn": "Too many steps",
+          "bodyZh": "先选一个能完成的小连接，让大任务有个落脚点。",
+          "bodyEn": "Choose one small connection you can finish, giving the larger task a foothold."
+        },
+        {
+          "titleZh": "等待结果",
+          "titleEn": "Waiting for a result",
+          "bodyZh": "放松一下肩膀，等结果回来再决定下一步。",
+          "bodyEn": "Relax your shoulders and let the result inform the next step."
+        },
+        {
+          "titleZh": "完成一段",
+          "titleEn": "A section is finished",
+          "bodyZh": "记住已经接好的部分，再向下一小段前进。",
+          "bodyEn": "Notice what now fits together before moving to the next small section."
+        }
+      ],
+      "traitsZh": [
+        "踏实",
+        "耐心",
+        "爱动手"
+      ],
+      "traitsEn": [
+        "Grounded",
+        "Patient",
+        "Hands-on"
+      ],
+      "matchZh": "适合启动项目、持续构建，以及喜欢看着小进展累积的你。",
+      "matchEn": "For starting projects, steady builds, and enjoying small visible steps."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/desk-compiler-mole-mazai/spritesheet.webp",
+    "previewPath": "/pets/desk-compiler-mole-mazai/preview.webp",
+    "manifestPath": "/pets/desk-compiler-mole-mazai/pet.json",
+    "downloadPath": "/downloads/desk-compiler-mole-mazai.zip",
+    "detailPath": "/api/v1/pets/desk-compiler-mole-mazai.json"
+  }
+}

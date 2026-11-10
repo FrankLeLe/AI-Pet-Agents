@@ -1,5 +1,5 @@
-export const PET_RELEASE_COMMIT = "6bfce72ca689966918c3bb85c68007914a27f54c";
-export const PET_RELEASE_REPOSITORY = "https://github.com/FrankLeLe/AI-Pet-Agents";
+export const PET_RELEASE_COMMIT = "1a559b86621a992abf2691d5e429cdf0b13d2716";
+export const PET_RELEASE_ORIGIN = "https://aipetsagent.com";
 
 type PetRelease = {
   readonly sizeBytes: number;
@@ -59,6 +59,102 @@ export const PET_RELEASES: Readonly<Record<string, PetRelease>> = {
     sizeBytes: 3_364_313,
     sha256: "739d91bebca68bd6c3d72822169286a0d6ceb6dcc85dfb83fb60c267f4eb7401",
   },
+  "cat-ragdoll-yunduo": {
+    sizeBytes: 2_697_452,
+    sha256: "83b38032fcb109ce7fd0b73f36757becff7814690b1922532fdc4ea183360fb3",
+  },
+  "cat-american-shorthair-yinbing": {
+    sizeBytes: 2_642_651,
+    sha256: "83a38ed31a53e7b5a9838078a09ac07afc0ac0c7703605f3ee010621feafde89",
+  },
+  "cat-british-shorthair-lanyuanyuan": {
+    sizeBytes: 2_307_659,
+    sha256: "ca0de8be2145e64c4815d6ed39e9a8251cfc86f25c0b4fa00b82416c4f5fbf09",
+  },
+  "cat-maine-coon-linwang": {
+    sizeBytes: 3_026_843,
+    sha256: "70800adf8a3b6155de9ece0c759d417fb6738fb351f3c65fe4742aeb6ce9f8be",
+  },
+  "cat-siamese-haiyan": {
+    sizeBytes: 2_383_103,
+    sha256: "31a2b1a4d6e624888228c9f88837539b0b362a9d0b262ef4d4149ebaed311456",
+  },
+  "cat-norwegian-forest-songlu": {
+    sizeBytes: 2_836_583,
+    sha256: "c165a59214218356ef6cc8e03426e3c103324cb80f23d11260ad48d1ed396898",
+  },
+  "cat-persian-xuegao": {
+    sizeBytes: 2_278_456,
+    sha256: "bcca52f6e5c15ab2118d55c9b0a9a43bc20b3a93d5cf96c7643e1fb9a2d6bac7",
+  },
+  "cat-bengal-jinbao": {
+    sizeBytes: 2_806_723,
+    sha256: "2dd3a5b7b0c42e86787fec7b4314af3e82fdfd5bc859e22b8ff4f7dac5e64f1d",
+  },
+  "cat-russian-blue-wulan": {
+    sizeBytes: 1_965_776,
+    sha256: "d8c8dddebe868dfcce68d15ae77af8f7140b5be8bd2b2e57c9ba512f0f9757dd",
+  },
+  "cat-devon-rex-juanjuan": {
+    sizeBytes: 2_404_721,
+    sha256: "d7a12830a2cd939cbdc29194ccdff647630ae8d880c38318c4714f44a10f5e31",
+  },
+  "cat-sphynx-yueguang": {
+    sizeBytes: 2_309_607,
+    sha256: "bee2d515af16542e094d0410dd7f91b65cc1802e99de0aa345202d0b2e65441d",
+  },
+  "cat-abyssinian-hongsha": {
+    sizeBytes: 2_397_090,
+    sha256: "ce5823222c45db1f5d9038d1bff144e53bea36041d35f29a7d80a23ad159bbdb",
+  },
+  "desk-compiler-mole-mazai": {
+    sizeBytes: 2_732_606,
+    sha256: "f084e5b25a3fb0093c777bcd5e6bf52cb83e46752f8365c4859ed78ddefe9b31",
+  },
+  "desk-test-beetle-diandian": {
+    sizeBytes: 2_542_146,
+    sha256: "2ea6044466238a878ac476b691ad23a31cfedd1450db339f3df09b88bb1877e5",
+  },
+  "desk-review-owl-jiaojiao": {
+    sizeBytes: 2_794_931,
+    sha256: "d2200ab2a0a4afe3409aa4770a55360d8fe5cfb89a0da16698f5e8e7e530af99",
+  },
+  "desk-search-hound-xiuxiu": {
+    sizeBytes: 2_671_269,
+    sha256: "094542938e54f47a0f7c7d5fc77be19ad3c18cd97dedfd8c546576449e5105d0",
+  },
+  "desk-plan-beaver-gege": {
+    sizeBytes: 2_597_794,
+    sha256: "813a82448717c6967e877718ee5790c09aaf43dc79fd529e3361c809be75e879",
+  },
+  "desk-deploy-pigeon-yundi": {
+    sizeBytes: 2_700_115,
+    sha256: "f84fd2621d27f8029df528ba252a1e541d66d9a0c2cdc5276524470fbc5a46ab",
+  },
+  "desk-memory-squirrel-licun": {
+    sizeBytes: 2_821_570,
+    sha256: "6b9cdf388dac1740809470ff25803e75b3f0fc25b905a15bef3e5a913d01131a",
+  },
+  "desk-data-octopus-duoduo": {
+    sizeBytes: 2_822_736,
+    sha256: "9166af1dbb2383e118f1ae06ba618ae9e5d099db96ec37725b4800d0cae1fc8b",
+  },
+  "desk-design-red-panda-caiwei": {
+    sizeBytes: 3_141_370,
+    sha256: "85e1ffa2a8389a7584ae65de4ffa34a53eda426e553240e09264bdc6752bb115",
+  },
+  "desk-security-hedgehog-dundun": {
+    sizeBytes: 2_960_013,
+    sha256: "0c019015117e7f687f055760cc0e6c97b8e0a578860bdea3f0b5f826618fe14b",
+  },
+  "desk-waiting-sloth-manman": {
+    sizeBytes: 2_307_211,
+    sha256: "7fa865f7226e23e09720d73df63245fb53d1943d21571515e852301a6d9b1df2",
+  },
+  "desk-debug-salamander-huohua": {
+    sizeBytes: 2_360_299,
+    sha256: "1670329124c842612fcfe54a31a88cb0a470645eae64b11312a74da61b120867",
+  },
 };
 
 export function getPetRelease(petId: string) {
@@ -66,7 +162,7 @@ export function getPetRelease(petId: string) {
 }
 
 export function getPetPackageUrl(petId: string) {
-  return `https://raw.githubusercontent.com/FrankLeLe/AI-Pet-Agents/${PET_RELEASE_COMMIT}/public/downloads/${petId}.zip`;
+  return `${PET_RELEASE_ORIGIN}/downloads/${PET_RELEASE_COMMIT}/${petId}.zip`;
 }
 
 export function buildCodexInstallPrompt(

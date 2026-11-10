@@ -8,20 +8,46 @@
 }
 
 .spriteWindow {
+  contain: layout paint;
+  isolation: isolate;
   overflow: hidden;
+  transform: translateZ(0);
 }
 
-.spriteWindow img {
+.spriteLayer,
+.spriteFallback {
   position: absolute;
   top: 0;
   left: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.spriteFallback {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  transition: opacity 80ms linear;
+}
+
+.spriteLayer {
+  backface-visibility: hidden;
   width: calc(var(--sprite-columns) * 100%);
   max-width: none;
   height: 100%;
+  opacity: 0;
   transform: translate3d(var(--sprite-x), 0, 0);
-  pointer-events: none;
-  user-select: none;
-  will-change: transform;
+}
+
+.spriteLayer[data-active="true"][data-ready="true"] {
+  z-index: 2;
+  opacity: 1;
+  will-change: transform, opacity;
+}
+
+.spriteWindow[data-ready="true"] .spriteFallback {
+  opacity: 0;
 }
 
 .previewWindow img {
@@ -33,7 +59,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .spriteWindow img {
+  .spriteFallback {
+    transition: none;
+  }
+
+  .spriteLayer {
     will-change: auto;
   }
 }

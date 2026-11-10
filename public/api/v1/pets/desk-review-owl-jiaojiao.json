@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "desk-review-owl-jiaojiao",
+    "category": "desktop-work",
+    "zodiacOrder": null,
+    "needs": [
+      "solve",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "校校 · 审阅猫头鹰",
+      "en": "Jiaojiao · Review Owl"
+    },
+    "badge": "REVIEW 03",
+    "accent": "#726391",
+    "softAccent": "#e5dff0",
+    "status": "published",
+    "tagline": {
+      "zh": "慢慢看一遍，让好作品更清楚一点。",
+      "en": "Take a patient second look and let the work become clearer."
+    },
+    "description": {
+      "zh": "认真重看不是怀疑自己，而是给作品多一点照顾。",
+      "en": "A thoughtful second look is another way to care for your work."
+    },
+    "personalityTags": [
+      {
+        "zh": "专注",
+        "en": "Focused"
+      },
+      {
+        "zh": "公正",
+        "en": "Fair"
+      },
+      {
+        "zh": "有耐心",
+        "en": "Patient"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "审阅猫头鹰",
+      "zodiacEn": "Review Owl",
+      "roleZh": "耐心阅稿员",
+      "roleEn": "Patient Reader",
+      "promiseZh": "慢慢看一遍，让好作品更清楚一点。",
+      "promiseEn": "Take a patient second look and let the work become clearer.",
+      "storyTitleZh": "留在边上的空白",
+      "storyTitleEn": "The Space Left in the Margin",
+      "storyZh": "校校总把圆圆的眼镜擦得很亮，却从不急着给一页草稿下结论。它喜欢先从头看到尾，再回到那句让自己停顿的话旁。某天，小队的值班簿写满了整齐的安排，大家觉得已经足够清楚，只有校校注意到，两位伙伴在同一时间被分到了两个地方。它没有大声打断，而是把翅膀轻轻停在那一行，让大家一起重新看一遍。问题解决后，它仍在页边留了一小块空白，给后来改变主意的人使用。校校知道，审阅不是把所有不同都磨平，而是让重要的意思被准确理解。住进桌面以后，它会用专注的目光和安静的停顿，陪你在发送之前再给自己的作品一点时间。",
+      "storyEn": "Jiaojiao keeps its round spectacles bright but never rushes to judge a draft. It reads from beginning to end, then returns to the sentence that caused a pause. One day the crew's neatly written duty log sent two companions to different places at the same time. The owl rested a wing beside the conflicting line so everyone could look again. After the correction, it left a little space in the margin for plans that might change later. To Jiaojiao, review is not about smoothing every difference away. It is about making the important meaning easier to understand, with enough patience for another careful look before sending.",
+      "comfortZh": "认真重看不是怀疑自己，而是给作品多一点照顾。",
+      "comfortEn": "A thoughtful second look is another way to care for your work.",
+      "moments": [
+        {
+          "titleZh": "准备发送",
+          "titleEn": "Before sending",
+          "bodyZh": "先从读者的角度重看一遍，留意需要猜测的地方。",
+          "bodyEn": "Read from the recipient's perspective and notice where they must guess."
+        },
+        {
+          "titleZh": "意见不同",
+          "titleEn": "Different opinions",
+          "bodyZh": "把具体疑问放在同一行，先确认彼此说的是同一件事。",
+          "bodyEn": "Put the specific question beside the relevant line and compare meanings."
+        },
+        {
+          "titleZh": "反复修改",
+          "titleEn": "After several revisions",
+          "bodyZh": "留住最重要的表达，不必把每个细节都改得一样。",
+          "bodyEn": "Preserve the main meaning without making every detail identical."
+        }
+      ],
+      "traitsZh": [
+        "专注",
+        "公正",
+        "有耐心"
+      ],
+      "traitsEn": [
+        "Focused",
+        "Fair",
+        "Patient"
+      ],
+      "matchZh": "适合文字审阅、作品收尾，以及喜欢多想一遍再发送的你。",
+      "matchEn": "For reviewing words, finishing work, and taking a second look before sending."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/desk-review-owl-jiaojiao/spritesheet.webp",
+    "previewPath": "/pets/desk-review-owl-jiaojiao/preview.webp",
+    "manifestPath": "/pets/desk-review-owl-jiaojiao/pet.json",
+    "downloadPath": "/downloads/desk-review-owl-jiaojiao.zip",
+    "detailPath": "/api/v1/pets/desk-review-owl-jiaojiao.json"
+  }
+}

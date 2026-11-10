@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "cat-sphynx-yueguang",
+    "category": "breed-cat",
+    "zodiacOrder": null,
+    "needs": [
+      "comfort",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "月光",
+      "en": "Yueguang"
+    },
+    "badge": "SPHYNX 11",
+    "accent": "#c78f98",
+    "softAccent": "#f4dfe3",
+    "status": "published",
+    "tagline": {
+      "zh": "夜里只剩一个窗口，也不会冷清。",
+      "en": "When one window remains lit, the desk does not have to feel lonely."
+    },
+    "description": {
+      "zh": "难熬的时候不必装轻松，有个伴就先一起待着。",
+      "en": "You do not have to pretend a hard moment is easy; company can simply stay with you."
+    },
+    "personalityTags": [
+      {
+        "zh": "温暖",
+        "en": "Warm"
+      },
+      {
+        "zh": "亲人",
+        "en": "Cuddly"
+      },
+      {
+        "zh": "会表达",
+        "en": "Expressive"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "斯芬克斯猫",
+      "zodiacEn": "Sphynx",
+      "roleZh": "暖席陪伴猫",
+      "roleEn": "Warm-Seat Companion",
+      "promiseZh": "夜里只剩一个窗口，也不会冷清。",
+      "promiseEn": "When one window remains lit, the desk does not have to feel lonely.",
+      "storyTitleZh": "键盘旁留下的余温",
+      "storyTitleEn": "Warmth Beside the Keyboard",
+      "storyZh": "月光总能找到键盘余温还没有散去的位置。桃粉皮肤贴近桌面，大耳朵听着风扇低响，红色小吊牌随着呼吸轻轻动。它不像长毛伙伴那样占满一整块软垫，只要靠近一点，就能让夜里只剩一个窗口的房间不再冷清。一次赶工到很晚，桌面上的灯陆续熄灭，只剩一段难改的代码。月光没有催促，也没有装作问题很简单，只把前爪搭在窗口旁守着。等最后一次保存完成，它才伸懒腰离开。它懂得陪伴有时不需要建议，只需要在一段困难还没结束时，不急着把你独自留在那里。天亮之后，这种安静的守候也不会要求一句感谢。",
+      "storyEn": "Yueguang always finds the place where warmth still lingers beside the keyboard. Peach-pink skin rests close to the desk, large ears listen to the low fan, and a small red tag moves with each breath. Unlike the long-haired cats, it does not fill an entire cushion; staying close is enough to keep a room with one remaining window from feeling lonely. During one late deadline, lights across the desktop went dark until only a difficult section of code remained. Yueguang offered no pressure and did not pretend the problem was simple. It placed both front paws beside the window and stayed through the final save before stretching and leaving. The cat understands that companionship sometimes requires no advice—only the choice not to leave someone alone while a hard moment is still unfinished. When morning comes, that quiet watch asks for no thanks in return.",
+      "comfortZh": "难熬的时候不必装轻松，有个伴就先一起待着。",
+      "comfortEn": "You do not have to pretend a hard moment is easy; company can simply stay with you.",
+      "moments": [
+        {
+          "titleZh": "独自加班",
+          "titleEn": "During a late night",
+          "bodyZh": "把今天必须完成的范围圈小，别让整夜变成无边任务。",
+          "bodyEn": "Narrow what truly must be finished tonight so the work has an edge."
+        },
+        {
+          "titleZh": "情绪低落",
+          "titleEn": "When energy is low",
+          "bodyZh": "先承认现在不好受，不急着给自己讲大道理。",
+          "bodyEn": "Acknowledge that this feels hard before trying to explain it away."
+        },
+        {
+          "titleZh": "终于保存",
+          "titleEn": "After the final save",
+          "bodyZh": "关掉不需要的窗口，让身体知道这段工作已经结束。",
+          "bodyEn": "Close the windows you no longer need and let your body know the work has ended."
+        }
+      ],
+      "traitsZh": [
+        "温暖",
+        "亲人",
+        "会表达"
+      ],
+      "traitsEn": [
+        "Warm",
+        "Cuddly",
+        "Expressive"
+      ],
+      "matchZh": "适合夜间工作、独自赶进度，以及需要真实陪伴感的你。",
+      "matchEn": "For late work, solitary deadlines, and anyone who needs a companion that simply stays."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/cat-sphynx-yueguang/spritesheet.webp",
+    "previewPath": "/pets/cat-sphynx-yueguang/preview.webp",
+    "manifestPath": "/pets/cat-sphynx-yueguang/pet.json",
+    "downloadPath": "/downloads/cat-sphynx-yueguang.zip",
+    "detailPath": "/api/v1/pets/cat-sphynx-yueguang.json"
+  }
+}

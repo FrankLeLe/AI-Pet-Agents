@@ -6,7 +6,7 @@ import { PET_SERIES } from "@/lib/series";
 const origin = "https://aipetsagent.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const updated = new Date("2026-07-20T00:00:00.000Z");
+  const updated = new Date("2026-11-11T00:00:00.000Z");
   const corePaths = ["", "/pets", "/install", "/hatch", "/help"];
   const petPaths = PETS.flatMap((pet) => [
     `/pets/${pet.id}`,

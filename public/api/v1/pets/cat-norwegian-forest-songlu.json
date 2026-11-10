@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "cat-norwegian-forest-songlu",
+    "category": "breed-cat",
+    "zodiacOrder": null,
+    "needs": [
+      "solve",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "松露",
+      "en": "Songlu"
+    },
+    "badge": "NORWEGIAN FOREST 06",
+    "accent": "#806c50",
+    "softAccent": "#e9e0d2",
+    "status": "published",
+    "tagline": {
+      "zh": "先不急着判断，陪你慢慢看清楚。",
+      "en": "No rushed judgment—just enough quiet to see the shape of things."
+    },
+    "description": {
+      "zh": "现在看不清很正常，先把事实和猜测分开。",
+      "en": "It is normal not to see the path yet; begin by separating facts from guesses."
+    },
+    "personalityTags": [
+      {
+        "zh": "沉静",
+        "en": "Calm"
+      },
+      {
+        "zh": "灵巧",
+        "en": "Graceful"
+      },
+      {
+        "zh": "善观察",
+        "en": "Observant"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "挪威森林猫",
+      "zodiacEn": "Norwegian Forest Cat",
+      "roleZh": "林间观察猫",
+      "roleEn": "Quiet Forest Observer",
+      "promiseZh": "先不急着判断，陪你慢慢看清楚。",
+      "promiseEn": "No rushed judgment—just enough quiet to see the shape of things.",
+      "storyTitleZh": "枝叶之间，路会慢慢出现",
+      "storyTitleEn": "A Path Appears Between the Branches",
+      "storyZh": "松露喜欢趴在窗口边听风。棕白长毛随着气流轻轻动，黄绿色眼睛越过层层窗口，看哪些只是短暂摇晃，哪些真的改变了方向。它不急着给复杂的问题下结论，往往先把事实、猜测和感受分开放好。一次，多个错误同时出现，所有线索像缠在一起的树枝。松露没有追最响的那一条，而是从最早发生变化的位置开始观察，终于找到了共同的根。后来它仍保持原来的习惯：先听、再看、最后迈步。它让混乱不必立刻变简单，只要枝干逐渐清楚，下一段路自然会从缝隙里显出来。",
+      "storyEn": "Songlu likes to rest beside the window and listen to the wind. Brown-and-white fur moves gently in the draft while yellow-green eyes look across layers of open windows, noticing which ones merely tremble and which have truly changed direction. It does not force a quick conclusion onto a complicated problem. Facts, guesses, and feelings are given separate places first. Once, several errors appeared at the same time and every clue seemed tangled like branches. Songlu ignored the loudest symptom and watched from the earliest point of change until a shared root became visible. It still follows the same rhythm: listen, observe, then move. Confusion does not need to become simple all at once; when the branches grow clear, a usable path appears between them.",
+      "comfortZh": "现在看不清很正常，先把事实和猜测分开。",
+      "comfortEn": "It is normal not to see the path yet; begin by separating facts from guesses.",
+      "moments": [
+        {
+          "titleZh": "线索很乱",
+          "titleEn": "When clues are tangled",
+          "bodyZh": "按发生时间排一遍，先找最早变化的地方。",
+          "bodyEn": "Put events in time order and begin with the earliest change."
+        },
+        {
+          "titleZh": "意见冲突",
+          "titleEn": "When opinions conflict",
+          "bodyZh": "分别写下证据和担心，不把感受伪装成事实。",
+          "bodyEn": "List evidence and concerns separately without disguising feelings as facts."
+        },
+        {
+          "titleZh": "方向渐清",
+          "titleEn": "When a path emerges",
+          "bodyZh": "先验证最小的一段，让观察变成真实信息。",
+          "bodyEn": "Test the smallest section and turn observation into real information."
+        }
+      ],
+      "traitsZh": [
+        "沉静",
+        "灵巧",
+        "善观察"
+      ],
+      "traitsEn": [
+        "Calm",
+        "Graceful",
+        "Observant"
+      ],
+      "matchZh": "适合复杂分析、问题梳理，以及更习惯先观察再行动的你。",
+      "matchEn": "For complex analysis, tangled problems, and anyone who prefers to observe before acting."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/cat-norwegian-forest-songlu/spritesheet.webp",
+    "previewPath": "/pets/cat-norwegian-forest-songlu/preview.webp",
+    "manifestPath": "/pets/cat-norwegian-forest-songlu/pet.json",
+    "downloadPath": "/downloads/cat-norwegian-forest-songlu.zip",
+    "detailPath": "/api/v1/pets/cat-norwegian-forest-songlu.json"
+  }
+}

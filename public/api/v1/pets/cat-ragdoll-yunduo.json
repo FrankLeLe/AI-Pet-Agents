@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "cat-ragdoll-yunduo",
+    "category": "breed-cat",
+    "zodiacOrder": null,
+    "needs": [
+      "comfort",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "云朵",
+      "en": "Yunduo"
+    },
+    "badge": "RAGDOLL 01",
+    "accent": "#8ca9dc",
+    "softAccent": "#e5ecf8",
+    "status": "published",
+    "tagline": {
+      "zh": "忙累的时候，安静陪你坐一会儿。",
+      "en": "Quiet company for the moments when work feels heavy."
+    },
+    "description": {
+      "zh": "停一会儿不是掉队，事情可以等你缓过来。",
+      "en": "A pause is not falling behind; the work can wait while you recover."
+    },
+    "personalityTags": [
+      {
+        "zh": "温柔",
+        "en": "Gentle"
+      },
+      {
+        "zh": "安静",
+        "en": "Quiet"
+      },
+      {
+        "zh": "亲近",
+        "en": "Affectionate"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "布偶猫",
+      "zodiacEn": "Ragdoll",
+      "roleZh": "软垫陪伴猫",
+      "roleEn": "Quiet Corner Companion",
+      "promiseZh": "忙累的时候，安静陪你坐一会儿。",
+      "promiseEn": "Quiet company for the moments when work feels heavy.",
+      "storyTitleZh": "给忙碌留一块软地方",
+      "storyTitleEn": "A Soft Place in a Busy Day",
+      "storyZh": "云朵总在 Codex 窗口亮起后，挑离键盘不远又不会碍事的位置趴下。它不追着光标跑，也不催下一项任务，只把奶油色的尾巴收在身边，听房间里的敲击声慢慢稳定下来。遇到等待很久的构建，它会眨一会儿蓝眼睛；碰上反复修改的夜晚，它仍守着原来的位置。偶尔银饼巡桌经过，会替它推回一张快要掉下去的便签。云朵没有解决问题的本领，却懂得让一段沉默不再显得空。工作暂停时，它给桌面留下一块不必解释、不必表现的地方；回来以后，刚才那条路仍安稳地等在那里。",
+      "storyEn": "Yunduo chooses a place close to the keyboard without getting in the way whenever the Codex window lights up. It does not chase the cursor or hurry the next task. Instead, it folds its cocoa-tipped tail beside its cream coat and listens until the rhythm of typing grows steady. During a long build it simply blinks its blue eyes; through another round of revisions it keeps the same quiet post. Sometimes Yinbing passes on patrol and nudges a slipping note back onto the desk. Yunduo cannot solve the problem for you, but it can keep silence from feeling empty. When work pauses, it leaves a place where nothing needs to be explained or performed, and the unfinished path remains safe until you return.",
+      "comfortZh": "停一会儿不是掉队，事情可以等你缓过来。",
+      "comfortEn": "A pause is not falling behind; the work can wait while you recover.",
+      "moments": [
+        {
+          "titleZh": "等结果",
+          "titleEn": "While waiting",
+          "bodyZh": "先把手从键盘上松开，结果出来前不用一直紧绷。",
+          "bodyEn": "Let your hands leave the keyboard; waiting does not require constant tension."
+        },
+        {
+          "titleZh": "改了很多遍",
+          "titleEn": "After many revisions",
+          "bodyZh": "保留已经变好的部分，再决定下一处要不要动。",
+          "bodyEn": "Keep what has improved before deciding what truly needs another change."
+        },
+        {
+          "titleZh": "准备收工",
+          "titleEn": "Before stopping",
+          "bodyZh": "记下回来时的第一步，让今天安心停在这里。",
+          "bodyEn": "Leave one clear first step for your return, then let today end here."
+        }
+      ],
+      "traitsZh": [
+        "温柔",
+        "安静",
+        "亲近"
+      ],
+      "traitsEn": [
+        "Gentle",
+        "Quiet",
+        "Affectionate"
+      ],
+      "matchZh": "适合长时间工作、需要安静陪伴，或想让桌面慢一点的你。",
+      "matchEn": "For long work sessions, quiet company, and anyone who wants the desktop to feel a little slower."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/cat-ragdoll-yunduo/spritesheet.webp",
+    "previewPath": "/pets/cat-ragdoll-yunduo/preview.webp",
+    "manifestPath": "/pets/cat-ragdoll-yunduo/pet.json",
+    "downloadPath": "/downloads/cat-ragdoll-yunduo.zip",
+    "detailPath": "/api/v1/pets/cat-ragdoll-yunduo.json"
+  }
+}

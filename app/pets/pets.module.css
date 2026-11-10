@@ -41,7 +41,8 @@
 .intro h1 {
   margin: 8px 0 0;
   font-size: clamp(3.5rem, 8vw, 7.7rem);
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: normal;
   text-wrap: balance;
 }
 
@@ -173,7 +174,8 @@
 .seriesCardHeader h3 {
   margin: 0;
   font-size: clamp(3.2rem, 7vw, 7.1rem);
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: normal;
   text-wrap: balance;
 }
 

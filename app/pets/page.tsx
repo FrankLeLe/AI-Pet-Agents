@@ -8,8 +8,8 @@ import { getPetById } from "@/lib/pets";
 import {
   GUIDE_PET_ID,
   GUIDE_PROFILE,
+  getEditorialSeries,
   getSeriesPets,
-  PET_SERIES,
 } from "@/lib/series";
 
 import styles from "./pets.module.css";
@@ -26,6 +26,7 @@ export default async function PetsPage({ searchParams }: PetsPageProps) {
   const query = await searchParams;
   const language = normalizeLanguage(query.lang);
   const guide = getPetById(GUIDE_PET_ID);
+  const series = getEditorialSeries();
 
   return (
     <PageShell language={language} currentPath="/pets">
@@ -38,8 +39,8 @@ export default async function PetsPage({ searchParams }: PetsPageProps) {
           <p>
             {t(
               language,
-              "先选系列，再看角色。每个系列有自己的世界观、角色职责与安装入口。",
-              "Choose a series, then a character. Every series has its own world, roles, and install route.",
+              "每个系列都有自己的世界、角色和彼此相连的故事。",
+              "Every collection has its own world, characters, and connected stories.",
             )}
           </p>
         </section>
@@ -47,23 +48,27 @@ export default async function PetsPage({ searchParams }: PetsPageProps) {
         <section className={styles.seriesSection} aria-labelledby="series-heading">
           <header className={styles.sectionHeading}>
             <span>COLLECTIONS</span>
-            <h2 id="series-heading">{t(language, "从一个世界开始", "Start with a world")}</h2>
+            <h2 id="series-heading">{t(language, "先看新来的伙伴", "MEET THE NEW ARRIVALS")}</h2>
           </header>
 
           <div className={styles.seriesList}>
-            {PET_SERIES.map((series) => {
-              const members = getSeriesPets(series);
+            {series.map((collection) => {
+              const members = getSeriesPets(collection);
               return (
-                <article className={styles.seriesCard} key={series.id}>
+                <article className={styles.seriesCard} key={collection.id}>
                   <header className={styles.seriesCardHeader}>
                     <div>
-                      <span>{series.status[language]}</span>
-                      <p>{series.subtitle[language]}</p>
-                      <h3>{series.name[language]}</h3>
-                      <strong>{series.description[language]}</strong>
+                      <span>{collection.status[language]}</span>
+                      <p>{collection.subtitle[language]}</p>
+                      <h3>{collection.name[language]}</h3>
+                      <strong>{collection.description[language]}</strong>
                     </div>
-                    <Link href={withLanguage(`/series/${series.id}`, language)}>
-                      {t(language, "打开系列", "Open series")}
+                    <Link href={withLanguage(`/series/${collection.id}`, language)}>
+                      {collection.id === "cat-companion-club"
+                        ? t(language, "挑一只猫", "Meet the cats")
+                        : collection.id === "desktop-work-crew"
+                          ? t(language, "认识工作小队", "Meet the work crew")
+                          : t(language, "挑一位守护鸭", "Meet the guardians")}
                       <ArrowRight aria-hidden="true" size={19} strokeWidth={3} />
                     </Link>
                   </header>
@@ -94,9 +99,9 @@ export default async function PetsPage({ searchParams }: PetsPageProps) {
                     ))}
                   </div>
 
-                  <Link className={styles.storyEntry} href={withLanguage(`/series/${series.id}#story`, language)}>
-                    <span>{series.storyChapter[language]}</span>
-                    <strong>{series.storyTitle[language]}</strong>
+                  <Link className={styles.storyEntry} href={withLanguage(`/series/${collection.id}#story`, language)}>
+                    <span>{collection.storyChapter[language]}</span>
+                    <strong>{collection.storyTitle[language]}</strong>
                     <ArrowRight aria-hidden="true" size={19} strokeWidth={3} />
                   </Link>
                 </article>

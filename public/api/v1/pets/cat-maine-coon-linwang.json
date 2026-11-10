@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "cat-maine-coon-linwang",
+    "category": "breed-cat",
+    "zodiacOrder": null,
+    "needs": [
+      "steady",
+      "solve"
+    ],
+    "displayName": {
+      "zh": "林王",
+      "en": "Linwang"
+    },
+    "badge": "MAINE COON 04",
+    "accent": "#91684d",
+    "softAccent": "#eadbcf",
+    "status": "published",
+    "tagline": {
+      "zh": "看见全局，也替你守住眼前重点。",
+      "en": "A view of the whole room while the important piece stays protected."
+    },
+    "description": {
+      "zh": "看不完全部也没关系，先确认最重要的东西还在。",
+      "en": "You do not need to manage every detail at once; first make sure the essential thing is still in view."
+    },
+    "personalityTags": [
+      {
+        "zh": "沉稳",
+        "en": "Grounded"
+      },
+      {
+        "zh": "友善",
+        "en": "Friendly"
+      },
+      {
+        "zh": "有全局感",
+        "en": "Big-picture"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "缅因猫",
+      "zodiacEn": "Maine Coon",
+      "roleZh": "高处守望猫",
+      "roleEn": "High-Perch Watcher",
+      "promiseZh": "看见全局，也替你守住眼前重点。",
+      "promiseEn": "A view of the whole room while the important piece stays protected.",
+      "storyTitleZh": "最高书架上的值班位",
+      "storyTitleEn": "The Watch from the Highest Shelf",
+      "storyZh": "林王把最高一层书架当作固定值班位。浓密鬃毛挡住窗口吹来的风，大尾巴垂在架边，金色眼睛能同时看见桌面上的草稿、终端和等待回复的消息。它看得很远，却很少对每件事都发号施令。真正忙乱的时候，林王只会跳下来，站在当前最重要的文件旁。一次版本发布前，所有人都盯着最后几个细节，差点忘记最初要解决的问题。林王回到高处，目光落在墙上那张旧需求单上，大家才重新找回取舍。它守护的不是庞大的计划，而是全局与当下之间的联系：知道为什么出发，也知道此刻应该把哪一步做好。",
+      "storyEn": "Linwang keeps a permanent watch from the highest shelf. A thick chest ruff blocks the draft from the window, a great tail hangs over the edge, and golden eyes can see the draft, terminal, and unanswered message at the same time. Despite that broad view, it rarely gives orders about everything. When the desk becomes truly confused, Linwang comes down and stands beside the one file that matters most. Before one release, everyone became absorbed in final details and nearly forgot the problem the work was meant to solve. Linwang returned to its perch and fixed its gaze on the old requirement note pinned to the wall. Priorities became clear again. It does not guard a grand plan for its own sake; it guards the connection between the whole picture and the next useful step.",
+      "comfortZh": "看不完全部也没关系，先确认最重要的东西还在。",
+      "comfortEn": "You do not need to manage every detail at once; first make sure the essential thing is still in view.",
+      "moments": [
+        {
+          "titleZh": "方向太多",
+          "titleEn": "When directions multiply",
+          "bodyZh": "回到最初的问题，删掉与它无关的热闹选项。",
+          "bodyEn": "Return to the original problem and remove options that do not serve it."
+        },
+        {
+          "titleZh": "细节淹没全局",
+          "titleEn": "When details hide the goal",
+          "bodyZh": "抬头确认目标，再决定哪个细节值得继续。",
+          "bodyEn": "Look up at the goal before deciding which detail deserves more time."
+        },
+        {
+          "titleZh": "准备交付",
+          "titleEn": "Before delivery",
+          "bodyZh": "同时检查用户结果和下一步交接，让作品走得更远。",
+          "bodyEn": "Check both the user outcome and the next handoff so the work can travel well."
+        }
+      ],
+      "traitsZh": [
+        "沉稳",
+        "友善",
+        "有全局感"
+      ],
+      "traitsEn": [
+        "Grounded",
+        "Friendly",
+        "Big-picture"
+      ],
+      "matchZh": "适合复杂项目、版本交付，以及需要在全局和细节之间切换的你。",
+      "matchEn": "For complex projects, releases, and anyone balancing strategic context with detailed work."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/cat-maine-coon-linwang/spritesheet.webp",
+    "previewPath": "/pets/cat-maine-coon-linwang/preview.webp",
+    "manifestPath": "/pets/cat-maine-coon-linwang/pet.json",
+    "downloadPath": "/downloads/cat-maine-coon-linwang.zip",
+    "detailPath": "/api/v1/pets/cat-maine-coon-linwang.json"
+  }
+}

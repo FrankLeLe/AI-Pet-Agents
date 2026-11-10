@@ -6,12 +6,16 @@ A bilingual, no-login gallery for original Codex Desktop custom pets. The site p
 
 ## Included pets
 
-| ID | Display name | Format |
+The gallery contains 37 installable v2 companions across three collections and one site guide.
+
+全站包含三个系列和一位网站向导，共 37 只可安装的 v2 伙伴。
+
+| Collection / 系列 | Count / 数量 | Route / 页面 |
 | --- | --- | --- |
-| `star-armor-tuantuan` | 星铠团团 / Star-Armor Tuantuan | Codex pet v2 |
-| `gemini-twincrest-duck` | 双子镜辉鸭 / Gemini Twincrest Duck | Codex pet v2 |
-| `aries-ramcrest-duck` | 白羊金翎鸭 / Aries Ramcrest Duck | Codex pet v2 |
-| `taurus-bullguard-duck` | 金牛鎏甲鸭 / Taurus Bullguard Duck | Codex pet v2 |
+| 桌面工作小队 / Desktop Work Crew | 12 | `/series/desktop-work-crew` |
+| 呼噜事务所 / Cat Companion Club | 12 | `/series/cat-companion-club` |
+| 金羽十二星 / Golden Feather Constellation | 12 | `/series/golden-feather-constellation` |
+| 星铠团团 / Star-Armor Tuantuan | 1 | `/pets/star-armor-tuantuan` |
 
 Every package contains exactly two install files:
 
@@ -46,8 +50,9 @@ npm run build
 app/                 Site UI and metadata
 public/pets/         Installable pet manifests and spritesheets
 public/downloads/    Ready-to-extract pet and skill archives
-public/og.png        Social preview artwork
-.openai/hosting.json Sites deployment metadata
+public/og-series.png Social preview artwork
+docs/releases/       Accepted asset hashes and release provenance
+wrangler.jsonc       Production Cloudflare deployment configuration
 ```
 
 ## Installing a pet
@@ -67,6 +72,10 @@ Download `public/downloads/hatch-pet.zip` and extract it into `${CODEX_HOME:-$HO
 ## Deployment
 
 The app is built with vinext for Cloudflare Workers-compatible ESM output and is published through Cloudflare. Source and pet data are managed in this GitHub repository.
+
+After artwork passes v2 validation and independent visual review, copy the approved manifest, spritesheet and preview into `public/pets/<pet-id>/`. Each website ZIP must contain a single `<pet-id>/` folder with exactly `pet.json` and `spritesheet.webp`. Update pet/series copy, release hashes and focused tests together; then run `npm run lint` and `npm test`, commit and push the verified source to GitHub, and run `npm run deploy`. Verify the live collection, detail/install pages and ZIP SHA-256 before considering publication complete. Never replace bytes behind an already published immutable download URL.
+
+作品通过 v2 校验与独立视觉验收后，将定稿同步到公开素材、系列目录和下载包，更新版本哈希及测试；执行 lint 和测试后提交并推送 GitHub，再部署到 Cloudflare。线上页面和下载包校验通过后才算发布完成。已发布的不可变下载地址必须保留原始文件内容。
 
 ## License
 

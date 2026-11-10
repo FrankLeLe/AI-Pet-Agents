@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "desk-memory-squirrel-licun",
+    "category": "desktop-work",
+    "zodiacOrder": null,
+    "needs": [
+      "steady",
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "栗存 · 记忆松鼠",
+      "en": "Licun · Memory Squirrel"
+    },
+    "badge": "MEMORY 07",
+    "accent": "#b87335",
+    "softAccent": "#f1dfc6",
+    "status": "published",
+    "tagline": {
+      "zh": "重要的小事，值得给它留一个位置。",
+      "en": "Give the small things that matter a place to stay."
+    },
+    "description": {
+      "zh": "不用把一切都记在脑海里，把重要的内容好好放下。",
+      "en": "You do not need to hold everything in your head; give important things a home."
+    },
+    "personalityTags": [
+      {
+        "zh": "认真",
+        "en": "Thoughtful"
+      },
+      {
+        "zh": "细心",
+        "en": "Careful"
+      },
+      {
+        "zh": "念旧",
+        "en": "Sentimental"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "记忆松鼠",
+      "zodiacEn": "Memory Squirrel",
+      "roleZh": "细心收藏员",
+      "roleEn": "Thoughtful Keeper",
+      "promiseZh": "重要的小事，值得给它留一个位置。",
+      "promiseEn": "Give the small things that matter a place to stay.",
+      "storyTitleZh": "橡果背包的那声轻响",
+      "storyTitleEn": "A Quiet Click From the Acorn Pack",
+      "storyZh": "栗存背着一个薄荷绿的橡果小包，走到哪里都会先摸摸肩带，确认它还贴在身边。小队里有人记住了好看的颜色，有人记住了绕路的原因，栗存喜欢听完这些零碎的小事，再在晚上安静地回想一遍。一次大家准备重走旧路，却谁也想不起当初为什么绕过那座桥，栗存想起伙伴曾说过桥板松动的那一刻，也想起后来修好的日期。它没有把所有回忆混成一个模糊的印象，而是把前后顺序慢慢讲清楚。栗存的认真并不是永远不忘记，而是愿意给重要的线索一个可以回来寻找的位置。坐在桌边时，它会轻轻整理背包，陪你把今天值得留下的东西收好。",
+      "storyEn": "Licun carries a mint-green acorn pack and checks its straps wherever it goes. It enjoys the crew's small observations: a memorable color, a reason for taking a detour, a moment worth returning to. When nobody could remember why they had once avoided a bridge, the squirrel recalled both the loose board and the later repair. It kept the order of those events clear instead of blending them into one vague impression. Licun's care is not a promise never to forget. It is the habit of giving useful clues somewhere to be found again. Beside your screen, the little pack and curled tail make quiet company while you save the things worth keeping.",
+      "comfortZh": "不用把一切都记在脑海里，把重要的内容好好放下。",
+      "comfortEn": "You do not need to hold everything in your head; give important things a home.",
+      "moments": [
+        {
+          "titleZh": "发现好想法",
+          "titleEn": "A useful idea",
+          "bodyZh": "用自己的话记下关键点，也留下最初的来源。",
+          "bodyEn": "Write the key point in your own words and keep its original source."
+        },
+        {
+          "titleZh": "结束一天",
+          "titleEn": "At the end of a day",
+          "bodyZh": "只收好最值得留下的几件事，不必把一切都打包。",
+          "bodyEn": "Keep the few things worth returning to without saving everything."
+        },
+        {
+          "titleZh": "再次回来",
+          "titleEn": "Returning later",
+          "bodyZh": "先看看记录的时间和背景，再继续当时的思路。",
+          "bodyEn": "Check the date and context before continuing an earlier line of thought."
+        }
+      ],
+      "traitsZh": [
+        "认真",
+        "细心",
+        "念旧"
+      ],
+      "traitsEn": [
+        "Thoughtful",
+        "Careful",
+        "Sentimental"
+      ],
+      "matchZh": "适合整理笔记、记录决定，以及希望给想法留个去处的你。",
+      "matchEn": "For organizing notes, recording decisions, and giving ideas a place to return to."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/desk-memory-squirrel-licun/spritesheet.webp",
+    "previewPath": "/pets/desk-memory-squirrel-licun/preview.webp",
+    "manifestPath": "/pets/desk-memory-squirrel-licun/pet.json",
+    "downloadPath": "/downloads/desk-memory-squirrel-licun.zip",
+    "detailPath": "/api/v1/pets/desk-memory-squirrel-licun.json"
+  }
+}

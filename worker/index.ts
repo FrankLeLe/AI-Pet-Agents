@@ -1,17 +1,8 @@
-/** Cloudflare Worker entry point for the vinext-starter template. */
-import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
+/** Cloudflare Worker entry point for the vinext application. */
 import handler from "vinext/server/app-router-entry";
 
 interface Env {
   ASSETS: Fetcher;
-  DB: D1Database;
-  IMAGES: {
-    input(stream: ReadableStream): {
-      transform(options: Record<string, unknown>): {
-        output(options: { format: string; quality: number }): Promise<{ response(): Response }>;
-      };
-    };
-  };
 }
 
 interface ExecutionContext {
@@ -36,6 +27,35 @@ type HtmlRewriterConstructor = new () => {
 };
 
 const HSTS_VALUE = "max-age=31536000; includeSubDomains";
+const DOWNLOAD_RELEASE = "1a559b86621a992abf2691d5e429cdf0b13d2716";
+const HATCH_SKILL_RELEASE = "6bfce72ca689966918c3bb85c68007914a27f54c";
+const DOWNLOAD_BROWSER_CACHE = "public, max-age=0, must-revalidate";
+const DOWNLOAD_EDGE_CACHE =
+  "public, max-age=604800, stale-while-revalidate=2592000, stale-if-error=2592000";
+const VERSIONED_DOWNLOAD_CACHE = "public, max-age=31536000, immutable";
+
+type DownloadTarget = {
+  filename: string;
+  versioned: boolean;
+};
+
+function resolveDownloadTarget(pathname: string): DownloadTarget | null {
+  const legacyMatch = /^\/downloads\/([a-z0-9][a-z0-9-]*\.zip)$/.exec(pathname);
+  if (legacyMatch) {
+    return { filename: legacyMatch[1], versioned: false };
+  }
+
+  const versionedMatch =
+    /^\/downloads\/([0-9a-f]{40})\/([a-z0-9][a-z0-9-]*\.zip)$/.exec(pathname);
+  if (!versionedMatch) return null;
+  const isPetRelease = versionedMatch[1] === DOWNLOAD_RELEASE;
+  const isHatchRelease =
+    versionedMatch[1] === HATCH_SKILL_RELEASE &&
+    versionedMatch[2] === "hatch-pet.zip";
+  if (!isPetRelease && !isHatchRelease) return null;
+
+  return { filename: versionedMatch[2], versioned: true };
+}
 
 function parseByteRange(value: string, size: number): ByteRange | null {
   const match = /^bytes=(\d*)-(\d*)$/.exec(value.trim());
@@ -62,27 +82,84 @@ function parseByteRange(value: string, size: number): ByteRange | null {
   return { start, end: Math.min(requestedEnd, size - 1) };
 }
 
-async function serveDownload(request: Request, env: Env): Promise<Response> {
-  const assetResponse = await env.ASSETS.fetch(request);
-  const headers = new Headers(assetResponse.headers);
+function ifRangeMatches(value: string | null, headers: Headers): boolean {
+  if (!value) return true;
+  const etag = headers.get("etag");
+  return Boolean(etag && !etag.startsWith("W/") && value.trim() === etag);
+}
 
-  if (!assetResponse.ok) {
-    return assetResponse;
+function sliceByteStream(
+  stream: ReadableStream<Uint8Array>,
+  range: ByteRange,
+): ReadableStream<Uint8Array> {
+  let offset = 0;
+
+  return stream.pipeThrough(
+    new TransformStream<Uint8Array, Uint8Array>({
+      transform(chunk, controller) {
+        const chunkStart = offset;
+        const chunkEnd = chunkStart + chunk.byteLength - 1;
+
+        if (chunkEnd >= range.start && chunkStart <= range.end) {
+          const start = Math.max(range.start - chunkStart, 0);
+          const end = Math.min(range.end - chunkStart + 1, chunk.byteLength);
+          controller.enqueue(chunk.subarray(start, end));
+        }
+
+        offset += chunk.byteLength;
+        if (offset > range.end) controller.terminate();
+      },
+    }),
+  );
+}
+
+async function serveDownload(request: Request, env: Env): Promise<Response> {
+  const requestUrl = new URL(request.url);
+  const target = resolveDownloadTarget(requestUrl.pathname);
+  if (!target) {
+    return new Response("Not found", {
+      status: 404,
+      headers: {
+        "Cache-Control": "private, no-store",
+        "Strict-Transport-Security": HSTS_VALUE,
+        "X-Content-Type-Options": "nosniff",
+      },
+    });
   }
 
+  const assetUrl = new URL(request.url);
+  assetUrl.pathname = `/downloads/${target.filename}`;
+  assetUrl.search = "";
+  const assetResponse = await env.ASSETS.fetch(new Request(assetUrl, request));
+  if (!assetResponse.ok) {
+    const missingHeaders = new Headers(assetResponse.headers);
+    missingHeaders.set("Cache-Control", "private, no-store");
+    missingHeaders.delete("Cloudflare-CDN-Cache-Control");
+    missingHeaders.set("Strict-Transport-Security", HSTS_VALUE);
+    missingHeaders.set("X-Content-Type-Options", "nosniff");
+    return new Response(request.method === "HEAD" ? null : assetResponse.body, {
+      status: assetResponse.status,
+      statusText: assetResponse.statusText,
+      headers: missingHeaders,
+    });
+  }
+
+  const headers = new Headers(assetResponse.headers);
+  const cachePolicy = target.versioned
+    ? VERSIONED_DOWNLOAD_CACHE
+    : DOWNLOAD_BROWSER_CACHE;
+  const edgeCachePolicy = target.versioned
+    ? VERSIONED_DOWNLOAD_CACHE
+    : DOWNLOAD_EDGE_CACHE;
   headers.set("Accept-Ranges", "bytes");
-  headers.set("Cache-Control", "public, max-age=0, must-revalidate");
-  headers.set("Cloudflare-CDN-Cache-Control", "public, max-age=300, must-revalidate");
+  headers.set("Cache-Control", cachePolicy);
+  headers.set("Cloudflare-CDN-Cache-Control", edgeCachePolicy);
+  headers.set("Content-Disposition", `attachment; filename="${target.filename}"`);
   headers.set("Strict-Transport-Security", HSTS_VALUE);
+  headers.set("X-Content-Type-Options", "nosniff");
 
   const rangeHeader = request.headers.get("range");
-  const ifRangeHeader = request.headers.get("if-range");
-  if (
-    !rangeHeader ||
-    request.method === "HEAD" ||
-    assetResponse.status === 206 ||
-    (ifRangeHeader && assetResponse.status === 200)
-  ) {
+  if (!rangeHeader || request.method === "HEAD" || assetResponse.status === 206) {
     return new Response(request.method === "HEAD" ? null : assetResponse.body, {
       status: assetResponse.status,
       statusText: assetResponse.statusText,
@@ -90,20 +167,34 @@ async function serveDownload(request: Request, env: Env): Promise<Response> {
     });
   }
 
-  const body = await assetResponse.arrayBuffer();
-  const range = parseByteRange(rangeHeader, body.byteLength);
+  const size = Number(headers.get("content-length"));
+  if (
+    !Number.isSafeInteger(size) ||
+    size <= 0 ||
+    !assetResponse.body ||
+    !ifRangeMatches(request.headers.get("if-range"), headers)
+  ) {
+    return new Response(assetResponse.body, {
+      status: assetResponse.status,
+      statusText: assetResponse.statusText,
+      headers,
+    });
+  }
 
+  const range = parseByteRange(rangeHeader, size);
   if (!range) {
-    headers.set("Content-Range", `bytes */${body.byteLength}`);
+    await assetResponse.body.cancel();
+    headers.set("Content-Range", `bytes */${size}`);
     headers.set("Content-Length", "0");
     return new Response(null, { status: 416, headers });
   }
 
-  const partialBody = body.slice(range.start, range.end + 1);
-  headers.set("Content-Range", `bytes ${range.start}-${range.end}/${body.byteLength}`);
-  headers.set("Content-Length", String(partialBody.byteLength));
-
-  return new Response(partialBody, { status: 206, headers });
+  headers.set("Content-Range", `bytes ${range.start}-${range.end}/${size}`);
+  headers.set("Content-Length", String(range.end - range.start + 1));
+  return new Response(sliceByteStream(assetResponse.body, range), {
+    status: 206,
+    headers,
+  });
 }
 
 async function localizeDocumentLanguage(response: Response, language: string): Promise<Response> {
@@ -135,12 +226,6 @@ async function localizeDocumentLanguage(response: Response, language: string): P
   });
 }
 
-// Image security config. SVG sources with .svg extension auto-skip the
-// optimization endpoint on the client side (served directly, no proxy).
-// To route SVGs through the optimizer (with security headers), set
-// dangerouslyAllowSVG: true in next.config.js and uncomment below:
-// const imageConfig: ImageConfig = { dangerouslyAllowSVG: true };
-
 const worker = {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const url = new URL(request.url);
@@ -152,17 +237,6 @@ const worker = {
       return serveDownload(request, env);
     }
 
-    if (url.pathname === "/_vinext/image") {
-      const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
-      return handleImageOptimization(request, {
-        fetchAsset: (path) => env.ASSETS.fetch(new Request(new URL(path, request.url))),
-        transformImage: async (body, { width, format, quality }) => {
-          const result = await env.IMAGES.input(body).transform(width > 0 ? { width } : {}).output({ format, quality });
-          return result.response();
-        },
-      }, allowedWidths);
-    }
-
     const response = await handler.fetch(request, env, ctx);
 
     if (request.method !== "GET" && request.method !== "HEAD") {
@@ -171,11 +245,16 @@ const worker = {
 
     const headers = new Headers(response.headers);
     const contentType = headers.get("content-type") ?? "";
-    const isPetAsset = url.pathname.startsWith("/pets/") && !contentType.includes("text/html");
+    const isRscResponse = contentType.includes("text/x-component");
+    const isPetAsset =
+      url.pathname.startsWith("/pets/") &&
+      !contentType.includes("text/html") &&
+      !isRscResponse;
     headers.set("Strict-Transport-Security", HSTS_VALUE);
 
-    if (response.ok && (isPetAsset || url.pathname.startsWith("/downloads/"))) {
-      headers.set("Cache-Control", "public, max-age=604800, stale-while-revalidate=2592000");
+    if (response.ok && isPetAsset) {
+      headers.set("Cache-Control", DOWNLOAD_BROWSER_CACHE);
+      headers.set("Cloudflare-CDN-Cache-Control", DOWNLOAD_EDGE_CACHE);
     } else if (response.ok && url.pathname.startsWith("/api/v1/")) {
       headers.set("Cache-Control", "public, max-age=300");
       headers.set(
@@ -184,13 +263,12 @@ const worker = {
       );
     } else if (
       response.ok &&
-      (contentType.includes("text/html") ||
-        contentType.includes("text/x-component"))
+      (contentType.includes("text/html") || isRscResponse)
     ) {
       headers.set("Cache-Control", "public, max-age=0, must-revalidate");
       headers.set(
         "Cloudflare-CDN-Cache-Control",
-        "public, max-age=300, stale-while-revalidate=86400, stale-if-error=86400",
+        "public, max-age=3600, stale-while-revalidate=86400, stale-if-error=86400",
       );
     } else if (
       response.ok &&

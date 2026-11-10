@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "desk-security-hedgehog-dundun",
+    "category": "desktop-work",
+    "zodiacOrder": null,
+    "needs": [
+      "steady",
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "盾盾 · 安全刺猬",
+      "en": "Dundun · Security Hedgehog"
+    },
+    "badge": "SECURITY 10",
+    "accent": "#526782",
+    "softAccent": "#e0e7ef",
+    "status": "published",
+    "tagline": {
+      "zh": "留意边界，也给自己留一份安心。",
+      "en": "Notice the boundaries and leave yourself room for peace of mind."
+    },
+    "description": {
+      "zh": "谨慎不是不敢前进，而是知道自己正站在哪里。",
+      "en": "Being careful means knowing where you stand before moving ahead."
+    },
+    "personalityTags": [
+      {
+        "zh": "谨慎",
+        "en": "Cautious"
+      },
+      {
+        "zh": "温柔",
+        "en": "Gentle"
+      },
+      {
+        "zh": "可靠",
+        "en": "Dependable"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "安全刺猬",
+      "zodiacEn": "Security Hedgehog",
+      "roleZh": "温柔守望员",
+      "roleEn": "Gentle Watchkeeper",
+      "promiseZh": "留意边界，也给自己留一份安心。",
+      "promiseEn": "Notice the boundaries and leave yourself room for peace of mind.",
+      "storyTitleZh": "打开肩甲的小刺猬",
+      "storyTitleEn": "The Hedgehog Who Opened Its Collar",
+      "storyZh": "盾盾身上的铜色小刺并不尖锐，它常把前爪轻轻放在奶油色护领旁，认真看着来来往往的伙伴。一次小队准备开放自己的小屋，大家急着把所有门都打开，盾盾却先绕着屋子走了一圈，把可以分享的房间和存放私人日记的柜子分清楚。它不是不欢迎客人，只是不希望热闹过后，有人发现重要的东西被误拿走。确认好边界以后，盾盾第一个张开前爪，把新朋友迎进门。它的温柔一直和谨慎待在一起，没有因为小心就把整个世界关在外面。来到你的桌面，它会以安稳的姿态陪着你，让一次停顿和确认也能成为继续前进的力量。",
+      "storyEn": "Dundun's copper spines are softly rounded. It often rests its paws beside a cream collar and watches the crew come and go. Before opening their little house to visitors, the hedgehog walked through it to distinguish shared rooms from cupboards holding private diaries. It wanted guests to feel welcome without anyone discovering afterward that something personal had been carried away by mistake. Once the boundaries were clear, Dundun was the first to open its paws in greeting. Care and warmth belong together in its world. Beside your screen, its steady posture offers company for the pause that helps you decide where and how to take the next step.",
+      "comfortZh": "谨慎不是不敢前进，而是知道自己正站在哪里。",
+      "comfortEn": "Being careful means knowing where you stand before moving ahead.",
+      "moments": [
+        {
+          "titleZh": "准备分享",
+          "titleEn": "Before sharing",
+          "bodyZh": "看看哪些内容适合公开，哪些只需要留给自己。",
+          "bodyEn": "Notice what belongs in public and what should stay with you."
+        },
+        {
+          "titleZh": "需要确认",
+          "titleEn": "A pause for confirmation",
+          "bodyZh": "把范围说清楚，让选择有具体的依据。",
+          "bodyEn": "Make the scope clear so the choice rests on something concrete."
+        },
+        {
+          "titleZh": "心里没底",
+          "titleEn": "Feeling uncertain",
+          "bodyZh": "先找一个可以核实的小问题，给下一步一点支撑。",
+          "bodyEn": "Find one small question you can verify to support the next step."
+        }
+      ],
+      "traitsZh": [
+        "谨慎",
+        "温柔",
+        "可靠"
+      ],
+      "traitsEn": [
+        "Cautious",
+        "Gentle",
+        "Dependable"
+      ],
+      "matchZh": "适合检查边界、仔细交接，以及喜欢安稳陪伴的你。",
+      "matchEn": "For checking boundaries, careful handovers, and reassuring company."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/desk-security-hedgehog-dundun/spritesheet.webp",
+    "previewPath": "/pets/desk-security-hedgehog-dundun/preview.webp",
+    "manifestPath": "/pets/desk-security-hedgehog-dundun/pet.json",
+    "downloadPath": "/downloads/desk-security-hedgehog-dundun.zip",
+    "detailPath": "/api/v1/pets/desk-security-hedgehog-dundun.json"
+  }
+}

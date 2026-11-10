@@ -10,7 +10,7 @@ function json(value) {
 }
 
 const petModule = await loadPetModule();
-const updatedAt = "2026-07-20";
+const updatedAt = "2026-11-11";
 const apiCatalog = {
   schemaVersion: 1,
   updatedAt,

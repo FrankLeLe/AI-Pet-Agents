@@ -5,13 +5,16 @@
   "compatibility_date": "2026-05-15",
   "compatibility_flags": ["nodejs_compat"],
   "cache": {
+    // Keep Cloudflare's default per-version cache isolation so a deployment
+    // cannot serve a previous release's ZIP against new SHA-256 metadata.
     "enabled": true
   },
   "no_bundle": true,
   "assets": {
     "directory": "./dist/client",
-    "binding": "ASSETS",
-    "run_worker_first": ["/downloads/*"]
+    // Existing files are served directly from Cloudflare's asset edge. The
+    // Worker only runs for versioned download aliases that do not exist on disk.
+    "binding": "ASSETS"
   },
   "routes": [
     {

@@ -82,7 +82,8 @@
   font-size: clamp(4rem, 7vw, 7.5rem);
   letter-spacing: -0.04em;
   line-height: 0.84;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: normal;
   text-wrap: balance;
 }
 
@@ -181,7 +182,8 @@
   font-family: Impact, "Arial Black", "Microsoft YaHei", sans-serif;
   letter-spacing: -0.02em;
   line-height: 1;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: normal;
   text-wrap: balance;
 }
 

@@ -1,4 +1,4 @@
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
@@ -9,9 +9,9 @@ import { PetPreview } from "../../_components/PetPreview";
 import { normalizeLanguage, PageShell, t, withLanguage } from "../../_components/SiteChrome";
 import {
   buildCodexInstallPrompt,
+  getPetPackageUrl,
   getPetRelease,
   PET_RELEASE_COMMIT,
-  PET_RELEASE_REPOSITORY,
 } from "@/lib/pet-releases";
 import { getPetById, PETS } from "@/lib/pets";
 import {
@@ -83,17 +83,13 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
           <div className={styles.heroCopy}>
             <span>{role}</span>
             <h1>
-              <span>{t(language, "安装", "INSTALL")}</span>
+              <span>{t(language, "带回 CODEX", "ADD TO CODEX")}</span>
               {name}
             </h1>
             <p>{description}</p>
             <div className={styles.heroActions}>
-              <a href={pet.downloadPath} download>
-                <Download aria-hidden="true" size={19} strokeWidth={3} />
-                {t(language, "下载 ZIP", "Download ZIP")}
-              </a>
-              <a href="#codex-install">
-                {t(language, "让 Codex 安装", "Let Codex install")}
+              <a className={styles.primaryAction} href="#codex-install">
+                <span>{t(language, "复制给 Codex", "Copy for Codex")}</span>
                 <ArrowRight aria-hidden="true" size={19} strokeWidth={3} />
               </a>
             </div>
@@ -109,6 +105,8 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
             codexPrompt={codexPrompt}
             sha256={release.sha256}
             sizeLabel={sizeLabel}
+            sourceCommit={PET_RELEASE_COMMIT}
+            sourceUrl={getPetPackageUrl(pet.id)}
           />
         </div>
 
@@ -128,20 +126,17 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
 
         <aside className={styles.trustStrip}>
           <div>
-            <strong>{t(language, "安装包可以核对", "The package is verifiable")}</strong>
+            <strong>{t(language, "没看到它？", "Can’t find it?")}</strong>
             <p>
               {t(
                 language,
-                `来源固定在 GitHub 提交 ${PET_RELEASE_COMMIT.slice(0, 8)}，页面同时提供完整 SHA-256。`,
-                `The source is pinned to GitHub commit ${PET_RELEASE_COMMIT.slice(0, 8)}, with a full SHA-256 supplied on this page.`,
+                "完整退出并重新打开 Codex Desktop，再检查宠物选择器。",
+                "Fully quit and reopen Codex Desktop, then check the pet selector.",
               )}
             </p>
           </div>
-          <a href={`${PET_RELEASE_REPOSITORY}/tree/${PET_RELEASE_COMMIT}`} target="_blank" rel="noreferrer">
-            {t(language, "查看固定版本", "View pinned source")}
-          </a>
           <Link href={withLanguage("/help", language)}>
-            {t(language, "宠物没有出现？", "Pet not showing?")}
+            {t(language, "查看排查方法", "Troubleshoot")}
           </Link>
           <Link href={withLanguage(`/pets/${pet.id}`, language)}>
             {t(language, "返回角色页", "Back to character")}

@@ -1881,7 +1881,8 @@
     margin-top: 42px;
     max-width: 100%;
     font-size: clamp(2.45rem, 11vw, 3.65rem);
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+    word-break: normal;
   }
 
   .storyNarrative {
@@ -2086,7 +2087,8 @@
     padding-inline: 1px;
     font-size: 0.84rem;
     letter-spacing: 0.025em;
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+    word-break: normal;
   }
 }
 

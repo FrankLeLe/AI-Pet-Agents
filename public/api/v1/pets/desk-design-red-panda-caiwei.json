@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "desk-design-red-panda-caiwei",
+    "category": "desktop-work",
+    "zodiacOrder": null,
+    "needs": [
+      "create",
+      "solve"
+    ],
+    "displayName": {
+      "zh": "彩尾 · 设计小熊猫",
+      "en": "Caiwei · Design Red Panda"
+    },
+    "badge": "DESIGN 09",
+    "accent": "#cf753d",
+    "softAccent": "#f6dfce",
+    "status": "published",
+    "tagline": {
+      "zh": "少一点拥挤，让真正重要的东西被看见。",
+      "en": "Make a little room for what really matters."
+    },
+    "description": {
+      "zh": "好看也可以很清楚，先把最重要的意思留住。",
+      "en": "Beautiful can also be clear; start with the meaning that matters most."
+    },
+    "personalityTags": [
+      {
+        "zh": "敏锐",
+        "en": "Perceptive"
+      },
+      {
+        "zh": "有趣",
+        "en": "Playful"
+      },
+      {
+        "zh": "克制",
+        "en": "Restrained"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "设计小熊猫",
+      "zodiacEn": "Design Red Panda",
+      "roleZh": "清楚表达员",
+      "roleEn": "Clarity Maker",
+      "promiseZh": "少一点拥挤，让真正重要的东西被看见。",
+      "promiseEn": "Make a little room for what really matters.",
+      "storyTitleZh": "尾巴上的三段颜色",
+      "storyTitleEn": "Three Colors Along a Tail",
+      "storyZh": "彩尾的尾巴上只有三段醒目的颜色：珊瑚橙、青绿和暖黄。它并不是不喜欢别的颜色，只是喜欢看清每一种颜色在什么地方最合适。小队要做一张欢迎新伙伴的告示时，大家把喜欢的装饰都加了上去，最后连见面的时间都不容易找到。彩尾没有立刻换上一套新花样，而是先把最重要的一句话放到大家一眼能看见的位置，再一点点留出空白。它用前爪托着下巴看了很久，直到欢迎的意思不再需要解释。来到你的桌边，它仍会在尾巴的颜色之间来回张望，提醒创作也可以从温柔的删减开始，让作品留出给别人理解的空间。",
+      "storyEn": "Caiwei's tail carries just three bright bands: coral, teal, and warm yellow. The red panda likes other colors too, but enjoys discovering where each one belongs. When the crew made a welcome notice, everyone added a favorite decoration until the meeting time was hard to find. Caiwei did not replace the clutter with a different flourish. It moved the most important sentence where everyone could see it, then made a little space around it. With a paw under its chin, it watched until the welcome no longer needed explaining. On your desktop, its thoughtful glances between the tail bands suggest a gentle starting point for design: leave room for someone else to understand.",
+      "comfortZh": "好看也可以很清楚，先把最重要的意思留住。",
+      "comfortEn": "Beautiful can also be clear; start with the meaning that matters most.",
+      "moments": [
+        {
+          "titleZh": "方案太满",
+          "titleEn": "A crowded design",
+          "bodyZh": "说清最重要的一件事，再决定其他元素是否需要留下。",
+          "bodyEn": "Name the main point before deciding which other elements should stay."
+        },
+        {
+          "titleZh": "选择配色",
+          "titleEn": "Choosing colors",
+          "bodyZh": "先确认层次和阅读顺序，再挑喜欢的颜色。",
+          "bodyEn": "Set the hierarchy and reading order before choosing favorite colors."
+        },
+        {
+          "titleZh": "反复打磨",
+          "titleEn": "Refining the result",
+          "bodyZh": "停一下，从第一次看到它的人那里重新看一眼。",
+          "bodyEn": "Pause and look again as someone encountering it for the first time."
+        }
+      ],
+      "traitsZh": [
+        "敏锐",
+        "有趣",
+        "克制"
+      ],
+      "traitsEn": [
+        "Perceptive",
+        "Playful",
+        "Restrained"
+      ],
+      "matchZh": "适合视觉设计、内容整理，以及在表达上想做减法的你。",
+      "matchEn": "For visual design, shaping content, and finding clarity through simplification."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/desk-design-red-panda-caiwei/spritesheet.webp",
+    "previewPath": "/pets/desk-design-red-panda-caiwei/preview.webp",
+    "manifestPath": "/pets/desk-design-red-panda-caiwei/pet.json",
+    "downloadPath": "/downloads/desk-design-red-panda-caiwei.zip",
+    "detailPath": "/api/v1/pets/desk-design-red-panda-caiwei.json"
+  }
+}

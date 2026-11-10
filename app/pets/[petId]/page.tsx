@@ -150,16 +150,16 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
             <p className={styles.petRole}>{role}</p>
             <p className={styles.petTagline}>{specialty}</p>
             <div className={styles.heroActions}>
-              <Link className={styles.primaryButton} href={withLanguage(`/install/${pet.id}`, language)}>
-                {t(language, "安装到 Codex", "Install in Codex")}
-              </Link>
-              <a className={styles.secondaryButton} href="#playground">
-                {t(language, "先试试动作", "Try the actions")}
+              <a className={styles.primaryButton} href="#playground">
+                {t(language, "先玩一下", "Try it now")}
               </a>
+              <Link
+                className={styles.secondaryButton}
+                href={`${withLanguage(`/install/${pet.id}`, language)}#codex-install`}
+              >
+                {t(language, "带回 Codex", "Bring to Codex")}
+              </Link>
             </div>
-            <p className={styles.microcopy}>
-              {t(language, "无需登录 · 免费下载 · 本地安装", "No account · Free download · Local install")}
-            </p>
           </div>
           <div className={styles.petPortrait}>
             <span>{role}</span>
@@ -210,10 +210,10 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
           <div className={styles.sectionHeading}>
             <div>
               <p className={styles.eyebrow}>{series ? "FROM THE SAME SERIES" : "START A SERIES"}</p>
-              <h2 id="more-pets-heading">
+              <h2 id="more-pets-heading" data-copy-role="card-headline">
                 {series
-                  ? t(language, "同一星轨上的其他角色", "OTHER CHARACTERS ON THIS ROUTE")
-                  : t(language, "从金羽十二星继续", "CONTINUE WITH GOLDEN FEATHER CONSTELLATION")}
+                  ? t(language, "同系列伙伴", "MORE COMPANIONS")
+                  : t(language, "继续探索", "KEEP EXPLORING")}
               </h2>
             </div>
           </div>

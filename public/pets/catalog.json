@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-20",
+  "updatedAt": "2026-11-11",
   "format": {
     "spriteVersionNumber": 2,
     "atlasWidth": 1536,
@@ -153,6 +153,270 @@
       },
       "preview": "/pets/pisces-fintail-duck/preview.webp",
       "download": "/downloads/pisces-fintail-duck.zip"
+    },
+    {
+      "id": "cat-ragdoll-yunduo",
+      "category": "breed-cat",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "云朵",
+        "en": "Yunduo"
+      },
+      "preview": "/pets/cat-ragdoll-yunduo/preview.webp",
+      "download": "/downloads/cat-ragdoll-yunduo.zip"
+    },
+    {
+      "id": "cat-american-shorthair-yinbing",
+      "category": "breed-cat",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "银饼",
+        "en": "Yinbing"
+      },
+      "preview": "/pets/cat-american-shorthair-yinbing/preview.webp",
+      "download": "/downloads/cat-american-shorthair-yinbing.zip"
+    },
+    {
+      "id": "cat-british-shorthair-lanyuanyuan",
+      "category": "breed-cat",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "蓝圆圆",
+        "en": "Lan Yuanyuan"
+      },
+      "preview": "/pets/cat-british-shorthair-lanyuanyuan/preview.webp",
+      "download": "/downloads/cat-british-shorthair-lanyuanyuan.zip"
+    },
+    {
+      "id": "cat-maine-coon-linwang",
+      "category": "breed-cat",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "林王",
+        "en": "Linwang"
+      },
+      "preview": "/pets/cat-maine-coon-linwang/preview.webp",
+      "download": "/downloads/cat-maine-coon-linwang.zip"
+    },
+    {
+      "id": "cat-siamese-haiyan",
+      "category": "breed-cat",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "海盐",
+        "en": "Haiyan"
+      },
+      "preview": "/pets/cat-siamese-haiyan/preview.webp",
+      "download": "/downloads/cat-siamese-haiyan.zip"
+    },
+    {
+      "id": "cat-norwegian-forest-songlu",
+      "category": "breed-cat",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "松露",
+        "en": "Songlu"
+      },
+      "preview": "/pets/cat-norwegian-forest-songlu/preview.webp",
+      "download": "/downloads/cat-norwegian-forest-songlu.zip"
+    },
+    {
+      "id": "cat-persian-xuegao",
+      "category": "breed-cat",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "雪糕",
+        "en": "Xuegao"
+      },
+      "preview": "/pets/cat-persian-xuegao/preview.webp",
+      "download": "/downloads/cat-persian-xuegao.zip"
+    },
+    {
+      "id": "cat-bengal-jinbao",
+      "category": "breed-cat",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "金豹",
+        "en": "Jinbao"
+      },
+      "preview": "/pets/cat-bengal-jinbao/preview.webp",
+      "download": "/downloads/cat-bengal-jinbao.zip"
+    },
+    {
+      "id": "cat-russian-blue-wulan",
+      "category": "breed-cat",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "雾蓝",
+        "en": "Wulan"
+      },
+      "preview": "/pets/cat-russian-blue-wulan/preview.webp",
+      "download": "/downloads/cat-russian-blue-wulan.zip"
+    },
+    {
+      "id": "cat-devon-rex-juanjuan",
+      "category": "breed-cat",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "卷卷",
+        "en": "Juanjuan"
+      },
+      "preview": "/pets/cat-devon-rex-juanjuan/preview.webp",
+      "download": "/downloads/cat-devon-rex-juanjuan.zip"
+    },
+    {
+      "id": "cat-sphynx-yueguang",
+      "category": "breed-cat",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "月光",
+        "en": "Yueguang"
+      },
+      "preview": "/pets/cat-sphynx-yueguang/preview.webp",
+      "download": "/downloads/cat-sphynx-yueguang.zip"
+    },
+    {
+      "id": "cat-abyssinian-hongsha",
+      "category": "breed-cat",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "红砂",
+        "en": "Hongsha"
+      },
+      "preview": "/pets/cat-abyssinian-hongsha/preview.webp",
+      "download": "/downloads/cat-abyssinian-hongsha.zip"
+    },
+    {
+      "id": "desk-compiler-mole-mazai",
+      "category": "desktop-work",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "码仔 · 编译鼹鼠",
+        "en": "Mazai · Compiler Mole"
+      },
+      "preview": "/pets/desk-compiler-mole-mazai/preview.webp",
+      "download": "/downloads/desk-compiler-mole-mazai.zip"
+    },
+    {
+      "id": "desk-test-beetle-diandian",
+      "category": "desktop-work",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "点点 · 测试甲虫",
+        "en": "Diandian · Testing Beetle"
+      },
+      "preview": "/pets/desk-test-beetle-diandian/preview.webp",
+      "download": "/downloads/desk-test-beetle-diandian.zip"
+    },
+    {
+      "id": "desk-review-owl-jiaojiao",
+      "category": "desktop-work",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "校校 · 审阅猫头鹰",
+        "en": "Jiaojiao · Review Owl"
+      },
+      "preview": "/pets/desk-review-owl-jiaojiao/preview.webp",
+      "download": "/downloads/desk-review-owl-jiaojiao.zip"
+    },
+    {
+      "id": "desk-search-hound-xiuxiu",
+      "category": "desktop-work",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "嗅嗅 · 搜索猎犬",
+        "en": "Xiuxiu · Search Hound"
+      },
+      "preview": "/pets/desk-search-hound-xiuxiu/preview.webp",
+      "download": "/downloads/desk-search-hound-xiuxiu.zip"
+    },
+    {
+      "id": "desk-plan-beaver-gege",
+      "category": "desktop-work",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "格格 · 规划海狸",
+        "en": "Gege · Planning Beaver"
+      },
+      "preview": "/pets/desk-plan-beaver-gege/preview.webp",
+      "download": "/downloads/desk-plan-beaver-gege.zip"
+    },
+    {
+      "id": "desk-deploy-pigeon-yundi",
+      "category": "desktop-work",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "云递 · 部署信鸽",
+        "en": "Yundi · Deployment Pigeon"
+      },
+      "preview": "/pets/desk-deploy-pigeon-yundi/preview.webp",
+      "download": "/downloads/desk-deploy-pigeon-yundi.zip"
+    },
+    {
+      "id": "desk-memory-squirrel-licun",
+      "category": "desktop-work",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "栗存 · 记忆松鼠",
+        "en": "Licun · Memory Squirrel"
+      },
+      "preview": "/pets/desk-memory-squirrel-licun/preview.webp",
+      "download": "/downloads/desk-memory-squirrel-licun.zip"
+    },
+    {
+      "id": "desk-data-octopus-duoduo",
+      "category": "desktop-work",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "多多 · 数据章鱼",
+        "en": "Duoduo · Data Octopus"
+      },
+      "preview": "/pets/desk-data-octopus-duoduo/preview.webp",
+      "download": "/downloads/desk-data-octopus-duoduo.zip"
+    },
+    {
+      "id": "desk-design-red-panda-caiwei",
+      "category": "desktop-work",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "彩尾 · 设计小熊猫",
+        "en": "Caiwei · Design Red Panda"
+      },
+      "preview": "/pets/desk-design-red-panda-caiwei/preview.webp",
+      "download": "/downloads/desk-design-red-panda-caiwei.zip"
+    },
+    {
+      "id": "desk-security-hedgehog-dundun",
+      "category": "desktop-work",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "盾盾 · 安全刺猬",
+        "en": "Dundun · Security Hedgehog"
+      },
+      "preview": "/pets/desk-security-hedgehog-dundun/preview.webp",
+      "download": "/downloads/desk-security-hedgehog-dundun.zip"
+    },
+    {
+      "id": "desk-waiting-sloth-manman",
+      "category": "desktop-work",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "慢慢 · 等待树懒",
+        "en": "Manman · Waiting Sloth"
+      },
+      "preview": "/pets/desk-waiting-sloth-manman/preview.webp",
+      "download": "/downloads/desk-waiting-sloth-manman.zip"
+    },
+    {
+      "id": "desk-debug-salamander-huohua",
+      "category": "desktop-work",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "火花 · 调试火蜥蜴",
+        "en": "Huohua · Debugging Salamander"
+      },
+      "preview": "/pets/desk-debug-salamander-huohua/preview.webp",
+      "download": "/downloads/desk-debug-salamander-huohua.zip"
     }
   ]
 }

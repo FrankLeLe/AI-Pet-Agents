@@ -1,12 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
+import { withLanguage } from "@/lib/i18n";
 import { ANIMATIONS } from "@/lib/pet-animation";
 import type { AnimationKey } from "@/lib/pet-animation";
 import type { Language } from "@/lib/pets";
 
-import { PetPreview } from "./PetPreview";
 import { SpritePet } from "./SpritePet";
 import styles from "./pet-playground.module.css";
 
@@ -23,6 +24,10 @@ const ANIMATION_LABELS: Record<AnimationKey, { zh: string; en: string }> = {
   look: { zh: "看看四周", en: "Look around" },
 };
 
+const PLAYGROUND_PRELOAD_ANIMATIONS: readonly AnimationKey[] = ANIMATIONS.map(
+  (item) => item.key,
+);
+
 type PetPlaygroundProps = {
   language: Language;
   petId: string;
@@ -37,31 +42,44 @@ export function PetPlayground({
   initialAnimation = "idle",
 }: PetPlaygroundProps) {
   const [animation, setAnimation] = useState<AnimationKey>(initialAnimation);
+  const [displayedAnimation, setDisplayedAnimation] =
+    useState<AnimationKey>(initialAnimation);
   const [isAwake, setIsAwake] = useState(false);
-  const label = ANIMATION_LABELS[animation][language];
+  const displayedLabel = ANIMATION_LABELS[displayedAnimation][language];
 
   return (
     <section className={styles.playground} aria-labelledby="playground-title">
       <div className={styles.playgroundCopy}>
-        <p className={styles.eyebrow}>ACTION PLAYGROUND</p>
-        <h2 id="playground-title">
-          {language === "zh" ? "动作试玩" : "TRY THE ACTIONS"}
+        <p className={styles.eyebrow}>PET PLAYGROUND</p>
+        <h2 id="playground-title" data-copy-role="card-headline">
+          {language === "zh" ? "一起玩会儿" : "PLAY TOGETHER"}
         </h2>
-        <p>
-          {language === "zh"
-            ? "选择一种状态，查看角色在 Codex 里的对应动作。"
-            : "Choose a state to preview the character's matching action in Codex."}
-        </p>
         <div
           className={styles.stateButtons}
           role="group"
-          aria-label={language === "zh" ? "宠物动画状态" : "Pet animation states"}
+          aria-label={language === "zh" ? `和${petName}互动` : `Play with ${petName}`}
         >
           {ANIMATIONS.map((item) => (
             <button
               type="button"
-              className={animation === item.key ? styles.stateButtonActive : undefined}
-              aria-pressed={animation === item.key}
+              className={
+                displayedAnimation === item.key
+                  ? styles.stateButtonActive
+                  : undefined
+              }
+              aria-pressed={displayedAnimation === item.key}
+              aria-busy={
+                isAwake &&
+                animation === item.key &&
+                displayedAnimation !== item.key
+              }
+              data-motion-pending={
+                isAwake &&
+                animation === item.key &&
+                displayedAnimation !== item.key
+                  ? "true"
+                  : "false"
+              }
               onClick={() => {
                 setAnimation(item.key);
                 setIsAwake(true);
@@ -78,35 +96,42 @@ export function PetPlayground({
           <span>{petName}</span>
           <strong aria-live="polite">
             {isAwake
-              ? label
+              ? displayedLabel
               : language === "zh"
-                ? "选择一个动作开始试玩"
-                : "Choose an action to begin"}
+                ? "在等你"
+                : "Waiting for you"}
           </strong>
         </div>
+        <SpritePet
+          key={petId}
+          petId={petId}
+          animation={isAwake ? animation : initialAnimation}
+          preloadAnimations={PLAYGROUND_PRELOAD_ANIMATIONS}
+          paused={!isAwake}
+          getAnimationLabel={(currentAnimation) => {
+            const currentLabel = ANIMATION_LABELS[currentAnimation][language];
+            return language === "zh"
+              ? `${petName}正在${currentLabel}`
+              : `${petName}: ${currentLabel}`;
+          }}
+          onDisplayedAnimationChange={setDisplayedAnimation}
+          onAnimationError={(failedAnimation) => {
+            setAnimation((currentAnimation) =>
+              currentAnimation === failedAnimation
+                ? displayedAnimation
+                : currentAnimation,
+            );
+          }}
+          className={styles.playgroundSprite}
+        />
         {isAwake ? (
-          <SpritePet
-            petId={petId}
-            animation={animation}
-            label={language === "zh" ? `${petName}正在${label}` : `${petName}: ${label}`}
-            className={styles.playgroundSprite}
-          />
-        ) : (
-          <PetPreview
-            petId={petId}
-            label={language === "zh" ? `${petName}静态预览` : `${petName} preview`}
-            className={styles.playgroundSprite}
-          />
-        )}
-        <p className={styles.stageHint}>
-          {language === "zh"
-            ? isAwake
-              ? "这就是角色安装到 Codex 后的动作效果。"
-              : "完整动画会在你选择动作后加载。"
-            : isAwake
-              ? "This is how the character moves after installation."
-              : "The full animation loads after you choose an action."}
-        </p>
+          <Link
+            className={styles.installCta}
+            href={`${withLanguage(`/install/${petId}`, language)}#codex-install`}
+          >
+            {language === "zh" ? `带${petName}回 Codex` : `Bring ${petName} to Codex`}
+          </Link>
+        ) : null}
       </div>
     </section>
   );

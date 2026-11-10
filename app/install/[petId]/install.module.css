@@ -79,7 +79,8 @@
   font-size: clamp(3rem, 6.5vw, 6.8rem);
   letter-spacing: -0.035em;
   line-height: 0.9;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: normal;
   text-wrap: balance;
 }
 
@@ -121,8 +122,17 @@
   font-weight: 950;
 }
 
-.heroActions a:first-child {
+.heroActions .primaryAction {
   background: var(--yellow);
+}
+
+.heroActions .secondaryAction {
+  background: white;
+}
+
+.heroActions a > span {
+  display: grid;
+  gap: 2px;
 }
 
 .installRoutes {
@@ -163,7 +173,7 @@
 
 .trustStrip {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
   gap: 20px;
   align-items: center;
   margin-top: 28px;

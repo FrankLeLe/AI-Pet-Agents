@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "cat-abyssinian-hongsha",
+    "category": "breed-cat",
+    "zodiacOrder": null,
+    "needs": [
+      "start",
+      "create"
+    ],
+    "displayName": {
+      "zh": "红砂",
+      "en": "Hongsha"
+    },
+    "badge": "ABYSSINIAN 12",
+    "accent": "#b86743",
+    "softAccent": "#f1d8cc",
+    "status": "published",
+    "tagline": {
+      "zh": "门缝刚亮，就陪你出去探探路。",
+      "en": "When light appears under the door, take one curious step toward it."
+    },
+    "description": {
+      "zh": "未知不用一次走完，先做一个能退回来的小尝试。",
+      "en": "You do not need to cross the unknown at once; begin with a small step you can reverse."
+    },
+    "personalityTags": [
+      {
+        "zh": "好奇",
+        "en": "Curious"
+      },
+      {
+        "zh": "敏捷",
+        "en": "Agile"
+      },
+      {
+        "zh": "爱探索",
+        "en": "Adventurous"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "阿比西尼亚猫",
+      "zodiacEn": "Abyssinian",
+      "roleZh": "轻装探路猫",
+      "roleEn": "Nimble Path Finder",
+      "promiseZh": "门缝刚亮，就陪你出去探探路。",
+      "promiseEn": "When light appears under the door, take one curious step toward it.",
+      "storyTitleZh": "门缝亮起时的第一步",
+      "storyTitleEn": "The First Step When Light Appears",
+      "storyZh": "红砂总在新窗口刚打开时抬起头。红褐滴答毛像被晨光擦亮，长尾巴在身后保持平衡，它会先看看门缝外有什么，再轻快迈出去。它不保证每条路都通向正确答案，也不会为了显得勇敢就一路狂奔。一次新工具刚出现，大家在说明和猜测之间争论很久。红砂只建立了一个很小的试验，把一项真实任务放进去走了一遍。结果不算完美，却让限制和机会都变得清楚。它留下脚印后便回到桌面，把路线交给后来的人。红砂相信探索不是冒险表演，而是用一次可收回的行动换来比猜测更可靠的信息。走错一小段也没有关系，只要知道怎样回到原处。",
+      "storyEn": "Hongsha raises its head whenever a new window opens. Ruddy ticked fur catches the morning light, a long tail holds the body in balance, and the cat studies what lies beyond the narrow opening before stepping through. It does not promise that every path leads to the right answer, nor does it run merely to look brave. When a new tool appeared, everyone spent a long time debating documentation and guesses. Hongsha built one small trial and sent a real task through it. The result was not perfect, but both the limits and possibilities became clear. After leaving a line of pawprints, it returned to the desk and let others decide whether to follow. For Hongsha, exploration is not a performance of risk; it is a reversible action that produces information more trustworthy than speculation. A short wrong turn is acceptable when the route back remains clear.",
+      "comfortZh": "未知不用一次走完，先做一个能退回来的小尝试。",
+      "comfortEn": "You do not need to cross the unknown at once; begin with a small step you can reverse.",
+      "moments": [
+        {
+          "titleZh": "发现新工具",
+          "titleEn": "When a new tool appears",
+          "bodyZh": "选一项真实小任务试用，别只比较宣传和想象。",
+          "bodyEn": "Test one small real task instead of comparing only claims and assumptions."
+        },
+        {
+          "titleZh": "担心走错",
+          "titleEn": "When the path may be wrong",
+          "bodyZh": "先留下回退点，让探索不必承担全部风险。",
+          "bodyEn": "Create a return point first so exploration does not carry all the risk."
+        },
+        {
+          "titleZh": "带回结果",
+          "titleEn": "After the trial",
+          "bodyZh": "记录限制和收获，让后来的人不用重复猜测。",
+          "bodyEn": "Record limits and gains so the next person does not need to repeat the guesswork."
+        }
+      ],
+      "traitsZh": [
+        "好奇",
+        "敏捷",
+        "爱探索"
+      ],
+      "traitsEn": [
+        "Curious",
+        "Agile",
+        "Adventurous"
+      ],
+      "matchZh": "适合工具试用、技术探索，以及希望用小实验代替空想的你。",
+      "matchEn": "For tool trials, technical exploration, and anyone who prefers small experiments to speculation."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/cat-abyssinian-hongsha/spritesheet.webp",
+    "previewPath": "/pets/cat-abyssinian-hongsha/preview.webp",
+    "manifestPath": "/pets/cat-abyssinian-hongsha/pet.json",
+    "downloadPath": "/downloads/cat-abyssinian-hongsha.zip",
+    "detailPath": "/api/v1/pets/cat-abyssinian-hongsha.json"
+  }
+}

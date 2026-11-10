@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "cat-british-shorthair-lanyuanyuan",
+    "category": "breed-cat",
+    "zodiacOrder": null,
+    "needs": [
+      "steady",
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "蓝圆圆",
+      "en": "Lan Yuanyuan"
+    },
+    "badge": "BRITISH SHORTHAIR 03",
+    "accent": "#7589a3",
+    "softAccent": "#dfe7f0",
+    "status": "published",
+    "tagline": {
+      "zh": "事情再多，也先稳稳做好眼前一件。",
+      "en": "When everything piles up, begin with the one thing in front of you."
+    },
+    "description": {
+      "zh": "不用同时顾好所有事情，先让一件事有着落。",
+      "en": "You do not need to hold everything at once; give one task a solid landing place."
+    },
+    "personalityTags": [
+      {
+        "zh": "稳重",
+        "en": "Steady"
+      },
+      {
+        "zh": "耐心",
+        "en": "Patient"
+      },
+      {
+        "zh": "从容",
+        "en": "Composed"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "英国短毛猫",
+      "zodiacEn": "British Shorthair",
+      "roleZh": "稳场坐镇猫",
+      "roleEn": "Steady Desk Keeper",
+      "promiseZh": "事情再多，也先稳稳做好眼前一件。",
+      "promiseEn": "When everything piles up, begin with the one thing in front of you.",
+      "storyTitleZh": "桌面慢下来的半拍",
+      "storyTitleEn": "The Half Beat That Slows the Desk",
+      "storyZh": "蓝圆圆不喜欢追着每一条通知跑。它更愿意在桌面中央稳稳坐下，把圆脸朝向当前窗口，等四周的声音自然退到后面。待办堆得太高时，它会用厚实的爪子按住最上面一张；不是说其他事情不重要，只是眼前这一件需要先有落点。曾经有个晚上，多个任务同时闪烁，窗口来回切换，谁也没有真正向前。蓝圆圆坐在唯一没有关闭的文档旁，直到第一小段被写完。随后第二件、第三件才各自有了位置。它从不许诺快速清空一切，只守住一个可以持续的次序：先坐下来，再看清楚，然后把最近的一件事稳稳做完。",
+      "storyEn": "Lan Yuanyuan has no interest in chasing every notification across the screen. It prefers to sit firmly at the center of the desk, round face turned toward the current window, and wait for the surrounding noise to settle behind it. When tasks rise into a pile, one broad paw rests on the top page—not because the others do not matter, but because the nearest one needs a place to begin. One evening, several jobs blinked at once and the screen kept switching without anything moving forward. Lan Yuanyuan stayed beside the only document left open until its first small section was finished. The second and third tasks found their places afterward. It never promises to clear everything quickly; it protects a workable order: settle, see clearly, and complete the closest real step.",
+      "comfortZh": "不用同时顾好所有事情，先让一件事有着落。",
+      "comfortEn": "You do not need to hold everything at once; give one task a solid landing place.",
+      "moments": [
+        {
+          "titleZh": "待办太多",
+          "titleEn": "When tasks pile up",
+          "bodyZh": "挑出今天必须落地的一件，其余先排到它后面。",
+          "bodyEn": "Choose the one task that must land today and place the rest behind it."
+        },
+        {
+          "titleZh": "频繁切换",
+          "titleEn": "When context keeps switching",
+          "bodyZh": "留下一个窗口，完成一个可见段落后再换。",
+          "bodyEn": "Keep one window open and finish one visible section before switching."
+        },
+        {
+          "titleZh": "节奏乱了",
+          "titleEn": "When the rhythm slips",
+          "bodyZh": "从最近、最明确的动作重新坐稳，不追赶刚才。",
+          "bodyEn": "Reset with the nearest clear action instead of chasing lost time."
+        }
+      ],
+      "traitsZh": [
+        "稳重",
+        "耐心",
+        "从容"
+      ],
+      "traitsEn": [
+        "Steady",
+        "Patient",
+        "Composed"
+      ],
+      "matchZh": "适合任务繁杂、容易被通知带走，或需要稳定节奏的你。",
+      "matchEn": "For crowded task lists, distracting notifications, and anyone who works best at a steady pace."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/cat-british-shorthair-lanyuanyuan/spritesheet.webp",
+    "previewPath": "/pets/cat-british-shorthair-lanyuanyuan/preview.webp",
+    "manifestPath": "/pets/cat-british-shorthair-lanyuanyuan/pet.json",
+    "downloadPath": "/downloads/cat-british-shorthair-lanyuanyuan.zip",
+    "detailPath": "/api/v1/pets/cat-british-shorthair-lanyuanyuan.json"
+  }
+}

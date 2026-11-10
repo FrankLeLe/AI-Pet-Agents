@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "desk-deploy-pigeon-yundi",
+    "category": "desktop-work",
+    "zodiacOrder": null,
+    "needs": [
+      "start",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "云递 · 部署信鸽",
+      "en": "Yundi · Deployment Pigeon"
+    },
+    "badge": "DEPLOY 06",
+    "accent": "#6d8eaa",
+    "softAccent": "#dfeaf1",
+    "status": "published",
+    "tagline": {
+      "zh": "快到终点的时候，陪你把最后一步走稳。",
+      "en": "Near the finish, keep the final step steady."
+    },
+    "description": {
+      "zh": "作品值得被看见，也值得好好确认已经到达。",
+      "en": "Your work deserves to be seen and its arrival deserves a careful check."
+    },
+    "personalityTags": [
+      {
+        "zh": "可靠",
+        "en": "Dependable"
+      },
+      {
+        "zh": "守时",
+        "en": "Punctual"
+      },
+      {
+        "zh": "细致",
+        "en": "Careful"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "部署信鸽",
+      "zodiacEn": "Deployment Pigeon",
+      "roleZh": "可靠送达员",
+      "roleEn": "Reliable Courier",
+      "promiseZh": "快到终点的时候，陪你把最后一步走稳。",
+      "promiseEn": "Near the finish, keep the final step steady.",
+      "storyTitleZh": "出发前，再看一眼搭扣",
+      "storyTitleEn": "One Last Look at the Harness",
+      "storyZh": "云递有一条亮眼的橙色背带，圆角小胶囊总贴在它背后。伙伴们把旅行中的小成果交给它时，它会先低头检查胸前的搭扣，再转过头看看胶囊有没有放稳。一次，庆祝的声音已经响起来，云递却仍站在出发点没有动。它发现目的地的灯刚换了位置，如果沿着旧方向走，就会把好消息送到空房间。等大家确认好新的落点，它才踏着短短的步子向前。回来时，背带上仍干干净净，伙伴们却都知道，那份看起来不忙的认真很重要。住在你的桌面上，云递会陪你经历准备亮相前的小紧张，提醒最后一步也值得和开头一样用心。",
+      "storyEn": "Yundi wears an orange harness with a rounded capsule secured close to its back. Before setting out with the crew's small achievements, it checks the chest clasp and looks over its shoulder. Once, a celebration had already begun when the pigeon noticed that the destination light had moved. Following the old route would deliver good news to an empty room. It waited until the new destination was clear, then set off with short, deliberate steps. Its clean harness revealed little of the care involved, but the others understood. On your desktop, Yundi offers company for that nervous moment before showing work, when the final step deserves as much attention as the first.",
+      "comfortZh": "作品值得被看见，也值得好好确认已经到达。",
+      "comfortEn": "Your work deserves to be seen and its arrival deserves a careful check.",
+      "moments": [
+        {
+          "titleZh": "准备发布",
+          "titleEn": "Ready to publish",
+          "bodyZh": "再看一眼目标位置和当前版本，确认出发的正是这一份。",
+          "bodyEn": "Check the destination and current version before sending this exact result."
+        },
+        {
+          "titleZh": "等待到达",
+          "titleEn": "Waiting for arrival",
+          "bodyZh": "给结果一点时间，再从接收的一端确认它。",
+          "bodyEn": "Give the result a moment, then check from the receiving end."
+        },
+        {
+          "titleZh": "顺利送达",
+          "titleEn": "The result arrives",
+          "bodyZh": "把验证和来路记下来，让这次完成有个清楚的落点。",
+          "bodyEn": "Record the check and source so this completion has a clear endpoint."
+        }
+      ],
+      "traitsZh": [
+        "可靠",
+        "守时",
+        "细致"
+      ],
+      "traitsEn": [
+        "Dependable",
+        "Punctual",
+        "Careful"
+      ],
+      "matchZh": "适合作品发布、项目交接，以及在最后一步需要稳住心态的你。",
+      "matchEn": "For publishing work, handing over projects, and staying steady near the finish."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/desk-deploy-pigeon-yundi/spritesheet.webp",
+    "previewPath": "/pets/desk-deploy-pigeon-yundi/preview.webp",
+    "manifestPath": "/pets/desk-deploy-pigeon-yundi/pet.json",
+    "downloadPath": "/downloads/desk-deploy-pigeon-yundi.zip",
+    "detailPath": "/api/v1/pets/desk-deploy-pigeon-yundi.json"
+  }
+}

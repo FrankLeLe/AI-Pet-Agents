@@ -1,0 +1,203 @@
+{
+  "seriesId": "desktop-work-crew",
+  "preparedOn": "2026-11-11",
+  "petCount": 12,
+  "reviewScope": "Approved source bytes reverified before publication; no regenerated or unreviewed atlas included.",
+  "archiveContract": "<pet-id>/pet.json and <pet-id>/spritesheet.webp only",
+  "license": "ASSET-LICENSE.md",
+  "pets": [
+    {
+      "id": "desk-compiler-mole-mazai",
+      "manifestSha256": "d36096c9a11ac224ba3ff8f921bb067b84840a83d6d4577075a4c980fcdf8765",
+      "spritesheetSha256": "c788f6d9992f9732dee97572cf8536f689143e3e16d5bfbe72c9a352492673ce",
+      "websiteZipSha256": "f084e5b25a3fb0093c777bcd5e6bf52cb83e46752f8365c4859ed78ddefe9b31",
+      "websiteZipSizeBytes": 2732606,
+      "format": "1536x2288, 192x208 cells, spriteVersionNumber 2",
+      "strictValidationPassed": true,
+      "strictErrors": [],
+      "strictWarnings": [],
+      "independentVisualQA": "pass",
+      "directionWarnings": []
+    },
+    {
+      "id": "desk-test-beetle-diandian",
+      "manifestSha256": "be6f6f03acc622905b3cb6250279d28951dc82fb07aabce3dd01bb6216e4fb89",
+      "spritesheetSha256": "287e2109dceb79222627ebaf64fd3f154578ef50f4f8b619520dd79c4faf22de",
+      "websiteZipSha256": "2ea6044466238a878ac476b691ad23a31cfedd1450db339f3df09b88bb1877e5",
+      "websiteZipSizeBytes": 2542146,
+      "format": "1536x2288, 192x208 cells, spriteVersionNumber 2",
+      "strictValidationPassed": true,
+      "strictErrors": [],
+      "strictWarnings": [],
+      "independentVisualQA": "pass",
+      "directionWarnings": []
+    },
+    {
+      "id": "desk-review-owl-jiaojiao",
+      "manifestSha256": "1a99339e1f56146861b84e085eb37eecf8e45cd0272a139dc6036cc305ce04fa",
+      "spritesheetSha256": "e60e504c7920d8ffe53de9c399cb43a0cf262ae767ee1ec96ce4404ea7d01c2b",
+      "websiteZipSha256": "d2200ab2a0a4afe3409aa4770a55360d8fe5cfb89a0da16698f5e8e7e530af99",
+      "websiteZipSizeBytes": 2794931,
+      "format": "1536x2288, 192x208 cells, spriteVersionNumber 2",
+      "strictValidationPassed": true,
+      "strictErrors": [],
+      "strictWarnings": [],
+      "independentVisualQA": "pass",
+      "directionWarnings": []
+    },
+    {
+      "id": "desk-search-hound-xiuxiu",
+      "manifestSha256": "7266efffb2b47cf88a1378ae33f4d1b3aa78e07d085e2c94454d8b35ff9e33cb",
+      "spritesheetSha256": "9db49545d1012ad3a8605cff6bf126a05b6fafb9e50d05e7299ca564b1ead773",
+      "websiteZipSha256": "094542938e54f47a0f7c7d5fc77be19ad3c18cd97dedfd8c546576449e5105d0",
+      "websiteZipSizeBytes": 2671269,
+      "format": "1536x2288, 192x208 cells, spriteVersionNumber 2",
+      "strictValidationPassed": true,
+      "strictErrors": [],
+      "strictWarnings": [],
+      "independentVisualQA": "pass",
+      "directionWarnings": [
+        "247.5"
+      ]
+    },
+    {
+      "id": "desk-plan-beaver-gege",
+      "manifestSha256": "be4622a6e883539f95f04f2272d6345a52f6e7b32f5efb3aa5b3a842fc10b3c8",
+      "spritesheetSha256": "dceefa917e498c61ce23f10e424808f3f0c446d5960410b2a2369c07714a6be3",
+      "websiteZipSha256": "813a82448717c6967e877718ee5790c09aaf43dc79fd529e3361c809be75e879",
+      "websiteZipSizeBytes": 2597794,
+      "format": "1536x2288, 192x208 cells, spriteVersionNumber 2",
+      "strictValidationPassed": true,
+      "strictErrors": [],
+      "strictWarnings": [],
+      "independentVisualQA": "pass",
+      "directionWarnings": []
+    },
+    {
+      "id": "desk-deploy-pigeon-yundi",
+      "manifestSha256": "75b9fe4703e4dab90c363a4584070a01e8a5276c6e64fac27f04e1f48b7698d8",
+      "spritesheetSha256": "9313c7bc9e5dffb856eee09ecbb37faf56d8971b1b8038c4f93e0b456f445328",
+      "websiteZipSha256": "f84fd2621d27f8029df528ba252a1e541d66d9a0c2cdc5276524470fbc5a46ab",
+      "websiteZipSizeBytes": 2700115,
+      "format": "1536x2288, 192x208 cells, spriteVersionNumber 2",
+      "strictValidationPassed": true,
+      "strictErrors": [],
+      "strictWarnings": [],
+      "independentVisualQA": "pass",
+      "directionWarnings": [
+        "022.5",
+        "157.5",
+        "202.5",
+        "337.5"
+      ]
+    },
+    {
+      "id": "desk-memory-squirrel-licun",
+      "manifestSha256": "83fbf2b4ad7184c0023079f713a56b3ee24f22d294a2bd0de363832103e2f375",
+      "spritesheetSha256": "7a2789d8567d4cb2702981d0d789f4588c5f9b2b5ca8b3d58f2b56961c1f8ba1",
+      "websiteZipSha256": "6b9cdf388dac1740809470ff25803e75b3f0fc25b905a15bef3e5a913d01131a",
+      "websiteZipSizeBytes": 2821570,
+      "format": "1536x2288, 192x208 cells, spriteVersionNumber 2",
+      "strictValidationPassed": true,
+      "strictErrors": [],
+      "strictWarnings": [],
+      "independentVisualQA": "pass",
+      "directionWarnings": [
+        "067.5",
+        "112.5",
+        "157.5",
+        "202.5",
+        "247.5",
+        "292.5",
+        "337.5"
+      ]
+    },
+    {
+      "id": "desk-data-octopus-duoduo",
+      "manifestSha256": "c8223c3deb953cd74e269b7c342b823ac7bf6701a4bd53f2a6614edf9a8dcb38",
+      "spritesheetSha256": "039e52d808b284931b348fbe0b0c283987a767db8699764fe0b5aba7046e1a11",
+      "websiteZipSha256": "9166af1dbb2383e118f1ae06ba618ae9e5d099db96ec37725b4800d0cae1fc8b",
+      "websiteZipSizeBytes": 2822736,
+      "format": "1536x2288, 192x208 cells, spriteVersionNumber 2",
+      "strictValidationPassed": true,
+      "strictErrors": [],
+      "strictWarnings": [],
+      "independentVisualQA": "pass",
+      "directionWarnings": []
+    },
+    {
+      "id": "desk-design-red-panda-caiwei",
+      "manifestSha256": "859a76ce39119900217fc5ce4166b132fd7fec8af989efc6825a150af06b98af",
+      "spritesheetSha256": "3071f346086b1e145a57da8dfef0e092133980ca256726fdd4c33aaf14d08243",
+      "websiteZipSha256": "85e1ffa2a8389a7584ae65de4ffa34a53eda426e553240e09264bdc6752bb115",
+      "websiteZipSizeBytes": 3141370,
+      "format": "1536x2288, 192x208 cells, spriteVersionNumber 2",
+      "strictValidationPassed": true,
+      "strictErrors": [],
+      "strictWarnings": [],
+      "independentVisualQA": "pass",
+      "directionWarnings": [
+        "022.5",
+        "045",
+        "067.5",
+        "135",
+        "157.5",
+        "202.5",
+        "225",
+        "247.5",
+        "292.5"
+      ]
+    },
+    {
+      "id": "desk-security-hedgehog-dundun",
+      "manifestSha256": "814ed6aabc3479562cd906ef10f498716bd28311dec4b11a998bb5ce52b8f474",
+      "spritesheetSha256": "8c7ecc9fbc5799ba244cb7911a8f7616b283fafedcbf23d34884d600729e6a0b",
+      "websiteZipSha256": "0c019015117e7f687f055760cc0e6c97b8e0a578860bdea3f0b5f826618fe14b",
+      "websiteZipSizeBytes": 2960013,
+      "format": "1536x2288, 192x208 cells, spriteVersionNumber 2",
+      "strictValidationPassed": true,
+      "strictErrors": [],
+      "strictWarnings": [],
+      "independentVisualQA": "pass",
+      "directionWarnings": [
+        "112.5",
+        "135",
+        "157.5",
+        "202.5",
+        "225",
+        "247.5",
+        "292.5",
+        "315"
+      ]
+    },
+    {
+      "id": "desk-waiting-sloth-manman",
+      "manifestSha256": "b014f6acf64273e60167b744a246c2b22caf574380356e4b8aa1d96fcbaccdf6",
+      "spritesheetSha256": "72019df5bb0028230472e817af513c6c11e3e850a2fe219e37ce2e837b7b9cdf",
+      "websiteZipSha256": "7fa865f7226e23e09720d73df63245fb53d1943d21571515e852301a6d9b1df2",
+      "websiteZipSizeBytes": 2307211,
+      "format": "1536x2288, 192x208 cells, spriteVersionNumber 2",
+      "strictValidationPassed": true,
+      "strictErrors": [],
+      "strictWarnings": [],
+      "independentVisualQA": "pass",
+      "directionWarnings": [
+        "022.5",
+        "337.5"
+      ]
+    },
+    {
+      "id": "desk-debug-salamander-huohua",
+      "manifestSha256": "ab869ca7dde070dc8d15bca19bf5e1385d0d44afb152a35ae34b6d044edd07f9",
+      "spritesheetSha256": "6eb908da023781a505a102a7749062fa85c55625150245f56597b75be7b4b317",
+      "websiteZipSha256": "1670329124c842612fcfe54a31a88cb0a470645eae64b11312a74da61b120867",
+      "websiteZipSizeBytes": 2360299,
+      "format": "1536x2288, 192x208 cells, spriteVersionNumber 2",
+      "strictValidationPassed": true,
+      "strictErrors": [],
+      "strictWarnings": [],
+      "independentVisualQA": "pass",
+      "directionWarnings": []
+    }
+  ]
+}

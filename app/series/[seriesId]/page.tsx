@@ -98,10 +98,11 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
         <section className={styles.characters} id="characters" aria-labelledby="characters-heading">
           <header className={styles.sectionHeading}>
             <div>
-              <span>CHARACTER INDEX</span>
-              <h2 id="characters-heading">{t(language, "每位角色，各守一段星轨", "A distinct guardian for every stretch of the route")}</h2>
+              <span>{t(language, "挑一位伙伴", "MEET THE PETS")}</span>
+              <h2 id="characters-heading" data-copy-role="card-headline">
+                {series.selectionTitle[language]}
+              </h2>
             </div>
-            <p>{t(language, "点进角色页，可以现场试动作，再决定是否安装。", "Open a character page to try its actions before installing.")}</p>
           </header>
 
           <p className={styles.scrollHint}>

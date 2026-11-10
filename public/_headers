@@ -5,11 +5,16 @@
   Cache-Control: public, max-age=31536000, immutable
 
 /pets/*
-  Cache-Control: public, max-age=604800, stale-while-revalidate=2592000
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Cloudflare-CDN-Cache-Control: public, max-age=604800, stale-while-revalidate=2592000, stale-if-error=2592000
 
 /downloads/*
   Cache-Control: public, max-age=0, must-revalidate
-  Cloudflare-CDN-Cache-Control: public, max-age=300, must-revalidate
+  Cloudflare-CDN-Cache-Control: public, max-age=604800, stale-while-revalidate=2592000, stale-if-error=2592000
+  Accept-Ranges: bytes
+  Content-Disposition: attachment
+  X-Content-Type-Options: nosniff
 
 /api/v1/*
   Cache-Control: public, max-age=300
+  Cloudflare-CDN-Cache-Control: public, max-age=3600, stale-while-revalidate=86400, stale-if-error=86400

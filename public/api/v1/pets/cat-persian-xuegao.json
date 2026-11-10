@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "cat-persian-xuegao",
+    "category": "breed-cat",
+    "zodiacOrder": null,
+    "needs": [
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "雪糕",
+      "en": "Xuegao"
+    },
+    "badge": "PERSIAN 07",
+    "accent": "#c693af",
+    "softAccent": "#f6e5ee",
+    "status": "published",
+    "tagline": {
+      "zh": "忙乱之间，也该留一口气。",
+      "en": "A small breath belongs inside a busy day."
+    },
+    "description": {
+      "zh": "休息不是偷懒，是让注意力重新回到你手里。",
+      "en": "Rest is not laziness; it returns your attention to your own hands."
+    },
+    "personalityTags": [
+      {
+        "zh": "优雅",
+        "en": "Elegant"
+      },
+      {
+        "zh": "松弛",
+        "en": "Relaxed"
+      },
+      {
+        "zh": "温和",
+        "en": "Mellow"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "波斯猫",
+      "zodiacEn": "Persian",
+      "roleZh": "休息提醒猫",
+      "roleEn": "Gentle Rest Keeper",
+      "promiseZh": "忙乱之间，也该留一口气。",
+      "promiseEn": "A small breath belongs inside a busy day.",
+      "storyTitleZh": "占住一小块空白",
+      "storyTitleEn": "Keeping One Small Pause",
+      "storyZh": "雪糕喜欢把最柔软的位置留在两段工作之间。雪白长毛挨着窗口铺开，金色圆眼看着通知来去，却很少跟着忙乱转头。它会在水杯旁坐一会儿，提醒你喝口水；也会在连续修改很久后挡住下一张便签，让肩膀先放下来。曾经有个夜晚，大家以为不停下来才能赶上进度，结果错误越来越多。雪糕安静趴在键盘前，直到房间终于休息了十分钟。回来以后，最难的一处反而很快被看清。它从不把休息说成奖励，只把它当作工作本来就该拥有的一部分：短一点、真实一点，然后再继续。休息没有让任务消失，却让人重新拥有处理任务的注意力。",
+      "storyEn": "Xuegao keeps the softest place between two stretches of work. Snow-white fur spreads beside the window, and round gold eyes watch notifications arrive and leave without following every disturbance. It sits near the water glass when a drink has been forgotten and settles in front of the next note after too many revisions, asking tense shoulders to come down first. One night, everyone believed that stopping would make the deadline impossible, but mistakes multiplied as the hours passed. Xuegao rested quietly before the keyboard until the room finally took ten minutes away. On returning, the hardest issue became surprisingly clear. It never treats rest as a prize to be earned; rest is simply part of the work—brief, honest, and available before continuing. The pause does not remove the task, but it returns enough attention to meet it well.",
+      "comfortZh": "休息不是偷懒，是让注意力重新回到你手里。",
+      "comfortEn": "Rest is not laziness; it returns your attention to your own hands.",
+      "moments": [
+        {
+          "titleZh": "盯屏太久",
+          "titleEn": "After too much screen time",
+          "bodyZh": "离开屏幕几分钟，让眼睛重新找到远处。",
+          "bodyEn": "Step away for a few minutes and let your eyes find distance again."
+        },
+        {
+          "titleZh": "越改越乱",
+          "titleEn": "When revisions get worse",
+          "bodyZh": "先停十分钟，再判断问题到底在内容还是疲劳。",
+          "bodyEn": "Pause for ten minutes, then decide whether the issue is the work or fatigue."
+        },
+        {
+          "titleZh": "回到桌前",
+          "titleEn": "When you return",
+          "bodyZh": "只接着做一件明确的事，不用补偿刚才的休息。",
+          "bodyEn": "Resume with one clear action; there is no need to compensate for the pause."
+        }
+      ],
+      "traitsZh": [
+        "优雅",
+        "松弛",
+        "温和"
+      ],
+      "traitsEn": [
+        "Elegant",
+        "Relaxed",
+        "Mellow"
+      ],
+      "matchZh": "适合高强度工作、容易忘记休息，或需要桌面松一点的你。",
+      "matchEn": "For intense work, forgotten breaks, and anyone whose desktop needs more room to breathe."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/cat-persian-xuegao/spritesheet.webp",
+    "previewPath": "/pets/cat-persian-xuegao/preview.webp",
+    "manifestPath": "/pets/cat-persian-xuegao/pet.json",
+    "downloadPath": "/downloads/cat-persian-xuegao.zip",
+    "detailPath": "/api/v1/pets/cat-persian-xuegao.json"
+  }
+}

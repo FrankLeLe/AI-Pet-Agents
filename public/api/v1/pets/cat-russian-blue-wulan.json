@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "cat-russian-blue-wulan",
+    "category": "breed-cat",
+    "zodiacOrder": null,
+    "needs": [
+      "solve",
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "雾蓝",
+      "en": "Wulan"
+    },
+    "badge": "RUSSIAN BLUE 09",
+    "accent": "#667d94",
+    "softAccent": "#dce6ef",
+    "status": "published",
+    "tagline": {
+      "zh": "不抢着回答，先陪你看见小变化。",
+      "en": "No rushed answer—first notice what has quietly changed."
+    },
+    "description": {
+      "zh": "还没有答案也没关系，准确观察本身就是进展。",
+      "en": "It is fine not to have the answer yet; accurate observation is already progress."
+    },
+    "personalityTags": [
+      {
+        "zh": "安静",
+        "en": "Quiet"
+      },
+      {
+        "zh": "敏锐",
+        "en": "Perceptive"
+      },
+      {
+        "zh": "克制",
+        "en": "Reserved"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "俄罗斯蓝猫",
+      "zodiacEn": "Russian Blue",
+      "roleZh": "细节观察猫",
+      "roleEn": "Detail Watcher",
+      "promiseZh": "不抢着回答，先陪你看见小变化。",
+      "promiseEn": "No rushed answer—first notice what has quietly changed.",
+      "storyTitleZh": "绿眼睛里的微小变化",
+      "storyTitleEn": "Small Changes in Green Eyes",
+      "storyZh": "雾蓝不喜欢站在最热闹的地方。它常坐在屏幕侧面，让银蓝短毛融进清晨或深夜的冷光里，只用祖母绿眼睛观察状态一点点变化。大家讨论激烈时，它不会抢着给结论；等声音落下，才把目光停在真正不同的地方。一次页面突然变慢，所有人都在检查最大的资源，雾蓝却看见一个按钮按下后颜色比平时迟了半拍。顺着这点延迟，团队找到了重复触发的请求。它没有庆祝，只重新坐回原处。雾蓝相信许多问题不会大声宣布自己，耐心留意细节，就能在混乱变大之前看见方向。没有立刻得到答案时，准确记录变化本身已经是一种进展。",
+      "storyEn": "Wulan avoids the loudest part of the desk. It sits beside the screen, silver-blue coat blending into cool morning or late-night light, and watches state change a little at a time through emerald eyes. During an excited discussion it never competes to deliver the first conclusion. Only after the noise settles does its gaze rest on the detail that is actually different. When a page once became slow, everyone inspected the largest assets. Wulan noticed instead that a button changed color half a beat later than usual. Following that tiny delay revealed a request firing more than once. The cat did not celebrate; it simply returned to its place. Wulan knows that many problems never announce themselves loudly. Patient attention can reveal their direction before the confusion grows. When an answer has not arrived, an accurate record of what changed is already useful progress.",
+      "comfortZh": "还没有答案也没关系，准确观察本身就是进展。",
+      "comfortEn": "It is fine not to have the answer yet; accurate observation is already progress.",
+      "moments": [
+        {
+          "titleZh": "感觉不对",
+          "titleEn": "When something feels off",
+          "bodyZh": "写下具体哪里不同，别让模糊感觉立刻变成结论。",
+          "bodyEn": "Name exactly what differs before turning a vague feeling into a conclusion."
+        },
+        {
+          "titleZh": "排查性能",
+          "titleEn": "During performance checks",
+          "bodyZh": "比较动作前后的小变化，再追踪最早出现的延迟。",
+          "bodyEn": "Compare before and after, then trace the earliest visible delay."
+        },
+        {
+          "titleZh": "争论很响",
+          "titleEn": "When discussion gets loud",
+          "bodyZh": "等一等，再问哪条证据真正区分了两种判断。",
+          "bodyEn": "Pause and ask which evidence actually separates the two interpretations."
+        }
+      ],
+      "traitsZh": [
+        "安静",
+        "敏锐",
+        "克制"
+      ],
+      "traitsEn": [
+        "Quiet",
+        "Perceptive",
+        "Reserved"
+      ],
+      "matchZh": "适合性能观察、细致调试，以及不喜欢仓促下结论的你。",
+      "matchEn": "For performance observation, careful debugging, and anyone who dislikes premature conclusions."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/cat-russian-blue-wulan/spritesheet.webp",
+    "previewPath": "/pets/cat-russian-blue-wulan/preview.webp",
+    "manifestPath": "/pets/cat-russian-blue-wulan/pet.json",
+    "downloadPath": "/downloads/cat-russian-blue-wulan.zip",
+    "detailPath": "/api/v1/pets/cat-russian-blue-wulan.json"
+  }
+}

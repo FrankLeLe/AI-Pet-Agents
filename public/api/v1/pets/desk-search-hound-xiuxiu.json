@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "desk-search-hound-xiuxiu",
+    "category": "desktop-work",
+    "zodiacOrder": null,
+    "needs": [
+      "solve",
+      "start"
+    ],
+    "displayName": {
+      "zh": "嗅嗅 · 搜索猎犬",
+      "en": "Xiuxiu · Search Hound"
+    },
+    "badge": "SEARCH 04",
+    "accent": "#d88a32",
+    "softAccent": "#f7e7ce",
+    "status": "published",
+    "tagline": {
+      "zh": "线索藏得再小，也值得停下来闻一闻。",
+      "en": "Even a small clue deserves a curious pause."
+    },
+    "description": {
+      "zh": "暂时没找到不代表没有路，先跟住一条可靠的线索。",
+      "en": "Not finding it yet does not mean there is no path; follow one solid clue."
+    },
+    "personalityTags": [
+      {
+        "zh": "好奇",
+        "en": "Curious"
+      },
+      {
+        "zh": "热心",
+        "en": "Helpful"
+      },
+      {
+        "zh": "敏锐",
+        "en": "Keen"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "搜索猎犬",
+      "zodiacEn": "Search Hound",
+      "roleZh": "好奇寻迹员",
+      "roleEn": "Curious Tracker",
+      "promiseZh": "线索藏得再小，也值得停下来闻一闻。",
+      "promiseEn": "Even a small clue deserves a curious pause.",
+      "storyTitleZh": "绕到桌脚的那条路",
+      "storyTitleEn": "The Trail Around the Desk Leg",
+      "storyZh": "嗅嗅最先到达一个陌生地方的，通常是那只圆圆的鼻子。橙色耳朵跟在后面晃，它却不急着决定该往哪里跑。一次，小队怎么也找不到装订好的路线图，大家把桌面翻了好几遍，嗅嗅只在原处停了一会儿，便沿着一条很轻的气味绕到了桌脚。路线图原来滑进了不起眼的缝隙。找到以后，它没有把所有小动静都当成答案，而是又回头确认了一次来路。伙伴们喜欢它的热心，也喜欢它愿意承认线索暂时断掉。来到你的桌面，它的左右张望和小小歪头像一个友好的提醒：先看清眼前能确认的事情，不必在第一分钟就猜中整条路线。",
+      "storyEn": "Xiuxiu usually arrives at an unfamiliar place nose first, with orange ears following a moment later. When the crew lost a bound route map, everyone searched the desk repeatedly. The hound paused where they had last seen it, then followed a faint trail around a desk leg. The map had slipped into an unremarkable gap. Xiuxiu retraced the route before celebrating; not every small noise was an answer. Its friends love both its enthusiasm and its willingness to pause when a trail runs cold. On your desktop, the curious turns and gentle head tilts offer company while you follow the things you can actually confirm.",
+      "comfortZh": "暂时没找到不代表没有路，先跟住一条可靠的线索。",
+      "comfortEn": "Not finding it yet does not mean there is no path; follow one solid clue.",
+      "moments": [
+        {
+          "titleZh": "线索太散",
+          "titleEn": "Scattered clues",
+          "bodyZh": "先留下来源和关键词，再决定哪条值得追下去。",
+          "bodyEn": "Keep the source and keywords before choosing which trail to follow."
+        },
+        {
+          "titleZh": "找了很久",
+          "titleEn": "After a long search",
+          "bodyZh": "回到最后一个确定的位置，换个范围试试。",
+          "bodyEn": "Return to the last confirmed point and try a different search boundary."
+        },
+        {
+          "titleZh": "终于找到",
+          "titleEn": "A clue turns up",
+          "bodyZh": "核对它是否回答了原来的问题，再收好这条来路。",
+          "bodyEn": "Check that it answers the original question and save the route back."
+        }
+      ],
+      "traitsZh": [
+        "好奇",
+        "热心",
+        "敏锐"
+      ],
+      "traitsEn": [
+        "Curious",
+        "Helpful",
+        "Keen"
+      ],
+      "matchZh": "适合寻找资料、梳理线索，以及需要重新找到方向的你。",
+      "matchEn": "For finding references, following clues, and regaining a sense of direction."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/desk-search-hound-xiuxiu/spritesheet.webp",
+    "previewPath": "/pets/desk-search-hound-xiuxiu/preview.webp",
+    "manifestPath": "/pets/desk-search-hound-xiuxiu/pet.json",
+    "downloadPath": "/downloads/desk-search-hound-xiuxiu.zip",
+    "detailPath": "/api/v1/pets/desk-search-hound-xiuxiu.json"
+  }
+}

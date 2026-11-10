@@ -29,6 +29,11 @@
   letter-spacing: 0.055em;
 }
 
+.copyButton[data-copy-state="error"] {
+  background: #ffd6cf;
+  color: #7f1711;
+}
+
 .platformSwitch button {
   padding: 0 14px;
   background: transparent;
@@ -77,6 +82,18 @@
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 1.55;
+}
+
+.copyError {
+  margin: 12px 0 0;
+  padding: 12px 14px;
+  border: 2px solid #ffb2a6;
+  border-radius: 10px;
+  background: #401814;
+  color: #ffe2dc;
+  font-size: 0.73rem;
+  font-weight: 800;
+  line-height: 1.5;
 }
 
 .srOnly {

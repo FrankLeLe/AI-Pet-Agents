@@ -1,0 +1,2 @@
+# Keep installable manifests byte-identical to the verified release archives.
+public/pets/**/pet.json -text

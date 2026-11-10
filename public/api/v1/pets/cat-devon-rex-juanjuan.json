@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "cat-devon-rex-juanjuan",
+    "category": "breed-cat",
+    "zodiacOrder": null,
+    "needs": [
+      "create",
+      "start"
+    ],
+    "displayName": {
+      "zh": "卷卷",
+      "en": "Juanjuan"
+    },
+    "badge": "DEVON REX 10",
+    "accent": "#a87968",
+    "softAccent": "#eedfd8",
+    "status": "published",
+    "tagline": {
+      "zh": "路走不通，就换个有趣的玩法。",
+      "en": "When the straight path stalls, try a more playful route."
+    },
+    "description": {
+      "zh": "卡住不一定要更用力，也可以换个顺序试试。",
+      "en": "Being stuck does not always call for more force; changing the order may be enough."
+    },
+    "personalityTags": [
+      {
+        "zh": "机灵",
+        "en": "Clever"
+      },
+      {
+        "zh": "调皮",
+        "en": "Mischievous"
+      },
+      {
+        "zh": "有创意",
+        "en": "Inventive"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "德文卷毛猫",
+      "zodiacEn": "Devon Rex",
+      "roleZh": "灵感捣蛋猫",
+      "roleEn": "Playful Idea Stirrer",
+      "promiseZh": "路走不通，就换个有趣的玩法。",
+      "promiseEn": "When the straight path stalls, try a more playful route.",
+      "storyTitleZh": "把笔直路线拨出一个弯",
+      "storyTitleEn": "Nudging a Straight Line Into a Curve",
+      "storyZh": "卷卷总能找到规则没有写到的缝隙。大耳朵先听见新鲜动静，短卷毛一晃，它就从熟悉流程旁绕出一条小路。它并不故意破坏东西，只是好奇“如果换一种顺序会怎样”。一次设计卡了很久，所有方案都沿着同一排网格摆得端正。卷卷跳上桌面，把其中一张卡片轻轻拨到边缘。这个小意外让大家看见，原来内容可以按故事而不是按功能排列。新方案很快有了呼吸。卷卷的恶作剧从来不替代判断，它只负责松动过于僵硬的假设，让你有机会试一个成本很小、但可能带来新方向的变化。验证有效以后，它也会安静下来，让好点子变成可靠做法。",
+      "storyEn": "Juanjuan always finds the small gap that a rule forgot to describe. Large ears catch a fresh sound, short curls bounce, and the cat slips around the familiar process by another route. It does not break things for sport; it is curious about what happens when the order changes. One design remained stuck because every option sat neatly along the same grid. Juanjuan hopped onto the desk and nudged one card toward the edge. The small accident revealed that the content could be arranged by story rather than by function, and the page suddenly had room to breathe. Its mischief never replaces judgment. It merely loosens an assumption that has become too rigid, making room for a low-cost experiment that may reveal a genuinely useful direction. Once the idea proves useful, Juanjuan settles down long enough to help turn the playful discovery into a dependable method.",
+      "comfortZh": "卡住不一定要更用力，也可以换个顺序试试。",
+      "comfortEn": "Being stuck does not always call for more force; changing the order may be enough.",
+      "moments": [
+        {
+          "titleZh": "方案都一样",
+          "titleEn": "When every option looks alike",
+          "bodyZh": "主动改掉一个默认条件，看新的差异会不会出现。",
+          "bodyEn": "Change one default condition and see whether a meaningful difference appears."
+        },
+        {
+          "titleZh": "流程太僵",
+          "titleEn": "When the process feels rigid",
+          "bodyZh": "保留目标，换一种顺序完成最小实验。",
+          "bodyEn": "Keep the goal and test a different order with the smallest experiment."
+        },
+        {
+          "titleZh": "找到新玩法",
+          "titleEn": "After finding a new route",
+          "bodyZh": "验证它确实更好，再把偶然发现整理成可复用方法。",
+          "bodyEn": "Verify that it works better, then turn the accident into a reusable method."
+        }
+      ],
+      "traitsZh": [
+        "机灵",
+        "调皮",
+        "有创意"
+      ],
+      "traitsEn": [
+        "Clever",
+        "Mischievous",
+        "Inventive"
+      ],
+      "matchZh": "适合创意探索、方案重构，以及被固定套路卡住的你。",
+      "matchEn": "For creative exploration, structural rethink, and anyone trapped by an overly familiar pattern."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/cat-devon-rex-juanjuan/spritesheet.webp",
+    "previewPath": "/pets/cat-devon-rex-juanjuan/preview.webp",
+    "manifestPath": "/pets/cat-devon-rex-juanjuan/pet.json",
+    "downloadPath": "/downloads/cat-devon-rex-juanjuan.zip",
+    "detailPath": "/api/v1/pets/cat-devon-rex-juanjuan.json"
+  }
+}

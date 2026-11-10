@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "desk-data-octopus-duoduo",
+    "category": "desktop-work",
+    "zodiacOrder": null,
+    "needs": [
+      "solve",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "多多 · 数据章鱼",
+      "en": "Duoduo · Data Octopus"
+    },
+    "badge": "DATA 08",
+    "accent": "#4965cb",
+    "softAccent": "#dfe4fa",
+    "status": "published",
+    "tagline": {
+      "zh": "事情再多，也可以一次理清一条线。",
+      "en": "Even with plenty to consider, follow one thread at a time."
+    },
+    "description": {
+      "zh": "不必同时抓住所有事情，找到顺序就能慢慢理清。",
+      "en": "You need not hold everything at once; a useful order makes room to think."
+    },
+    "personalityTags": [
+      {
+        "zh": "有条理",
+        "en": "Orderly"
+      },
+      {
+        "zh": "从容",
+        "en": "Composed"
+      },
+      {
+        "zh": "善协调",
+        "en": "Coordinated"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "数据章鱼",
+      "zodiacEn": "Data Octopus",
+      "roleZh": "节拍整理员",
+      "roleEn": "Rhythm Keeper",
+      "promiseZh": "事情再多，也可以一次理清一条线。",
+      "promiseEn": "Even with plenty to consider, follow one thread at a time.",
+      "storyTitleZh": "八只手，一个节拍",
+      "storyTitleEn": "Eight Arms, One Rhythm",
+      "storyZh": "多多有八只短短的触手，却并不喜欢同时把所有东西举到空中。它的奶油色颈环上有三颗小珠子，触手尖会沿着珠子轻轻轮换，像给自己的忙碌定下一个稳定的节拍。一次小队收到许多大小不同的路线碎片，大家急着把它们拼在一起，桌面反而越来越乱。多多先收拢触手，留出一小片空位，让相同来源的碎片靠在一起，再慢慢比较它们的先后和边缘。等图案清楚起来，它才伸出下一只手。伙伴们这才发现，能照顾很多事情，并不等于每一秒都要做很多事。在你的桌面上，多多会用有次序的小动作，陪你从杂乱里找回一条可以跟住的线。",
+      "storyEn": "Duoduo has eight short arms but does not try to lift everything at once. Its tentacle tips take turns touching the beads on a cream collar, setting a calm rhythm. When the crew received a confusing stack of route fragments, hurried attempts to join them only filled the desk with more clutter. Duoduo curled its arms inward, made a small clear space, and grouped pieces by their source before comparing their edges and order. Only when one section made sense did the next arm move. Having room for many things, the crew learned, did not mean handling them all at the same instant. On your desktop, the octopus brings that measured rhythm to busy moments.",
+      "comfortZh": "不必同时抓住所有事情，找到顺序就能慢慢理清。",
+      "comfortEn": "You need not hold everything at once; a useful order makes room to think.",
+      "moments": [
+        {
+          "titleZh": "信息很多",
+          "titleEn": "Lots of information",
+          "bodyZh": "先分清来源和范围，再比较具体内容。",
+          "bodyEn": "Separate sources and scope before comparing the details."
+        },
+        {
+          "titleZh": "同时忙碌",
+          "titleEn": "Several things need attention",
+          "bodyZh": "选一条能先理顺的线，让其他事情暂时有处可放。",
+          "bodyEn": "Choose one thread to untangle and give the others somewhere to wait."
+        },
+        {
+          "titleZh": "看见规律",
+          "titleEn": "A pattern appears",
+          "bodyZh": "换个例子确认一下，再决定这个规律能用到哪里。",
+          "bodyEn": "Check another example before deciding how far the pattern applies."
+        }
+      ],
+      "traitsZh": [
+        "有条理",
+        "从容",
+        "善协调"
+      ],
+      "traitsEn": [
+        "Orderly",
+        "Composed",
+        "Coordinated"
+      ],
+      "matchZh": "适合数据整理、多线任务，以及想从复杂信息里找回顺序的你。",
+      "matchEn": "For organizing data, managing several threads, and finding order in complex information."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/desk-data-octopus-duoduo/spritesheet.webp",
+    "previewPath": "/pets/desk-data-octopus-duoduo/preview.webp",
+    "manifestPath": "/pets/desk-data-octopus-duoduo/pet.json",
+    "downloadPath": "/downloads/desk-data-octopus-duoduo.zip",
+    "detailPath": "/api/v1/pets/desk-data-octopus-duoduo.json"
+  }
+}

@@ -61,6 +61,7 @@ unzip "$archive" -d "$pets_root"`,
 export function InstallCommandPanel({ language, mode, petId }: InstallCommandPanelProps) {
   const [platform, setPlatform] = useState<Platform>("windows");
   const [copied, setCopied] = useState(false);
+  const [copyFailed, setCopyFailed] = useState(false);
   const commands = useMemo(() => getCommands(mode, petId), [mode, petId]);
   const command = commands[platform];
 
@@ -71,18 +72,34 @@ export function InstallCommandPanel({ language, mode, petId }: InstallCommandPan
   }, [copied]);
 
   async function copyCommand() {
+    let didCopy = false;
+
     try {
       await navigator.clipboard.writeText(command);
+      didCopy = true;
     } catch {
       const textarea = document.createElement("textarea");
-      textarea.value = command;
-      textarea.style.position = "fixed";
-      textarea.style.opacity = "0";
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand("copy");
-      textarea.remove();
+      try {
+        textarea.value = command;
+        textarea.style.position = "fixed";
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.select();
+        didCopy = document.execCommand("copy");
+      } catch {
+        didCopy = false;
+      } finally {
+        textarea.remove();
+      }
     }
+
+    if (!didCopy) {
+      setCopied(false);
+      setCopyFailed(true);
+      return;
+    }
+
+    setCopyFailed(false);
     setCopied(true);
   }
 
@@ -107,8 +124,23 @@ export function InstallCommandPanel({ language, mode, petId }: InstallCommandPan
             macOS / LINUX
           </button>
         </div>
-        <button className={styles.copyButton} type="button" onClick={copyCommand}>
-          {copied ? (language === "zh" ? "已复制" : "COPIED") : language === "zh" ? "复制命令" : "COPY"}
+        <button
+          className={styles.copyButton}
+          type="button"
+          onClick={copyCommand}
+          data-copy-state={copied ? "success" : copyFailed ? "error" : "idle"}
+        >
+          {copied
+            ? language === "zh"
+              ? "已复制"
+              : "COPIED"
+            : copyFailed
+              ? language === "zh"
+                ? "复制失败，请重试"
+                : "COPY FAILED · RETRY"
+              : language === "zh"
+                ? "复制命令"
+                : "COPY"}
         </button>
       </div>
       <pre className={styles.commandCode} tabIndex={0}>
@@ -119,8 +151,23 @@ export function InstallCommandPanel({ language, mode, petId }: InstallCommandPan
           ? "执行前先确认 ZIP 已下载到系统的 Downloads 文件夹。安装后完整退出并重新打开 Codex Desktop。"
           : "Before running, confirm the ZIP is in your Downloads folder. Fully quit and reopen Codex Desktop after installation."}
       </p>
+      {copyFailed ? (
+        <p className={styles.copyError} role="alert" aria-live="assertive">
+          {language === "zh"
+            ? "没能自动复制。请在上方代码框中手动选择并复制。"
+            : "Couldn’t copy automatically. Select and copy the command from the code box above."}
+        </p>
+      ) : null}
       <span className={styles.srOnly} aria-live="polite">
-        {copied ? (language === "zh" ? "命令已复制到剪贴板" : "Command copied to clipboard") : ""}
+        {copyFailed
+          ? language === "zh"
+            ? "命令复制失败"
+            : "Command copy failed"
+          : copied
+            ? language === "zh"
+              ? "命令已复制到剪贴板"
+              : "Command copied to clipboard"
+            : ""}
       </span>
     </div>
   );
