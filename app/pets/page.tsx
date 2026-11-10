@@ -64,11 +64,13 @@ export default async function PetsPage({ searchParams }: PetsPageProps) {
                       <strong>{collection.description[language]}</strong>
                     </div>
                     <Link href={withLanguage(`/series/${collection.id}`, language)}>
-                      {collection.id === "cat-companion-club"
-                        ? t(language, "挑一只猫", "Meet the cats")
-                        : collection.id === "desktop-work-crew"
-                          ? t(language, "认识工作小队", "Meet the work crew")
-                          : t(language, "挑一位守护鸭", "Meet the guardians")}
+                      {collection.id === "desk-corner-friends"
+                        ? t(language, "认识桌角小居民", "Meet the corner friends")
+                        : collection.id === "cat-companion-club"
+                          ? t(language, "挑一只猫", "Meet the cats")
+                          : collection.id === "desktop-work-crew"
+                            ? t(language, "认识工作小队", "Meet the work crew")
+                            : t(language, "挑一位守护鸭", "Meet the guardians")}
                       <ArrowRight aria-hidden="true" size={19} strokeWidth={3} />
                     </Link>
                   </header>

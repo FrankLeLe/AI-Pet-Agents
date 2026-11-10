@@ -1,5 +1,6 @@
 /** Cloudflare Worker entry point for the vinext application. */
 import handler from "vinext/server/app-router-entry";
+import { getPetRelease, getPetReleaseCommit } from "../lib/pet-releases";
 
 interface Env {
   ASSETS: Fetcher;
@@ -27,7 +28,6 @@ type HtmlRewriterConstructor = new () => {
 };
 
 const HSTS_VALUE = "max-age=31536000; includeSubDomains";
-const DOWNLOAD_RELEASE = "1a559b86621a992abf2691d5e429cdf0b13d2716";
 const HATCH_SKILL_RELEASE = "6bfce72ca689966918c3bb85c68007914a27f54c";
 const DOWNLOAD_BROWSER_CACHE = "public, max-age=0, must-revalidate";
 const DOWNLOAD_EDGE_CACHE =
@@ -48,7 +48,10 @@ function resolveDownloadTarget(pathname: string): DownloadTarget | null {
   const versionedMatch =
     /^\/downloads\/([0-9a-f]{40})\/([a-z0-9][a-z0-9-]*\.zip)$/.exec(pathname);
   if (!versionedMatch) return null;
-  const isPetRelease = versionedMatch[1] === DOWNLOAD_RELEASE;
+  const petId = versionedMatch[2].slice(0, -4);
+  const isPetRelease =
+    Boolean(getPetRelease(petId)) &&
+    versionedMatch[1] === getPetReleaseCommit(petId);
   const isHatchRelease =
     versionedMatch[1] === HATCH_SKILL_RELEASE &&
     versionedMatch[2] === "hatch-pet.zip";

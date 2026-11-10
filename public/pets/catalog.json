@@ -417,6 +417,39 @@
       },
       "preview": "/pets/desk-debug-salamander-huohua/preview.webp",
       "download": "/downloads/desk-debug-salamander-huohua.zip"
+    },
+    {
+      "id": "foldlume",
+      "category": "desk-corner",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "折灯",
+        "en": "Foldlume"
+      },
+      "preview": "/pets/foldlume/preview.webp",
+      "download": "/downloads/foldlume.zip"
+    },
+    {
+      "id": "eavie",
+      "category": "desk-corner",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "檐豆",
+        "en": "Eavie"
+      },
+      "preview": "/pets/eavie/preview.webp",
+      "download": "/downloads/eavie.zip"
+    },
+    {
+      "id": "mendmoth",
+      "category": "desk-corner",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "补补",
+        "en": "Mendmoth"
+      },
+      "preview": "/pets/mendmoth/preview.webp",
+      "download": "/downloads/mendmoth.zip"
     }
   ]
 }

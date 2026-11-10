@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "eavie",
+    "category": "desk-corner",
+    "zodiacOrder": null,
+    "needs": [
+      "create",
+      "start",
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "檐豆",
+      "en": "Eavie"
+    },
+    "badge": "HOME 02",
+    "accent": "#426b52",
+    "softAccent": "#e3ebd8",
+    "status": "published",
+    "tagline": {
+      "zh": "带着自己的小屋，去看看新地方。",
+      "en": "Carry a little home into somewhere new."
+    },
+    "description": {
+      "zh": "不用一下走得很远，先探头看看也很好。",
+      "en": "You do not need to go far at once. A curious peek is a good beginning."
+    },
+    "personalityTags": [
+      {
+        "zh": "好奇",
+        "en": "Curious"
+      },
+      {
+        "zh": "慢热",
+        "en": "Thoughtful"
+      },
+      {
+        "zh": "自在",
+        "en": "At ease"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "叶屋蜗牛",
+      "zodiacEn": "Leaf-House Snail",
+      "roleZh": "带着家探路",
+      "roleEn": "At Home on the Trail",
+      "promiseZh": "带着自己的小屋，去看看新地方。",
+      "promiseEn": "Carry a little home into somewhere new.",
+      "storyTitleZh": "屋檐以外的第一步",
+      "storyTitleEn": "The First Step Beyond the Eaves",
+      "storyZh": "檐豆的叶屋不大，恰好能藏好一张圆脸和两根短短的触角。它喜欢把砖红门帘整理好，再从屋檐下观察桌面的变化。一次，折灯的暖光照到了一条从没走过的纸边，檐豆很想知道另一头是什么，却又担心离熟悉的角落太远。补补没有替它决定，只在出发的地方轻轻挥了挥翅膀。檐豆伸出前半身，让小屋跟上一点，再停下来闻闻空气。原来带着屋子走，也可以叫作出门。它在纸边的另一头找到了一粒浅绿色的橡皮屑，看起来像一座很小的山。回去时，它兴奋地摆着触角，讲了一路。现在的檐豆仍然走得很慢，却会认真迎接每个陌生的小角落。它知道，安心和好奇可以一起带在身上。",
+      "storyEn": "Eavie's leaf house is just large enough for a round face and two short antennae. Before looking out, it straightens the terracotta curtain and studies whatever has changed on the desk. One evening, Foldlume's warm light reached a paper edge Eavie had never followed. It wanted to see the far end but worried about leaving its familiar corner behind. Mendmoth simply waved from the starting place. Eavie stretched forward, let the house catch up, and paused to feel the air. Carrying home along could count as going out, too. At the far end, it found a pale-green eraser crumb that looked like a tiny mountain. It wiggled its antennae all the way back, eager to tell the others. Eavie still moves slowly, but every unfamiliar corner receives a curious look. Feeling safe and being adventurous can travel together.",
+      "comfortZh": "不用一下走得很远，先探头看看也很好。",
+      "comfortEn": "You do not need to go far at once. A curious peek is a good beginning.",
+      "moments": [
+        {
+          "titleZh": "遇到新东西",
+          "titleEn": "Something unfamiliar",
+          "bodyZh": "先找一个想知道的小问题，从熟悉的地方往外看一点。",
+          "bodyEn": "Choose one small question and look a little beyond what you already know."
+        },
+        {
+          "titleZh": "还拿不定主意",
+          "titleEn": "Not quite decided",
+          "bodyZh": "做一个容易退回的小尝试，让好奇有个落脚点。",
+          "bodyEn": "Try something small and easy to undo, giving curiosity a place to start."
+        },
+        {
+          "titleZh": "发现了小惊喜",
+          "titleEn": "A small discovery",
+          "bodyZh": "记住那个让你停下来的细节，下次可以从这里再出发。",
+          "bodyEn": "Keep the detail that caught your attention. It can be your next starting point."
+        }
+      ],
+      "traitsZh": [
+        "好奇",
+        "慢热",
+        "自在"
+      ],
+      "traitsEn": [
+        "Curious",
+        "Thoughtful",
+        "At ease"
+      ],
+      "matchZh": "适合探索新点子、尝试陌生工具，或想按自己的速度出发的你。",
+      "matchEn": "For exploring ideas, trying unfamiliar tools, and setting off at your own pace."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/eavie/spritesheet.webp",
+    "previewPath": "/pets/eavie/preview.webp",
+    "manifestPath": "/pets/eavie/pet.json",
+    "downloadPath": "/downloads/eavie.zip",
+    "detailPath": "/api/v1/pets/eavie.json"
+  }
+}

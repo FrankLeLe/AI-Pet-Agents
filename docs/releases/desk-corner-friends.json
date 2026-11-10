@@ -1,5 +1,17 @@
 {
   "schemaVersion": 1,
+  "assetCommit": "e5f86f8ac08565eb40d4b216bd261f816eb0cc89",
+  "verification": {
+    "lint": "pass",
+    "integrationTestsPassed": 34,
+    "previousAssetFilesUnchanged": 148,
+    "visualScreenshotReview": "Unavailable because the browser preview connection timed out",
+    "directionLimitations": {
+      "foldlume": "Subtle vertical cues at 247.5 and 292.5 degrees; cardinal directions passed blind review",
+      "eavie": "Subtle secondary-axis cues at 202.5, 247.5 and 292.5 degrees; cardinal directions passed blind review",
+      "mendmoth": "All blind direction checks passed without warnings"
+    }
+  },
   "series": "desk-corner-friends",
   "title": {
     "zh": "桌角小居民",

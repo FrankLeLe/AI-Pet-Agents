@@ -12,7 +12,7 @@ import {
   buildCodexInstallPrompt,
   getPetPackageUrl,
   getPetRelease,
-  PET_RELEASE_COMMIT,
+  getPetReleaseCommit,
 } from "@/lib/pet-releases";
 import { getPetById, PETS } from "@/lib/pets";
 import {
@@ -148,7 +148,7 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
             codexPrompt={codexPrompt}
             sha256={release.sha256}
             sizeLabel={sizeLabel}
-            sourceCommit={PET_RELEASE_COMMIT}
+            sourceCommit={getPetReleaseCommit(pet.id)}
             sourceUrl={getPetPackageUrl(pet.id)}
           />
         </div>

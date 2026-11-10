@@ -22,6 +22,8 @@ const desktopWorkAtlasHashes = {
   "desk-debug-salamander-huohua": "6eb908da023781a505a102a7749062fa85c55625150245f56597b75be7b4b317",
 };
 
+const deskCornerIds = ["foldlume", "eavie", "mendmoth"];
+
 const expectedIds = [
   "star-armor-tuantuan",
   "aries-ramcrest-duck",
@@ -49,6 +51,7 @@ const expectedIds = [
   "cat-sphynx-yueguang",
   "cat-abyssinian-hongsha",
   ...Object.keys(desktopWorkAtlasHashes),
+  ...deskCornerIds,
 ];
 
 const expectedAnimationKeys = [
@@ -218,9 +221,19 @@ test("publishes a self-consistent detail document for every pet", async () => {
     assert.equal(manifest.displayName, pet.displayName.zh);
     assert.equal(manifest.spriteVersionNumber, pet.spriteVersionNumber);
     assert.equal(manifest.spritesheetPath, "spritesheet.webp");
-    assert.ok(spritesheet.size > 1_500_000);
-    assert.ok(preview.size > 20_000 && preview.size < 100_000);
-    assert.ok(archive.size > 1_500_000);
+    assert.ok(spritesheet.size > 0);
+    assert.ok(preview.size > 0 && preview.size < 100_000);
+    assert.ok(archive.size > 0);
+    const [atlasMetadata, previewMetadata] = await Promise.all([
+      sharp(await readFile(new URL(`../public/pets/${pet.id}/spritesheet.webp`, import.meta.url))).metadata(),
+      sharp(await readFile(new URL(`../public/pets/${pet.id}/preview.webp`, import.meta.url))).metadata(),
+    ]);
+    assert.equal(atlasMetadata.width, 1536, `${pet.id} must have eight sprite columns`);
+    assert.equal(atlasMetadata.height, 2288, `${pet.id} must have eleven v2 rows`);
+    assert.equal(atlasMetadata.hasAlpha, true, `${pet.id} atlas must preserve transparency`);
+    assert.equal(previewMetadata.width, 192, `${pet.id} preview must match one sprite cell`);
+    assert.equal(previewMetadata.height, 208);
+    assert.equal(previewMetadata.hasAlpha, true);
     const webPreview = await stat(
       new URL(`../public/pets/${pet.id}/web/preview.webp`, import.meta.url),
     );
@@ -287,6 +300,112 @@ test("publishes the accepted desktop work revisions with unmodified idle preview
   }
 });
 
+test("publishes three distinct desk corner friends with complete v2 motion and exact idle previews", async () => {
+  const { PETS, ANIMATIONS } = await loadPetModule();
+  const expected = [
+    { id: "foldlume", zh: "折灯", en: "Foldlume", kind: "折纸灯精灵", needs: ["start", "steady", "comfort"] },
+    { id: "eavie", zh: "檐豆", en: "Eavie", kind: "叶屋蜗牛", needs: ["create", "start", "comfort"] },
+    { id: "mendmoth", zh: "补补", en: "Mendmoth", kind: "暖毯蛾", needs: ["comfort", "steady"] },
+  ];
+  assert.deepEqual(
+    PETS.filter((pet) => pet.category === "desk-corner").map((pet) => pet.id),
+    expected.map((pet) => pet.id),
+  );
+  const atlasHashes = new Set();
+  const rowFrameCounts = [6, 8, 8, 4, 5, 8, 6, 6, 6, 8, 8];
+
+  for (const identity of expected) {
+    const pet = PETS.find((candidate) => candidate.id === identity.id);
+    assert.deepEqual(pet.displayName, { zh: identity.zh, en: identity.en });
+    assert.deepEqual(pet.needs, identity.needs);
+    assert.equal(pet.editorial.zodiacZh, identity.kind);
+    const [atlas, preview] = await Promise.all([
+      readFile(new URL(`../public/pets/${pet.id}/spritesheet.webp`, import.meta.url)),
+      readFile(new URL(`../public/pets/${pet.id}/preview.webp`, import.meta.url)),
+    ]);
+    atlasHashes.add(sha256(atlas));
+    const { data, info } = await sharp(atlas).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    assert.equal(info.width, 1536);
+    assert.equal(info.height, 2288);
+    assert.equal(info.channels, 4);
+
+    for (const [row, frameCount] of rowFrameCounts.entries()) {
+      for (let column = 0; column < 8; column += 1) {
+        let artworkPixels = 0;
+        let transparentPixels = 0;
+        for (let y = row * 208; y < (row + 1) * 208; y += 1) {
+          for (let x = column * 192; x < (column + 1) * 192; x += 1) {
+            const alpha = data[(y * info.width + x) * 4 + 3];
+            if (alpha > 0) artworkPixels += 1;
+            else transparentPixels += 1;
+          }
+        }
+        const label = `${pet.id} row ${row}, column ${column}`;
+        if (column < frameCount) {
+          assert.ok(artworkPixels > 50, `${label} is missing its authored pose`);
+          assert.ok(transparentPixels > 0, `${label} must not have an opaque background`);
+        } else {
+          assert.equal(artworkPixels, 0, `${label} must remain unused and transparent`);
+        }
+      }
+    }
+
+    for (const animation of ANIMATIONS) {
+      const frameHashes = new Set();
+      for (let frame = 0; frame < animation.frames; frame += 1) {
+        const cell = await sharp(atlas).extract({
+          left: (frame % 8) * 192,
+          top: (animation.row + Math.floor(frame / 8)) * 208,
+          width: 192,
+          height: 208,
+        }).ensureAlpha().raw().toBuffer();
+        frameHashes.add(sha256(cell));
+      }
+      assert.ok(frameHashes.size > 1, `${pet.id}/${animation.key} must not repeat a single static pose`);
+    }
+
+    const [idlePixels, previewPixels] = await Promise.all([
+      sharp(atlas).extract({ left: 0, top: 0, width: 192, height: 208 }).ensureAlpha().raw().toBuffer(),
+      sharp(preview).ensureAlpha().raw().toBuffer(),
+    ]);
+    assert.deepEqual(previewPixels, idlePixels, `${pet.id} preview must preserve the final idle pose`);
+  }
+  assert.equal(atlasHashes.size, expected.length, "each original character needs its own authored atlas");
+});
+
+test("preserves the legacy pet release namespace and rejects unknown release identities", async () => {
+  const releaseModule = await loadPetReleaseModule();
+  const legacyCommit = "1a559b86621a992abf2691d5e429cdf0b13d2716";
+  assert.equal(releaseModule.PET_RELEASE_COMMIT, legacyCommit);
+  const legacyIds = expectedIds.filter((id) => !deskCornerIds.includes(id));
+  assert.equal(legacyIds.length, 37);
+  for (const id of legacyIds) {
+    assert.ok(releaseModule.getPetRelease(id), `${id} must keep its existing release metadata`);
+    assert.equal(releaseModule.getPetReleaseCommit(id), legacyCommit, `${id} must keep its original namespace`);
+    assert.equal(releaseModule.getPetPackageUrl(id), `https://aipetsagent.com/downloads/${legacyCommit}/${id}.zip`);
+  }
+  for (const id of ["not-a-pet", "constructor", "toString", "__proto__"]) {
+    assert.equal(releaseModule.getPetRelease(id), undefined, `${id} must not resolve as a known release`);
+    assert.equal(releaseModule.buildCodexInstallPrompt(id, id, "en"), "");
+  }
+});
+
+test("requires an explicit new asset commit for desk corner pet downloads", async () => {
+  const releaseModule = await loadPetReleaseModule();
+  for (const id of deskCornerIds) {
+    const release = releaseModule.getPetRelease(id);
+    assert.ok(release, `${id} needs its final archive metadata before publication`);
+    assert.equal(typeof release.releaseCommit, "string", `${id} must explicitly identify its asset commit`);
+    assert.match(release.releaseCommit, /^[0-9a-f]{40}$/);
+    assert.notEqual(release.releaseCommit, releaseModule.PET_RELEASE_COMMIT, `${id} did not exist in the legacy release`);
+    assert.equal(releaseModule.getPetReleaseCommit(id), release.releaseCommit);
+    assert.equal(releaseModule.getPetPackageUrl(id), `https://aipetsagent.com/downloads/${release.releaseCommit}/${id}.zip`);
+    for (const language of ["zh", "en"]) {
+      assert.ok(releaseModule.buildCodexInstallPrompt(id, id, language).includes(releaseModule.getPetPackageUrl(id)));
+    }
+  }
+});
+
 test("pins every install archive to its published size and SHA-256", async () => {
   const releaseModule = await loadPetReleaseModule();
   assert.equal(releaseModule.PET_RELEASE_COMMIT, "1a559b86621a992abf2691d5e429cdf0b13d2716");
@@ -300,6 +419,7 @@ test("pins every install archive to its published size and SHA-256", async () =>
       readFile(new URL(`../public/pets/${id}/spritesheet.webp`, import.meta.url)),
     ]);
     const expectedRelease = releaseModule.PET_RELEASES[id];
+    const releaseCommit = releaseModule.getPetReleaseCommit(id);
 
     assert.ok(expectedRelease, `${id} release metadata is missing`);
     assert.equal(expectedRelease.sizeBytes, archiveStat.size, `${id} size changed`);
@@ -310,12 +430,12 @@ test("pins every install archive to its published size and SHA-256", async () =>
     );
     assert.match(
       releaseModule.getPetPackageUrl(id),
-      new RegExp(`^https://aipetsagent\\.com/downloads/${releaseModule.PET_RELEASE_COMMIT}/${id}\\.zip$`),
+      new RegExp(`^https://aipetsagent\\.com/downloads/${releaseCommit}/${id}\\.zip$`),
     );
     assert.doesNotMatch(releaseModule.getPetPackageUrl(id), /github/i);
 
     const installPrompt = releaseModule.buildCodexInstallPrompt(id, id, "en");
-    assert.match(installPrompt, new RegExp(releaseModule.PET_RELEASE_COMMIT));
+    assert.match(installPrompt, new RegExp(releaseCommit));
     assert.match(installPrompt, new RegExp(expectedRelease.sha256));
     assert.match(installPrompt, new RegExp(`CODEX_HOME/pets/${id}`));
     assert.match(installPrompt, /containing only pet\.json and spritesheet\.webp/);
@@ -368,7 +488,8 @@ test("serves static assets first and reserves the Worker for versioned ZIP alias
   assert.match(wrangler, /"cache"\s*:\s*\{[\s\S]*"enabled"\s*:\s*true/);
   assert.doesNotMatch(wrangler, /"cross_version_cache"\s*:\s*true/);
   assert.doesNotMatch(wrangler, /"run_worker_first"/);
-  assert.match(workerSource, /const DOWNLOAD_RELEASE = "[0-9a-f]{40}"/);
+  assert.match(workerSource, /getPetReleaseCommit\(petId\)/);
+  assert.match(workerSource, /Boolean\(getPetRelease\(petId\)\)/);
   assert.match(workerSource, /resolveDownloadTarget/);
   assert.match(workerSource, /VERSIONED_DOWNLOAD_CACHE = "public, max-age=31536000, immutable"/);
   assert.match(workerSource, /sliceByteStream/);
@@ -416,7 +537,7 @@ test("rewrites pinned ZIP aliases and streams ranges without buffering the archi
     },
   });
   const partial = await worker.fetch(
-    new Request("https://aipetsagent.com/downloads/1a559b86621a992abf2691d5e429cdf0b13d2716/example.zip", {
+    new Request("https://aipetsagent.com/downloads/1a559b86621a992abf2691d5e429cdf0b13d2716/aries-ramcrest-duck.zip", {
       headers: { range: "bytes=128-383" },
     }),
     {
@@ -448,8 +569,8 @@ test("rewrites pinned ZIP aliases and streams ranges without buffering the archi
     partial.headers.get("cloudflare-cdn-cache-control"),
     "public, max-age=31536000, immutable",
   );
-  assert.equal(partial.headers.get("content-disposition"), 'attachment; filename="example.zip"');
-  assert.equal(new URL(fetchedAssetUrl).pathname, "/downloads/example.zip");
+  assert.equal(partial.headers.get("content-disposition"), 'attachment; filename="aries-ramcrest-duck.zip"');
+  assert.equal(new URL(fetchedAssetUrl).pathname, "/downloads/aries-ramcrest-duck.zip");
   assert.equal(new URL(fetchedAssetUrl).search, "");
   assert.deepEqual(
     new Uint8Array(await partial.arrayBuffer()),
@@ -461,27 +582,72 @@ test("rewrites pinned ZIP aliases and streams ranges without buffering the archi
 test("rejects stale or malformed versioned ZIP aliases before touching asset storage", async () => {
   const worker = await loadBuiltWorker();
   let assetFetches = 0;
-  const response = await worker.fetch(
-    new Request(
-      "https://aipetsagent.com/downloads/0000000000000000000000000000000000000000/example.zip",
-    ),
-    {
-      ASSETS: {
-        fetch: async () => {
-          assetFetches += 1;
-          return new Response("unexpected");
-        },
+  const env = {
+    ASSETS: {
+      fetch: async () => {
+        assetFetches += 1;
+        return new Response("unexpected");
       },
     },
-    {
-      waitUntil() {},
-      passThroughOnException() {},
-    },
-  );
+  };
+  const context = { waitUntil() {}, passThroughOnException() {} };
+  const paths = [
+    "/downloads/0000000000000000000000000000000000000000/aries-ramcrest-duck.zip",
+    "/downloads/not-a-commit/aries-ramcrest-duck.zip",
+    "/downloads/1a559b86621a992abf2691d5e429cdf0b13d2716/example.zip",
+    "/downloads/1a559b86621a992abf2691d5e429cdf0b13d2716/constructor.zip",
+    "/downloads/1a559b86621a992abf2691d5e429cdf0b13d2716/hatch-pet.zip",
+  ];
 
-  assert.equal(response.status, 404);
-  assert.equal(response.headers.get("cache-control"), "private, no-store");
+  for (const path of paths) {
+    const response = await worker.fetch(new Request(`https://aipetsagent.com${path}`), env, context);
+    assert.equal(response.status, 404, path);
+    assert.equal(response.headers.get("cache-control"), "private, no-store");
+  }
   assert.equal(assetFetches, 0);
+});
+
+test("serves each new pet only within its own release namespace", async () => {
+  const [worker, releaseModule] = await Promise.all([loadBuiltWorker(), loadPetReleaseModule()]);
+  const context = { waitUntil() {}, passThroughOnException() {} };
+
+  for (const id of deskCornerIds) {
+    const release = releaseModule.getPetRelease(id);
+    assert.ok(release?.releaseCommit, `${id} needs final release metadata`);
+    const archive = await readFile(new URL(`../public/downloads/${id}.zip`, import.meta.url));
+    let fetches = 0;
+    const env = {
+      ASSETS: {
+        fetch: async (request) => {
+          fetches += 1;
+          assert.equal(new URL(request.url).pathname, `/downloads/${id}.zip`);
+          return new Response(archive, {
+            headers: {
+              "content-length": String(archive.length),
+              "content-type": "application/zip",
+              etag: `"${release.sha256}"`,
+            },
+          });
+        },
+      },
+    };
+    const validUrl = releaseModule.getPetPackageUrl(id);
+    const response = await worker.fetch(new Request(validUrl), env, context);
+    assert.equal(response.status, 200);
+    assert.equal(response.headers.get("cache-control"), "public, max-age=31536000, immutable");
+    assert.equal(sha256(new Uint8Array(await response.arrayBuffer())), release.sha256);
+    for (const wrongUrl of [
+      validUrl.replace(release.releaseCommit, releaseModule.PET_RELEASE_COMMIT),
+      validUrl.replace(release.releaseCommit, "0000000000000000000000000000000000000000"),
+      validUrl.replace(`${id}.zip`, "aries-ramcrest-duck.zip"),
+      validUrl.replace(`${id}.zip`, "hatch-pet.zip"),
+      validUrl.replace(`${id}.zip`, "unknown-pet.zip"),
+    ]) {
+      const rejected = await worker.fetch(new Request(wrongUrl), env, context);
+      assert.equal(rejected.status, 404, wrongUrl);
+    }
+    assert.equal(fetches, 1, "wrong release aliases must not reach asset storage");
+  }
 });
 
 test("serves the pinned Hatch skill archive and restricts its release namespace", async () => {

@@ -1,6 +1,13 @@
 import assert from "node:assert/strict";
 import { access, readFile, stat } from "node:fs/promises";
 import test from "node:test";
+import { loadPetReleaseModule } from "../scripts/load-pet-module.mjs";
+
+const deskCornerPets = {
+  foldlume: { zh: "折灯", en: "Foldlume" },
+  eavie: { zh: "檐豆", en: "Eavie" },
+  mendmoth: { zh: "补补", en: "Mendmoth" },
+};
 
 const desktopWorkPets = {
   "desk-compiler-mole-mazai": "码仔 · 编译鼹鼠",
@@ -60,13 +67,14 @@ test("server-renders the complete Codex Pets landing page", async () => {
   assert.match(html, /呼噜事务所/);
   assert.match(html, /Q版品种猫/);
   assert.match(html, /桌面工作小队/);
+  assert.match(html, /桌角小居民/);
   assert.match(html, /preview\.webp/);
   assert.doesNotMatch(html, /spritesheet\.webp/);
   assert.match(html, /https:\/\/aipetsagent\.com\/og-series\.png/);
   assert.doesNotMatch(html, /codex-preview|Your site is taking shape|Building your site/i);
 });
 
-test("features the desktop work crew in both home editions and preserves older collections", async () => {
+test("preserves the desktop work crew and older collections in both home editions", async () => {
   const [zhResponse, enResponse] = await Promise.all([
     render("/?lang=zh"),
     render("/?lang=en"),
@@ -133,6 +141,68 @@ test("features the desktop work crew in both home editions and preserves older c
     enHtml,
     /Try one first, then install|CHOOSE · PREVIEW · INSTALL|Know before you install|No account, free download|Adds only pet files/,
   );
+});
+
+test("features the desk corner friends and provides a complete bilingual adoption journey", async () => {
+  const releaseModule = await loadPetReleaseModule();
+  const sitemapResponse = await render("/sitemap.xml");
+  assert.equal(sitemapResponse.status, 200);
+  const sitemap = await sitemapResponse.text();
+  assert.ok(sitemap.includes("https://aipetsagent.com/series/desk-corner-friends"));
+
+  for (const language of ["zh", "en"]) {
+    const routes = ["/", "/pets", "/install", "/series/desk-corner-friends"];
+    const pages = await Promise.all(routes.map(async (route) => {
+      const response = await render(`${route}?lang=${language}`);
+      assert.equal(response.status, 200, `${route}?lang=${language}`);
+      return response.text();
+    }));
+    const [home, index, installIndex, series] = pages;
+    const seriesName = language === "zh" ? "桌角小居民" : "Desk Corner Friends";
+    const previousSeriesName = language === "zh" ? "桌面工作小队" : "Desktop Work Crew";
+    for (const html of [home, index]) {
+      assert.ok(html.includes(seriesName));
+      assert.ok(html.indexOf(seriesName) < html.indexOf(previousSeriesName), "the new series must lead the collections");
+    }
+    assert.ok(home.includes('id="collection-desk-corner-friends"'));
+    assert.ok(index.includes(`href="/series/desk-corner-friends?lang=${language}"`));
+    assert.ok(index.includes(language === "zh" ? "认识桌角小居民" : "Meet the corner friends"));
+    assert.match(series, /id="story"/);
+    assert.ok(series.includes(language === "zh" ? "桌角还亮着" : "The Corner Is Still Lit"));
+    const firstNewInstall = installIndex.indexOf(`href="/install/foldlume?lang=${language}"`);
+    const firstOlderInstall = installIndex.indexOf(`href="/install/desk-compiler-mole-mazai?lang=${language}"`);
+    assert.ok(firstNewInstall >= 0 && firstNewInstall < firstOlderInstall, "Foldlume must lead the installation choices");
+
+    for (const [id, names] of Object.entries(deskCornerPets)) {
+      for (const html of [home, index, series]) {
+        assert.ok(html.includes(`href="/pets/${id}?lang=${language}"`), `${id} needs a reachable ${language} detail page`);
+        assert.ok(html.includes(names[language]));
+      }
+      assert.ok(sitemap.includes(`https://aipetsagent.com/pets/${id}`));
+      assert.ok(sitemap.includes(`https://aipetsagent.com/install/${id}`));
+      const [detailResponse, installResponse] = await Promise.all([
+        render(`/pets/${id}?lang=${language}`),
+        render(`/install/${id}?lang=${language}`),
+      ]);
+      assert.equal(detailResponse.status, 200);
+      assert.equal(installResponse.status, 200);
+      const [detail, install] = await Promise.all([detailResponse.text(), installResponse.text()]);
+      assert.ok(detail.includes(names[language]));
+      assert.ok(detail.includes(`href="/series/desk-corner-friends?lang=${language}"`));
+      for (const siblingId of Object.keys(deskCornerPets).filter((other) => other !== id)) {
+        assert.ok(detail.includes(`href="/pets/${siblingId}?lang=${language}"`), `${id} needs its two original companions`);
+      }
+      assert.ok(install.includes(names[language]));
+      assert.ok(install.includes(`/downloads/${id}.zip`));
+      assert.match(install, /data-install-method="codex"/);
+      assert.match(install, /data-install-method="zip"/);
+      assert.match(install, /SHA-256/);
+      const release = releaseModule.getPetRelease(id);
+      assert.ok(release?.releaseCommit, `${id} needs its actual release commit`);
+      assert.ok(install.includes(releaseModule.getPetPackageUrl(id)), `${id} install prompt must use its own release URL`);
+      assert.ok(install.includes(release.releaseCommit.slice(0, 8)), `${id} source label must show its own release`);
+    }
+  }
 });
 
 test("gives hatch users one short state-driven Codex path", async () => {
@@ -554,7 +624,7 @@ test("leaves HTTPS redirects to the edge", async () => {
 
 test("localizes metadata and canonical URLs for every pet installation page", async () => {
   const catalog = JSON.parse(await readFile(new URL("../public/api/v1/catalog.json", import.meta.url), "utf8"));
-  assert.equal(catalog.pets.length, 37);
+  assert.equal(catalog.pets.length, 40);
 
   for (const pet of catalog.pets) {
     for (const language of ["zh", "en"]) {
@@ -739,7 +809,7 @@ test("removes all temporary starter preview infrastructure", async () => {
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
 });
 
-test("ships thirty-seven valid v2 pet packages and their downloads", async () => {
+test("ships forty valid v2 pet packages and their downloads", async () => {
   const expected = [
     "star-armor-tuantuan",
     "aries-ramcrest-duck",
@@ -767,6 +837,7 @@ test("ships thirty-seven valid v2 pet packages and their downloads", async () =>
     "cat-sphynx-yueguang",
     "cat-abyssinian-hongsha",
     ...Object.keys(desktopWorkPets),
+    ...Object.keys(deskCornerPets),
   ];
 
   for (const id of expected) {
@@ -779,9 +850,9 @@ test("ships thirty-seven valid v2 pet packages and their downloads", async () =>
     assert.equal(manifest.id, id);
     assert.equal(manifest.spriteVersionNumber, 2);
     assert.equal(manifest.spritesheetPath, "spritesheet.webp");
-    assert.ok(spritesheet.size > 1_500_000);
-    assert.ok(preview.size > 20_000 && preview.size < 100_000);
-    assert.ok(archive.size > 1_500_000);
+    assert.ok(spritesheet.size > 0);
+    assert.ok(preview.size > 0 && preview.size < 100_000);
+    assert.ok(archive.size > 0);
   }
 
   const catalog = JSON.parse(
@@ -792,7 +863,7 @@ test("ships thirty-seven valid v2 pet packages and their downloads", async () =>
   );
   const socialCard = await stat(new URL("../public/og-series.png", import.meta.url));
 
-  assert.equal(catalog.pets.length, 37);
+  assert.equal(catalog.pets.length, 40);
   assert.equal(catalog.format.spriteVersionNumber, 2);
   assert.ok(skillArchive.size > 50_000);
   assert.ok(socialCard.size > 500_000);

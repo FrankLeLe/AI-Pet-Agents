@@ -4,9 +4,25 @@ export const PET_RELEASE_ORIGIN = "https://aipetsagent.com";
 type PetRelease = {
   readonly sizeBytes: number;
   readonly sha256: string;
+  readonly releaseCommit?: string;
 };
 
 export const PET_RELEASES: Readonly<Record<string, PetRelease>> = {
+  foldlume: {
+    sizeBytes: 1_976_324,
+    sha256: "541de43ba9c7831642a6a0bcc6eb271f6ce40f48171c43251251707826a6dd75",
+    releaseCommit: "e5f86f8ac08565eb40d4b216bd261f816eb0cc89",
+  },
+  eavie: {
+    sizeBytes: 1_808_042,
+    sha256: "52ded776286d3f9c373aa3e36bcdc4f94feaa0d6e55b6dd87e810821dd056b77",
+    releaseCommit: "e5f86f8ac08565eb40d4b216bd261f816eb0cc89",
+  },
+  mendmoth: {
+    sizeBytes: 1_635_416,
+    sha256: "958e81d4d048f2b1b35ea5c9aedea50094f22dbd6a57f4879b395572835d9b66",
+    releaseCommit: "e5f86f8ac08565eb40d4b216bd261f816eb0cc89",
+  },
   "star-armor-tuantuan": {
     sizeBytes: 2_939_542,
     sha256: "5e3766f059eeb89ec023a96c148023849f1ef3dfcad525a823f4521cf2a6562b",
@@ -158,11 +174,15 @@ export const PET_RELEASES: Readonly<Record<string, PetRelease>> = {
 };
 
 export function getPetRelease(petId: string) {
-  return PET_RELEASES[petId];
+  return Object.hasOwn(PET_RELEASES, petId) ? PET_RELEASES[petId] : undefined;
+}
+
+export function getPetReleaseCommit(petId: string) {
+  return getPetRelease(petId)?.releaseCommit ?? PET_RELEASE_COMMIT;
 }
 
 export function getPetPackageUrl(petId: string) {
-  return `${PET_RELEASE_ORIGIN}/downloads/${PET_RELEASE_COMMIT}/${petId}.zip`;
+  return `${PET_RELEASE_ORIGIN}/downloads/${getPetReleaseCommit(petId)}/${petId}.zip`;
 }
 
 export function buildCodexInstallPrompt(

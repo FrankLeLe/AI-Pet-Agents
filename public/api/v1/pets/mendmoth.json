@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "mendmoth",
+    "category": "desk-corner",
+    "zodiacOrder": null,
+    "needs": [
+      "comfort",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "补补",
+      "en": "Mendmoth"
+    },
+    "badge": "WARMTH 03",
+    "accent": "#526d83",
+    "softAccent": "#e3eaf0",
+    "status": "published",
+    "tagline": {
+      "zh": "把小小的不顺，轻轻包好。",
+      "en": "Wrap a little kindness around a difficult moment."
+    },
+    "description": {
+      "zh": "有点沮丧的时候，也值得被温柔对待。",
+      "en": "A discouraged moment deserves gentleness, too."
+    },
+    "personalityTags": [
+      {
+        "zh": "体贴",
+        "en": "Caring"
+      },
+      {
+        "zh": "害羞",
+        "en": "Shy"
+      },
+      {
+        "zh": "柔软",
+        "en": "Soft-hearted"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "暖毯蛾",
+      "zodiacEn": "Blanket Moth",
+      "roleZh": "温柔收尾员",
+      "roleEn": "A Gentle Wrap-Up Friend",
+      "promiseZh": "把小小的不顺，轻轻包好。",
+      "promiseEn": "Wrap a little kindness around a difficult moment.",
+      "storyTitleZh": "那块没有藏起来的补丁",
+      "storyTitleEn": "The Patch Left in Plain Sight",
+      "storyZh": "补补左边的翅膀上有一块暖黄色补丁。刚搬到桌角时，它总把那边翅膀收得紧紧的，怕别人觉得这块颜色太显眼。有一天，折灯尝试照亮太多地方，把自己缩成了一团；檐豆也在陌生的纸边犹豫，不知道该往哪里走。补补想说点安慰的话，却因为害羞什么也没说出来。它只是慢慢张开翅膀，在两位伙伴旁边留出一片柔软的阴影。那块补丁正好接住折灯的光，暖得像一小块晚霞。檐豆靠过来，折灯也松开了折面。补补这才明白，照顾别人不一定需要说出漂亮的话，也不必先把自己修得完美。后来遇到不顺心的时刻，它会先用翅边拍拍自己，再把翅膀轻轻收拢。明天还有明天的事，今晚先让心情有个舒服的落点。",
+      "storyEn": "Mendmoth has a warm-yellow patch on its left wing. When it first moved into the desk corner, it kept that wing tucked close, worried the patch stood out too much. One day Foldlume tried to light too many things and crumpled into a tight little shape, while Eavie hesitated at an unfamiliar paper edge. Mendmoth wanted to say something comforting, but shyness swallowed the words. Instead, it slowly opened its wings and made a soft sheltered space beside its friends. The patch caught Foldlume's glow and looked like a small piece of sunset. Eavie came closer, and the lantern loosened a fold. Mendmoth realized that kindness did not require a perfect speech or a perfectly mended self. Now, after a difficult moment, it gives itself a gentle wing-tip pat before wrapping up again. Tomorrow can hold tomorrow's work; tonight, a feeling deserves somewhere comfortable to land.",
+      "comfortZh": "有点沮丧的时候，也值得被温柔对待。",
+      "comfortEn": "A discouraged moment deserves gentleness, too.",
+      "moments": [
+        {
+          "titleZh": "不太顺利",
+          "titleEn": "A rough moment",
+          "bodyZh": "先承认今天有点难，不用急着把失落赶走。",
+          "bodyEn": "Let today be a little difficult without rushing the feeling away."
+        },
+        {
+          "titleZh": "想停一会",
+          "titleEn": "Time for a pause",
+          "bodyZh": "把还没做完的地方记下来，给自己留一段安静。",
+          "bodyEn": "Note where you stopped and leave yourself a little quiet time."
+        },
+        {
+          "titleZh": "终于缓过来",
+          "titleEn": "Feeling ready again",
+          "bodyZh": "像打开一角翅膀那样，慢慢回到眼前的小事。",
+          "bodyEn": "Open one corner of your wings and ease back into something small."
+        }
+      ],
+      "traitsZh": [
+        "体贴",
+        "害羞",
+        "柔软"
+      ],
+      "traitsEn": [
+        "Caring",
+        "Shy",
+        "Soft-hearted"
+      ],
+      "matchZh": "适合反复修改、受挫之后的休息，或希望桌面多一点暖意的你。",
+      "matchEn": "For repeated revisions, a pause after a setback, and a warmer corner of the desk."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/mendmoth/spritesheet.webp",
+    "previewPath": "/pets/mendmoth/preview.webp",
+    "manifestPath": "/pets/mendmoth/pet.json",
+    "downloadPath": "/downloads/mendmoth.zip",
+    "detailPath": "/api/v1/pets/mendmoth.json"
+  }
+}

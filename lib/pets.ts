@@ -25,7 +25,7 @@ export type PetNeed = (typeof PET_NEEDS)[number];
 export type Pet = {
   readonly id: string;
   readonly status: "published";
-  readonly category: "bronze-cat" | "zodiac-duck" | "breed-cat" | "desktop-work";
+  readonly category: "bronze-cat" | "zodiac-duck" | "breed-cat" | "desktop-work" | "desk-corner";
   readonly zodiacOrder: number | null;
   readonly needs: readonly PetNeed[];
   readonly displayName: LocalizedText;
@@ -486,6 +486,36 @@ const PET_DEFINITIONS = [
     badge: "DEBUG 12",
     accent: "#bd5945",
     softAccent: "#f3d9d1",
+  },
+  {
+    id: "foldlume",
+    category: "desk-corner",
+    zodiacOrder: null,
+    needs: ["start", "steady", "comfort"],
+    displayName: { zh: "折灯", en: "Foldlume" },
+    badge: "LIGHT 01",
+    accent: "#b96d22",
+    softAccent: "#f6e4cb",
+  },
+  {
+    id: "eavie",
+    category: "desk-corner",
+    zodiacOrder: null,
+    needs: ["create", "start", "comfort"],
+    displayName: { zh: "檐豆", en: "Eavie" },
+    badge: "HOME 02",
+    accent: "#426b52",
+    softAccent: "#e3ebd8",
+  },
+  {
+    id: "mendmoth",
+    category: "desk-corner",
+    zodiacOrder: null,
+    needs: ["comfort", "steady"],
+    displayName: { zh: "补补", en: "Mendmoth" },
+    badge: "WARMTH 03",
+    accent: "#526d83",
+    softAccent: "#e3eaf0",
   },
 ] as const satisfies readonly {
   id: string;

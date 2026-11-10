@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "foldlume",
+    "category": "desk-corner",
+    "zodiacOrder": null,
+    "needs": [
+      "start",
+      "steady",
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "折灯",
+      "en": "Foldlume"
+    },
+    "badge": "LIGHT 01",
+    "accent": "#b96d22",
+    "softAccent": "#f6e4cb",
+    "status": "published",
+    "tagline": {
+      "zh": "给还没完成的事情，留一盏灯。",
+      "en": "Leave a little light for what is still taking shape."
+    },
+    "description": {
+      "zh": "还没做完也没关系，眼前这一小步值得被照亮。",
+      "en": "There is still time to finish. The next small step deserves a little light."
+    },
+    "personalityTags": [
+      {
+        "zh": "认真",
+        "en": "Earnest"
+      },
+      {
+        "zh": "温柔",
+        "en": "Gentle"
+      },
+      {
+        "zh": "有韧劲",
+        "en": "Resilient"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "折纸灯精灵",
+      "zodiacEn": "Paper Lantern Spirit",
+      "roleZh": "留灯的小伙伴",
+      "roleEn": "Keeper of a Little Light",
+      "promiseZh": "给还没完成的事情，留一盏灯。",
+      "promiseEn": "Leave a little light for what is still taking shape.",
+      "storyTitleZh": "折角里的那一点亮",
+      "storyTitleEn": "A Light Inside the Fold",
+      "storyZh": "折灯第一次醒来时，桌上只剩一张改了又改的草稿。它把自己折得方方正正，想替主人照清每一个角落，头顶却总有一个小角不肯服帖。越着急，身体的折面就缩得越紧，腹中的杏色灯光也挤成细细一线。檐豆从叶屋下探出头，补补把翅边轻轻搭在旁边，谁也没有催它变得完美。折灯于是试着松开一道折痕，先照亮眼前的一小块空白。第二天，草稿终于多了一行新的字。它发现，留灯不必照亮整间房，只要让回来的人找得到下一步。从那以后，它会在工作时认真收放折面，受挫时低一低折角，再慢慢站好。那一点亮，始终给愿意继续的你留着。",
+      "storyEn": "Foldlume first woke beside a draft that had been revised over and over. It tried to fold itself perfectly square and light every corner of the page, but one little corner on its head refused to lie flat. The harder it tried, the tighter its paper folds became, until the apricot light inside narrowed to a line. Eavie peeked out from under the leaf roof, and Mendmoth rested a soft wing nearby. Neither asked it to be perfect. Foldlume loosened one crease and lit just the small blank space in front of it. By morning, the draft had gained a new line. A lamp did not have to fill the whole room; it only had to make the next step visible. Now it works with earnest little folds, droops for a moment after a setback, and slowly stands tall again. The light is still there whenever you are ready to return.",
+      "comfortZh": "还没做完也没关系，眼前这一小步值得被照亮。",
+      "comfortEn": "There is still time to finish. The next small step deserves a little light.",
+      "moments": [
+        {
+          "titleZh": "迟迟没开头",
+          "titleEn": "A difficult beginning",
+          "bodyZh": "先打开那份草稿，只给今天能做的一小步留位置。",
+          "bodyEn": "Open the draft and make room for one small step you can take today."
+        },
+        {
+          "titleZh": "又试了一次",
+          "titleEn": "Trying once more",
+          "bodyZh": "像松开一道折痕那样，把肩膀放松，再试一个变化。",
+          "bodyEn": "Relax your shoulders like a paper crease opening, then try one change."
+        },
+        {
+          "titleZh": "有一点进展",
+          "titleEn": "A little progress",
+          "bodyZh": "停一下，看看刚刚被你照亮的那一小块。",
+          "bodyEn": "Pause to notice the little part you have just brought into view."
+        }
+      ],
+      "traitsZh": [
+        "认真",
+        "温柔",
+        "有韧劲"
+      ],
+      "traitsEn": [
+        "Earnest",
+        "Gentle",
+        "Resilient"
+      ],
+      "matchZh": "适合开始一份新草稿、慢慢推进项目，或需要一点温柔鼓励的你。",
+      "matchEn": "For opening a new draft, making steady progress, and keeping a little encouragement nearby."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/foldlume/spritesheet.webp",
+    "previewPath": "/pets/foldlume/preview.webp",
+    "manifestPath": "/pets/foldlume/pet.json",
+    "downloadPath": "/downloads/foldlume.zip",
+    "detailPath": "/api/v1/pets/foldlume.json"
+  }
+}

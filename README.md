@@ -6,12 +6,13 @@ A bilingual, no-login gallery for original Codex Desktop custom pets. The site p
 
 ## Included pets
 
-The gallery contains 37 installable v2 companions across three collections and one site guide.
+The gallery contains 40 installable v2 companions across four collections and one site guide.
 
-全站包含三个系列和一位网站向导，共 37 只可安装的 v2 伙伴。
+全站包含四个系列和一位网站向导，共 40 只可安装的 v2 伙伴。
 
 | Collection / 系列 | Count / 数量 | Route / 页面 |
 | --- | --- | --- |
+| 桌角小居民 / Desk Corner Friends | 3 | `/series/desk-corner-friends` |
 | 桌面工作小队 / Desktop Work Crew | 12 | `/series/desktop-work-crew` |
 | 呼噜事务所 / Cat Companion Club | 12 | `/series/cat-companion-club` |
 | 金羽十二星 / Golden Feather Constellation | 12 | `/series/golden-feather-constellation` |

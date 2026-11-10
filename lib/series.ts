@@ -589,7 +589,61 @@ const DESKTOP_WORK_MEMBERS = [
   },
 ] as const satisfies readonly SeriesMemberProfile[];
 
+const DESK_CORNER_MEMBERS = [
+  {
+    petId: "foldlume",
+    name: { zh: "折灯", en: "Foldlume" },
+    zodiac: { zh: "折纸灯精灵", en: "Paper Lantern Spirit" },
+    role: { zh: "留灯的小伙伴", en: "Keeper of a Little Light" },
+    specialty: { zh: "给下一步留一点亮", en: "A little light for the next step" },
+    vignette: {
+      zh: "折灯头顶总有一个不太服帖的小折角。受挫时它会低一低头，再把杏色的光慢慢撑开。",
+      en: "One little corner on Foldlume's head never lies quite flat. After a setback, it dips for a moment, then gently opens its apricot light again.",
+    },
+  },
+  {
+    petId: "eavie",
+    name: { zh: "檐豆", en: "Eavie" },
+    zodiac: { zh: "叶屋蜗牛", en: "Leaf-House Snail" },
+    role: { zh: "带着家探路", en: "At Home on the Trail" },
+    specialty: { zh: "安心探一个新角落", en: "Explore one new corner" },
+    vignette: {
+      zh: "檐豆把砖红门帘整理好，短短的触角就先探了出去。它走得慢，却总能带回来一个新发现。",
+      en: "Once the terracotta curtain is straight, Eavie's short antennae peek outside. It moves slowly and always returns with something new to share.",
+    },
+  },
+  {
+    petId: "mendmoth",
+    name: { zh: "补补", en: "Mendmoth" },
+    zodiac: { zh: "暖毯蛾", en: "Blanket Moth" },
+    role: { zh: "温柔收尾员", en: "A Gentle Wrap-Up Friend" },
+    specialty: { zh: "给心情一个软着陆", en: "A soft landing for the day" },
+    vignette: {
+      zh: "补补把灰蓝翅膀收成一条小毯子，左翼的暖黄补丁仍露在外面。照顾别人前，它也会轻轻拍拍自己。",
+      en: "Mendmoth folds gray-blue wings into a small blanket, leaving the warm-yellow patch on its left wing visible. It gives itself a gentle pat, too.",
+    },
+  },
+] as const satisfies readonly SeriesMemberProfile[];
+
 export const PET_SERIES = [
+  {
+    id: "desk-corner-friends",
+    name: { zh: "桌角小居民", en: "Desk Corner Friends" },
+    subtitle: { zh: "一盏灯、一间小屋、一条暖毯", en: "A light, a little home, a warm blanket" },
+    status: { zh: "新上线", en: "Just launched" },
+    description: {
+      zh: "在桌角留个位置，让认真、好奇和温柔住进来。",
+      en: "Make a little room for earnest effort, curiosity, and kindness.",
+    },
+    selectionTitle: { zh: "认识你的桌角邻居", en: "Meet your corner neighbors" },
+    storyTitle: { zh: "桌角还亮着", en: "The Corner Is Still Lit" },
+    storyChapter: { zh: "第一章：给彼此留个位置", en: "Chapter One: Room for Each Other" },
+    story: {
+      zh: "折灯第一次亮起来时，只照到了桌边一小块空白。檐豆背着叶屋慢慢路过，发现那里刚好可以停一停；补补把翅膀收好，坐在灯光最柔和的地方。它们没有约定一定要完成什么，只约好在对方回来时留个位置。折灯让下一步看得清，檐豆把小小的新鲜事带回来，补补给不顺利的一天一个软着陆。认真、好奇和温柔，就这样住进了同一个桌角。",
+      en: "When Foldlume first lit up, it reached only a small blank space at the edge of the desk. Eavie passed with its leaf house and found just enough room to pause. Mendmoth folded its wings and settled where the glow was softest. They made no promise to finish everything; they only promised to leave a place for one another's return. Foldlume makes the next step visible, Eavie brings back little discoveries, and Mendmoth gives a difficult day somewhere soft to land. Earnest effort, curiosity, and kindness now share the same corner.",
+    },
+    members: DESK_CORNER_MEMBERS,
+  },
   {
     id: "desktop-work-crew",
     name: {
@@ -664,7 +718,7 @@ export const PET_SERIES = [
   },
 ] as const satisfies readonly PetSeries[];
 
-export const FEATURED_SERIES_ID = "desktop-work-crew";
+export const FEATURED_SERIES_ID = "desk-corner-friends";
 
 export function getFeaturedSeries() {
   return getSeriesById(FEATURED_SERIES_ID) ?? PET_SERIES[0];
@@ -701,8 +755,8 @@ export function getSeriesForPet(petId: string) {
   );
 }
 
-export function getMemberProfile(petId: string) {
-  return PET_SERIES.flatMap((series) => series.members).find(
+export function getMemberProfile(petId: string): SeriesMemberProfile | undefined {
+  return PET_SERIES.flatMap<SeriesMemberProfile>((series) => series.members).find(
     (member) => member.petId === petId,
   );
 }
