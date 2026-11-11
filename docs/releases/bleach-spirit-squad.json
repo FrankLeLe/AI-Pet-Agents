@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "series": "bleach-spirit-squad",
+  "title": {
+    "zh": "死神 · 灵子小队",
+    "en": "BLEACH · Spirit Squad"
+  },
+  "createdAt": "2026-11-11T08:46:08.989581+00:00",
+  "status": "assets-accepted",
+  "artMethod": "Built-in imagegen canonical references and independent state strips; bundled extraction, registration, composition, validation and exact-byte preview pipeline.",
+  "scope": "Five human chibi fan interpretations of BLEACH characters, nine standard actions and sixteen look directions each, plus independently authored 8-frame power transformations and 8-frame awakened loops for the website. All existing companions remain unchanged.",
+  "preservedExistingAssets": 197,
+  "pets": [
+    {
+      "abilities": {
+        "transform": {
+          "sha256": "6f3eca973c8c532ea977f7da483102f035b1c886ae187a48d3af63d475959217",
+          "bytes": 579844,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "e05bbb3cef1136160881ea79754d4edd5b08732c4fb75e5021eb72836c334d30",
+          "bytes": 569974,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "d6729b54e5300a18488bdae013b7fb8931ba842a7db1edabfdaf34c2bca17a19",
+          "bytes": 61756,
+          "frames": 1
+        }
+      },
+      "id": "bleach-ichigo",
+      "displayName": {
+        "zh": "黑崎一护",
+        "en": "Ichigo Kurosaki"
+      },
+      "atlasSha256": "7c12f4ace5cd823ab2f76c73eb841d4c2466f5577a0c48f4f981108b27501b79",
+      "atlasBytes": 1533568,
+      "zipSha256": "87799a35d4da173994d8a7562f053a5aecd294756a7447fe58aebdd6ac8fd3f3",
+      "zipBytes": 1534593,
+      "manifestSha256": "103129faceff6412be3d773233d587d30121db9cb582048dc2076bbc896526ed",
+      "previewSha256": "ab32756955de807af63495cd040b6cc4942c52a7cab3899648374719ab91c3db",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 198,
+        "jump_baselines": [
+          197,
+          187,
+          172,
+          186,
+          197
+        ],
+        "airborne_lift_pixels": 25,
+        "landing_delta_pixels": 1
+      },
+      "evidence": {
+        "quality": "work/bleach-spirit-squad/bleach-ichigo/qa/pet-quality-webp.json",
+        "atlasValidation": "work/bleach-spirit-squad/bleach-ichigo/final/validation-webp.json",
+        "preflight": "work/bleach-spirit-squad/bleach-ichigo/qa/pets-preflight-webp.json",
+        "blind": "work/bleach-spirit-squad/bleach-ichigo/qa/blind-validation.json",
+        "blindMajority": "work/bleach-spirit-squad/bleach-ichigo/qa/blind-majority.json",
+        "visual": "work/bleach-spirit-squad/bleach-ichigo/qa/final-visual-review.json",
+        "previewSource": "work/bleach-spirit-squad/bleach-ichigo/qa/previews-final/source.json",
+        "sourceVerification": "work/bleach-spirit-squad/bleach-ichigo/qa/source-verification.json",
+        "abilityReview": "work/bleach-spirit-squad/bleach-ichigo/qa/abilities/ability-review.json"
+      }
+    },
+    {
+      "abilities": {
+        "transform": {
+          "sha256": "57de15700aa79a9bbd1458bc0503679ddff4d752ca5a65b39e6a77e86af77699",
+          "bytes": 519092,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "c4bb2cffa0c34f2e68921afc626e04ffa5df0425383e167d855e7fbd3b697ff3",
+          "bytes": 542660,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "d8afe49dbd4d2c1f3004db4c1529bc5a99fa5df300f8d8e9d757e0c7ddcc2159",
+          "bytes": 62186,
+          "frames": 1
+        }
+      },
+      "id": "bleach-rukia",
+      "displayName": {
+        "zh": "朽木露琪亚",
+        "en": "Rukia Kuchiki"
+      },
+      "atlasSha256": "0b38feec66010fe44ea4da3322a53a294e1f0274b9d0a27cd891775088c20cda",
+      "atlasBytes": 1553054,
+      "zipSha256": "beb1fcd1656bc57d83d229fed670095715cd06db59dd6e92644d3b6cf22dba9f",
+      "zipBytes": 1554117,
+      "manifestSha256": "8327d527d73e878a844552113afb089a12eba97ec5a52611f655d747f9c6b7f4",
+      "previewSha256": "62293ecf5cad78b43a5cd3b3fb7d4686132deda4a7e68bee16139bedce97bdd8",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 202,
+        "jump_baselines": [
+          202,
+          198,
+          164,
+          189,
+          202
+        ],
+        "airborne_lift_pixels": 38,
+        "landing_delta_pixels": 0
+      },
+      "evidence": {
+        "quality": "work/bleach-spirit-squad/bleach-rukia/qa/pet-quality-webp.json",
+        "atlasValidation": "work/bleach-spirit-squad/bleach-rukia/final/validation-webp.json",
+        "preflight": "work/bleach-spirit-squad/bleach-rukia/qa/pets-preflight-webp.json",
+        "blind": "work/bleach-spirit-squad/bleach-rukia/qa/blind-validation.json",
+        "blindMajority": "work/bleach-spirit-squad/bleach-rukia/qa/blind-majority.json",
+        "visual": "work/bleach-spirit-squad/bleach-rukia/qa/final-visual-review.json",
+        "previewSource": "work/bleach-spirit-squad/bleach-rukia/qa/previews-final/source.json",
+        "sourceVerification": "work/bleach-spirit-squad/bleach-rukia/qa/source-verification.json",
+        "abilityReview": "work/bleach-spirit-squad/bleach-rukia/qa/abilities/ability-review.json"
+      }
+    },
+    {
+      "abilities": {
+        "transform": {
+          "sha256": "ec85bc84d69d93b330336a5b3dce28fcde8b1e0c54acb2e7a716ccda5ef0148e",
+          "bytes": 552100,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "49e9dcf5f4d74e548bb11f1aae7dfc914f0bc6c01faac71db3889cc99350437f",
+          "bytes": 578462,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "93b7e9475107f0666a399e8cacfa18889e7f56b90f097404eb4906608518fd93",
+          "bytes": 67020,
+          "frames": 1
+        }
+      },
+      "id": "bleach-orihime",
+      "displayName": {
+        "zh": "井上织姬",
+        "en": "Orihime Inoue"
+      },
+      "atlasSha256": "6acb6702edb91d8a50a61437c860d2f9536ba63737b233bc6250945b9045041e",
+      "atlasBytes": 1429874,
+      "zipSha256": "5cb06bd06b84247b8cd6678261cb9e82cb99ca3317b368840395192772a8fc5f",
+      "zipBytes": 1430734,
+      "manifestSha256": "cd9e5218af40c980d6f71bc5b66709d97b98bc5a49dc585e53f5b09c8f09631e",
+      "previewSha256": "47f2f357ee0b6680936a61daba516f75f631cc5525247972f8a25743351838ad",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 198,
+        "jump_baselines": [
+          197,
+          197,
+          172,
+          184,
+          197
+        ],
+        "airborne_lift_pixels": 25,
+        "landing_delta_pixels": 1
+      },
+      "evidence": {
+        "quality": "work/bleach-spirit-squad/bleach-orihime/qa/pet-quality-webp.json",
+        "atlasValidation": "work/bleach-spirit-squad/bleach-orihime/final/validation-webp.json",
+        "preflight": "work/bleach-spirit-squad/bleach-orihime/qa/pets-preflight-webp.json",
+        "blind": "work/bleach-spirit-squad/bleach-orihime/qa/blind-validation.json",
+        "blindMajority": "work/bleach-spirit-squad/bleach-orihime/qa/blind-majority.json",
+        "visual": "work/bleach-spirit-squad/bleach-orihime/qa/final-visual-review.json",
+        "previewSource": "work/bleach-spirit-squad/bleach-orihime/qa/previews-final/source.json",
+        "sourceVerification": "work/bleach-spirit-squad/bleach-orihime/qa/source-verification.json",
+        "abilityReview": "work/bleach-spirit-squad/bleach-orihime/qa/abilities/ability-review.json"
+      }
+    },
+    {
+      "abilities": {
+        "transform": {
+          "sha256": "50c7fc8dabfbfa7c33e5bea780dbd211d2ac71af8c44c141279e388f4475fd37",
+          "bytes": 538254,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "cf0df888297f1e02f4e4f371fdb75bc726a4e1a613423799b5f75fc9cbf6fcc8",
+          "bytes": 601050,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "2cd03abb00df130e844a9fbf13daad1739922ba3fc2b545b74e62b81414bac0b",
+          "bytes": 67688,
+          "frames": 1
+        }
+      },
+      "id": "bleach-uryu",
+      "displayName": {
+        "zh": "石田雨龙",
+        "en": "Uryu Ishida"
+      },
+      "atlasSha256": "1733ef079ce09a362cf9d7f6c6c80a207fba8016144df5814196e281f553785b",
+      "atlasBytes": 1146036,
+      "zipSha256": "e1427a3a86247b18a8e4901ad16569db7e46000190675d33135c499dcfd2a7a7",
+      "zipBytes": 1146899,
+      "manifestSha256": "d88a9ae69c3e37865f8a6fc065ace61b0b3df1c9e8a3872cf9ada1563986230f",
+      "previewSha256": "10d356d7c90e023aef2d8b980d9c8bf0ce540882ab797b1a1ee6f009a0c515dd",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 198,
+        "jump_baselines": [
+          197,
+          197,
+          172,
+          180,
+          197
+        ],
+        "airborne_lift_pixels": 25,
+        "landing_delta_pixels": 1
+      },
+      "evidence": {
+        "quality": "work/bleach-spirit-squad/bleach-uryu/qa/pet-quality-webp.json",
+        "atlasValidation": "work/bleach-spirit-squad/bleach-uryu/final/validation-webp.json",
+        "preflight": "work/bleach-spirit-squad/bleach-uryu/qa/pets-preflight-webp.json",
+        "blind": "work/bleach-spirit-squad/bleach-uryu/qa/blind-validation.json",
+        "blindMajority": "work/bleach-spirit-squad/bleach-uryu/qa/blind-majority.json",
+        "visual": "work/bleach-spirit-squad/bleach-uryu/qa/final-visual-review.json",
+        "previewSource": "work/bleach-spirit-squad/bleach-uryu/qa/previews-final/source.json",
+        "sourceVerification": "work/bleach-spirit-squad/bleach-uryu/qa/source-verification.json",
+        "abilityReview": "work/bleach-spirit-squad/bleach-uryu/qa/abilities/ability-review.json"
+      }
+    },
+    {
+      "abilities": {
+        "transform": {
+          "sha256": "32fea60bed9b0dee0716a5f0bc8dd0dac62400731592b7daccedcb5b58de01a5",
+          "bytes": 561900,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "272a82e44e945afc9dd2ec5806a705a4e9022184753d6df281be62a09d936b5a",
+          "bytes": 587464,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "653435fc5c523da52640ffb1e26caeba838bdd3e158b995c09f038d14d8ad623",
+          "bytes": 69982,
+          "frames": 1
+        }
+      },
+      "id": "bleach-chad",
+      "displayName": {
+        "zh": "茶渡泰虎",
+        "en": "Yasutora Sado"
+      },
+      "atlasSha256": "6c94a8a6b1ae72bd03679d23577e54c50ce9b0546f2a998996214b5905f29f01",
+      "atlasBytes": 1720052,
+      "zipSha256": "30274f360cf12b0b402e128d60383fd3a82e0b124758b46ef62ed96a703d4dd4",
+      "zipBytes": 1721174,
+      "manifestSha256": "fe3982b7d4c6346a8ece0e0cf6a8d2caf50dc87ad37de21247eb03715b87bfb1",
+      "previewSha256": "f0d7505dac93137f75172054331fa8bbc59054cbd1dfefa7ba5f264edae18945",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 202,
+        "jump_baselines": [
+          202,
+          198,
+          156,
+          180,
+          202
+        ],
+        "airborne_lift_pixels": 46,
+        "landing_delta_pixels": 0
+      },
+      "evidence": {
+        "quality": "work/bleach-spirit-squad/bleach-chad/qa/pet-quality-webp.json",
+        "atlasValidation": "work/bleach-spirit-squad/bleach-chad/final/validation-webp.json",
+        "preflight": "work/bleach-spirit-squad/bleach-chad/qa/pets-preflight-webp.json",
+        "blind": "work/bleach-spirit-squad/bleach-chad/qa/blind-validation.json",
+        "blindMajority": "work/bleach-spirit-squad/bleach-chad/qa/blind-majority.json",
+        "visual": "work/bleach-spirit-squad/bleach-chad/qa/final-visual-review.json",
+        "previewSource": "work/bleach-spirit-squad/bleach-chad/qa/previews-final/source.json",
+        "sourceVerification": "work/bleach-spirit-squad/bleach-chad/qa/source-verification.json",
+        "abilityReview": "work/bleach-spirit-squad/bleach-chad/qa/abilities/ability-review.json"
+      }
+    }
+  ]
+}
