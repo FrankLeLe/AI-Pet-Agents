@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 1,
+  "series": "desk-corner-friends",
+  "title": {
+    "zh": "桌角小居民 · 十二位小邻居",
+    "en": "Desk Corner Friends · Twelve Little Neighbors"
+  },
+  "createdAt": "2026-11-11T07:07:48.750494+00:00",
+  "status": "assets-accepted",
+  "artMethod": "Built-in imagegen canonical references and independent state strips; bundled extraction, registration, composition, validation and exact-byte preview pipeline.",
+  "scope": "Nine new original characters, nine state animations and sixteen look directions each. Existing three characters remain unchanged.",
+  "preservedExistingAssets": 161,
+  "pets": [
+    {
+      "id": "dewbert",
+      "displayName": {
+        "zh": "露团",
+        "en": "Dewbert"
+      },
+      "atlasSha256": "14b8dcf5ee393d3ae2f9ddeb551d513019a4f72499543e2703f71be047f102e5",
+      "atlasBytes": 1126730,
+      "zipSha256": "1b3f796830534eae9a3a39511d939811242e350d465994d1e39427026b9aac1b",
+      "zipBytes": 1127611,
+      "manifestSha256": "5640341480b5d142f5dca29a72945037a04f2c73fb11197a4f1b319ec020ea14",
+      "previewSha256": "03ae60f12c86fc6e55286cf4b56e85bf7c5f83ca7f7ba033fee13949c9194692",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 197,
+        "jump_baselines": [
+          197,
+          197,
+          159,
+          179,
+          197
+        ],
+        "airborne_lift_pixels": 38,
+        "landing_delta_pixels": 0
+      },
+      "evidence": {
+        "quality": "work/desk-corner-expansion/dewbert/qa/pet-quality-webp.json",
+        "atlasValidation": "work/desk-corner-expansion/dewbert/final/validation-webp.json",
+        "preflight": "work/desk-corner-expansion/dewbert/qa/pets-preflight-webp.json",
+        "blind": "work/desk-corner-expansion/dewbert/qa/blind-validation.json",
+        "blindMajority": "work/desk-corner-expansion/dewbert/qa/blind-majority.json",
+        "visual": "work/desk-corner-expansion/dewbert/qa/final-visual-review.json",
+        "previewSource": "work/desk-corner-expansion/dewbert/qa/previews-final/source.json"
+      }
+    },
+    {
+      "id": "spriggle",
+      "displayName": {
+        "zh": "芽团",
+        "en": "Spriggle"
+      },
+      "atlasSha256": "2b58047ef376b61cf6d4188160a4a35e5a9fb898376c431a54fc8295e1791229",
+      "atlasBytes": 1437176,
+      "zipSha256": "44dd057907789e256dc71ddaaf1c755622184761aee0c488a728ee98a25ff6f1",
+      "zipBytes": 1438167,
+      "manifestSha256": "3e96c7b35a952486e1bee22c87d93531ddb6bf7e47b548bdd8d3946c789be381",
+      "previewSha256": "eab19d5fb0df39779a68600ad5d37718f9be446bdcd09b87b28010eb9e7a9aa0",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 197,
+        "jump_baselines": [
+          197,
+          197,
+          163,
+          182,
+          197
+        ],
+        "airborne_lift_pixels": 34,
+        "landing_delta_pixels": 0
+      },
+      "evidence": {
+        "quality": "work/desk-corner-expansion/spriggle/qa/pet-quality-webp.json",
+        "atlasValidation": "work/desk-corner-expansion/spriggle/final/validation-webp.json",
+        "preflight": "work/desk-corner-expansion/spriggle/qa/pets-preflight-webp.json",
+        "blind": "work/desk-corner-expansion/spriggle/qa/blind-validation.json",
+        "blindMajority": "work/desk-corner-expansion/spriggle/qa/blind-majority.json",
+        "visual": "work/desk-corner-expansion/spriggle/qa/final-visual-review.json",
+        "previewSource": "work/desk-corner-expansion/spriggle/qa/previews-final/source.json"
+      }
+    },
+    {
+      "id": "bloomble",
+      "displayName": {
+        "zh": "绒朵",
+        "en": "Bloomble"
+      },
+      "atlasSha256": "03129c0ceaeebcef3c2d253cba2635ff98c39192b73c98e5d48ae597ce761a03",
+      "atlasBytes": 1513478,
+      "zipSha256": "2c8ec06ba479beb66e4b9d1ffb458ded869fa7edf56baad2eb136c4784de0883",
+      "zipBytes": 1509244,
+      "manifestSha256": "dd48b0fc2fcef69c675833435e851c06d0807ea1b2cf2b7352081fef9feef6d5",
+      "previewSha256": "c6b6d6c180eca1ad1b6ef617f263c8728a1a12ed552622b22802fb77cbdc6b38",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 197,
+        "jump_baselines": [
+          197,
+          197,
+          163,
+          180,
+          197
+        ],
+        "airborne_lift_pixels": 34,
+        "landing_delta_pixels": 0
+      },
+      "evidence": {
+        "quality": "work/desk-corner-expansion/bloomble/qa/pet-quality-webp.json",
+        "atlasValidation": "work/desk-corner-expansion/bloomble/final/validation-webp.json",
+        "preflight": "work/desk-corner-expansion/bloomble/qa/pets-preflight-webp.json",
+        "blind": "work/desk-corner-expansion/bloomble/qa/blind-validation.json",
+        "blindMajority": "work/desk-corner-expansion/bloomble/qa/blind-majority.json",
+        "visual": "work/desk-corner-expansion/bloomble/qa/final-visual-review.json",
+        "previewSource": "work/desk-corner-expansion/bloomble/qa/previews-final/source.json"
+      }
+    },
+    {
+      "id": "quillip",
+      "displayName": {
+        "zh": "纸啾",
+        "en": "Quillip"
+      },
+      "atlasSha256": "335f9b2f93f51d7874c9398d460f455773f9e2ef2e43b8955a44d910ceef09dd",
+      "atlasBytes": 1883596,
+      "zipSha256": "a7fc0a6ad4d0d98ad9ec61e71a7c60e1931ab44c240da67260c6c63677e58ff5",
+      "zipBytes": 1881091,
+      "manifestSha256": "0ad6a7c71bc865e91cc38facb68423452e3badd09e5cbfb82ee631dfa441f212",
+      "previewSha256": "5d0d0021893a514cad7347d505048a6ff2da764ff54c59f9cc0942a67adb5b44",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 197,
+        "jump_baselines": [
+          197,
+          182,
+          169,
+          178,
+          197
+        ],
+        "airborne_lift_pixels": 28,
+        "landing_delta_pixels": 0
+      },
+      "evidence": {
+        "quality": "work/desk-corner-expansion/quillip/qa/pet-quality-webp.json",
+        "atlasValidation": "work/desk-corner-expansion/quillip/final/validation-webp.json",
+        "preflight": "work/desk-corner-expansion/quillip/qa/pets-preflight-webp.json",
+        "blind": "work/desk-corner-expansion/quillip/qa/blind-validation.json",
+        "blindMajority": "work/desk-corner-expansion/quillip/qa/blind-majority.json",
+        "visual": "work/desk-corner-expansion/quillip/qa/final-visual-review.json",
+        "previewSource": "work/desk-corner-expansion/quillip/qa/previews-final/source.json"
+      }
+    },
+    {
+      "id": "inklet",
+      "displayName": {
+        "zh": "墨点",
+        "en": "Inklet"
+      },
+      "atlasSha256": "0e0588909a8f8363e4cad438617e10a1d736e4606e8b91463727af5a240e4aca",
+      "atlasBytes": 1748426,
+      "zipSha256": "46d75d6fe17c3bbe7f331daacc4c840e4aaae01ec04481499098f90396c29f6c",
+      "zipBytes": 1749380,
+      "manifestSha256": "040d369872c389f085a054e67e1f018c5bdff64bcd6a0c23fad6d6c74f4b7b07",
+      "previewSha256": "f4f1fdfab05d9d5d1f39afa51580cd50412b88d110dc1054233d054b4ffc1494",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 197,
+        "jump_baselines": [
+          196,
+          186,
+          172,
+          185,
+          197
+        ],
+        "airborne_lift_pixels": 25,
+        "landing_delta_pixels": 0
+      },
+      "evidence": {
+        "quality": "work/desk-corner-expansion/inklet/qa/pet-quality-webp.json",
+        "atlasValidation": "work/desk-corner-expansion/inklet/final/validation-webp.json",
+        "preflight": "work/desk-corner-expansion/inklet/qa/pets-preflight-webp.json",
+        "blind": "work/desk-corner-expansion/inklet/qa/blind-validation.json",
+        "blindMajority": "work/desk-corner-expansion/inklet/qa/blind-majority.json",
+        "visual": "work/desk-corner-expansion/inklet/qa/final-visual-review.json",
+        "previewSource": "work/desk-corner-expansion/inklet/qa/previews-final/source.json"
+      }
+    },
+    {
+      "id": "buttonbud",
+      "displayName": {
+        "zh": "扣扣",
+        "en": "Buttonbud"
+      },
+      "atlasSha256": "5f1fe1e680ec3dc98d129b462a390093f30bb30c82ebe8faed90115bc58eee1b",
+      "atlasBytes": 1717234,
+      "zipSha256": "5d94dac8713685c39b0f082fa31ceeb269ea342a279fb781983a38bf600dd1bd",
+      "zipBytes": 1708735,
+      "manifestSha256": "2a33a6cb16b580c4ca6a3bcab53339b52935f0923bb4c0e4c2c6b8ef1560af95",
+      "previewSha256": "a471bd1faa46f66eff8f77f5280b371f55af76dc2abcdf8f09a8b979692ddcd3",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 197,
+        "jump_baselines": [
+          197,
+          185,
+          172,
+          184,
+          197
+        ],
+        "airborne_lift_pixels": 25,
+        "landing_delta_pixels": 0
+      },
+      "evidence": {
+        "quality": "work/desk-corner-expansion/buttonbud/qa/pet-quality-webp.json",
+        "atlasValidation": "work/desk-corner-expansion/buttonbud/final/validation-webp.json",
+        "preflight": "work/desk-corner-expansion/buttonbud/qa/pets-preflight-webp.json",
+        "blind": "work/desk-corner-expansion/buttonbud/qa/blind-validation.json",
+        "blindMajority": "work/desk-corner-expansion/buttonbud/qa/blind-majority.json",
+        "visual": "work/desk-corner-expansion/buttonbud/qa/final-visual-review.json",
+        "previewSource": "work/desk-corner-expansion/buttonbud/qa/previews-final/source.json"
+      }
+    },
+    {
+      "id": "spoolie",
+      "displayName": {
+        "zh": "线眠",
+        "en": "Spoolie"
+      },
+      "atlasSha256": "a168476403e85e2d01801bf97d5ed510701a1fd4032476a1200fcaa7890838aa",
+      "atlasBytes": 1543564,
+      "zipSha256": "19abbce04120853a8d2a5926cea4d3286dc1b48b7949583bb476668f3ad95064",
+      "zipBytes": 1539461,
+      "manifestSha256": "0576fd526624a5d3cc4fe4ae64dddbf24e7b0575e1b674f86084b49e6a886171",
+      "previewSha256": "04c6c3482bbdd1232c729d8c52e924fc012933df5cf170badac19ec89a0e2899",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 195,
+        "jump_baselines": [
+          195,
+          195,
+          170,
+          189,
+          195
+        ],
+        "airborne_lift_pixels": 25,
+        "landing_delta_pixels": 0
+      },
+      "evidence": {
+        "quality": "work/desk-corner-expansion/spoolie/qa/pet-quality-webp.json",
+        "atlasValidation": "work/desk-corner-expansion/spoolie/final/validation-webp.json",
+        "preflight": "work/desk-corner-expansion/spoolie/qa/pets-preflight-webp.json",
+        "blind": "work/desk-corner-expansion/spoolie/qa/blind-validation.json",
+        "blindMajority": "work/desk-corner-expansion/spoolie/qa/blind-majority.json",
+        "visual": "work/desk-corner-expansion/spoolie/qa/final-visual-review.json",
+        "previewSource": "work/desk-corner-expansion/spoolie/qa/previews-final/source.json"
+      }
+    },
+    {
+      "id": "crumbit",
+      "displayName": {
+        "zh": "酥角",
+        "en": "Crumbit"
+      },
+      "atlasSha256": "3ccba3300ab60ce9e75e07e091aa73c6359feb5e1a1529cb040aebb066ab0ad6",
+      "atlasBytes": 1713788,
+      "zipSha256": "0d1436e1fdfe355db1879bce1900bbe69e1243cbdb3e0b900748fec6e3e15bd8",
+      "zipBytes": 1707742,
+      "manifestSha256": "1a9fef98118387bb531da25f5dec67c151afbe2dd41894a6cd07a048e7df03df",
+      "previewSha256": "aaee1447dba1d95baa20eed06a95ac3b51df49b7598a5a6bf5c7e773339b9780",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 195,
+        "jump_baselines": [
+          195,
+          195,
+          162,
+          178,
+          195
+        ],
+        "airborne_lift_pixels": 33,
+        "landing_delta_pixels": 0
+      },
+      "evidence": {
+        "quality": "work/desk-corner-expansion/crumbit/qa/pet-quality-webp.json",
+        "atlasValidation": "work/desk-corner-expansion/crumbit/final/validation-webp.json",
+        "preflight": "work/desk-corner-expansion/crumbit/qa/pets-preflight-webp.json",
+        "blind": "work/desk-corner-expansion/crumbit/qa/blind-validation.json",
+        "blindMajority": "work/desk-corner-expansion/crumbit/qa/blind-majority.json",
+        "visual": "work/desk-corner-expansion/crumbit/qa/final-visual-review.json",
+        "previewSource": "work/desk-corner-expansion/crumbit/qa/previews-final/source.json"
+      }
+    },
+    {
+      "id": "thimblet",
+      "displayName": {
+        "zh": "顶顶",
+        "en": "Thimblet"
+      },
+      "atlasSha256": "ce37d582154609676e1912f6be68a6a99f29d072175a37c2df036640c151d51b",
+      "atlasBytes": 1828432,
+      "zipSha256": "834ae76027d8f1ba248253628da96c217f6b7249af890fb3380ea9d02b8a9c1d",
+      "zipBytes": 1817436,
+      "manifestSha256": "972aa53ac79ed732e17a569ad0edcb9a56dcc0e4cb76fd4f671f122695d8744d",
+      "previewSha256": "081d5ecaef4b577ed51886f055c13edb7695a55e358a07127286438c7b1bb3d9",
+      "frames": 73,
+      "spriteVersionNumber": 2,
+      "jump": {
+        "idle_baseline": 195,
+        "jump_baselines": [
+          195,
+          195,
+          154,
+          175,
+          195
+        ],
+        "airborne_lift_pixels": 41,
+        "landing_delta_pixels": 0
+      },
+      "evidence": {
+        "quality": "work/desk-corner-expansion/thimblet/qa/pet-quality-webp.json",
+        "atlasValidation": "work/desk-corner-expansion/thimblet/final/validation-webp.json",
+        "preflight": "work/desk-corner-expansion/thimblet/qa/pets-preflight-webp.json",
+        "blind": "work/desk-corner-expansion/thimblet/qa/blind-validation.json",
+        "blindMajority": "work/desk-corner-expansion/thimblet/qa/blind-majority.json",
+        "visual": "work/desk-corner-expansion/thimblet/qa/final-visual-review.json",
+        "previewSource": "work/desk-corner-expansion/thimblet/qa/previews-final/source.json"
+      }
+    }
+  ]
+}
