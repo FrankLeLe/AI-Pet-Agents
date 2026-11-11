@@ -12,7 +12,7 @@
     "build": "npm run data:sync && npm run assets:web && vinext build",
     "start": "vinext start",
     "deploy": "npm run build && wrangler deploy --config wrangler.jsonc",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs tests/pet-data-contract.test.mjs",
+    "test": "npm run build && node --test tests/rendered-html.test.mjs tests/pet-data-contract.test.mjs tests/pet-powers.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .codex",
     "db:generate": "drizzle-kit generate"
   },

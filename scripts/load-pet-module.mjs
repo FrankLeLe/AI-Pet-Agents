@@ -31,18 +31,25 @@ async function transpile(relativePath) {
 }
 
 export async function loadPetModule() {
-  const [animationSource, editorialSource, petsSource] = await Promise.all([
+  const [animationSource, editorialSource, petsSource, bleachSource] = await Promise.all([
     transpile("pet-animation.ts"),
     transpile("pet-content.ts"),
     transpile("pets.ts"),
+    transpile("bleach-content.ts"),
   ]);
   const animationUrl = toDataUrl(animationSource);
-  const editorialUrl = toDataUrl(editorialSource);
+  const bleachUrl = toDataUrl(bleachSource);
+  const editorialUrl = toDataUrl(editorialSource.replaceAll('"./bleach-content"', `"${bleachUrl}"`));
   const linkedPetsSource = petsSource
     .replaceAll('"./pet-animation"', `"${animationUrl}"`)
     .replaceAll('"./pet-content"', `"${editorialUrl}"`);
+  const linkedCatalogSource = linkedPetsSource.replaceAll('"./bleach-content"', `"${bleachUrl}"`);
 
-  return import(toDataUrl(linkedPetsSource));
+  return import(toDataUrl(linkedCatalogSource));
+}
+
+export async function loadPetPowerModule() {
+  return import(toDataUrl(await transpile("pet-powers.ts")));
 }
 
 export async function loadPetReleaseModule() {

@@ -549,6 +549,61 @@
       },
       "preview": "/pets/thimblet/preview.webp",
       "download": "/downloads/thimblet.zip"
+    },
+    {
+      "id": "bleach-ichigo",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "黑崎一护",
+        "en": "Ichigo Kurosaki"
+      },
+      "preview": "/pets/bleach-ichigo/preview.webp",
+      "download": "/downloads/bleach-ichigo.zip"
+    },
+    {
+      "id": "bleach-rukia",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "朽木露琪亚",
+        "en": "Rukia Kuchiki"
+      },
+      "preview": "/pets/bleach-rukia/preview.webp",
+      "download": "/downloads/bleach-rukia.zip"
+    },
+    {
+      "id": "bleach-orihime",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "井上织姬",
+        "en": "Orihime Inoue"
+      },
+      "preview": "/pets/bleach-orihime/preview.webp",
+      "download": "/downloads/bleach-orihime.zip"
+    },
+    {
+      "id": "bleach-uryu",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "石田雨龙",
+        "en": "Uryu Ishida"
+      },
+      "preview": "/pets/bleach-uryu/preview.webp",
+      "download": "/downloads/bleach-uryu.zip"
+    },
+    {
+      "id": "bleach-chad",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "茶渡泰虎",
+        "en": "Yasutora Sado"
+      },
+      "preview": "/pets/bleach-chad/preview.webp",
+      "download": "/downloads/bleach-chad.zip"
     }
   ]
 }

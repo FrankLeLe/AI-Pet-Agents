@@ -94,6 +94,15 @@
   line-height: 1.6;
 }
 
+.heroCopy > .attribution {
+  margin-top: 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .heroActions {
   display: flex;
   flex-wrap: wrap;

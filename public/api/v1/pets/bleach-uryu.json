@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "bleach-uryu",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "solve",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "石田雨龙",
+      "en": "Uryu Ishida"
+    },
+    "badge": "BLEACH 04",
+    "accent": "#5caecc",
+    "softAccent": "#e0f4fc",
+    "status": "published",
+    "tagline": {
+      "zh": "看清细节，下一步就会更明确。",
+      "en": "Notice the detail and the next step becomes clearer."
+    },
+    "description": {
+      "zh": "暂时没有答案也没关系，把一处细节看清就很好。",
+      "en": "An answer can wait. Noticing one useful detail is already progress."
+    },
+    "personalityTags": [
+      {
+        "zh": "理性",
+        "en": "Thoughtful"
+      },
+      {
+        "zh": "细致",
+        "en": "Meticulous"
+      },
+      {
+        "zh": "专注",
+        "en": "Focused"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "灭却师",
+      "zodiacEn": "Quincy",
+      "roleZh": "专注而精准的伙伴",
+      "roleEn": "A focused, precise companion",
+      "promiseZh": "看清细节，下一步就会更明确。",
+      "promiseEn": "Notice the detail and the next step becomes clearer.",
+      "storyTitleZh": "眼镜之后的目光",
+      "storyTitleEn": "A Clearer Look",
+      "storyZh": "雨龙习惯先整理好自己的状态，再开始面对眼前的问题。到了桌边，他会轻轻推一下眼镜，站定，低头确认，然后换个角度再看一次。他不急着给出答案，更愿意把容易忽略的细节一一找出来。遇到暂时不明白的地方，他会短暂停顿，却不会用更大的动静掩盖疑问。伙伴准备继续时，他总能把目光放回同一个方向。灵子聚拢的片刻，青蓝色几何光翼在背后展开，手甲与脚甲透出清澈的光；而镜片之后，仍是那双熟悉而认真的眼睛。等力量收束，他把衣袖整理平整，回到安静的陪伴中。慢一点看清楚，常常能让接下来的路走得更稳。",
+      "storyEn": "Uryu prefers to settle himself before approaching a problem. At the desk he adjusts his glasses, stands still, checks once and looks from another angle. He is less interested in a quick answer than in the detail everyone might have missed. A difficult question earns a quiet pause rather than a dramatic response. When the others move on, he finds the same direction. Spirit particles gather into cyan geometric wings and clear armor around his hands and legs, but the attentive eyes behind his glasses remain familiar. Afterwards he smooths his sleeve and returns to quiet company. Taking time to see clearly can make the road ahead steadier.",
+      "comfortZh": "暂时没有答案也没关系，把一处细节看清就很好。",
+      "comfortEn": "An answer can wait. Noticing one useful detail is already progress.",
+      "moments": [
+        {
+          "titleZh": "开始专注",
+          "titleEn": "Finding focus",
+          "bodyZh": "推好眼镜，先把注意力放在一件事上。",
+          "bodyEn": "Adjust your glasses and settle on one thing."
+        },
+        {
+          "titleZh": "再确认一次",
+          "titleEn": "One more check",
+          "bodyZh": "换个角度，看看有没有遗漏的小线索。",
+          "bodyEn": "Try another angle and notice the quiet clue."
+        },
+        {
+          "titleZh": "完圣体展开",
+          "titleEn": "Reveal Vollständig",
+          "bodyZh": "青蓝灵子翼与晶体护甲一同显现。",
+          "bodyEn": "Cyan spirit wings and crystalline armor emerge together."
+        }
+      ],
+      "traitsZh": [
+        "理性",
+        "细致",
+        "专注"
+      ],
+      "traitsEn": [
+        "Thoughtful",
+        "Meticulous",
+        "Focused"
+      ],
+      "matchZh": "适合专心思考、核对细节，或想把事情看得更清楚的时候。",
+      "matchEn": "For focused thought, a careful check or a clearer view of things."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/bleach-uryu/spritesheet.webp",
+    "previewPath": "/pets/bleach-uryu/preview.webp",
+    "manifestPath": "/pets/bleach-uryu/pet.json",
+    "downloadPath": "/downloads/bleach-uryu.zip",
+    "detailPath": "/api/v1/pets/bleach-uryu.json"
+  }
+}

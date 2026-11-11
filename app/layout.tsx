@@ -4,7 +4,7 @@ import "./globals.css";
 const siteUrl = "https://aipetsagent.com";
 const title = "Codex Pets｜给 Codex 选一位会动的伙伴";
 const description =
-  "认识原创桌面伙伴，试试它们的小动作，选一位带回 Codex。";
+  "认识各具性格的桌面伙伴，试试日常动作与力量互动，选一位带回 Codex。";
 
 export const viewport: Viewport = {
   themeColor: "#f7f1e5",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "Codex Desktop",
     "AI desktop pet",
     "桌面宠物",
-    "原创桌面伙伴",
+    "桌面伙伴",
   ],
   authors: [{ name: "Codex Pets" }],
   alternates: { canonical: siteUrl },

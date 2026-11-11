@@ -1,5 +1,6 @@
 import type { Language, LocalizedText, Pet } from "./pets";
 import { getPetById } from "./pets";
+import { BLEACH_SERIES } from "./bleach-content";
 
 export type SeriesMemberProfile = {
   readonly petId: string;
@@ -20,6 +21,7 @@ export type PetSeries = {
   readonly storyTitle: LocalizedText;
   readonly storyChapter: LocalizedText;
   readonly story: LocalizedText;
+  readonly attribution?: LocalizedText;
   readonly members: readonly SeriesMemberProfile[];
 };
 
@@ -833,6 +835,7 @@ const DESK_CORNER_MEMBERS = [
 ] as const satisfies readonly SeriesMemberProfile[];
 
 export const PET_SERIES = [
+  BLEACH_SERIES,
   {
     id: "desk-corner-friends",
     name: { zh: "桌角小居民", en: "Desk Corner Friends" },
@@ -925,7 +928,7 @@ export const PET_SERIES = [
   },
 ] as const satisfies readonly PetSeries[];
 
-export const FEATURED_SERIES_ID = "desk-corner-friends";
+export const FEATURED_SERIES_ID = "bleach-spirit-squad";
 
 export function getFeaturedSeries() {
   return getSeriesById(FEATURED_SERIES_ID) ?? PET_SERIES[0];
@@ -952,11 +955,11 @@ export type PetWithProfile = {
   readonly profile: SeriesMemberProfile;
 };
 
-export function getSeriesById(seriesId: string) {
+export function getSeriesById(seriesId: string): PetSeries | undefined {
   return PET_SERIES.find((series) => series.id === seriesId);
 }
 
-export function getSeriesForPet(petId: string) {
+export function getSeriesForPet(petId: string): PetSeries | undefined {
   return PET_SERIES.find((series) =>
     series.members.some((member) => member.petId === petId),
   );

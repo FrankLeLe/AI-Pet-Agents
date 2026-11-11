@@ -1,0 +1,56 @@
+.power {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  margin: 60px 0;
+  border: 3px solid #161812;
+  border-radius: 28px;
+  background: #fffaf0;
+  box-shadow: 7px 8px 0 #161812;
+  overflow: hidden;
+  scroll-margin-top: 24px;
+}
+.copy { padding: clamp(26px, 4vw, 58px); align-self: center; min-width: 0; }
+.eyebrow { font-size: 12px; font-weight: 850; letter-spacing: 0.08em; }
+.copy h2 { font-size: clamp(28px, 3vw, 44px); line-height: 1.15; margin: 24px 0; overflow-wrap: anywhere; }
+.copy > p:not(.eyebrow) { line-height: 1.8; }
+.controls { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.controls button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 10px 15px; border: 2px solid #161812; border-radius: 12px; color: #161812; background: #fffaf0; font: inherit; font-weight: 800; cursor: pointer; }
+.controls .primary { background: #ffdc58; box-shadow: 3px 4px 0 #161812; }
+.controls button:hover:not(:disabled) { transform: translateY(-2px); }
+.controls button:focus-visible { outline: 3px solid #4167ff; outline-offset: 4px; }
+.controls button:disabled { cursor: default; opacity: 0.68; }
+.copy .hint { font-size: 12px; margin-top: 20px; color: #595a53; }
+.stage { position: relative; display: grid; align-content: center; justify-items: center; min-height: 540px; isolation: isolate; overflow: hidden; padding: 78px 18px 46px; color: #fffaf0; background: #222734; border-left: 3px solid #161812; }
+.stageHeader { position: absolute; z-index: 4; top: 20px; left: 20px; right: 20px; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; font-size: 12px; }
+.stageHeader span { flex-shrink: 0; }
+.stageHeader strong { text-align: right; line-height: 1.5; max-width: 70%; }
+.figure { position: relative; width: min(100%, 354px); aspect-ratio: 12 / 13; overflow: hidden; z-index: 2; contain: layout paint; }
+.resting { position: absolute; inset: 0; opacity: 0; transform: translateY(var(--power-rest-y)) scale(var(--power-rest-scale)); transform-origin: 50% 100%; }
+.resting[data-shown="true"] { opacity: 1; }
+.resting > div { width: 100%; height: 100%; }
+.sequence { position: absolute; top: 0; left: 0; width: 800%; height: 100%; max-width: none; opacity: 0; transform: translate3d(var(--power-x, 0%), 0, 0); pointer-events: none; user-select: none; }
+.sequence[data-active="true"] { opacity: 1; will-change: transform; }
+.aura { position: absolute; width: 430px; max-width: 100%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(ellipse, color-mix(in srgb, var(--power-color) 22%, transparent), transparent 68%); opacity: 0.25; transition: opacity 600ms ease; z-index: 0; }
+.stage[data-power-phase="awakened"] .aura, .stage[data-power-phase="transforming"] .aura { opacity: 1; }
+.stage[data-effects="on"] .aura { animation: breathe 2400ms ease-in-out infinite alternate; }
+.rings { position: absolute; bottom: 60px; width: 70%; height: 25px; border: 1px solid var(--power-color); border-radius: 50%; opacity: 0; filter: blur(1px); z-index: 0; }
+.stage[data-power-phase="awakened"] .rings { opacity: 0.35; }
+.stage[data-atmosphere="frost"] { background: #273e50; }
+.stage[data-atmosphere="shield"] { background: #42372e; }
+.stage[data-atmosphere="spirit"] { background: #1f3649; }
+.stage[data-atmosphere="armor"] { background: #392b30; }
+.stageFootnote { position: absolute; bottom: 18px; font-size: 11px; opacity: 0.7; }
+@keyframes breathe { from { transform: scale(0.94); } to { transform: scale(1.06); } }
+@media (max-width: 760px) {
+  .power { grid-template-columns: 1fr; margin: 40px 0; }
+  .stage { min-height: 450px; border-left: 0; border-top: 3px solid #161812; padding-top: 68px; }
+  .figure { width: min(100%, 300px); }
+  .stageHeader { left: 14px; right: 14px; gap: 10px; }
+  .copy { padding: 26px 22px; }
+  .copy h2 { margin: 18px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aura { animation: none !important; transition: none; }
+  .controls button:hover:not(:disabled) { transform: none; }
+  .sequence { will-change: auto; }
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "bleach-chad",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "steady",
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "茶渡泰虎",
+      "en": "Yasutora Sado"
+    },
+    "badge": "BLEACH 05",
+    "accent": "#ac6257",
+    "softAccent": "#f3e2dd",
+    "status": "published",
+    "tagline": {
+      "zh": "不用着急，我会稳稳站在这里。",
+      "en": "Take your time. I will be right here."
+    },
+    "description": {
+      "zh": "慢慢来也可以，有些陪伴不需要很多话。",
+      "en": "A gentle pace is welcome. Good company does not always need many words."
+    },
+    "personalityTags": [
+      {
+        "zh": "沉稳",
+        "en": "Steady"
+      },
+      {
+        "zh": "可靠",
+        "en": "Dependable"
+      },
+      {
+        "zh": "温厚",
+        "en": "Kind"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "双臂力量的守护者",
+      "zodiacEn": "A protector with powerful arms",
+      "roleZh": "沉稳可靠的伙伴",
+      "roleEn": "A steady, dependable friend",
+      "promiseZh": "不用着急，我会稳稳站在这里。",
+      "promiseEn": "Take your time. I will be right here.",
+      "storyTitleZh": "安静站在身边",
+      "storyTitleEn": "Quietly Beside You",
+      "storyZh": "茶渡不常用许多话表达关心，却总能让身边的人知道他在。到了桌边，他会把脚步放稳，轻轻点头，然后安静地等你开始。事情顺利时，他抬起手给一个简单的回应；事情不顺时，他也不会急着催促，只是留在原来的位置，陪你缓过那一小会儿。需要守护的时候，右臂先显现黑红色护甲，左臂随后覆上白色，厚实的姿态依旧保持清楚而稳定。他没有因为力量变大就变得喧闹，反而更认真地看向伙伴所在的方向。等一切安定，他放下双手，重新露出熟悉的平静神情。今天不管走得快还是慢，都可以在这份沉默的陪伴里，找到一点踏实。",
+      "storyEn": "Chad rarely needs many words to show that he cares. At the desk he plants his feet, gives a small nod and waits for you to begin. A good moment receives a simple raised hand. A difficult one is met with patient company rather than a demand to hurry. When protection is needed, black-and-red armor forms on his right arm, followed by white armor on his left. His broad stance stays steady. Greater strength does not make him louder; it makes his attention to his friends more deliberate. Once everything settles, he lowers his hands and returns to his familiar calm. Whatever today's pace, there is reassurance in his quiet presence.",
+      "comfortZh": "慢慢来也可以，有些陪伴不需要很多话。",
+      "comfortEn": "A gentle pace is welcome. Good company does not always need many words.",
+      "moments": [
+        {
+          "titleZh": "稳稳开始",
+          "titleEn": "A steady start",
+          "bodyZh": "站好，点头，给今天一个踏实的开头。",
+          "bodyEn": "Plant your feet and give the day a steady beginning."
+        },
+        {
+          "titleZh": "耐心等待",
+          "titleEn": "Patient company",
+          "bodyZh": "不用一直说话，安静待在一起也很好。",
+          "bodyEn": "Quiet time together can be enough."
+        },
+        {
+          "titleZh": "双臂解放",
+          "titleEn": "Release both arms",
+          "bodyZh": "黑红右臂与白色左臂守在身前，让伙伴安心。",
+          "bodyEn": "The black-and-red right arm and white left arm rise to protect his friends."
+        }
+      ],
+      "traitsZh": [
+        "沉稳",
+        "可靠",
+        "温厚"
+      ],
+      "traitsEn": [
+        "Steady",
+        "Dependable",
+        "Kind"
+      ],
+      "matchZh": "适合长时间专心、耐心等待，或想要安稳陪伴的时候。",
+      "matchEn": "For a long stretch of focus, a patient wait or reassuring company."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/bleach-chad/spritesheet.webp",
+    "previewPath": "/pets/bleach-chad/preview.webp",
+    "manifestPath": "/pets/bleach-chad/pet.json",
+    "downloadPath": "/downloads/bleach-chad.zip",
+    "detailPath": "/api/v1/pets/bleach-chad.json"
+  }
+}

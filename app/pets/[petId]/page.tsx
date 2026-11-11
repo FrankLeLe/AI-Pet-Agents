@@ -5,6 +5,7 @@ import type { CSSProperties } from "react";
 
 import { ANIMATIONS } from "@/lib/pet-animation";
 import type { AnimationKey } from "@/lib/pet-animation";
+import { getPetPower } from "@/lib/pet-powers";
 import { getPetById, PETS } from "@/lib/pets";
 import {
   GUIDE_PET_ID,
@@ -16,6 +17,7 @@ import {
 
 import { PetCard } from "../../_components/PetCard";
 import { PetPlayground } from "../../_components/PetPlayground";
+import { PetPowerPlayground } from "../../_components/PetPowerPlayground";
 import { PetPreview } from "../../_components/PetPreview";
 import { normalizeLanguage, PageShell, t, withLanguage } from "../../_components/SiteChrome";
 import styles from "../../_components/site-chrome.module.css";
@@ -77,6 +79,7 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
     : "idle";
   const profile = getMemberProfile(pet.id);
   const series = getSeriesForPet(pet.id);
+  const power = getPetPower(pet.id);
   const isGuide = pet.id === GUIDE_PET_ID;
   const name = getProductName(pet, language);
   const role = isGuide
@@ -150,9 +153,10 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
             <p className={styles.petRole}>{role}</p>
             <p className={styles.petTagline}>{specialty}</p>
             <div className={styles.heroActions}>
-              <a className={styles.primaryButton} href="#playground">
-                {t(language, "先玩一下", "Try it now")}
+              <a className={styles.primaryButton} href={power ? "#powers" : "#playground"}>
+                {power ? t(language, "体验力量", "Unfold their power") : t(language, "先玩一下", "Try it now")}
               </a>
+              {power ? <a className={styles.secondaryButton} href="#playground">{t(language, "日常互动", "Everyday moments")}</a> : null}
               <Link
                 className={styles.secondaryButton}
                 href={`${withLanguage(`/install/${pet.id}`, language)}#codex-install`}
@@ -175,13 +179,13 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
 
         <section className={styles.storyFeature} aria-labelledby="story-heading" style={accentStyle}>
           <article className={styles.storyNarrative}>
-            <p className={styles.eyebrow}>{t(language, "它的小故事", "A little story")}</p>
+            <p className={styles.eyebrow}>{power ? t(language, "桌边小记", "A desk-side moment") : t(language, "它的小故事", "A little story")}</p>
             <h2 id="story-heading">{storyTitle}</h2>
             <p>{story}</p>
           </article>
           <aside className={styles.storyDossier} aria-label={t(language, "角色档案", "Character profile")}>
             <div>
-              <span>{t(language, "它是谁", "Meet your companion")}</span>
+              <span>{power ? t(language, "角色身份", "Character identity") : t(language, "它是谁", "Meet your companion")}</span>
               <strong>{role}</strong>
             </div>
             <div>
@@ -197,6 +201,8 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
           </aside>
         </section>
 
+        {power ? <PetPowerPlayground language={language} petName={name} power={power} /> : null}
+
         <div id="playground">
           <PetPlayground
             language={language}
@@ -206,11 +212,17 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
           />
         </div>
 
+        {power ? (
+          <p className={styles.eyebrow}>
+            {t(language, "角色原作：久保带人《BLEACH》。本站 Q 版同人演绎。", "Characters from Tite Kubo’s BLEACH. Chibi fan interpretations by this site.")}
+          </p>
+        ) : null}
+
         <section className={styles.contentSection} aria-labelledby="more-pets-heading">
           <div className={styles.sectionHeading}>
             <div>
               <p className={styles.eyebrow}>
-                {series ? t(language, "它的朋友们", "Meet its friends") : t(language, "还有这些伙伴", "More to meet")}
+                {power ? t(language, "并肩的伙伴", "Friends by your side") : series ? t(language, "它的朋友们", "Meet its friends") : t(language, "还有这些伙伴", "More to meet")}
               </p>
               <h2 id="more-pets-heading" data-copy-role="card-headline">
                 {series

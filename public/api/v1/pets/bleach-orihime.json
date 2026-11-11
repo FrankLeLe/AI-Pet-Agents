@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "bleach-orihime",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "comfort",
+      "start"
+    ],
+    "displayName": {
+      "zh": "井上织姬",
+      "en": "Orihime Inoue"
+    },
+    "badge": "BLEACH 03",
+    "accent": "#dc9d64",
+    "softAccent": "#fff0d8",
+    "status": "published",
+    "tagline": {
+      "zh": "这里有一处可以安心的位置。",
+      "en": "There is a little room for reassurance here."
+    },
+    "description": {
+      "zh": "累了可以停一小会儿，温柔也会陪你重新开始。",
+      "en": "Rest for a moment if you need to. A kind beginning will still be here."
+    },
+    "personalityTags": [
+      {
+        "zh": "温柔",
+        "en": "Gentle"
+      },
+      {
+        "zh": "开朗",
+        "en": "Bright"
+      },
+      {
+        "zh": "坚韧",
+        "en": "Resilient"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "盾舜六花的持有者",
+      "zodiacEn": "Bearer of Shun Shun Rikka",
+      "roleZh": "温柔的守护伙伴",
+      "roleEn": "A gentle protector",
+      "promiseZh": "这里有一处可以安心的位置。",
+      "promiseEn": "There is a little room for reassurance here.",
+      "storyTitleZh": "留给伙伴的位置",
+      "storyTitleEn": "A Place Kept for a Friend",
+      "storyZh": "织姬来到桌边时，总会先带来一个明亮的笑容。她听见伙伴说话，会微微侧过头；看见有人有些泄气，就把手轻轻放在身前，认真等对方说完。她并不把温柔理解成什么都不做，而是在需要的时候站稳，给别人留出喘口气的位置。蓝色花夹亮起，三点光沿着双手前方连成护盾，熟悉的长发与白衣仍然清晰可见。等紧张的时刻过去，她便收起力量，恢复轻快的小动作，像是在说今天还有许多值得期待的事情。桌边的这一小段陪伴，不要求你一直有精神，也不催你立刻振作。你愿意重新开始时，她会笑着和你一起抬起头。",
+      "storyEn": "Orihime brings a bright smile to the desk. She tilts her head to listen and waits patiently when a friend feels discouraged. To her, kindness is active: it means standing firm and giving someone room to breathe. Her blue flower clips shine, three points connect into a shield before her hands, and her familiar hair and white clothing stay in view. When the tense moment passes, she lets the power settle and returns to her light, cheerful movements. There is still something to look forward to. Her company does not require constant energy or an instant recovery. When you are ready to begin again, she looks up with you.",
+      "comfortZh": "累了可以停一小会儿，温柔也会陪你重新开始。",
+      "comfortEn": "Rest for a moment if you need to. A kind beginning will still be here.",
+      "moments": [
+        {
+          "titleZh": "打个招呼",
+          "titleEn": "A warm hello",
+          "bodyZh": "笑着抬起手，给平常的一天一点明亮。",
+          "bodyEn": "A cheerful wave brings light to an ordinary day."
+        },
+        {
+          "titleZh": "安心等候",
+          "titleEn": "A reassuring wait",
+          "bodyZh": "先把呼吸放慢，再决定下一步。",
+          "bodyEn": "Slow your breathing before choosing the next step."
+        },
+        {
+          "titleZh": "护盾展开",
+          "titleEn": "Raise the shield",
+          "bodyZh": "三天结盾在身前展开，留下温暖的金色光芒。",
+          "bodyEn": "Santen Kesshun opens ahead in a warm golden glow."
+        }
+      ],
+      "traitsZh": [
+        "温柔",
+        "开朗",
+        "坚韧"
+      ],
+      "traitsEn": [
+        "Gentle",
+        "Bright",
+        "Resilient"
+      ],
+      "matchZh": "适合需要安慰、忙碌后的休息，或想温柔开个头的时候。",
+      "matchEn": "For reassurance, a pause after a busy stretch or a gentle beginning."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/bleach-orihime/spritesheet.webp",
+    "previewPath": "/pets/bleach-orihime/preview.webp",
+    "manifestPath": "/pets/bleach-orihime/pet.json",
+    "downloadPath": "/downloads/bleach-orihime.zip",
+    "detailPath": "/api/v1/pets/bleach-orihime.json"
+  }
+}

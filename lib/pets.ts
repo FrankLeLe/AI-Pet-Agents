@@ -3,6 +3,7 @@ import {
   type PetEditorialContent,
 } from "./pet-content";
 import { SPRITE_FORMAT } from "./pet-animation";
+import { BLEACH_PET_DEFINITIONS } from "./bleach-content";
 
 export {
   ANIMATIONS,
@@ -25,7 +26,7 @@ export type PetNeed = (typeof PET_NEEDS)[number];
 export type Pet = {
   readonly id: string;
   readonly status: "published";
-  readonly category: "bronze-cat" | "zodiac-duck" | "breed-cat" | "desktop-work" | "desk-corner";
+  readonly category: "bronze-cat" | "zodiac-duck" | "breed-cat" | "desktop-work" | "desk-corner" | "bleach";
   readonly zodiacOrder: number | null;
   readonly needs: readonly PetNeed[];
   readonly displayName: LocalizedText;
@@ -634,6 +635,7 @@ const PET_DEFINITIONS = [
     accent: "#4e8a7e",
     softAccent: "#dcefe8",
   },
+  ...BLEACH_PET_DEFINITIONS,
 ] as const satisfies readonly {
   id: string;
   category: Pet["category"];

@@ -23,8 +23,8 @@ export async function generateMetadata({ searchParams }: HomePageProps): Promise
     ? "Codex Pets｜给 Codex 选一位会动的伙伴"
     : "Codex Pets | Find your desktop companion";
   const description = language === "zh"
-    ? "认识原创桌面伙伴，试试它们的小动作，选一位带回 Codex。"
-    : "Meet original desktop companions, try their little moves, and bring a favorite to Codex.";
+    ? "认识各具性格的桌面伙伴，试试日常动作与力量互动，选一位带回 Codex。"
+    : "Meet distinctive desktop companions, try everyday moves and power interactions, and bring a favorite to Codex.";
 
   return {
     title,

@@ -27,6 +27,8 @@ const deskCornerIds = [
   "quillip", "inklet", "buttonbud", "spoolie", "crumbit", "thimblet",
 ];
 
+const bleachIds = ["bleach-ichigo", "bleach-rukia", "bleach-orihime", "bleach-uryu", "bleach-chad"];
+
 const expectedIds = [
   "star-armor-tuantuan",
   "aries-ramcrest-duck",
@@ -55,6 +57,7 @@ const expectedIds = [
   "cat-abyssinian-hongsha",
   ...Object.keys(desktopWorkAtlasHashes),
   ...deskCornerIds,
+  ...bleachIds,
 ];
 
 const expectedAnimationKeys = [
@@ -389,7 +392,7 @@ test("preserves the legacy pet release namespace and rejects unknown release ide
   const releaseModule = await loadPetReleaseModule();
   const legacyCommit = "1a559b86621a992abf2691d5e429cdf0b13d2716";
   assert.equal(releaseModule.PET_RELEASE_COMMIT, legacyCommit);
-  const legacyIds = expectedIds.filter((id) => !deskCornerIds.includes(id));
+  const legacyIds = expectedIds.filter((id) => !deskCornerIds.includes(id) && !bleachIds.includes(id));
   assert.equal(legacyIds.length, 37);
   for (const id of legacyIds) {
     assert.ok(releaseModule.getPetRelease(id), `${id} must keep its existing release metadata`);
@@ -422,6 +425,22 @@ test("requires an explicit new asset commit for desk corner pet downloads", asyn
       assert.ok(releaseModule.buildCodexInstallPrompt(id, id, language).includes(releaseModule.getPetPackageUrl(id)));
     }
   }
+});
+
+test("keeps BLEACH packages in their own immutable release namespace", async () => {
+  const releases = await loadPetReleaseModule();
+  const previous = ["1a559b86621a992abf2691d5e429cdf0b13d2716", "e5f86f8ac08565eb40d4b216bd261f816eb0cc89", "3f88605eddbf066bf38041cf258ddc18cf54d00f"];
+  const commits = new Set();
+  for (const id of bleachIds) {
+    const release = releases.getPetRelease(id);
+    assert.ok(release);
+    assert.match(release.releaseCommit, /^[0-9a-f]{40}$/);
+    assert.equal(previous.includes(release.releaseCommit), false);
+    assert.equal(releases.getPetPackageUrl(id), `https://aipetsagent.com/downloads/${release.releaseCommit}/${id}.zip`);
+    commits.add(release.releaseCommit);
+  }
+  assert.equal(commits.size, 1);
+  for (const id of deskCornerIds.slice(3)) assert.equal(releases.getPetReleaseCommit(id), previous[2]);
 });
 
 test("pins every install archive to its published size and SHA-256", async () => {
@@ -629,7 +648,7 @@ test("serves each new pet only within its own release namespace", async () => {
   const [worker, releaseModule] = await Promise.all([loadBuiltWorker(), loadPetReleaseModule()]);
   const context = { waitUntil() {}, passThroughOnException() {} };
 
-  for (const id of deskCornerIds) {
+  for (const id of [...deskCornerIds, ...bleachIds]) {
     const release = releaseModule.getPetRelease(id);
     assert.ok(release?.releaseCommit, `${id} needs final release metadata`);
     const archive = await readFile(new URL(`../public/downloads/${id}.zip`, import.meta.url));

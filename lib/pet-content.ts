@@ -1,3 +1,5 @@
+import { BLEACH_EDITORIAL_CONTENT } from "./bleach-content";
+
 export type PetEditorialMoment = {
   readonly titleZh: string;
   readonly titleEn: string;
@@ -30,6 +32,7 @@ export type PetEditorialContent = {
 };
 
 export const PET_EDITORIAL_CONTENT: Record<string, PetEditorialContent> = {
+  ...BLEACH_EDITORIAL_CONTENT,
   dewbert: {
     zodiacZh: "露珠团子",
     zodiacEn: "Dewdrop Companion",

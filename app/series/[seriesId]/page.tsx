@@ -69,6 +69,7 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
             <p>{series.subtitle[language]}</p>
             <h1 id="series-heading">{series.name[language]}</h1>
             <strong>{series.description[language]}</strong>
+            {series.attribution ? <p className={styles.attribution}>{series.attribution[language]}</p> : null}
             <div className={styles.heroActions}>
               <a href="#characters">
                 {t(language, "查看角色", "Meet the characters")}
@@ -133,8 +134,8 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
                   <strong>{profile.specialty[language]}</strong>
                   <p>{profile.vignette[language]}</p>
                   <div>
-                    <Link href={withLanguage(`/pets/${pet.id}`, language)}>
-                      {t(language, "查看角色", "View character")}
+                    <Link href={`${withLanguage(`/pets/${pet.id}`, language)}${series.id === "bleach-spirit-squad" ? "#powers" : ""}`}>
+                      {series.id === "bleach-spirit-squad" ? t(language, "体验力量", "Discover their power") : t(language, "查看角色", "View character")}
                       <ArrowRight aria-hidden="true" size={17} strokeWidth={3} />
                     </Link>
                     <Link href={withLanguage(`/install/${pet.id}`, language)}>

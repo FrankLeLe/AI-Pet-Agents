@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { access, readFile, stat } from "node:fs/promises";
 import test from "node:test";
-import { loadPetReleaseModule } from "../scripts/load-pet-module.mjs";
+import { loadPetPowerModule, loadPetReleaseModule } from "../scripts/load-pet-module.mjs";
 
 const deskCornerPets = {
   foldlume: { zh: "折灯", en: "Foldlume" },
@@ -193,7 +193,7 @@ test("preserves the desktop work crew and older collections in both home edition
   );
 });
 
-test("features the desk corner friends and provides a complete bilingual adoption journey", async () => {
+test("preserves the desk corner friends and their complete bilingual adoption journey", async () => {
   const releaseModule = await loadPetReleaseModule();
   const sitemapResponse = await render("/sitemap.xml");
   assert.equal(sitemapResponse.status, 200);
@@ -253,6 +253,58 @@ test("features the desk corner friends and provides a complete bilingual adoptio
       assert.ok(install.includes(release.releaseCommit), `${id} copyable install request must retain its pinned release`);
     }
   }
+});
+
+test("publishes the human BLEACH squad with bilingual powers, attribution and install links", async () => {
+  const [{ PET_POWERS }, releases] = await Promise.all([loadPetPowerModule(), loadPetReleaseModule()]);
+  const names = {
+    "bleach-ichigo": { zh: "黑崎一护", en: "Ichigo Kurosaki" },
+    "bleach-rukia": { zh: "朽木露琪亚", en: "Rukia Kuchiki" },
+    "bleach-orihime": { zh: "井上织姬", en: "Orihime Inoue" },
+    "bleach-uryu": { zh: "石田雨龙", en: "Uryu Ishida" },
+    "bleach-chad": { zh: "茶渡泰虎", en: "Yasutora Sado" },
+  };
+  const sitemap = await (await render("/sitemap.xml")).text();
+  assert.ok(sitemap.includes("/series/bleach-spirit-squad"));
+  for (const language of ["zh", "en"]) {
+    const [home, index, collection] = await Promise.all(
+      ["/", "/pets", "/series/bleach-spirit-squad"].map(async (path) => {
+        const response = await render(`${path}?lang=${language}`);
+        assert.equal(response.status, 200);
+        return response.text();
+      }),
+    );
+    for (const html of [home, index]) {
+      assert.ok(html.indexOf("BLEACH") < html.indexOf(language === "zh" ? "桌角小居民" : "Desk Corner Friends"));
+    }
+    assert.match(collection, language === "zh" ? /同人演绎/ : /fan interpretations/i);
+    for (const power of PET_POWERS) {
+      const id = power.petId;
+      for (const html of [home, index, collection]) {
+        assert.ok(html.includes(names[id][language]));
+        assert.ok(html.includes(`/pets/${id}?lang=${language}`));
+      }
+      assert.ok(sitemap.includes(`/pets/${id}`));
+      assert.ok(sitemap.includes(`/install/${id}`));
+      const [detail, install] = await Promise.all([`/pets/${id}`, `/install/${id}`].map(async (path) => {
+        const response = await render(`${path}?lang=${language}`);
+        assert.equal(response.status, 200, path);
+        return response.text();
+      }));
+      assert.ok(detail.includes(power.name[language]));
+      assert.match(detail, /id="powers"/);
+      assert.match(detail, /data-power-phase="resting"/);
+      assert.match(detail, /data-power-action="activate"/);
+      assert.match(detail, /href="#powers"/);
+      assert.match(detail, /id="playground"/);
+      assert.match(detail, language === "zh" ? /同人演绎/ : /fan interpretations/i);
+      assert.doesNotMatch(defaultInterfaceText(detail), /spritesheet|384|416|atlas|SHA-256/);
+      assert.ok(install.includes(releases.getPetPackageUrl(id)));
+      assert.match(install, language === "zh" ? /力量展开可以在角色页/ : /power sequences are ready to enjoy on the character page/);
+    }
+  }
+  const oldPage = await (await render("/pets/foldlume?lang=zh")).text();
+  assert.doesNotMatch(oldPage, /data-power-action|id="powers"/);
 });
 
 test("gives hatch users one short state-driven Codex path", async () => {
@@ -674,7 +726,7 @@ test("leaves HTTPS redirects to the edge", async () => {
 
 test("localizes metadata and canonical URLs for every pet installation page", async () => {
   const catalog = JSON.parse(await readFile(new URL("../public/api/v1/catalog.json", import.meta.url), "utf8"));
-  assert.equal(catalog.pets.length, 49);
+  assert.equal(catalog.pets.length, 54);
 
   for (const pet of catalog.pets) {
     for (const language of ["zh", "en"]) {
@@ -859,7 +911,7 @@ test("removes all temporary starter preview infrastructure", async () => {
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
 });
 
-test("ships forty-nine valid v2 pet packages and their downloads", async () => {
+test("ships fifty-four valid v2 pet packages and their downloads", async () => {
   const expected = [
     "star-armor-tuantuan",
     "aries-ramcrest-duck",
@@ -888,6 +940,11 @@ test("ships forty-nine valid v2 pet packages and their downloads", async () => {
     "cat-abyssinian-hongsha",
     ...Object.keys(desktopWorkPets),
     ...Object.keys(deskCornerPets),
+    "bleach-ichigo",
+    "bleach-rukia",
+    "bleach-orihime",
+    "bleach-uryu",
+    "bleach-chad",
   ];
 
   for (const id of expected) {
@@ -913,7 +970,7 @@ test("ships forty-nine valid v2 pet packages and their downloads", async () => {
   );
   const socialCard = await stat(new URL("../public/og-series.png", import.meta.url));
 
-  assert.equal(catalog.pets.length, 49);
+  assert.equal(catalog.pets.length, 54);
   assert.equal(catalog.format.spriteVersionNumber, 2);
   assert.ok(skillArchive.size > 50_000);
   assert.ok(socialCard.size > 500_000);

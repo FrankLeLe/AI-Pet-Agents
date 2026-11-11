@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "bleach-rukia",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "solve",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "朽木露琪亚",
+      "en": "Rukia Kuchiki"
+    },
+    "badge": "BLEACH 02",
+    "accent": "#8fc4e1",
+    "softAccent": "#e3f3fb",
+    "status": "published",
+    "tagline": {
+      "zh": "先看清楚，再稳稳向前。",
+      "en": "See clearly, then move with care."
+    },
+    "description": {
+      "zh": "把目光放回眼前，安静也可以很有力量。",
+      "en": "Look at what is in front of you. Quiet can be a kind of strength."
+    },
+    "personalityTags": [
+      {
+        "zh": "冷静",
+        "en": "Calm"
+      },
+      {
+        "zh": "认真",
+        "en": "Attentive"
+      },
+      {
+        "zh": "坚定",
+        "en": "Resolute"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "袖白雪的持有者",
+      "zodiacEn": "Wielder of Sode no Shirayuki",
+      "roleZh": "冷静而坚定的伙伴",
+      "roleEn": "A quietly resolute friend",
+      "promiseZh": "先看清楚，再稳稳向前。",
+      "promiseEn": "See clearly, then move with care.",
+      "storyTitleZh": "雪落下之前",
+      "storyTitleEn": "Before the Snow Settles",
+      "storyZh": "露琪亚总会先看清眼前的事情，再决定什么时候出手。到了桌边，这份认真变成了一个小小的点头、一次仔细的侧望，和在你犹豫时耐心停下的脚步。她不喜欢把每个问题都说得很大，也不会因为一点挫折就急着改变方向。有时一护已经准备向前，她还会抬起手，提醒大家再确认一次；等到路真的看清了，她又会毫不迟疑地跟上。白刀轻轻扬起时，寒气把周围变得宁静，雪白的姿态里仍是熟悉的坚定目光。力量收起之后，她整理好衣袖，继续安静站在你身边。今天的节奏可以慢一点，重要的是知道自己正在往哪里走。",
+      "storyEn": "Rukia looks carefully before deciding when to act. At the desk, that attention becomes a small nod, a thoughtful glance and a patient pause when you hesitate. She does not make every difficulty sound enormous, nor does one setback send her in a new direction. Sometimes Ichigo is already moving when she raises a hand to check once more. Once the way is clear, she follows without hesitation. Her white blade rises, the air grows quiet, and familiar resolve remains in her snow-white form. When that power settles, she straightens her sleeve and stays beside you. The pace can be gentle when the direction is clear.",
+      "comfortZh": "把目光放回眼前，安静也可以很有力量。",
+      "comfortEn": "Look at what is in front of you. Quiet can be a kind of strength.",
+      "moments": [
+        {
+          "titleZh": "认真看看",
+          "titleEn": "A closer look",
+          "bodyZh": "先确认最关键的一处，再慢慢展开。",
+          "bodyEn": "Check the important detail before moving on."
+        },
+        {
+          "titleZh": "需要停顿",
+          "titleEn": "A quiet pause",
+          "bodyZh": "不必急着回应，留一点时间把想法理顺。",
+          "bodyEn": "There is time to let your thoughts settle before answering."
+        },
+        {
+          "titleZh": "白雪展开",
+          "titleEn": "A snowy form",
+          "bodyZh": "白霞罚展开，雪白衣袖与寒气一同舒展。",
+          "bodyEn": "Hakka no Togame unfolds in white robes and rising cold."
+        }
+      ],
+      "traitsZh": [
+        "冷静",
+        "认真",
+        "坚定"
+      ],
+      "traitsEn": [
+        "Calm",
+        "Attentive",
+        "Resolute"
+      ],
+      "matchZh": "适合梳理思绪、检查细节，或想把步调放稳的时候。",
+      "matchEn": "For sorting thoughts, checking details or finding a steadier pace."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/bleach-rukia/spritesheet.webp",
+    "previewPath": "/pets/bleach-rukia/preview.webp",
+    "manifestPath": "/pets/bleach-rukia/pet.json",
+    "downloadPath": "/downloads/bleach-rukia.zip",
+    "detailPath": "/api/v1/pets/bleach-rukia.json"
+  }
+}

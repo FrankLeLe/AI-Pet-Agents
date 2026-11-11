@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "bleach-ichigo",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "start",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "黑崎一护",
+      "en": "Ichigo Kurosaki"
+    },
+    "badge": "BLEACH 01",
+    "accent": "#ee793d",
+    "softAccent": "#ffe6c9",
+    "status": "published",
+    "tagline": {
+      "zh": "下一步，我陪你一起走。",
+      "en": "I will take the next step with you."
+    },
+    "description": {
+      "zh": "不用一下子做到最好，先把眼前这一步走稳。",
+      "en": "You do not have to get everything right. Give this next step a steady start."
+    },
+    "personalityTags": [
+      {
+        "zh": "坚定",
+        "en": "Resolute"
+      },
+      {
+        "zh": "热心",
+        "en": "Caring"
+      },
+      {
+        "zh": "直率",
+        "en": "Direct"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "代理死神",
+      "zodiacEn": "Substitute Soul Reaper",
+      "roleZh": "挺身而出的伙伴",
+      "roleEn": "The friend who steps forward",
+      "promiseZh": "下一步，我陪你一起走。",
+      "promiseEn": "I will take the next step with you.",
+      "storyTitleZh": "先迈出那一步",
+      "storyTitleEn": "The First Step Forward",
+      "storyZh": "一护把斩月背稳的时候，桌边的灯刚刚亮起。他没有急着催谁出发，只是回头看了一眼，确认露琪亚、织姬、雨龙和茶渡都在。面前的事情还没有头绪，他便先从最小的一步开始：站直，深呼吸，再把目光放回眼前。偶尔碰了壁，他也会皱起眉头，低头停上一会儿，但很快又把肩膀挺起来。需要力量时，黑色长衣随灵压展开；回到日常后，他仍然是那个会抬手打招呼、认真听伙伴说话的人。守护不只发生在战斗里，也藏在一句没有说出口的陪伴中。今天还没有走完的路，他愿意陪你接着走。",
+      "storyEn": "Ichigo settles Zangetsu on his back as the desk lamp comes on. Before moving, he checks that Rukia, Orihime, Uryu and Chad are close. The day is not clear yet, so he begins with something small: stand straight, take a breath and look at what is in front of him. A setback may draw a frown, but he soon lifts his shoulders again. When strength is needed, spiritual pressure unfurls his black coat. Afterwards he is still the friend who waves hello and listens. Protection lives in ordinary company too, and he is ready to share the road that remains.",
+      "comfortZh": "不用一下子做到最好，先把眼前这一步走稳。",
+      "comfortEn": "You do not have to get everything right. Give this next step a steady start.",
+      "moments": [
+        {
+          "titleZh": "准备出发",
+          "titleEn": "Ready to begin",
+          "bodyZh": "把肩膀放松，先选一件眼前能做的小事。",
+          "bodyEn": "Relax your shoulders and choose one small thing within reach."
+        },
+        {
+          "titleZh": "碰到难题",
+          "titleEn": "A difficult moment",
+          "bodyZh": "停一下也没关系，重新站稳再继续。",
+          "bodyEn": "It is fine to pause. Find your footing before continuing."
+        },
+        {
+          "titleZh": "力量展开",
+          "titleEn": "Power unfolds",
+          "bodyZh": "灵压收束，天锁斩月带来更坚定的姿态。",
+          "bodyEn": "Spiritual pressure gathers into the resolve of Tensa Zangetsu."
+        }
+      ],
+      "traitsZh": [
+        "坚定",
+        "热心",
+        "直率"
+      ],
+      "traitsEn": [
+        "Resolute",
+        "Caring",
+        "Direct"
+      ],
+      "matchZh": "适合准备开工、需要一点勇气，或想有人并肩的时候。",
+      "matchEn": "For a fresh start, a little courage or someone standing beside you."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/bleach-ichigo/spritesheet.webp",
+    "previewPath": "/pets/bleach-ichigo/preview.webp",
+    "manifestPath": "/pets/bleach-ichigo/pet.json",
+    "downloadPath": "/downloads/bleach-ichigo.zip",
+    "detailPath": "/api/v1/pets/bleach-ichigo.json"
+  }
+}

@@ -1,17 +1,18 @@
 # Codex Pets
 
-A bilingual, no-login gallery for original Codex Desktop custom pets. The site previews the real v2 spritesheets, provides ready-to-install pet packages, and distributes the Hatch Pet skill for creating and validating new pets.
+A bilingual, no-login gallery for original and fan-interpreted Codex Desktop custom pets. The site previews the real v2 spritesheets, provides ready-to-install pet packages, and distributes the Hatch Pet skill for creating and validating new pets.
 
 一个无需登录的中英双语 Codex Desktop 自定义宠物站。网站直接预览真实 v2 spritesheet，提供可安装宠物包，并分发用于创建、修复、校验与打包宠物的 Hatch Pet Skill。
 
 ## Included pets
 
-The gallery contains 49 installable v2 companions across four collections and one site guide.
+The gallery contains 54 installable v2 companions across five collections and one site guide.
 
-全站包含四个系列和一位网站向导，共 49 只可安装的 v2 伙伴。
+全站包含五个系列和一位网站向导，共 54 位可安装的 v2 伙伴。
 
 | Collection / 系列 | Count / 数量 | Route / 页面 |
 | --- | --- | --- |
+| 死神 · 灵子小队 / BLEACH · Spirit Squad | 5 | `/series/bleach-spirit-squad` |
 | 桌角小居民 / Desk Corner Friends | 12 | `/series/desk-corner-friends` |
 | 桌面工作小队 / Desktop Work Crew | 12 | `/series/desktop-work-crew` |
 | 呼噜事务所 / Cat Companion Club | 12 | `/series/cat-companion-club` |
@@ -27,6 +28,10 @@ Every package contains exactly two install files:
 ```
 
 The spritesheets use the v2 `8 × 11` atlas contract (`1536 × 2288`, `192 × 208` per cell), with nine standard animation states and sixteen look directions.
+
+The BLEACH collection preserves the original human character forms in a chibi fan interpretation. Each character additionally has two independently authored eight-frame website sequences: a power transition and an awakened loop. The website supports replay, pause, return to everyday, reduced-motion preferences, and suspension while hidden. These web power sequences are separate from the installable v2 desktop package.
+
+死神系列采用原作人形的 Q 版同人演绎。每位角色另有独立绘制的八帧力量展开和八帧展开态循环，网页支持重播、暂停、回到日常、减少动态偏好及隐藏时暂停。力量互动在网页体验，桌面安装包保留标准 v2 日常动作。
 
 ## Local development
 

@@ -8,6 +8,31 @@ type PetRelease = {
 };
 
 export const PET_RELEASES: Readonly<Record<string, PetRelease>> = {
+  "bleach-ichigo": {
+    sizeBytes: 1_534_593,
+    sha256: "87799a35d4da173994d8a7562f053a5aecd294756a7447fe58aebdd6ac8fd3f3",
+    releaseCommit: "03a3b0ef46fb59cb0924e75efdcbfabcbac2fc44",
+  },
+  "bleach-rukia": {
+    sizeBytes: 1_554_117,
+    sha256: "beb1fcd1656bc57d83d229fed670095715cd06db59dd6e92644d3b6cf22dba9f",
+    releaseCommit: "03a3b0ef46fb59cb0924e75efdcbfabcbac2fc44",
+  },
+  "bleach-orihime": {
+    sizeBytes: 1_430_734,
+    sha256: "5cb06bd06b84247b8cd6678261cb9e82cb99ca3317b368840395192772a8fc5f",
+    releaseCommit: "03a3b0ef46fb59cb0924e75efdcbfabcbac2fc44",
+  },
+  "bleach-uryu": {
+    sizeBytes: 1_146_899,
+    sha256: "e1427a3a86247b18a8e4901ad16569db7e46000190675d33135c499dcfd2a7a7",
+    releaseCommit: "03a3b0ef46fb59cb0924e75efdcbfabcbac2fc44",
+  },
+  "bleach-chad": {
+    sizeBytes: 1_721_174,
+    sha256: "30274f360cf12b0b402e128d60383fd3a82e0b124758b46ef62ed96a703d4dd4",
+    releaseCommit: "03a3b0ef46fb59cb0924e75efdcbfabcbac2fc44",
+  },
   dewbert: {
     sizeBytes: 1_127_611,
     sha256: "1b3f796830534eae9a3a39511d939811242e350d465994d1e39427026b9aac1b",

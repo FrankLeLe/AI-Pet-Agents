@@ -13,6 +13,7 @@ import {
   getPetRelease,
 } from "@/lib/pet-releases";
 import { getPetById, PETS } from "@/lib/pets";
+import { getPetPower } from "@/lib/pet-powers";
 import {
   GUIDE_PET_ID,
   GUIDE_PROFILE,
@@ -128,6 +129,11 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
               {name}
             </h1>
             <p>{description}</p>
+            {getPetPower(pet.id) ? (
+              <p>
+                {t(language, "把日常陪伴带回桌面；力量展开可以在角色页随时体验。", "Bring everyday company to your desktop; power sequences are ready to enjoy on the character page.")}
+              </p>
+            ) : null}
             <div className={styles.heroActions}>
               <a className={styles.primaryAction} href="#codex-install">
                 <span>{t(language, "复制给 Codex", "Copy for Codex")}</span>

@@ -64,7 +64,9 @@ export default async function PetsPage({ searchParams }: PetsPageProps) {
                       <strong>{collection.description[language]}</strong>
                     </div>
                     <Link href={withLanguage(`/series/${collection.id}`, language)}>
-                      {collection.id === "desk-corner-friends"
+                      {collection.id === "bleach-spirit-squad"
+                        ? t(language, "认识灵子小队", "Meet the Spirit Squad")
+                        : collection.id === "desk-corner-friends"
                         ? t(language, "认识桌角小居民", "Meet the corner friends")
                         : collection.id === "cat-companion-club"
                           ? t(language, "挑一只猫", "Meet the cats")
