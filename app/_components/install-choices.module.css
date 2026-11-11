@@ -143,22 +143,6 @@
   padding: 14px 16px;
 }
 
-.sourceMeta {
-  display: grid;
-  gap: 8px;
-  padding: 14px 16px;
-  border-top: 2px solid white;
-  font-size: 0.68rem;
-  font-weight: 760;
-  overflow-wrap: anywhere;
-}
-
-.sourceMeta a {
-  width: fit-content;
-  border-bottom: 1px solid currentColor;
-}
-
-.sourceMeta code,
 .promptPreview textarea,
 .pathError code {
   font-family: "SFMono-Regular", Consolas, monospace;

@@ -380,25 +380,6 @@
   font-weight: 900;
 }
 
-.sourceMeta {
-  display: grid;
-  gap: 7px;
-  margin-top: 8px;
-  padding: 13px 16px;
-  border: 2px solid var(--route-ink);
-  border-radius: 10px 10px 0 0;
-  background: var(--route-cream);
-  font-size: 0.65rem;
-  font-weight: 760;
-  overflow-wrap: anywhere;
-}
-
-.sourceMeta a {
-  width: fit-content;
-  border-bottom: 1px solid currentColor;
-}
-
-.sourceMeta code,
 .fullPrompt textarea {
   font-family: "SFMono-Regular", Consolas, monospace;
 }
@@ -415,11 +396,6 @@
   color: white;
   font-size: 0.68rem;
   line-height: 1.7;
-}
-
-.sourceMeta + textarea {
-  border-top: 0;
-  border-radius: 0 0 10px 10px;
 }
 
 .readyMade {

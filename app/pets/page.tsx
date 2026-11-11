@@ -33,7 +33,7 @@ export default async function PetsPage({ searchParams }: PetsPageProps) {
       <main className={styles.main} id="main-content">
         <section className={styles.intro}>
           <div>
-            <span>CODEX PET INDEX</span>
+            <span>{t(language, "认识会动的小伙伴", "Meet your desktop companions")}</span>
             <h1>{t(language, "宠物图鉴", "PET INDEX")}</h1>
           </div>
           <p>
@@ -47,7 +47,7 @@ export default async function PetsPage({ searchParams }: PetsPageProps) {
 
         <section className={styles.seriesSection} aria-labelledby="series-heading">
           <header className={styles.sectionHeading}>
-            <span>COLLECTIONS</span>
+            <span>{t(language, "伙伴们的世界", "Their little worlds")}</span>
             <h2 id="series-heading">{t(language, "先看新来的伙伴", "MEET THE NEW ARRIVALS")}</h2>
           </header>
 
@@ -90,7 +90,7 @@ export default async function PetsPage({ searchParams }: PetsPageProps) {
                         <PetPreview
                           petId={pet.id}
                           className={styles.memberImage}
-                          label={t(language, `${profile.name.zh}静态预览`, `${profile.name.en} preview`)}
+                          label={t(language, `${profile.name.zh}形象`, `${profile.name.en} preview`)}
                         />
                         <span>
                           <small>{profile.role[language]}</small>
@@ -119,7 +119,7 @@ export default async function PetsPage({ searchParams }: PetsPageProps) {
                 petId={guide.id}
                 eager
                 className={styles.guideImage}
-                label={t(language, "星铠团团静态预览", "Star-Armor Tuantuan preview")}
+                label={t(language, "星铠团团形象", "Star-Armor Tuantuan preview")}
               />
             </div>
             <div className={styles.guideCopy}>

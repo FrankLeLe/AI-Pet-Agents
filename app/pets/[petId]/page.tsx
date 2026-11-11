@@ -131,7 +131,7 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replaceAll("<", "\\u003c") }}
         />
 
-        <nav className={styles.breadcrumbs} aria-label={t(language, "面包屑导航", "Breadcrumb")}>
+        <nav className={styles.breadcrumbs} aria-label={t(language, "当前位置", "You are here")}>
           <Link href={withLanguage("/pets", language)}>{t(language, "宠物图鉴", "Pet index")}</Link>
           {series ? (
             <>
@@ -166,7 +166,7 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
             <PetPreview
               petId={pet.id}
               eager
-              label={t(language, `${name}静态预览`, `${name} preview`)}
+              label={t(language, `${name}形象`, `${name} preview`)}
               className={styles.detailSprite}
             />
             <strong>{identity}</strong>
@@ -175,13 +175,13 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
 
         <section className={styles.storyFeature} aria-labelledby="story-heading" style={accentStyle}>
           <article className={styles.storyNarrative}>
-            <p className={styles.eyebrow}>{isGuide ? "GUIDE NOTE" : "CHARACTER NOTE"}</p>
+            <p className={styles.eyebrow}>{t(language, "它的小故事", "A little story")}</p>
             <h2 id="story-heading">{storyTitle}</h2>
             <p>{story}</p>
           </article>
           <aside className={styles.storyDossier} aria-label={t(language, "角色档案", "Character profile")}>
             <div>
-              <span>{t(language, "角色职责", "ROLE")}</span>
+              <span>{t(language, "它是谁", "Meet your companion")}</span>
               <strong>{role}</strong>
             </div>
             <div>
@@ -209,7 +209,9 @@ export default async function PetDetailPage({ params, searchParams }: PetDetailP
         <section className={styles.contentSection} aria-labelledby="more-pets-heading">
           <div className={styles.sectionHeading}>
             <div>
-              <p className={styles.eyebrow}>{series ? "FROM THE SAME SERIES" : "START A SERIES"}</p>
+              <p className={styles.eyebrow}>
+                {series ? t(language, "它的朋友们", "Meet its friends") : t(language, "还有这些伙伴", "More to meet")}
+              </p>
               <h2 id="more-pets-heading" data-copy-role="card-headline">
                 {series
                   ? t(language, "同系列伙伴", "MORE COMPANIONS")

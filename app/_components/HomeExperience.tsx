@@ -12,7 +12,6 @@ import type { CSSProperties, KeyboardEvent } from "react";
 import { useEffect, useRef, useState } from "react";
 
 import { t, withLanguage } from "@/lib/i18n";
-import { ANIMATIONS } from "@/lib/pet-animation";
 import type { AnimationKey } from "@/lib/pet-animation";
 import type { Language } from "@/lib/pets";
 
@@ -74,11 +73,18 @@ const GUIDE_DEMOS: readonly {
   enLabel: string;
 }[] = [
   { animation: "waving", zhLabel: "挥手", enLabel: "Wave" },
-  { animation: "running", zhLabel: "工作", enLabel: "Work" },
-  { animation: "review", zhLabel: "检查", enLabel: "Review" },
+  { animation: "running", zhLabel: "专心工作", enLabel: "Getting to work" },
+  { animation: "review", zhLabel: "仔细看看", enLabel: "Taking a closer look" },
 ];
 
 const GUIDE_ANIMATIONS = GUIDE_DEMOS.map((item) => item.animation);
+
+function guideAnimationLabel(animation: AnimationKey, language: Language) {
+  const demo = GUIDE_DEMOS.find((item) => item.animation === animation);
+  return demo
+    ? t(language, demo.zhLabel, demo.enLabel)
+    : t(language, "歇一会儿", "Taking a break");
+}
 
 function HomeSeriesSection({
   language,
@@ -223,7 +229,7 @@ function HomeSeriesSection({
                     petId={member.petId}
                     label={t(
                       language,
-                      `${member.name}静态预览`,
+                      `${member.name}形象`,
                       `${member.name} preview`,
                     )}
                   />
@@ -286,9 +292,7 @@ export function HomeExperience({ language, guide, series }: HomeExperienceProps)
   const guideDemo = GUIDE_DEMOS[guideDemoIndex ?? 0];
   const requestedGuideAnimation =
     guideDemoIndex === null ? "idle" : guideDemo.animation;
-  const displayedGuideDefinition =
-    ANIMATIONS.find((item) => item.key === displayedGuideAnimation) ??
-    ANIMATIONS[0];
+  const displayedGuideLabel = guideAnimationLabel(displayedGuideAnimation, language);
   function showNextGuideDemo() {
     setGuideDemoIndex((current) =>
       current === null ? 0 : (current + 1) % GUIDE_DEMOS.length,
@@ -299,7 +303,7 @@ export function HomeExperience({ language, guide, series }: HomeExperienceProps)
     <main className={styles.homeMain} id="main-content">
       <section className={styles.heroPanel} aria-labelledby="home-heading">
         <div className={styles.heroCopy}>
-          <span className={styles.eyebrow}>CODEX PETS · DESKTOP COMPANIONS</span>
+          <span className={styles.eyebrow}>{t(language, "CODEX PETS · 你的桌面伙伴", "CODEX PETS · DESKTOP COMPANIONS")}</span>
           <h1 id="home-heading" data-copy-role="page-headline">
             {t(
               language,
@@ -337,10 +341,10 @@ export function HomeExperience({ language, guide, series }: HomeExperienceProps)
               language,
               guideDemoIndex === null
                 ? `点击${guide.name}打个招呼`
-                : `当前动作：${displayedGuideDefinition.label.zh}。点击播放下一个动作`,
+                : `${guide.name}：${displayedGuideLabel}。再点一下，看看别的小动作`,
               guideDemoIndex === null
                 ? `Click ${guide.name} to say hello`
-                : `Current motion: ${displayedGuideDefinition.label.en}. Click to play the next motion`,
+                : `${guide.name}: ${displayedGuideLabel}. Click to try another little move`,
             )}
           >
             <SpritePet
@@ -351,16 +355,9 @@ export function HomeExperience({ language, guide, series }: HomeExperienceProps)
               preloadAnimations={GUIDE_ANIMATIONS}
               paused={guideDemoIndex === null}
               eager
-              getAnimationLabel={(currentAnimation) => {
-                const currentDefinition =
-                  ANIMATIONS.find((item) => item.key === currentAnimation) ??
-                  ANIMATIONS[0];
-                return `${guide.name} — ${t(
-                  language,
-                  currentDefinition.label.zh,
-                  currentDefinition.label.en,
-                )}`;
-              }}
+              getAnimationLabel={(currentAnimation) =>
+                `${guide.name}: ${guideAnimationLabel(currentAnimation, language)}`
+              }
               onDisplayedAnimationChange={setDisplayedGuideAnimation}
               onAnimationError={(failedAnimation) => {
                 setGuideDemoIndex((currentIndex) => {
@@ -382,11 +379,7 @@ export function HomeExperience({ language, guide, series }: HomeExperienceProps)
               <MousePointerClick aria-hidden="true" size={16} strokeWidth={3} />
               {guideDemoIndex === null
                 ? t(language, "点点看", "Say hello")
-                : t(
-                    language,
-                    displayedGuideDefinition.label.zh,
-                    displayedGuideDefinition.label.en,
-                  )}
+                : displayedGuideLabel}
             </span>
           </button>
           <span className={styles.srOnly} role="status" aria-live="polite">
@@ -394,8 +387,8 @@ export function HomeExperience({ language, guide, series }: HomeExperienceProps)
               ? ""
               : t(
                   language,
-                  `${guide.name}正在${displayedGuideDefinition.label.zh}`,
-                  `${guide.name} is showing ${displayedGuideDefinition.label.en.toLowerCase()}`,
+                  `${guide.name}：${displayedGuideLabel}`,
+                  `${guide.name}: ${displayedGuideLabel}`,
                 )}
           </span>
         </aside>

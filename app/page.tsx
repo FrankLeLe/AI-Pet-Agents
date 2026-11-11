@@ -19,8 +19,24 @@ type HomePageProps = {
 export async function generateMetadata({ searchParams }: HomePageProps): Promise<Metadata> {
   const query = await searchParams;
   const language = normalizeLanguage(query.lang);
+  const title = language === "zh"
+    ? "Codex Pets｜给 Codex 选一位会动的伙伴"
+    : "Codex Pets | Find your desktop companion";
+  const description = language === "zh"
+    ? "认识原创桌面伙伴，试试它们的小动作，选一位带回 Codex。"
+    : "Meet original desktop companions, try their little moves, and bring a favorite to Codex.";
 
   return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      locale: language === "zh" ? "zh_CN" : "en_US",
+      url: language === "zh" ? "/" : "/?lang=en",
+      images: [{ url: "/og-series.png", width: 1672, height: 941, alt: title }],
+    },
+    twitter: { card: "summary_large_image", title, description, images: ["/og-series.png"] },
     alternates: {
       canonical: language === "en" ? "/?lang=en" : "/",
       languages: {

@@ -12,15 +12,15 @@ import { SpritePet } from "./SpritePet";
 import styles from "./pet-playground.module.css";
 
 const ANIMATION_LABELS: Record<AnimationKey, { zh: string; en: string }> = {
-  idle: { zh: "待机", en: "Idle" },
+  idle: { zh: "歇一会儿", en: "Take a break" },
   "running-right": { zh: "向右出发", en: "Move right" },
   "running-left": { zh: "向左出发", en: "Move left" },
   waving: { zh: "打个招呼", en: "Wave" },
   jumping: { zh: "跳跃", en: "Jump" },
-  failed: { zh: "出错", en: "Error" },
+  failed: { zh: "有点失落", en: "Feeling down" },
   waiting: { zh: "等待", en: "Waiting" },
   running: { zh: "工作", en: "Working" },
-  review: { zh: "检查", en: "Review" },
+  review: { zh: "仔细看看", en: "Take a closer look" },
   look: { zh: "看看四周", en: "Look around" },
 };
 
@@ -50,7 +50,7 @@ export function PetPlayground({
   return (
     <section className={styles.playground} aria-labelledby="playground-title">
       <div className={styles.playgroundCopy}>
-        <p className={styles.eyebrow}>PET PLAYGROUND</p>
+        <p className={styles.eyebrow}>{language === "zh" ? "打个招呼" : "Say hello"}</p>
         <h2 id="playground-title" data-copy-role="card-headline">
           {language === "zh" ? "一起玩会儿" : "PLAY TOGETHER"}
         </h2>
@@ -111,7 +111,7 @@ export function PetPlayground({
           getAnimationLabel={(currentAnimation) => {
             const currentLabel = ANIMATION_LABELS[currentAnimation][language];
             return language === "zh"
-              ? `${petName}正在${currentLabel}`
+              ? `${petName}：${currentLabel}`
               : `${petName}: ${currentLabel}`;
           }}
           onDisplayedAnimationChange={setDisplayedAnimation}

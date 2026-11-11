@@ -675,8 +675,8 @@ export const PET_SERIES = [
       en: "Chapter One: Another Day Together",
     },
     story: {
-      zh: "清晨，码仔合拢背心搭扣，格格在尾巴上比划今天的小计划。嗅嗅先探出鼻子，点点沿着熟悉的节拍走过，校校还在认真看最后一行。栗存收好值得记住的小事，多多让忙碌有了顺序，彩尾为拥挤的画面留出空白。盾盾守着边界，火花追着变化，云递准备送出今天的成果。灯暗下来的时候，慢慢挪了挪颈枕，给还在等待的伙伴留一个位置。它们不会替你编译、测试或发布，只用各自的动作与性格，把同一张桌子上的一天陪得更有温度。",
-      en: "In the morning, Mazai fastens a vest clasp while Gege measures out a small plan. Xiuxiu leads with a curious nose, Diandian follows a familiar rhythm, and Jiaojiao gives the final line another look. Licun keeps a few worthwhile memories, Duoduo brings order to the busy moments, and Caiwei makes room in a crowded picture. Dundun watches the boundaries, Huohua follows a change, and Yundi prepares to carry the day's little achievements. As the light dims, Manman adjusts its neck pillow and leaves a comfortable place for whoever is still waiting. They do not compile, test, or publish for you. Their movements and personalities simply make a day around the same desk feel warmer.",
+      zh: "清晨，码仔合拢背心搭扣，格格在尾巴上比划今天的小计划。嗅嗅先探出鼻子，点点沿着熟悉的节拍走过，校校还在认真看最后一行。栗存收好值得记住的小事，多多让忙碌有了顺序，彩尾为拥挤的画面留出空白。盾盾守着边界，火花追着变化，云递准备送出今天的成果。灯暗下来的时候，慢慢挪了挪颈枕，给还在等待的伙伴留一个位置。它们用各自的小动作和性格，陪你度过忙碌与等待，让同一张桌子上的一天更有温度。",
+      en: "In the morning, Mazai fastens a vest clasp while Gege measures out a small plan. Xiuxiu leads with a curious nose, Diandian follows a familiar rhythm, and Jiaojiao gives the final line another look. Licun keeps a few worthwhile memories, Duoduo brings order to the busy moments, and Caiwei makes room in a crowded picture. Dundun watches the boundaries, Huohua follows a change, and Yundi prepares to carry the day's little achievements. As the light dims, Manman adjusts its neck pillow and leaves a comfortable place for whoever is still waiting. Through busy moments and quiet waits, their little movements and personalities make a day around the same desk feel warmer.",
     },
     members: DESKTOP_WORK_MEMBERS,
   },

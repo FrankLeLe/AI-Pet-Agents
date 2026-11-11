@@ -40,8 +40,8 @@ const PROOF_STATES: ReadonlyArray<{
   zh: string;
   en: string;
 }> = [
-  { key: "idle", zh: "待机", en: "Idle" },
-  { key: "running-right", zh: "拖动", en: "Drag" },
+  { key: "idle", zh: "歇一会儿", en: "Taking a break" },
+  { key: "running-right", zh: "小跑", en: "Trotting" },
   { key: "running", zh: "工作", en: "Work" },
 ];
 
@@ -124,8 +124,8 @@ export function HatchExperience({ language }: { language: Language }) {
               preloadAnimations={PROOF_ANIMATIONS}
               getAnimationLabel={(currentAnimation) =>
                 isChinese
-                  ? `星铠团团正在展示${PROOF_STATES.find((item) => item.key === currentAnimation)?.zh ?? "待机"}`
-                  : `Star-Armor Tuantuan showing ${PROOF_STATES.find((item) => item.key === currentAnimation)?.en ?? "Idle"}`
+                  ? `星铠团团：${PROOF_STATES.find((item) => item.key === currentAnimation)?.zh ?? "歇一会儿"}`
+                  : `Star-Armor Tuantuan: ${PROOF_STATES.find((item) => item.key === currentAnimation)?.en ?? "Taking a break"}`
               }
               onDisplayedAnimationChange={setDisplayedAnimation}
               onAnimationError={(failedAnimation) => {
@@ -139,7 +139,7 @@ export function HatchExperience({ language }: { language: Language }) {
               className={styles.proofPet}
             />
 
-            <div className={styles.motionTabs} role="group" aria-label={isChinese ? "切换真实动作" : "Switch real motions"}>
+            <div className={styles.motionTabs} role="group" aria-label={isChinese ? "选择宠物动作" : "Choose a pet motion"}>
               {PROOF_STATES.map((item) => (
                 <button
                   type="button"
@@ -170,7 +170,7 @@ export function HatchExperience({ language }: { language: Language }) {
 
         <div className={`${styles.actionDock} ${mode === "ready" ? styles.actionDockReady : ""}`}>
           <div className={styles.actionMain}>
-          <div className={styles.modeTabs} role="tablist" aria-label={isChinese ? "选择当前状态" : "Choose your current state"}>
+          <div className={styles.modeTabs} role="tablist" aria-label={isChinese ? "开始创造宠物" : "Start making your pet"}>
             <button
               type="button"
               role="tab"
@@ -191,7 +191,7 @@ export function HatchExperience({ language }: { language: Language }) {
               onClick={() => selectMode("ready")}
             >
               <Check aria-hidden="true" size={20} strokeWidth={3} />
-              {isChinese ? "已经装好" : "Already installed"}
+              {isChinese ? "已完成准备" : "Setup complete"}
             </button>
           </div>
 
@@ -202,12 +202,16 @@ export function HatchExperience({ language }: { language: Language }) {
               data-hatch-mode={mode}
             >
               <div className={styles.actionIntro}>
-                <h2>{isChinese ? "创造您的宠物" : "CREATE YOUR PET"}</h2>
+                <h2>
+                  {mode === "first"
+                    ? isChinese ? "开启造宠功能" : "SET UP PET MAKING"
+                    : isChinese ? "创造你的宠物" : "CREATE YOUR PET"}
+                </h2>
                 <p className={styles.actionHint}>
                   {mode === "first"
                     ? isChinese
-                      ? "复制后，到 Codex 新任务粘贴发送；装好后重启。"
-                      : "Copy it into a new Codex task and send; reopen Codex when finished."
+                      ? "第一次使用，先让 Codex 帮你安装造宠工具。复制后，到 Codex 新对话粘贴发送。安装完成后重新打开 Codex。"
+                      : "First, ask Codex to install the pet-making tool. Copy this into a new Codex chat and send it. Reopen Codex when setup finishes."
                     : isChinese
                       ? "在 Codex 新任务里附图，粘贴并发送。"
                       : "In a new Codex task, attach the image, paste, and send."}
@@ -246,8 +250,8 @@ export function HatchExperience({ language }: { language: Language }) {
               <span>
                 {mode === "first"
                   ? isChinese
-                    ? "已复制。回到 Codex 粘贴发送；装好后重启 Codex。"
-                    : "Copied. Paste and send it in Codex, then reopen Codex."
+                    ? "已复制。回到 Codex 粘贴发送，等准备完成后重新打开 Codex。"
+                    : "Copied. Paste and send it in Codex. When setup finishes, reopen Codex."
                   : isChinese
                     ? "已复制。附上角色图，粘贴并发送。"
                     : "Copied. Attach the image, paste, and send."}
@@ -265,20 +269,8 @@ export function HatchExperience({ language }: { language: Language }) {
           <div className={styles.dockFooter}>
             <details className={styles.fullPrompt} open={copyState === "error"}>
               <summary>
-                {mode === "first"
-                  ? isChinese
-                    ? "查看安装内容与来源"
-                    : "View install text and source"
-                  : isChinese
-                    ? "查看完整内容"
-                    : "View full text"}
+                {isChinese ? "查看要发送的内容" : "Review the message to send"}
               </summary>
-              {mode === "first" ? (
-                <div className={styles.sourceMeta}>
-                  <a href={SKILL_URL} target="_blank" rel="noreferrer">Cloudflare CDN · {SOURCE_COMMIT.slice(0, 8)}</a>
-                  <code>SHA-256 · {SKILL_SHA256}</code>
-                </div>
-              ) : null}
               <textarea
                 aria-label={mode === "first" ? (isChinese ? "完整安装内容" : "Full install text") : (isChinese ? "完整造宠内容" : "Full pet-making text")}
                 readOnly

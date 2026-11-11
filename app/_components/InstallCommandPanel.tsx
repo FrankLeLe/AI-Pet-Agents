@@ -106,14 +106,14 @@ export function InstallCommandPanel({ language, mode, petId }: InstallCommandPan
   return (
     <div className={styles.commandPanel}>
       <div className={styles.commandToolbar}>
-        <div className={styles.platformSwitch} aria-label={language === "zh" ? "选择系统" : "Choose platform"}>
+        <div className={styles.platformSwitch} aria-label={language === "zh" ? "选择电脑系统" : "Choose your operating system"}>
           <button
             type="button"
             className={platform === "windows" ? styles.platformActive : undefined}
             aria-pressed={platform === "windows"}
             onClick={() => setPlatform("windows")}
           >
-            WINDOWS
+            Windows
           </button>
           <button
             type="button"
@@ -121,7 +121,7 @@ export function InstallCommandPanel({ language, mode, petId }: InstallCommandPan
             aria-pressed={platform === "unix"}
             onClick={() => setPlatform("unix")}
           >
-            macOS / LINUX
+            macOS / Linux
           </button>
         </div>
         <button
@@ -133,14 +133,14 @@ export function InstallCommandPanel({ language, mode, petId }: InstallCommandPan
           {copied
             ? language === "zh"
               ? "已复制"
-              : "COPIED"
+              : "Copied"
             : copyFailed
               ? language === "zh"
                 ? "复制失败，请重试"
-                : "COPY FAILED · RETRY"
+                : "Couldn’t copy · Retry"
               : language === "zh"
                 ? "复制命令"
-                : "COPY"}
+                : "Copy command"}
         </button>
       </div>
       <pre className={styles.commandCode} tabIndex={0}>
@@ -148,8 +148,8 @@ export function InstallCommandPanel({ language, mode, petId }: InstallCommandPan
       </pre>
       <p className={styles.commandNote}>
         {language === "zh"
-          ? "执行前先确认 ZIP 已下载到系统的 Downloads 文件夹。安装后完整退出并重新打开 Codex Desktop。"
-          : "Before running, confirm the ZIP is in your Downloads folder. Fully quit and reopen Codex Desktop after installation."}
+          ? "先将下载的文件放进“下载”（Downloads）文件夹。运行命令后，完整退出并重新打开 Codex Desktop。"
+          : "Put the downloaded file in your Downloads folder first. After running the command, fully quit and reopen Codex Desktop."}
       </p>
       {copyFailed ? (
         <p className={styles.copyError} role="alert" aria-live="assertive">

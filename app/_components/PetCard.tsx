@@ -45,7 +45,7 @@ export function PetCard({ pet, language, compact = false }: PetCardProps) {
         <span className={styles.petBadge}>{label}</span>
         <PetPreview
           petId={pet.id}
-          label={t(language, `${name}静态预览`, `${name} preview`)}
+          label={t(language, `${name}形象`, `${name} preview`)}
           className={styles.petCardSprite}
         />
       </div>

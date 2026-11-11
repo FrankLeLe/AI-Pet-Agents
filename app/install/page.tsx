@@ -65,11 +65,7 @@ export default async function InstallIndexPage({ searchParams }: InstallIndexPag
               >
                 <PetPreview
                   petId={pet.id}
-                  label={t(
-                    language,
-                    `${name}静态预览`,
-                    `${name} preview`,
-                  )}
+                  label={name}
                   className={styles.installPetSprite}
                 />
                 <span>
@@ -89,10 +85,10 @@ export default async function InstallIndexPage({ searchParams }: InstallIndexPag
         <aside className={styles.helpStrip}>
           <div>
             <strong>{t(language, "宠物没出现？", "Pet not showing?")}</strong>
-            <p>{t(language, "检查文件位置和 Codex 的重启方式。", "Check the file location and how Codex was restarted.")}</p>
+            <p>{t(language, "先试着重新打开 Codex，或看看常见问题。", "Try reopening Codex, or check the common questions.")}</p>
           </div>
           <Link className={styles.darkButton} href={withLanguage("/help", language)}>
-            {t(language, "查看排查方法", "Troubleshoot")}
+            {t(language, "获取帮助", "Get help")}
           </Link>
         </aside>
       </main>

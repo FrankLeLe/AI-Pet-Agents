@@ -13,10 +13,7 @@ type InstallChoicesProps = {
   petName: string;
   downloadPath: string;
   codexPrompt: string;
-  sha256: string;
   sizeLabel: string;
-  sourceCommit: string;
-  sourceUrl: string;
 };
 
 type CopyTarget = "windows" | "unix" | "prompt" | null;
@@ -51,10 +48,7 @@ export function InstallChoices({
   petName,
   downloadPath,
   codexPrompt,
-  sha256,
   sizeLabel,
-  sourceCommit,
-  sourceUrl,
 }: InstallChoicesProps) {
   const [copied, setCopied] = useState<CopyTarget>(null);
   const [copyFailed, setCopyFailed] = useState<CopyTarget>(null);
@@ -92,7 +86,7 @@ export function InstallChoices({
         <div className={styles.cardCopy}>
           <span>CODEX DESKTOP</span>
           <h2 id="install-choice-heading" data-copy-role="card-headline">
-            {language === "zh" ? "用 Codex 安装" : "CODEX INSTALL"}
+            {language === "zh" ? "用 Codex 安装" : "INSTALL WITH CODEX"}
           </h2>
           <p>
             {language === "zh"
@@ -126,8 +120,8 @@ export function InstallChoices({
               <strong>{language === "zh" ? "现在回到 Codex" : "Now return to Codex"}</strong>
               <span>
                 {language === "zh"
-                  ? `粘贴并发送。安装结束后重新打开 Codex，就能找到「${petName}」。`
-                  : `Paste and send. Reopen Codex when it finishes to find ${petName}.`}
+                  ? `粘贴并发送，按 Codex 的提示完成安装。然后重新打开 Codex，在宠物列表中选择「${petName}」。`
+                  : `Paste and send, then follow Codex’s instructions to finish installing. Reopen Codex and choose ${petName} from the pet list.`}
               </span>
             </div>
           </div>
@@ -138,22 +132,16 @@ export function InstallChoices({
             <strong>{copyFailedLabel}</strong>
             <span>
               {language === "zh"
-                ? "请在下方打开安装指令并手动复制。"
-                : "Open the install request below and copy it manually."}
+                ? "展开下方的内容，选中后手动复制。"
+                : "Expand the request below, then select and copy it."}
             </span>
           </div>
         ) : null}
 
         <details className={styles.promptPreview} open={copyFailed === "prompt"}>
-          <summary>{language === "zh" ? "查看安装指令与来源" : "View request and source"}</summary>
-          <div className={styles.sourceMeta}>
-            <a href={sourceUrl} target="_blank" rel="noreferrer">
-              Cloudflare CDN · {sourceCommit.slice(0, 8)}
-            </a>
-            <code>SHA-256 · {sha256}</code>
-          </div>
+          <summary>{language === "zh" ? "查看要发送的内容" : "Review the request"}</summary>
           <textarea
-            aria-label={language === "zh" ? "完整安装指令" : "Full install request"}
+            aria-label={language === "zh" ? "发给 Codex 的安装请求" : "Installation request for Codex"}
             readOnly
             value={codexPrompt}
             onFocus={(event) => event.currentTarget.select()}
@@ -166,29 +154,34 @@ export function InstallChoices({
         data-install-method="zip"
         data-priority="secondary"
       >
-        <summary>{language === "zh" ? "手动安装 ZIP" : "Install the ZIP manually"}</summary>
+        <summary>{language === "zh" ? "手动安装" : "Install manually"}</summary>
         <div className={styles.manualBody}>
           <div className={styles.manualHeading}>
             <div>
               <strong>{petName}</strong>
-              <span>ZIP · {sizeLabel}</span>
+              <span>{sizeLabel}</span>
             </div>
             <a className={styles.downloadButton} href={downloadPath} download>
               <Download aria-hidden="true" size={19} strokeWidth={3} />
-              {language === "zh" ? "下载 ZIP" : "Download ZIP"}
+              {language === "zh" ? "下载宠物文件" : "Download pet files"}
             </a>
           </div>
 
           <ol className={styles.steps}>
             <li>
               {language === "zh"
-                ? `解压后，把完整的「${petId}」文件夹放进 Codex 的 pets 目录。`
-                : `Unzip it, then move the complete “${petId}” folder into Codex’s pets folder.`}
+                ? `解压下载的文件，把「${petId}」文件夹完整放到下方的安装位置。`
+                : `Extract the download, then move the complete “${petId}” folder to the installation location below.`}
             </li>
             <li>
               {language === "zh"
                 ? "完整退出 Codex Desktop，再重新打开。"
                 : "Fully quit Codex Desktop, then reopen it."}
+            </li>
+            <li>
+              {language === "zh"
+                ? `打开宠物列表，选择「${petName}」。`
+                : `Open the pet list and choose ${petName}.`}
             </li>
           </ol>
 
@@ -202,8 +195,8 @@ export function InstallChoices({
               {copied === "windows"
                 ? copiedLabel
                 : language === "zh"
-                  ? "复制 Windows 路径"
-                  : "Copy Windows path"}
+                  ? "复制 Windows 安装位置"
+                  : "Copy Windows folder"}
             </button>
             <button type="button" onClick={() => copy("unix", UNIX_PETS_PATH)}>
               {copied === "unix" ? (
@@ -214,8 +207,8 @@ export function InstallChoices({
               {copied === "unix"
                 ? copiedLabel
                 : language === "zh"
-                  ? "复制 macOS / Linux 路径"
-                  : "Copy macOS / Linux path"}
+                  ? "复制 macOS / Linux 安装位置"
+                  : "Copy macOS / Linux folder"}
             </button>
           </div>
 

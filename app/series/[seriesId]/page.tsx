@@ -57,7 +57,7 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
   return (
     <PageShell language={language} currentPath={`/series/${series.id}`}>
       <main className={styles.main} id="main-content">
-        <nav className={styles.breadcrumbs} aria-label={t(language, "面包屑导航", "Breadcrumb")}>
+        <nav className={styles.breadcrumbs} aria-label={t(language, "当前位置", "You are here")}>
           <Link href={withLanguage("/pets", language)}>{t(language, "宠物图鉴", "Pet index")}</Link>
           <span aria-hidden="true">/</span>
           <span aria-current="page">{series.name[language]}</span>
@@ -88,7 +88,7 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
                   petId={pet.id}
                   eager
                   className={styles.heroPet}
-                  label={t(language, `${profile.name.zh}静态预览`, `${profile.name.en} preview`)}
+                  label={t(language, `${profile.name.zh}形象`, `${profile.name.en} preview`)}
                 />
               </Link>
             ))}
@@ -123,7 +123,7 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
                   <PetPreview
                     petId={pet.id}
                     className={styles.characterImage}
-                    label={t(language, `${profile.name.zh}静态预览`, `${profile.name.en} preview`)}
+                    label={t(language, `${profile.name.zh}形象`, `${profile.name.en} preview`)}
                   />
                   <span>{profile.role[language]}</span>
                 </div>
@@ -151,7 +151,7 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
         <section className={styles.story} id="story" aria-labelledby="story-heading">
           <div className={styles.storyMarker}>
             <BookOpenText aria-hidden="true" size={30} strokeWidth={3} />
-            <span>STORY</span>
+            <span>{t(language, "他们的故事", "Their story")}</span>
           </div>
           <div>
             <p>{series.storyChapter[language]}</p>

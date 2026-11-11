@@ -10,9 +10,7 @@ import { PetPreview } from "../../_components/PetPreview";
 import { normalizeLanguage, PageShell, t, withLanguage } from "../../_components/SiteChrome";
 import {
   buildCodexInstallPrompt,
-  getPetPackageUrl,
   getPetRelease,
-  getPetReleaseCommit,
 } from "@/lib/pet-releases";
 import { getPetById, PETS } from "@/lib/pets";
 import {
@@ -48,8 +46,8 @@ export async function generateMetadata({ params, searchParams }: PetInstallPageP
   const title = t(language, `安装 ${name}｜Codex Pets`, `Install ${name} | Codex Pets`);
   const description = t(
     language,
-    `在 Codex 中安装「${name}」。复制安装指令或下载宠物 ZIP，选择适合你的安装方式。`,
-    `Bring ${name} into Codex. Copy the installation prompt or download the pet ZIP and choose the method that suits you.`,
+    `把「${name}」带回 Codex。复制请求，让 Codex 帮你安装，也可以下载宠物文件手动安装。`,
+    `Bring ${name} into Codex. Copy a request for Codex to help you install, or download the pet files and install manually.`,
   );
   const path = `/install/${pet.id}`;
 
@@ -106,7 +104,7 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
   return (
     <PageShell language={language} currentPath={`/install/${pet.id}`}>
       <main className={styles.main} id="main-content">
-        <nav className={styles.breadcrumbs} aria-label={t(language, "面包屑导航", "Breadcrumb")}>
+        <nav className={styles.breadcrumbs} aria-label={t(language, "当前位置", "You are here")}>
           <Link href={withLanguage("/pets", language)}>{t(language, "宠物图鉴", "Pet index")}</Link>
           <span aria-hidden="true">/</span>
           <Link href={withLanguage("/install", language)}>{t(language, "安装中心", "Install center")}</Link>
@@ -119,7 +117,7 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
             <PetPreview
               petId={pet.id}
               eager
-              label={t(language, `${name}静态预览`, `${name} preview`)}
+              label={name}
               className={styles.heroPet}
             />
           </div>
@@ -146,10 +144,7 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
             petName={name}
             downloadPath={pet.downloadPath}
             codexPrompt={codexPrompt}
-            sha256={release.sha256}
             sizeLabel={sizeLabel}
-            sourceCommit={getPetReleaseCommit(pet.id)}
-            sourceUrl={getPetPackageUrl(pet.id)}
           />
         </div>
 
@@ -159,8 +154,8 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
             <p>
               {t(
                 language,
-                "命令会在目标目录已存在时停止，不会静默覆盖。运行前确认 ZIP 在 Downloads 文件夹。",
-                "The command stops if the target folder already exists and never overwrites silently. Confirm the ZIP is in Downloads before running it.",
+                "请先把下载的宠物文件放进“下载”（Downloads）文件夹。如果同名文件夹已经存在，命令会停止并保留现有文件。",
+                "First, put the downloaded pet file in your Downloads folder. If a folder with the same name already exists, the command stops and keeps your existing files.",
               )}
             </p>
           </div>
@@ -173,13 +168,13 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
             <p>
               {t(
                 language,
-                "完整退出并重新打开 Codex Desktop，再检查宠物选择器。",
-                "Fully quit and reopen Codex Desktop, then check the pet selector.",
+                "完整退出并重新打开 Codex Desktop，再打开宠物列表看看。",
+                "Fully quit and reopen Codex Desktop, then check the pet list.",
               )}
             </p>
           </div>
           <Link href={withLanguage("/help", language)}>
-            {t(language, "查看排查方法", "Troubleshoot")}
+            {t(language, "获取帮助", "Get help")}
           </Link>
           <Link href={withLanguage(`/pets/${pet.id}`, language)}>
             {t(language, "返回角色页", "Back to character")}

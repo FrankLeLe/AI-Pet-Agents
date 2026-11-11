@@ -51,6 +51,47 @@ async function loadWorker() {
   return (await import(workerUrl.href)).default;
 }
 
+function defaultInterfaceText(html) {
+  let markup = html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, "");
+  // Keep summaries visible, including when disclosures are nested.
+  const disclosure = /<details\b([^>]*)>((?:(?!<\/?details\b)[\s\S])*?)<\/details>/gi;
+  while (/<details\b/i.test(markup)) {
+    const next = markup.replace(disclosure, (_match, attributes, body) =>
+      /\bopen(?:\s|=|$)/i.test(attributes)
+        ? body
+        : body.match(/<summary\b[^>]*>[\s\S]*?<\/summary>/i)?.[0] ?? "",
+    );
+    assert.notEqual(next, markup, "rendered disclosures must be well formed");
+    markup = next;
+  }
+  return markup.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ");
+}
+
+test("keeps everyday copy clear while retaining useful installation details on request", async () => {
+  for (const language of ["zh", "en"]) {
+    for (const route of ["/", "/pets", "/series/desktop-work-crew", "/pets/foldlume", "/install", "/install/foldlume", "/hatch", "/help"]) {
+      const path = `${route}?lang=${language}`;
+      const response = await render(path);
+      assert.equal(response.status, 200, path);
+      const html = await response.text();
+      const everydayText = defaultInterfaceText(html);
+      assert.doesNotMatch(everydayText, /Cloudflare|\bCDN\b|SHA-?256|\b[0-9a-f]{40,64}\b|\b(?:manifest|atlas|spritesheet|CODEX_HOME|v2)\b|pet\.json|1536|2288|图集|网格|格式版本/, path);
+      assert.doesNotMatch(html, />Cloudflare CDN|角色职责|静态预览|面包屑导航/);
+      if (language === "zh") {
+        assert.doesNotMatch(everydayText, /PET PLAYGROUND|GUIDE NOTE|CHARACTER NOTE|FROM THE SAME SERIES|CODEX PET INDEX/);
+      }
+      if (route === "/install/foldlume" || route === "/hatch") {
+        assert.match(html, /<textarea\b[^>]*>[\s\S]*SHA-256/);
+        assert.match(html, /查看要发送的内容|Review the (?:request|message to send)/);
+      }
+      if (route === "/help") {
+        assert.match(html, /pet\.json/);
+        assert.match(html, /spritesheet\.webp/);
+      }
+    }
+  }
+});
+
 test("server-renders the complete Codex Pets landing page", async () => {
   const response = await render();
   assert.equal(response.status, 200);
@@ -200,7 +241,7 @@ test("features the desk corner friends and provides a complete bilingual adoptio
       const release = releaseModule.getPetRelease(id);
       assert.ok(release?.releaseCommit, `${id} needs its actual release commit`);
       assert.ok(install.includes(releaseModule.getPetPackageUrl(id)), `${id} install prompt must use its own release URL`);
-      assert.ok(install.includes(release.releaseCommit.slice(0, 8)), `${id} source label must show its own release`);
+      assert.ok(install.includes(release.releaseCommit), `${id} copyable install request must retain its pinned release`);
     }
   }
 });
@@ -223,13 +264,13 @@ test("gives hatch users one short state-driven Codex path", async () => {
 
   assert.equal((zhHtml.match(/<h1\b/g) ?? []).length, 1);
   assert.match(zhHtml, /带你的宠物回家/);
-  assert.match(zhHtml, /创造您的宠物/);
+  assert.match(zhHtml, /开启造宠功能/);
   assert.match(zhHtml, /第一次使用/);
-  assert.match(zhHtml, /已经装好/);
+  assert.match(zhHtml, /已完成准备/);
   assert.match(zhHtml, /data-hatch-mode="first"/);
   assert.match(zhHtml, /data-copy-state="idle"/);
   assert.match(zhHtml, /复制，去 Codex 安装/);
-  assert.match(zhHtml, /查看安装内容与来源/);
+  assert.match(zhHtml, /查看要发送的内容/);
   assert.match(zhHtml, /选择一个动作试试/);
   assert.match(zhHtml, /先试玩已有宠物/);
   assert.match(zhHtml, /\/pets\/star-armor-tuantuan\/web\/animations\/idle\.webp/);
@@ -239,9 +280,9 @@ test("gives hatch users one short state-driven Codex path", async () => {
   );
 
   assert.match(enHtml, /BRING YOUR PET HOME/);
-  assert.match(enHtml, /CREATE YOUR PET/);
+  assert.match(enHtml, /SET UP PET MAKING/);
   assert.match(enHtml, /First time/);
-  assert.match(enHtml, /Already installed/);
+  assert.match(enHtml, /Setup complete/);
   assert.match(enHtml, /COPY TO INSTALL IN CODEX/);
   assert.match(enHtml, /TRY A FINISHED PET/);
   assert.doesNotMatch(
@@ -320,7 +361,7 @@ test("gives every pet page a product profile and an on-demand action playground"
   const html = await response.text();
   assert.match(html, /星轨向导/);
   assert.match(html, /团团的第一班岗/);
-  assert.match(html, /PET PLAYGROUND/);
+  assert.match(html, /打个招呼/);
   assert.match(html, /在等你/);
   assert.match(html, /先玩一下/);
   assert.match(html, /一起玩会儿/);
@@ -473,10 +514,10 @@ test("keeps page and card slogans short across the main journey", async () => {
   assert.match(installDetail, /用 Codex 安装/);
   assert.match(help, /宠物没出现？/);
   assert.match(help, /常见问题/);
-  assert.match(help, /文件结构/);
+  assert.match(help, /手动解压后，怎样确认文件放对了/);
   assert.match(help, /素材授权/);
   assert.match(helpEnglish, /PET MISSING?/);
-  assert.match(helpEnglish, /CHECK 3/);
+  assert.match(helpEnglish, /TRY THESE STEPS/);
 
   const combined = [
     home,
@@ -496,7 +537,7 @@ test("keeps page and card slogans short across the main journey", async () => {
     "major cards should mark the copy that must stay concise",
   );
   assert.doesNotMatch(
-    combined,
+    defaultInterfaceText(combined),
     /让每一次等待，都有个会动的伙伴|每位角色，各守一段星轨|把「[^」]+」带回 Codex|问题不藏在盔甲里|两个文件，结构要准确/,
   );
 });
@@ -645,7 +686,7 @@ test("localizes metadata and canonical URLs for every pet installation page", as
       assert.ok(html.includes(`property="og:url" content="https://aipetsagent.com${path}"`));
       assert.ok(html.includes(`property="og:locale" content="${language === "en" ? "en_US" : "zh_CN"}"`));
       assert.ok(html.includes(`name="twitter:title" content="${title}"`));
-      assert.match(html, language === "en" ? /Copy the installation prompt or download the pet ZIP/ : /复制安装指令或下载宠物 ZIP/);
+      assert.match(html, language === "en" ? /Copy a request for Codex to help you install/ : /复制请求，让 Codex 帮你安装/);
     }
   }
 });
