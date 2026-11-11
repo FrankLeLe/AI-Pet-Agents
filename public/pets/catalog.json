@@ -450,6 +450,105 @@
       },
       "preview": "/pets/mendmoth/preview.webp",
       "download": "/downloads/mendmoth.zip"
+    },
+    {
+      "id": "dewbert",
+      "category": "desk-corner",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "露团",
+        "en": "Dewbert"
+      },
+      "preview": "/pets/dewbert/preview.webp",
+      "download": "/downloads/dewbert.zip"
+    },
+    {
+      "id": "spriggle",
+      "category": "desk-corner",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "芽团",
+        "en": "Spriggle"
+      },
+      "preview": "/pets/spriggle/preview.webp",
+      "download": "/downloads/spriggle.zip"
+    },
+    {
+      "id": "bloomble",
+      "category": "desk-corner",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "绒朵",
+        "en": "Bloomble"
+      },
+      "preview": "/pets/bloomble/preview.webp",
+      "download": "/downloads/bloomble.zip"
+    },
+    {
+      "id": "quillip",
+      "category": "desk-corner",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "纸啾",
+        "en": "Quillip"
+      },
+      "preview": "/pets/quillip/preview.webp",
+      "download": "/downloads/quillip.zip"
+    },
+    {
+      "id": "inklet",
+      "category": "desk-corner",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "墨点",
+        "en": "Inklet"
+      },
+      "preview": "/pets/inklet/preview.webp",
+      "download": "/downloads/inklet.zip"
+    },
+    {
+      "id": "buttonbud",
+      "category": "desk-corner",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "扣扣",
+        "en": "Buttonbud"
+      },
+      "preview": "/pets/buttonbud/preview.webp",
+      "download": "/downloads/buttonbud.zip"
+    },
+    {
+      "id": "spoolie",
+      "category": "desk-corner",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "线眠",
+        "en": "Spoolie"
+      },
+      "preview": "/pets/spoolie/preview.webp",
+      "download": "/downloads/spoolie.zip"
+    },
+    {
+      "id": "crumbit",
+      "category": "desk-corner",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "酥角",
+        "en": "Crumbit"
+      },
+      "preview": "/pets/crumbit/preview.webp",
+      "download": "/downloads/crumbit.zip"
+    },
+    {
+      "id": "thimblet",
+      "category": "desk-corner",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "顶顶",
+        "en": "Thimblet"
+      },
+      "preview": "/pets/thimblet/preview.webp",
+      "download": "/downloads/thimblet.zip"
     }
   ]
 }

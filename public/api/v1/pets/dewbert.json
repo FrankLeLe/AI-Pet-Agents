@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "dewbert",
+    "category": "desk-corner",
+    "zodiacOrder": null,
+    "needs": [
+      "comfort",
+      "start"
+    ],
+    "displayName": {
+      "zh": "露团",
+      "en": "Dewbert"
+    },
+    "badge": "NEIGHBOR 04",
+    "accent": "#518da5",
+    "softAccent": "#e1f0f4",
+    "status": "published",
+    "tagline": {
+      "zh": "先呼吸一下，今天可以慢慢开始。",
+      "en": "Take a breath. Today can begin gently."
+    },
+    "description": {
+      "zh": "先让自己舒服一点，再走下一小步。",
+      "en": "Get comfortable first, then take one small step."
+    },
+    "personalityTags": [
+      {
+        "zh": "清新",
+        "en": "Fresh"
+      },
+      {
+        "zh": "从容",
+        "en": "Unhurried"
+      },
+      {
+        "zh": "安静",
+        "en": "Quiet"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "露珠团子",
+      "zodiacEn": "Dewdrop Companion",
+      "roleZh": "清晨的小呼吸",
+      "roleEn": "A Fresh Little Breath",
+      "promiseZh": "先呼吸一下，今天可以慢慢开始。",
+      "promiseEn": "Take a breath. Today can begin gently.",
+      "storyTitleZh": "清晨留下的那口气",
+      "storyTitleEn": "A Breath Left by Morning",
+      "storyZh": "露团总是第一个听见窗边的风。它把圆圆的身体轻轻撑开，再慢慢放松，像替还没睡醒的桌角做一次深呼吸。有一天，折灯急着照亮新草稿，纸啾急着送来新主意，连檐豆的触角也忙得停不下来。露团没有加入催促，只在空白的纸边坐稳，陪大家安静了一小会儿。等肩膀松下来，原本挤成一团的事情终于有了先后。它从此学会，清晨最好的礼物有时不是更多力气，而是可以从容开始的一口气。等大家准备好了，它才轻轻点头，把第一步留给每个人自己来选。",
+      "storyEn": "Dewbert is always first to notice the breeze by the window. Its little body rises and settles, as though taking a morning breath for the whole desk. One day Foldlume hurried over a new draft, Quillip brought too many ideas, and even Eavie's antennae would not stay still. Dewbert sat quietly beside the blank page. When everyone relaxed a little, the crowded plans found an order. Morning's best gift, it learned, could be the space to begin gently. Only when everyone feels ready does it nod and let each friend choose the first step.",
+      "comfortZh": "先让自己舒服一点，再走下一小步。",
+      "comfortEn": "Get comfortable first, then take one small step.",
+      "moments": [
+        {
+          "titleZh": "刚刚开始",
+          "titleEn": "A fresh start",
+          "bodyZh": "先伸个懒腰，再选今天最想做的一件事。",
+          "bodyEn": "Stretch, then choose one thing you want to begin."
+        },
+        {
+          "titleZh": "有点忙乱",
+          "titleEn": "A busy moment",
+          "bodyZh": "停一小会儿，把呼吸和手上的事都放慢。",
+          "bodyEn": "Pause and let your breathing and your work slow down."
+        },
+        {
+          "titleZh": "想再试试",
+          "titleEn": "Ready again",
+          "bodyZh": "不用追回刚才的速度，按舒服的节奏回来。",
+          "bodyEn": "Return at a comfortable pace, without catching up all at once."
+        }
+      ],
+      "traitsZh": [
+        "清新",
+        "从容",
+        "安静"
+      ],
+      "traitsEn": [
+        "Fresh",
+        "Unhurried",
+        "Quiet"
+      ],
+      "matchZh": "适合清晨开工、忙碌中的短暂停顿，或想温柔开始的你。",
+      "matchEn": "For a gentle morning, a pause in a busy day, and an unhurried beginning."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/dewbert/spritesheet.webp",
+    "previewPath": "/pets/dewbert/preview.webp",
+    "manifestPath": "/pets/dewbert/pet.json",
+    "downloadPath": "/downloads/dewbert.zip",
+    "detailPath": "/api/v1/pets/dewbert.json"
+  }
+}

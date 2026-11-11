@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "buttonbud",
+    "category": "desk-corner",
+    "zodiacOrder": null,
+    "needs": [
+      "start",
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "扣扣",
+      "en": "Buttonbud"
+    },
+    "badge": "NEIGHBOR 09",
+    "accent": "#b87549",
+    "softAccent": "#f4e3d4",
+    "status": "published",
+    "tagline": {
+      "zh": "重新开始，可以从扣好第一颗扣子算起。",
+      "en": "A fresh start can be as small as fastening one button."
+    },
+    "description": {
+      "zh": "再来一次，也可以从很小的地方开始。",
+      "en": "Trying again can begin with something very small."
+    },
+    "personalityTags": [
+      {
+        "zh": "耐心",
+        "en": "Patient"
+      },
+      {
+        "zh": "可靠",
+        "en": "Dependable"
+      },
+      {
+        "zh": "温厚",
+        "en": "Kind"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "纽扣小熊",
+      "zodiacEn": "Button-Coat Bear",
+      "roleZh": "耐心重启员",
+      "roleEn": "Patient Fresh-Start Friend",
+      "promiseZh": "重新开始，可以从扣好第一颗扣子算起。",
+      "promiseEn": "A fresh start can be as small as fastening one button.",
+      "storyTitleZh": "重新扣好的第一步",
+      "storyTitleEn": "Fastening a Fresh Start",
+      "storyZh": "扣扣有一件圆圆的橙色纽扣外套，做什么事都喜欢先把自己整理好。一次准备出发，它发现原来的安排全乱了，坐在桌边好久都不敢再动。顶顶靠过来，补补也展开了一点翅膀。扣扣低头看看自己的外套，忽然想到，不用一次把整天都重新安排好，只要先做回第一件小事。它拍拍衣角，站起来，把留在原地的一小步补上。后来谁想重新开始，扣扣就会安静陪在旁边。已经走过的路不会白走，今天仍然可以从一个新的小动作接上。",
+      "storyEn": "Buttonbud likes to straighten its round orange coat before setting off. When a plan once fell apart, it sat still for a long time, unsure how to begin again. Thimblet came closer and Mendmoth opened a soft wing. Looking down at its coat, Buttonbud realized it did not need to repair the whole day at once. It could start with one small familiar action. Now it sits patiently with anyone making a fresh start. The steps already taken still count, even when today needs a new beginning.",
+      "comfortZh": "再来一次，也可以从很小的地方开始。",
+      "comfortEn": "Trying again can begin with something very small.",
+      "moments": [
+        {
+          "titleZh": "中途停下",
+          "titleEn": "After a pause",
+          "bodyZh": "找回一件熟悉的小事，让手先动起来。",
+          "bodyEn": "Return to one familiar action and let your hands begin."
+        },
+        {
+          "titleZh": "计划变了",
+          "titleEn": "A changed plan",
+          "bodyZh": "先照顾眼前能做到的部分。",
+          "bodyEn": "Begin with the part you can manage right now."
+        },
+        {
+          "titleZh": "重新出发",
+          "titleEn": "Starting again",
+          "bodyZh": "把昨天的努力也带上，今天只走下一小步。",
+          "bodyEn": "Bring yesterday's effort with you and take today's next small step."
+        }
+      ],
+      "traitsZh": [
+        "耐心",
+        "可靠",
+        "温厚"
+      ],
+      "traitsEn": [
+        "Patient",
+        "Dependable",
+        "Kind"
+      ],
+      "matchZh": "适合重新拾起一件事、调整步调，或需要耐心陪伴的你。",
+      "matchEn": "For picking something up again, finding your pace, and patient company."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/buttonbud/spritesheet.webp",
+    "previewPath": "/pets/buttonbud/preview.webp",
+    "manifestPath": "/pets/buttonbud/pet.json",
+    "downloadPath": "/downloads/buttonbud.zip",
+    "detailPath": "/api/v1/pets/buttonbud.json"
+  }
+}

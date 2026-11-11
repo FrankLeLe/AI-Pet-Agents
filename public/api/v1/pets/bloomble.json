@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "bloomble",
+    "category": "desk-corner",
+    "zodiacOrder": null,
+    "needs": [
+      "create",
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "绒朵",
+      "en": "Bloomble"
+    },
+    "badge": "NEIGHBOR 06",
+    "accent": "#b29437",
+    "softAccent": "#fbf0cd",
+    "status": "published",
+    "tagline": {
+      "zh": "小小的成果，也值得开一朵花。",
+      "en": "Even a little win deserves a bloom."
+    },
+    "description": {
+      "zh": "刚刚做好的那一点，已经值得开心。",
+      "en": "The little part you just finished is worth enjoying."
+    },
+    "personalityTags": [
+      {
+        "zh": "开朗",
+        "en": "Cheerful"
+      },
+      {
+        "zh": "热情",
+        "en": "Warm"
+      },
+      {
+        "zh": "细心",
+        "en": "Attentive"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "绒绒雏菊",
+      "zodiacEn": "Plush Daisy",
+      "roleZh": "小小庆祝家",
+      "roleEn": "Little Celebration Friend",
+      "promiseZh": "小小的成果，也值得开一朵花。",
+      "promiseEn": "Even a little win deserves a bloom.",
+      "storyTitleZh": "还没完成也能庆祝",
+      "storyTitleEn": "A Bloom Before the Finish",
+      "storyZh": "绒朵的花瓣总是软软地围着一张笑脸。它初来时，大家都在等一件很大的事情完成，谁也顾不上已经做好的小部分。绒朵看见扣扣终于重新扣好第一步，便轻轻摇了一圈花瓣；看见檐豆带回新发现，又开心地踮起脚。大家起初有点不好意思，后来才发现，停下来为小成果高兴一下，并不会耽误继续向前。于是桌角多了许多短短的庆祝。绒朵负责记住，那些不起眼却认真发生过的进步，同样值得被看见。它还记得每一次笨拙的开头，所以也愿意为别人的尝试多等一会儿。",
+      "storyEn": "Bloomble arrived while everyone was waiting for one enormous task to be finished. The little parts already completed had gone unnoticed. When Buttonbud found a new beginning, Bloomble gave its petals a happy shake. When Eavie returned with a discovery, it rose on its toes. The others felt shy at first, then realized that enjoying a small achievement did not stop the next step. The corner gained many tiny celebrations, and Bloomble made sure quiet progress was seen. It remembers its own awkward beginnings, so it is happy to wait while another friend tries.",
+      "comfortZh": "刚刚做好的那一点，已经值得开心。",
+      "comfortEn": "The little part you just finished is worth enjoying.",
+      "moments": [
+        {
+          "titleZh": "做好一小段",
+          "titleEn": "A small finish",
+          "bodyZh": "停一下，给刚完成的部分一个微笑。",
+          "bodyEn": "Pause and smile at the part you have finished."
+        },
+        {
+          "titleZh": "不太满意",
+          "titleEn": "Not quite satisfied",
+          "bodyZh": "先看看已经变好的地方，再决定下一步。",
+          "bodyEn": "Notice what has improved before deciding what comes next."
+        },
+        {
+          "titleZh": "朋友有进展",
+          "titleEn": "A friend's good news",
+          "bodyZh": "把那句真心的夸奖说出来。",
+          "bodyEn": "Say the kind thing you really mean."
+        }
+      ],
+      "traitsZh": [
+        "开朗",
+        "热情",
+        "细心"
+      ],
+      "traitsEn": [
+        "Cheerful",
+        "Warm",
+        "Attentive"
+      ],
+      "matchZh": "适合记录小成果、分享好消息，或想让桌角明亮一点的你。",
+      "matchEn": "For noticing little wins, sharing good news, and a brighter desk corner."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/bloomble/spritesheet.webp",
+    "previewPath": "/pets/bloomble/preview.webp",
+    "manifestPath": "/pets/bloomble/pet.json",
+    "downloadPath": "/downloads/bloomble.zip",
+    "detailPath": "/api/v1/pets/bloomble.json"
+  }
+}

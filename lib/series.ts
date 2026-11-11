@@ -623,24 +623,231 @@ const DESK_CORNER_MEMBERS = [
       en: "Mendmoth folds gray-blue wings into a small blanket, leaving the warm-yellow patch on its left wing visible. It gives itself a gentle pat, too.",
     },
   },
+  {
+    petId: "dewbert",
+    name: {
+      zh: "露团",
+      en: "Dewbert",
+    },
+    zodiac: {
+      zh: "露珠团子",
+      en: "Dewdrop Companion",
+    },
+    role: {
+      zh: "清晨的小呼吸",
+      en: "A Fresh Little Breath",
+    },
+    specialty: {
+      zh: "先放松，再开始",
+      en: "A calm breath before you begin",
+    },
+    vignette: {
+      zh: "露团把蓝蓝的身体轻轻撑开，再慢慢放松。它总给忙碌的开头，留一口从容的气。",
+      en: "Dewbert rises with a small breath, then softly settles. Every busy beginning gets a little room to breathe.",
+    },
+  },
+  {
+    petId: "spriggle",
+    name: {
+      zh: "芽团",
+      en: "Spriggle",
+    },
+    zodiac: {
+      zh: "嫩芽团子",
+      en: "Little Root Sprout",
+    },
+    role: {
+      zh: "小进步收藏家",
+      en: "Keeper of Small Steps",
+    },
+    specialty: {
+      zh: "每天长一点点",
+      en: "Grow a little every day",
+    },
+    vignette: {
+      zh: "芽团头上的两片叶子总比昨天舒展一点。它把每一次小小的坚持，都当作值得收藏的阳光。",
+      en: "Spriggle's two leaves open a little more each day. Every small effort becomes another bit of sunshine to keep.",
+    },
+  },
+  {
+    petId: "bloomble",
+    name: {
+      zh: "绒朵",
+      en: "Bloomble",
+    },
+    zodiac: {
+      zh: "绒绒雏菊",
+      en: "Plush Daisy",
+    },
+    role: {
+      zh: "小小庆祝家",
+      en: "Little Celebration Friend",
+    },
+    specialty: {
+      zh: "为小成果开心",
+      en: "Celebrate the little wins",
+    },
+    vignette: {
+      zh: "绒朵不用等到最后一刻才开心。看见一丁点进展，它的六片软花瓣就会轻轻晃起来。",
+      en: "Bloomble never waits for the very end to be happy. A little progress is enough to set its six soft petals swaying.",
+    },
+  },
+  {
+    petId: "quillip",
+    name: {
+      zh: "纸啾",
+      en: "Quillip",
+    },
+    zodiac: {
+      zh: "折纸小雀",
+      en: "Folded-Paper Finch",
+    },
+    role: {
+      zh: "轻快报喜员",
+      en: "Bearer of Little Good News",
+    },
+    specialty: {
+      zh: "让灵感轻轻落下",
+      en: "Give a new idea a place to land",
+    },
+    vignette: {
+      zh: "纸啾沿着纸边轻快小跑，把蓝色折翼收得整整齐齐。每次回来，它只带一个最想告诉你的新点子。",
+      en: "Quillip trots along the page with neatly folded blue wings. Each return brings one new idea it cannot wait to share.",
+    },
+  },
+  {
+    petId: "inklet",
+    name: {
+      zh: "墨点",
+      en: "Inklet",
+    },
+    zodiac: {
+      zh: "墨滴小章鱼",
+      en: "Inkdrop Octopod",
+    },
+    role: {
+      zh: "安静专注员",
+      en: "Quiet Focus Friend",
+    },
+    specialty: {
+      zh: "慢慢理清思绪",
+      en: "Let your thoughts settle into place",
+    },
+    vignette: {
+      zh: "墨点总先把四只小脚放稳，再认真看一眼。散开的思绪到了它身边，会慢慢找到同一个起点。",
+      en: "Inklet plants four little feet before taking a careful look. Scattered thoughts slowly find a shared beginning beside it.",
+    },
+  },
+  {
+    petId: "buttonbud",
+    name: {
+      zh: "扣扣",
+      en: "Buttonbud",
+    },
+    zodiac: {
+      zh: "纽扣小熊",
+      en: "Button-Coat Bear",
+    },
+    role: {
+      zh: "耐心重启员",
+      en: "Patient Fresh-Start Friend",
+    },
+    specialty: {
+      zh: "重新扣好第一步",
+      en: "Fasten the first step again",
+    },
+    vignette: {
+      zh: "扣扣会先拍拍橙色的纽扣外套，再试着站起来。重新出发的时候，它从来不催你快一点。",
+      en: "Buttonbud pats its orange button coat, then tries standing up again. It never hurries a fresh start.",
+    },
+  },
+  {
+    petId: "spoolie",
+    name: {
+      zh: "线眠",
+      en: "Spoolie",
+    },
+    zodiac: {
+      zh: "线轴睡鼠",
+      en: "Thread-Spool Dormouse",
+    },
+    role: {
+      zh: "思绪整理员",
+      en: "A Gentle Thought Untangler",
+    },
+    specialty: {
+      zh: "把纷乱慢慢理顺",
+      en: "Find the thread through a busy day",
+    },
+    vignette: {
+      zh: "线眠把淡紫色线圈收得稳稳的，竖起圆耳朵听你慢慢说。它相信，越是打结的时候，越不用使劲拉。",
+      en: "Spoolie keeps its lavender threads snug and listens with round ears. A tangled moment calls for patience, not a harder pull.",
+    },
+  },
+  {
+    petId: "crumbit",
+    name: {
+      zh: "酥角",
+      en: "Crumbit",
+    },
+    zodiac: {
+      zh: "黄油饼角",
+      en: "Butter-Biscuit Friend",
+    },
+    role: {
+      zh: "休息提醒员",
+      en: "Little Break-Time Friend",
+    },
+    specialty: {
+      zh: "给今天留点甜",
+      en: "Save a little sweetness for today",
+    },
+    vignette: {
+      zh: "酥角会在大家忙得忘了时间时，慢慢伸一个懒腰。它想给每个认真的日子，留一小块甜。",
+      en: "Crumbit stretches whenever the others lose track of time. Every earnest day deserves a little patch of sweetness.",
+    },
+  },
+  {
+    petId: "thimblet",
+    name: {
+      zh: "顶顶",
+      en: "Thimblet",
+    },
+    zodiac: {
+      zh: "顶针小龟",
+      en: "Thimble Turtle",
+    },
+    role: {
+      zh: "慢慢尝试员",
+      en: "A Brave Little Try",
+    },
+    specialty: {
+      zh: "带着安心向前走",
+      en: "Take a small brave step",
+    },
+    vignette: {
+      zh: "顶顶从薄荷色的小壳里探出圆脑袋，先看看，再走一步。它慢慢地告诉你：安心和勇敢可以同时带着。",
+      en: "Thimblet peeks from its mint shell, looks around, and takes one step. Reassurance and courage can come along together.",
+    },
+  },
 ] as const satisfies readonly SeriesMemberProfile[];
 
 export const PET_SERIES = [
   {
     id: "desk-corner-friends",
     name: { zh: "桌角小居民", en: "Desk Corner Friends" },
-    subtitle: { zh: "一盏灯、一间小屋、一条暖毯", en: "A light, a little home, a warm blanket" },
+    subtitle: { zh: "十二位小邻居，一个暖暖的桌角", en: "Twelve little neighbors, one cozy corner" },
     status: { zh: "新上线", en: "Just launched" },
     description: {
-      zh: "在桌角留个位置，让认真、好奇和温柔住进来。",
-      en: "Make a little room for earnest effort, curiosity, and kindness.",
+      zh: "从清晨的一口气到夜晚的一盏灯，总有一位伙伴懂你的步调。",
+      en: "From a morning breath to an evening light, find a companion who shares your pace.",
     },
     selectionTitle: { zh: "认识你的桌角邻居", en: "Meet your corner neighbors" },
     storyTitle: { zh: "桌角还亮着", en: "The Corner Is Still Lit" },
-    storyChapter: { zh: "第一章：给彼此留个位置", en: "Chapter One: Room for Each Other" },
+    storyChapter: { zh: "第二章：桌角多了九个位置", en: "Chapter Two: Nine More Places at the Desk" },
     story: {
-      zh: "折灯第一次亮起来时，只照到了桌边一小块空白。檐豆背着叶屋慢慢路过，发现那里刚好可以停一停；补补把翅膀收好，坐在灯光最柔和的地方。它们没有约定一定要完成什么，只约好在对方回来时留个位置。折灯让下一步看得清，檐豆把小小的新鲜事带回来，补补给不顺利的一天一个软着陆。认真、好奇和温柔，就这样住进了同一个桌角。",
-      en: "When Foldlume first lit up, it reached only a small blank space at the edge of the desk. Eavie passed with its leaf house and found just enough room to pause. Mendmoth folded its wings and settled where the glow was softest. They made no promise to finish everything; they only promised to leave a place for one another's return. Foldlume makes the next step visible, Eavie brings back little discoveries, and Mendmoth gives a difficult day somewhere soft to land. Earnest effort, curiosity, and kindness now share the same corner.",
+      zh: "折灯第一次亮起来时，只照到了桌边一小块空白。檐豆背着叶屋慢慢路过，发现那里刚好可以停一停；补补把翅膀收好，坐在灯光最柔和的地方。它们没有约定一定要完成什么，只约好在对方回来时留个位置。折灯让下一步看得清，檐豆把小小的新鲜事带回来，补补给不顺利的一天一个软着陆。后来，桌角又多了九个位置。露团带来清晨的一口气，芽团记住每天的小进步，绒朵为刚完成的一点点摇起花瓣。纸啾送来新点子，墨点陪大家专心，扣扣守着重新开始的人。线眠慢慢理顺纷乱，酥角留出休息的空隙，顶顶陪朋友试着迈向陌生的地方。十二位小居民，不必拥有同一种节奏，也能把每一天陪得暖暖的。",
+      en: "When Foldlume first lit up, it reached only a small blank space at the edge of the desk. Eavie passed with its leaf house and found just enough room to pause. Mendmoth folded its wings and settled where the glow was softest. They made no promise to finish everything; they only promised to leave a place for one another's return. Foldlume makes the next step visible, Eavie brings back little discoveries, and Mendmoth gives a difficult day somewhere soft to land. Nine more places appeared in the corner. Dewbert brought a morning breath, Spriggle noticed small steps, and Bloomble celebrated each little finish. Quillip delivered fresh ideas, Inklet made room for focus, and Buttonbud kept company with fresh starts. Spoolie untangled busy thoughts, Crumbit saved time for rest, and Thimblet accompanied the first brave step into somewhere unfamiliar. Twelve neighbors can share a warm day without moving at the same pace.",
     },
     members: DESK_CORNER_MEMBERS,
   },

@@ -22,7 +22,10 @@ const desktopWorkAtlasHashes = {
   "desk-debug-salamander-huohua": "6eb908da023781a505a102a7749062fa85c55625150245f56597b75be7b4b317",
 };
 
-const deskCornerIds = ["foldlume", "eavie", "mendmoth"];
+const deskCornerIds = [
+  "foldlume", "eavie", "mendmoth", "dewbert", "spriggle", "bloomble",
+  "quillip", "inklet", "buttonbud", "spoolie", "crumbit", "thimblet",
+];
 
 const expectedIds = [
   "star-armor-tuantuan",
@@ -300,12 +303,21 @@ test("publishes the accepted desktop work revisions with unmodified idle preview
   }
 });
 
-test("publishes three distinct desk corner friends with complete v2 motion and exact idle previews", async () => {
+test("publishes twelve distinct desk corner friends with complete v2 motion and exact idle previews", async () => {
   const { PETS, ANIMATIONS } = await loadPetModule();
   const expected = [
     { id: "foldlume", zh: "折灯", en: "Foldlume", kind: "折纸灯精灵", needs: ["start", "steady", "comfort"] },
     { id: "eavie", zh: "檐豆", en: "Eavie", kind: "叶屋蜗牛", needs: ["create", "start", "comfort"] },
     { id: "mendmoth", zh: "补补", en: "Mendmoth", kind: "暖毯蛾", needs: ["comfort", "steady"] },
+    { id: "dewbert", zh: "露团", en: "Dewbert", kind: "露珠团子", needs: ["comfort", "start"] },
+    { id: "spriggle", zh: "芽团", en: "Spriggle", kind: "嫩芽团子", needs: ["steady", "start"] },
+    { id: "bloomble", zh: "绒朵", en: "Bloomble", kind: "绒绒雏菊", needs: ["create", "comfort"] },
+    { id: "quillip", zh: "纸啾", en: "Quillip", kind: "折纸小雀", needs: ["create", "start"] },
+    { id: "inklet", zh: "墨点", en: "Inklet", kind: "墨滴小章鱼", needs: ["solve", "steady"] },
+    { id: "buttonbud", zh: "扣扣", en: "Buttonbud", kind: "纽扣小熊", needs: ["start", "comfort"] },
+    { id: "spoolie", zh: "线眠", en: "Spoolie", kind: "线轴睡鼠", needs: ["solve", "steady", "comfort"] },
+    { id: "crumbit", zh: "酥角", en: "Crumbit", kind: "黄油饼角", needs: ["comfort", "steady"] },
+    { id: "thimblet", zh: "顶顶", en: "Thimblet", kind: "顶针小龟", needs: ["start", "comfort", "steady"] },
   ];
   assert.deepEqual(
     PETS.filter((pet) => pet.category === "desk-corner").map((pet) => pet.id),
@@ -392,12 +404,18 @@ test("preserves the legacy pet release namespace and rejects unknown release ide
 
 test("requires an explicit new asset commit for desk corner pet downloads", async () => {
   const releaseModule = await loadPetReleaseModule();
+  const originalCornerCommit = "e5f86f8ac08565eb40d4b216bd261f816eb0cc89";
   for (const id of deskCornerIds) {
     const release = releaseModule.getPetRelease(id);
     assert.ok(release, `${id} needs its final archive metadata before publication`);
     assert.equal(typeof release.releaseCommit, "string", `${id} must explicitly identify its asset commit`);
     assert.match(release.releaseCommit, /^[0-9a-f]{40}$/);
     assert.notEqual(release.releaseCommit, releaseModule.PET_RELEASE_COMMIT, `${id} did not exist in the legacy release`);
+    if (["foldlume", "eavie", "mendmoth"].includes(id)) {
+      assert.equal(release.releaseCommit, originalCornerCommit, `${id} must keep its published asset namespace`);
+    } else {
+      assert.notEqual(release.releaseCommit, originalCornerCommit, `${id} must point to its own expansion assets`);
+    }
     assert.equal(releaseModule.getPetReleaseCommit(id), release.releaseCommit);
     assert.equal(releaseModule.getPetPackageUrl(id), `https://aipetsagent.com/downloads/${release.releaseCommit}/${id}.zip`);
     for (const language of ["zh", "en"]) {
@@ -638,6 +656,10 @@ test("serves each new pet only within its own release namespace", async () => {
     assert.equal(sha256(new Uint8Array(await response.arrayBuffer())), release.sha256);
     for (const wrongUrl of [
       validUrl.replace(release.releaseCommit, releaseModule.PET_RELEASE_COMMIT),
+      validUrl.replace(
+        release.releaseCommit,
+        releaseModule.getPetReleaseCommit(["foldlume", "eavie", "mendmoth"].includes(id) ? "dewbert" : "foldlume"),
+      ),
       validUrl.replace(release.releaseCommit, "0000000000000000000000000000000000000000"),
       validUrl.replace(`${id}.zip`, "aries-ramcrest-duck.zip"),
       validUrl.replace(`${id}.zip`, "hatch-pet.zip"),

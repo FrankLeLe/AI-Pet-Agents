@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "spoolie",
+    "category": "desk-corner",
+    "zodiacOrder": null,
+    "needs": [
+      "solve",
+      "steady",
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "线眠",
+      "en": "Spoolie"
+    },
+    "badge": "NEIGHBOR 10",
+    "accent": "#8c78aa",
+    "softAccent": "#eee8f5",
+    "status": "published",
+    "tagline": {
+      "zh": "别急着拉紧，慢慢找到线头。",
+      "en": "No need to pull harder. Find the beginning gently."
+    },
+    "description": {
+      "zh": "先理清一小段，其他的可以慢慢来。",
+      "en": "Untangle one little part. The rest can follow."
+    },
+    "personalityTags": [
+      {
+        "zh": "细致",
+        "en": "Careful"
+      },
+      {
+        "zh": "耐心",
+        "en": "Patient"
+      },
+      {
+        "zh": "会倾听",
+        "en": "A good listener"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "线轴睡鼠",
+      "zodiacEn": "Thread-Spool Dormouse",
+      "roleZh": "思绪整理员",
+      "roleEn": "A Gentle Thought Untangler",
+      "promiseZh": "别急着拉紧，慢慢找到线头。",
+      "promiseEn": "No need to pull harder. Find the beginning gently.",
+      "storyTitleZh": "没有用力拉的那个结",
+      "storyTitleEn": "The Knot That Needed Patience",
+      "storyZh": "线眠身上的淡紫色线圈一层挨着一层，像把安静整齐地穿在了身上。它小时候见到打结的线就急着拉，结果越拉越紧。后来酥角请它停下来休息，墨点帮它找出最外面的一段，那个结才慢慢松开。线眠记住了这个办法：先看清哪里连着哪里，再轻轻动一下。现在桌角有谁被纷乱的小事困住，它就把耳朵放低，耐心听完。事情未必马上变少，但一旦找到线头，下一步就不再藏得那么深。它会把刚找到的线头轻轻按住，等朋友准备好了，再一起往前走。",
+      "storyEn": "Soft lavender thread wraps around Spoolie's body in quiet, tidy layers. It once pulled at every knot it found, only making them tighter. Crumbit invited it to rest while Inklet helped find the outermost strand. The knot slowly loosened. Spoolie learned to see what connects to what before moving anything. Now it listens patiently whenever a neighbor feels tangled in little tasks. There may still be plenty to do, but finding the beginning makes the next step easier to see. It holds the newly found thread gently until its friend is ready to follow it.",
+      "comfortZh": "先理清一小段，其他的可以慢慢来。",
+      "comfortEn": "Untangle one little part. The rest can follow.",
+      "moments": [
+        {
+          "titleZh": "事情太多",
+          "titleEn": "Too much at once",
+          "bodyZh": "先把事情写下来，让它们各有一个位置。",
+          "bodyEn": "Write things down and give each one its own place."
+        },
+        {
+          "titleZh": "不知道从哪开始",
+          "titleEn": "Finding a beginning",
+          "bodyZh": "挑最容易理清的一小段先动手。",
+          "bodyEn": "Begin with the smallest part that feels clear."
+        },
+        {
+          "titleZh": "终于顺了",
+          "titleEn": "Finding a rhythm",
+          "bodyZh": "记住这次的线头，下次就容易找到了。",
+          "bodyEn": "Keep the starting point so it is easier to find next time."
+        }
+      ],
+      "traitsZh": [
+        "细致",
+        "耐心",
+        "会倾听"
+      ],
+      "traitsEn": [
+        "Careful",
+        "Patient",
+        "A good listener"
+      ],
+      "matchZh": "适合整理待办、收拢思绪，或喜欢安静陪伴的你。",
+      "matchEn": "For arranging little tasks, gathering your thoughts, and quiet company."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/spoolie/spritesheet.webp",
+    "previewPath": "/pets/spoolie/preview.webp",
+    "manifestPath": "/pets/spoolie/pet.json",
+    "downloadPath": "/downloads/spoolie.zip",
+    "detailPath": "/api/v1/pets/spoolie.json"
+  }
+}

@@ -7,6 +7,15 @@ const deskCornerPets = {
   foldlume: { zh: "折灯", en: "Foldlume" },
   eavie: { zh: "檐豆", en: "Eavie" },
   mendmoth: { zh: "补补", en: "Mendmoth" },
+  dewbert: { zh: "露团", en: "Dewbert" },
+  spriggle: { zh: "芽团", en: "Spriggle" },
+  bloomble: { zh: "绒朵", en: "Bloomble" },
+  quillip: { zh: "纸啾", en: "Quillip" },
+  inklet: { zh: "墨点", en: "Inklet" },
+  buttonbud: { zh: "扣扣", en: "Buttonbud" },
+  spoolie: { zh: "线眠", en: "Spoolie" },
+  crumbit: { zh: "酥角", en: "Crumbit" },
+  thimblet: { zh: "顶顶", en: "Thimblet" },
 };
 
 const desktopWorkPets = {
@@ -230,8 +239,8 @@ test("features the desk corner friends and provides a complete bilingual adoptio
       const [detail, install] = await Promise.all([detailResponse.text(), installResponse.text()]);
       assert.ok(detail.includes(names[language]));
       assert.ok(detail.includes(`href="/series/desk-corner-friends?lang=${language}"`));
-      for (const siblingId of Object.keys(deskCornerPets).filter((other) => other !== id)) {
-        assert.ok(detail.includes(`href="/pets/${siblingId}?lang=${language}"`), `${id} needs its two original companions`);
+      for (const siblingId of Object.keys(deskCornerPets).filter((other) => other !== id).slice(0, 3)) {
+        assert.ok(detail.includes(`href="/pets/${siblingId}?lang=${language}"`), `${id} needs links to three neighbors`);
       }
       assert.ok(install.includes(names[language]));
       assert.ok(install.includes(`/downloads/${id}.zip`));
@@ -665,7 +674,7 @@ test("leaves HTTPS redirects to the edge", async () => {
 
 test("localizes metadata and canonical URLs for every pet installation page", async () => {
   const catalog = JSON.parse(await readFile(new URL("../public/api/v1/catalog.json", import.meta.url), "utf8"));
-  assert.equal(catalog.pets.length, 40);
+  assert.equal(catalog.pets.length, 49);
 
   for (const pet of catalog.pets) {
     for (const language of ["zh", "en"]) {
@@ -850,7 +859,7 @@ test("removes all temporary starter preview infrastructure", async () => {
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
 });
 
-test("ships forty valid v2 pet packages and their downloads", async () => {
+test("ships forty-nine valid v2 pet packages and their downloads", async () => {
   const expected = [
     "star-armor-tuantuan",
     "aries-ramcrest-duck",
@@ -904,7 +913,7 @@ test("ships forty valid v2 pet packages and their downloads", async () => {
   );
   const socialCard = await stat(new URL("../public/og-series.png", import.meta.url));
 
-  assert.equal(catalog.pets.length, 40);
+  assert.equal(catalog.pets.length, 49);
   assert.equal(catalog.format.spriteVersionNumber, 2);
   assert.ok(skillArchive.size > 50_000);
   assert.ok(socialCard.size > 500_000);

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "inklet",
+    "category": "desk-corner",
+    "zodiacOrder": null,
+    "needs": [
+      "solve",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "墨点",
+      "en": "Inklet"
+    },
+    "badge": "NEIGHBOR 08",
+    "accent": "#555b93",
+    "softAccent": "#e7e7f2",
+    "status": "published",
+    "tagline": {
+      "zh": "先落稳一个点，再慢慢连成线。",
+      "en": "Let one thought settle before joining the next."
+    },
+    "description": {
+      "zh": "不必同时想清所有事，眼前这一点就够了。",
+      "en": "You can focus on this one thing for now."
+    },
+    "personalityTags": [
+      {
+        "zh": "沉静",
+        "en": "Calm"
+      },
+      {
+        "zh": "专注",
+        "en": "Focused"
+      },
+      {
+        "zh": "有条理",
+        "en": "Thoughtful"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "墨滴小章鱼",
+      "zodiacEn": "Inkdrop Octopod",
+      "roleZh": "安静专注员",
+      "roleEn": "Quiet Focus Friend",
+      "promiseZh": "先落稳一个点，再慢慢连成线。",
+      "promiseEn": "Let one thought settle before joining the next.",
+      "storyTitleZh": "安静落稳的第一个点",
+      "storyTitleEn": "The First Quiet Point",
+      "storyZh": "墨点不爱抢着说话。它把四只短短的脚稳稳放好，等四周的声音慢慢落下，才开始认真看眼前的事。有一次，纸啾带来一串互相打架的新想法，线眠也找不到该从哪里理起。墨点想了想，只抬起一只小脚，指向大家都在意的同一个问题。原来先落稳一个点，散开的想法就有了可以靠近的地方。它没有让桌角变得沉闷，反而替热闹留出了一块清楚的空白。从那以后，朋友们需要专心时，总愿意在墨点旁边坐一会儿。",
+      "storyEn": "Inklet plants its four short feet and lets the surrounding noise settle before looking closely. Once, Quillip brought a tangle of competing ideas that even Spoolie could not untangle. Inklet lifted one little foot toward the question everyone cared about. A single steady point gave the scattered thoughts somewhere to meet. The desk did not become less lively; it gained a clear space inside the bustle. Friends now like to sit beside Inklet whenever they need a little focus.",
+      "comfortZh": "不必同时想清所有事，眼前这一点就够了。",
+      "comfortEn": "You can focus on this one thing for now.",
+      "moments": [
+        {
+          "titleZh": "思绪散开",
+          "titleEn": "Scattered thoughts",
+          "bodyZh": "只写下眼前最想弄明白的一个问题。",
+          "bodyEn": "Write down the one question you most want to understand."
+        },
+        {
+          "titleZh": "容易分心",
+          "titleEn": "A wandering mind",
+          "bodyZh": "把别的念头暂时收好，先陪这一件事坐一会儿。",
+          "bodyEn": "Keep other thoughts for later and sit with this one for a while."
+        },
+        {
+          "titleZh": "终于明白",
+          "titleEn": "A clearer thought",
+          "bodyZh": "留下那句最简单的解释，方便下次回来。",
+          "bodyEn": "Keep the simplest explanation for your next visit."
+        }
+      ],
+      "traitsZh": [
+        "沉静",
+        "专注",
+        "有条理"
+      ],
+      "traitsEn": [
+        "Calm",
+        "Focused",
+        "Thoughtful"
+      ],
+      "matchZh": "适合安静思考、整理疑问，或需要一点专注陪伴的你。",
+      "matchEn": "For quiet thinking, sorting out questions, and a little company while you focus."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/inklet/spritesheet.webp",
+    "previewPath": "/pets/inklet/preview.webp",
+    "manifestPath": "/pets/inklet/pet.json",
+    "downloadPath": "/downloads/inklet.zip",
+    "detailPath": "/api/v1/pets/inklet.json"
+  }
+}

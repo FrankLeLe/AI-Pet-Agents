@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "spriggle",
+    "category": "desk-corner",
+    "zodiacOrder": null,
+    "needs": [
+      "steady",
+      "start"
+    ],
+    "displayName": {
+      "zh": "芽团",
+      "en": "Spriggle"
+    },
+    "badge": "NEIGHBOR 05",
+    "accent": "#64854f",
+    "softAccent": "#e9efd9",
+    "status": "published",
+    "tagline": {
+      "zh": "今天长一点点，也算好好向前。",
+      "en": "A little growth today is still a step forward."
+    },
+    "description": {
+      "zh": "暂时看不见变化，也可以继续相信自己的积累。",
+      "en": "Small changes can be growing before you notice them."
+    },
+    "personalityTags": [
+      {
+        "zh": "耐心",
+        "en": "Patient"
+      },
+      {
+        "zh": "乐观",
+        "en": "Hopeful"
+      },
+      {
+        "zh": "踏实",
+        "en": "Steady"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "嫩芽团子",
+      "zodiacEn": "Little Root Sprout",
+      "roleZh": "小进步收藏家",
+      "roleEn": "Keeper of Small Steps",
+      "promiseZh": "今天长一点点，也算好好向前。",
+      "promiseEn": "A little growth today is still a step forward.",
+      "storyTitleZh": "两片叶子记得的事",
+      "storyTitleEn": "What Two Leaves Remember",
+      "storyZh": "芽团每天都会抬头看看自己的两片叶子。它曾经盼着一觉醒来就能长成遮住整张桌子的大树，结果等了许久，变化小得几乎看不见。线眠陪它在纸边留下一道小小的记号，过几天再回来看看。原来叶尖已经悄悄越过那里。芽团高兴得晃了好一会儿，从此不再盯着遥远的树冠，而是认真迎接今天能吸收的一点阳光。它也会把这份耐心借给桌边的朋友：慢慢做，正在长大的事情不会因为暂时看不见，就停止生长。",
+      "storyEn": "Spriggle used to hope its two leaves would become a great tree overnight. For days the change seemed too small to see. Spoolie helped it mark a tiny line beside the desk. When they returned, the leaf tips had quietly grown past it. Spriggle swayed with delight. Now it welcomes whatever sunshine today offers, rather than watching a distant treetop. It shares that patience with its neighbors: something can be growing even before the change becomes easy to see.",
+      "comfortZh": "暂时看不见变化，也可以继续相信自己的积累。",
+      "comfortEn": "Small changes can be growing before you notice them.",
+      "moments": [
+        {
+          "titleZh": "进展很小",
+          "titleEn": "A small step",
+          "bodyZh": "把今天做过的一件小事记下来。",
+          "bodyEn": "Keep a note of one small thing you did today."
+        },
+        {
+          "titleZh": "容易着急",
+          "titleEn": "Feeling impatient",
+          "bodyZh": "只和昨天的自己比一比，给成长一点时间。",
+          "bodyEn": "Look back at yesterday and give growth a little time."
+        },
+        {
+          "titleZh": "想养成习惯",
+          "titleEn": "A new habit",
+          "bodyZh": "给它留一个固定的小位置，明天再来照顾。",
+          "bodyEn": "Give it a small place in your day and return tomorrow."
+        }
+      ],
+      "traitsZh": [
+        "耐心",
+        "乐观",
+        "踏实"
+      ],
+      "traitsEn": [
+        "Patient",
+        "Hopeful",
+        "Steady"
+      ],
+      "matchZh": "适合慢慢学习、养成习惯，或需要看见小进步的你。",
+      "matchEn": "For steady learning, little habits, and noticing small steps forward."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/spriggle/spritesheet.webp",
+    "previewPath": "/pets/spriggle/preview.webp",
+    "manifestPath": "/pets/spriggle/pet.json",
+    "downloadPath": "/downloads/spriggle.zip",
+    "detailPath": "/api/v1/pets/spriggle.json"
+  }
+}

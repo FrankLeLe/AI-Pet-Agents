@@ -8,6 +8,51 @@ type PetRelease = {
 };
 
 export const PET_RELEASES: Readonly<Record<string, PetRelease>> = {
+  dewbert: {
+    sizeBytes: 1_127_611,
+    sha256: "1b3f796830534eae9a3a39511d939811242e350d465994d1e39427026b9aac1b",
+    releaseCommit: "3f88605eddbf066bf38041cf258ddc18cf54d00f",
+  },
+  spriggle: {
+    sizeBytes: 1_438_167,
+    sha256: "44dd057907789e256dc71ddaaf1c755622184761aee0c488a728ee98a25ff6f1",
+    releaseCommit: "3f88605eddbf066bf38041cf258ddc18cf54d00f",
+  },
+  bloomble: {
+    sizeBytes: 1_509_244,
+    sha256: "2c8ec06ba479beb66e4b9d1ffb458ded869fa7edf56baad2eb136c4784de0883",
+    releaseCommit: "3f88605eddbf066bf38041cf258ddc18cf54d00f",
+  },
+  quillip: {
+    sizeBytes: 1_881_091,
+    sha256: "a7fc0a6ad4d0d98ad9ec61e71a7c60e1931ab44c240da67260c6c63677e58ff5",
+    releaseCommit: "3f88605eddbf066bf38041cf258ddc18cf54d00f",
+  },
+  inklet: {
+    sizeBytes: 1_749_380,
+    sha256: "46d75d6fe17c3bbe7f331daacc4c840e4aaae01ec04481499098f90396c29f6c",
+    releaseCommit: "3f88605eddbf066bf38041cf258ddc18cf54d00f",
+  },
+  buttonbud: {
+    sizeBytes: 1_708_735,
+    sha256: "5d94dac8713685c39b0f082fa31ceeb269ea342a279fb781983a38bf600dd1bd",
+    releaseCommit: "3f88605eddbf066bf38041cf258ddc18cf54d00f",
+  },
+  spoolie: {
+    sizeBytes: 1_539_461,
+    sha256: "19abbce04120853a8d2a5926cea4d3286dc1b48b7949583bb476668f3ad95064",
+    releaseCommit: "3f88605eddbf066bf38041cf258ddc18cf54d00f",
+  },
+  crumbit: {
+    sizeBytes: 1_707_742,
+    sha256: "0d1436e1fdfe355db1879bce1900bbe69e1243cbdb3e0b900748fec6e3e15bd8",
+    releaseCommit: "3f88605eddbf066bf38041cf258ddc18cf54d00f",
+  },
+  thimblet: {
+    sizeBytes: 1_817_436,
+    sha256: "834ae76027d8f1ba248253628da96c217f6b7249af890fb3380ea9d02b8a9c1d",
+    releaseCommit: "3f88605eddbf066bf38041cf258ddc18cf54d00f",
+  },
   foldlume: {
     sizeBytes: 1_976_324,
     sha256: "541de43ba9c7831642a6a0bcc6eb271f6ce40f48171c43251251707826a6dd75",

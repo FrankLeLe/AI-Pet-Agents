@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "crumbit",
+    "category": "desk-corner",
+    "zodiacOrder": null,
+    "needs": [
+      "comfort",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "酥角",
+      "en": "Crumbit"
+    },
+    "badge": "NEIGHBOR 11",
+    "accent": "#b68642",
+    "softAccent": "#f8e9ca",
+    "status": "published",
+    "tagline": {
+      "zh": "再忙的今天，也给自己留一点甜。",
+      "en": "Even a busy day can hold a little sweetness."
+    },
+    "description": {
+      "zh": "休息一会儿，也是今天值得做的事。",
+      "en": "A little rest belongs in today's plans, too."
+    },
+    "personalityTags": [
+      {
+        "zh": "松弛",
+        "en": "Easygoing"
+      },
+      {
+        "zh": "体贴",
+        "en": "Considerate"
+      },
+      {
+        "zh": "暖心",
+        "en": "Warm-hearted"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "黄油饼角",
+      "zodiacEn": "Butter-Biscuit Friend",
+      "roleZh": "休息提醒员",
+      "roleEn": "Little Break-Time Friend",
+      "promiseZh": "再忙的今天，也给自己留一点甜。",
+      "promiseEn": "Even a busy day can hold a little sweetness.",
+      "storyTitleZh": "留给自己的那一小会儿",
+      "storyTitleEn": "A Little Time Kept for Yourself",
+      "storyZh": "酥角有一张温暖的三角脸，走路时两只可可色的小脚一下一下地挪。它最擅长发现大家忘记休息的时刻。某天，芽团忙着长高，折灯忙着照路，连绒朵都忘了坐下来。酥角于是靠在桌角，安静伸了个懒腰。朋友们一个接一个停下，才发现窗外的光已经换了颜色。那一小会儿没有做出什么成果，却让大家重新有了说笑的力气。酥角从此给每个忙碌的日子留一个小空隙，让好好休息也成为值得认真对待的事。它把休息看成一天的一部分，也认真记得朋友最喜欢的那一点甜。",
+      "storyEn": "Crumbit walks on two little cocoa-colored feet beneath a warm triangular face. It is very good at noticing when everyone has forgotten to rest. One day Spriggle was busy growing, Foldlume was lighting the way, and even Bloomble had not sat down. Crumbit settled in the corner and stretched. One by one, the others paused and noticed that the light outside had changed. Nothing was finished in that moment, yet everyone found a little more energy to laugh. Crumbit now keeps a small space for rest in every busy day. A little rest belongs in the day, along with the small sweetness each friend likes best.",
+      "comfortZh": "休息一会儿，也是今天值得做的事。",
+      "comfortEn": "A little rest belongs in today's plans, too.",
+      "moments": [
+        {
+          "titleZh": "坐得太久",
+          "titleEn": "A long stretch at the desk",
+          "bodyZh": "站起来动一动，看看窗外的光。",
+          "bodyEn": "Stand, stretch, and notice the light outside."
+        },
+        {
+          "titleZh": "有点疲惫",
+          "titleEn": "Feeling tired",
+          "bodyZh": "给自己留一小段不赶路的时间。",
+          "bodyEn": "Keep a little time without needing to get anywhere."
+        },
+        {
+          "titleZh": "准备收工",
+          "titleEn": "Winding down",
+          "bodyZh": "看一眼今天已经做好的事，再好好休息。",
+          "bodyEn": "Notice what you finished today, then let yourself rest."
+        }
+      ],
+      "traitsZh": [
+        "松弛",
+        "体贴",
+        "暖心"
+      ],
+      "traitsEn": [
+        "Easygoing",
+        "Considerate",
+        "Warm-hearted"
+      ],
+      "matchZh": "适合忙碌中的小休息、傍晚收尾，或想把步调放松一点的你。",
+      "matchEn": "For a short break, an easy evening, and a gentler pace."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/crumbit/spritesheet.webp",
+    "previewPath": "/pets/crumbit/preview.webp",
+    "manifestPath": "/pets/crumbit/pet.json",
+    "downloadPath": "/downloads/crumbit.zip",
+    "detailPath": "/api/v1/pets/crumbit.json"
+  }
+}

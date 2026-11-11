@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "thimblet",
+    "category": "desk-corner",
+    "zodiacOrder": null,
+    "needs": [
+      "start",
+      "comfort",
+      "steady"
+    ],
+    "displayName": {
+      "zh": "顶顶",
+      "en": "Thimblet"
+    },
+    "badge": "NEIGHBOR 12",
+    "accent": "#4e8a7e",
+    "softAccent": "#dcefe8",
+    "status": "published",
+    "tagline": {
+      "zh": "带着一点安心，慢慢试着往前。",
+      "en": "Carry a little reassurance into one brave step."
+    },
+    "description": {
+      "zh": "走得慢一点，也一样是在向前。",
+      "en": "A slow step is still a step forward."
+    },
+    "personalityTags": [
+      {
+        "zh": "谨慎",
+        "en": "Careful"
+      },
+      {
+        "zh": "勇敢",
+        "en": "Brave"
+      },
+      {
+        "zh": "温和",
+        "en": "Gentle"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "顶针小龟",
+      "zodiacEn": "Thimble Turtle",
+      "roleZh": "慢慢尝试员",
+      "roleEn": "A Brave Little Try",
+      "promiseZh": "带着一点安心，慢慢试着往前。",
+      "promiseEn": "Carry a little reassurance into one brave step.",
+      "storyTitleZh": "壳外还有一小步",
+      "storyTitleEn": "One Small Step Beyond the Shell",
+      "storyZh": "顶顶背着一只薄荷色的小顶针壳，上面有圆圆的浅窝，摸起来像安静的雨点。面对不熟悉的事，它总先缩一缩脖子，再悄悄探出来。檐豆第一次邀请它去纸边散步时，顶顶走得很慢，担心一转弯就找不到回去的方向。檐豆便陪它只走到第一道折痕，再一起回来。原来勇敢不一定要走很远。后来，顶顶也会陪扣扣重新开始，在每个陌生的小路口停一停，看看、想想，然后踏出可以承受的一步。它的壳一直在，前面的世界也一直在等。",
+      "storyEn": "Thimblet carries a mint-colored shell with soft round dimples like quiet raindrops. Faced with something unfamiliar, it tucks in its neck before peeking out again. When Eavie invited it for a walk, Thimblet worried it would lose the way home. They went only as far as the first paper crease and returned together. Being brave did not require going very far. Now Thimblet helps Buttonbud begin again, pausing at each unfamiliar corner before taking a manageable step. Its shell stays close, and the world remains ready to meet it.",
+      "comfortZh": "走得慢一点，也一样是在向前。",
+      "comfortEn": "A slow step is still a step forward.",
+      "moments": [
+        {
+          "titleZh": "有点害怕",
+          "titleEn": "A little unsure",
+          "bodyZh": "先看清眼前的一步，不必一下走到远处。",
+          "bodyEn": "Look at the step in front of you, without rushing further."
+        },
+        {
+          "titleZh": "第一次尝试",
+          "titleEn": "A first try",
+          "bodyZh": "挑一个容易停下来休息的小尝试。",
+          "bodyEn": "Choose a small try that leaves room to pause."
+        },
+        {
+          "titleZh": "比昨天勇敢",
+          "titleEn": "A little braver",
+          "bodyZh": "记住刚刚做到的事，下次带着这份安心出发。",
+          "bodyEn": "Remember what you managed and bring that reassurance next time."
+        }
+      ],
+      "traitsZh": [
+        "谨慎",
+        "勇敢",
+        "温和"
+      ],
+      "traitsEn": [
+        "Careful",
+        "Brave",
+        "Gentle"
+      ],
+      "matchZh": "适合尝试新事物、重新找回勇气，或想按自己速度前进的你。",
+      "matchEn": "For new experiences, finding courage again, and moving at your own pace."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/thimblet/spritesheet.webp",
+    "previewPath": "/pets/thimblet/preview.webp",
+    "manifestPath": "/pets/thimblet/pet.json",
+    "downloadPath": "/downloads/thimblet.zip",
+    "detailPath": "/api/v1/pets/thimblet.json"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-11",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "quillip",
+    "category": "desk-corner",
+    "zodiacOrder": null,
+    "needs": [
+      "create",
+      "start"
+    ],
+    "displayName": {
+      "zh": "纸啾",
+      "en": "Quillip"
+    },
+    "badge": "NEIGHBOR 07",
+    "accent": "#638da7",
+    "softAccent": "#e4edf3",
+    "status": "published",
+    "tagline": {
+      "zh": "让轻轻掠过的点子，有个落脚处。",
+      "en": "Give a passing idea somewhere to land."
+    },
+    "description": {
+      "zh": "先留下一个喜欢的点子，不必马上想完全部。",
+      "en": "Keep one idea you like. The rest can take its time."
+    },
+    "personalityTags": [
+      {
+        "zh": "轻快",
+        "en": "Light-footed"
+      },
+      {
+        "zh": "机灵",
+        "en": "Bright"
+      },
+      {
+        "zh": "爱分享",
+        "en": "Sharing"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "折纸小雀",
+      "zodiacEn": "Folded-Paper Finch",
+      "roleZh": "轻快报喜员",
+      "roleEn": "Bearer of Little Good News",
+      "promiseZh": "让轻轻掠过的点子，有个落脚处。",
+      "promiseEn": "Give a passing idea somewhere to land.",
+      "storyTitleZh": "落在纸边的好消息",
+      "storyTitleEn": "Good News at the Paper's Edge",
+      "storyZh": "纸啾最喜欢沿着纸边小跑，蓝色的折翼一收一放，像把沿途的新鲜事都装进了怀里。它从前总想一次送来很多点子，结果说得太快，自己也忘了最开始那一个。墨点请它先停在桌角，挑一件最想讲的事。纸啾歪头想了想，用小小的喙轻轻点向空白。一个点子终于有了停留的地方，其他的也不再急着挤进来。现在它仍然轻快，却学会一次带来一个好消息，让灵感落下以后，还有机会慢慢长大。有时一句还没想好的话，也值得拥有一张可以慢慢展开的小纸片。",
+      "storyEn": "Quillip trots along paper edges, opening and closing its blue folded wings as if gathering discoveries. It once tried to bring so many ideas at once that it forgot the first one. Inklet invited it to stop and choose the thought it most wanted to share. Quillip tilted its head and pointed its tiny beak toward a blank space. One idea finally had somewhere to land. It still moves lightly, but now brings one piece of good news at a time, leaving room for it to grow. Even an unfinished thought deserves a little paper on which it can slowly unfold.",
+      "comfortZh": "先留下一个喜欢的点子，不必马上想完全部。",
+      "comfortEn": "Keep one idea you like. The rest can take its time.",
+      "moments": [
+        {
+          "titleZh": "灵感闪过",
+          "titleEn": "A passing idea",
+          "bodyZh": "先留下一句话，给它一个可以回来的地方。",
+          "bodyEn": "Save a sentence so the idea has somewhere to return."
+        },
+        {
+          "titleZh": "点子太多",
+          "titleEn": "Too many ideas",
+          "bodyZh": "选最想尝试的那个，其他的先好好收着。",
+          "bodyEn": "Choose the one you want to try and keep the others nearby."
+        },
+        {
+          "titleZh": "有了好消息",
+          "titleEn": "Good news",
+          "bodyZh": "把小小的开心分享给在意的人。",
+          "bodyEn": "Share the little joy with someone you care about."
+        }
+      ],
+      "traitsZh": [
+        "轻快",
+        "机灵",
+        "爱分享"
+      ],
+      "traitsEn": [
+        "Light-footed",
+        "Bright",
+        "Sharing"
+      ],
+      "matchZh": "适合随手记灵感、开启新草稿，或喜欢分享小发现的你。",
+      "matchEn": "For catching ideas, opening fresh drafts, and sharing small discoveries."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/quillip/spritesheet.webp",
+    "previewPath": "/pets/quillip/preview.webp",
+    "manifestPath": "/pets/quillip/pet.json",
+    "downloadPath": "/downloads/quillip.zip",
+    "detailPath": "/api/v1/pets/quillip.json"
+  }
+}
