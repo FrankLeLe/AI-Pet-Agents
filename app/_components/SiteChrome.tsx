@@ -101,8 +101,8 @@ export function SiteFooter({ language }: SiteFooterProps) {
       <p>
         {t(
           language,
-          "© 2026 Codex Pets。角色与故事均为原创；无需登录即可浏览和下载。本项目独立制作，不代表 OpenAI 官方背书。",
-          "© 2026 Codex Pets. Characters and stories are original. Browse and download without an account. This independent project is not officially endorsed by OpenAI.",
+          "© 2026 Codex Pets。官方智能伙伴角色。",
+          "© 2026 Codex Pets. Official intelligent companion characters.",
         )}
       </p>
     </footer>
