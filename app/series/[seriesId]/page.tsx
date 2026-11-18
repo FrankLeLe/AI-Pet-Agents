@@ -69,7 +69,12 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
           <div className={styles.heroCopy}>
             <span className={styles.status}>{series.status[language]}</span>
             <p>{series.subtitle[language]}</p>
-            <h1 id="series-heading">{series.name[language]}</h1>
+            <h1 id="series-heading" className={captainRoster ? styles.captainTitle : undefined}
+              aria-label={captainRoster ? series.name[language] : undefined}>
+              {captainRoster
+                ? series.name[language].split(" · ").map((part) => <span key={part}>{part}</span>)
+                : series.name[language]}
+            </h1>
             <strong>{series.description[language]}</strong>
             {series.attribution ? <p className={styles.attribution}>{series.attribution[language]}</p> : null}
             <div className={styles.heroActions}>

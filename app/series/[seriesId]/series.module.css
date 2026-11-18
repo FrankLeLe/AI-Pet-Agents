@@ -451,6 +451,23 @@
     transition: none;
   }
 }
+.heroCopy h1.captainTitle {
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  font-size: clamp(2.2rem, 4.4vw, 4.15rem);
+  font-weight: 800;
+  line-height: 1.13;
+  letter-spacing: 0;
+}
+
+.captainTitle span {
+  display: block;
+  text-wrap: balance;
+}
+
+.captainTitle span + span {
+  margin-top: 0.14em;
+}
+
 .heroPets.captainPortraits {
   grid-template-columns: repeat(10, minmax(0, 1fr));
   align-content: center;
