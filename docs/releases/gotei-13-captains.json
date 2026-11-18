@@ -1,0 +1,435 @@
+{
+  "collection": "gotei-13-captains",
+  "date": "2026-11-19",
+  "pets": [
+    {
+      "id": "gotei-yamamoto",
+      "displayName": {
+        "zh": "山本元柳斋重国",
+        "en": "Genryusai Shigekuni Yamamoto"
+      },
+      "squad": 1,
+      "abilities": {
+        "transform": {
+          "sha256": "3530b087bb1e302788e78eabce166f74f882c4b6f0c9457e5b4ab69030f63c65",
+          "bytes": 774296,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "1b99e1ad9db536b8a0677c24522c56200520ada8fe560a4f6874a54b11f85c88",
+          "bytes": 1029160,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "1c1d4ad118dfae9da978e662fef2df2d4c71f4dbecfe8a338e8bd333241f1d6e",
+          "bytes": 121112,
+          "frames": 1
+        }
+      },
+      "atlasSha256": "5eb082440e5308630da3ff0656953f3c1fac93e23fe2404f39cbe4cf2947cd01",
+      "atlasBytes": 1723532,
+      "manifestSha256": "1f178c3cf542227794ebca34bed2c7cfc9273a56a188efe9dddb8d97f03e40e3",
+      "previewSha256": "9edbc43696fe5bb09e20c9e89db6ae9cd8bad235cfbf0ba7a521ed9bfdf7eed0",
+      "zipBytes": 1724141,
+      "zipSha256": "203928c56d616c75f9903ea910fdee774df2e80a5fb40cf7b2c45ef8a85b1bd1",
+      "frames": 73,
+      "spriteVersionNumber": 2
+    },
+    {
+      "id": "gotei-soi-fon",
+      "displayName": {
+        "zh": "碎蜂",
+        "en": "Soi Fon"
+      },
+      "squad": 2,
+      "abilities": {
+        "transform": {
+          "sha256": "5695a8b38e19940f4b0b7b75b9de569160747dee16bcc5f615209a31d88b2ad7",
+          "bytes": 600012,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "1fc8b6481b93b51bfdffd954c24d3e19f9b36832c8a8740ce4b97d7152e77415",
+          "bytes": 635120,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "4d0cf5392751f5dc295cd762db3853f77aa4273afab44ad2a4ec3eebf50c9540",
+          "bytes": 79994,
+          "frames": 1
+        }
+      },
+      "atlasSha256": "c26e0fd76693974b43ff832a73c44b6435b8d045d644640ec18f95fed322ab5b",
+      "atlasBytes": 1434764,
+      "manifestSha256": "6c219fcf75827cc623ac3a9dafb5c9b2ef31de7a8636794e129af84076144a83",
+      "previewSha256": "1b08c3cde2fffddaca66f468e8871492dbfc05bf26dc51761040189dcb61d758",
+      "zipBytes": 1435361,
+      "zipSha256": "0ba5436f144024f2addcb56452e6a0b4bfcb533e0c23f3360e63ec86c7892404",
+      "frames": 73,
+      "spriteVersionNumber": 2
+    },
+    {
+      "id": "gotei-gin",
+      "displayName": {
+        "zh": "市丸银",
+        "en": "Gin Ichimaru"
+      },
+      "squad": 3,
+      "abilities": {
+        "transform": {
+          "sha256": "c3f48ed3cee3beebaecfa6f4e68b771269e87c9cb6943f19d5618d334905a94e",
+          "bytes": 648972,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "a6c8dd37489446ee5f9602bff15412517696cf182a59437576b7cc91d53d4cf9",
+          "bytes": 744794,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "4389f61c1dba87c2a751f08705e0e766ff510337248ac5debeac546a743aa810",
+          "bytes": 95420,
+          "frames": 1
+        }
+      },
+      "atlasSha256": "6fa60269dcd0f34907db4ea96851f5c4d27902de9467aa3cda9e2aa19137c2ea",
+      "atlasBytes": 1370876,
+      "manifestSha256": "dbd10c402b84d1109174a88d50e14bd68406f422b9e90d6b2f5533e9b2bb2763",
+      "previewSha256": "79b0a32533e75b238ed66db2de856e3f6896a2ed576e19ce5bef9efa702d9a93",
+      "zipBytes": 1371419,
+      "zipSha256": "f50299c9c89a754f3bc9c112a813965809e4bd436373da617178aadce38c2633",
+      "frames": 73,
+      "spriteVersionNumber": 2
+    },
+    {
+      "id": "gotei-unohana",
+      "displayName": {
+        "zh": "卯之花烈",
+        "en": "Retsu Unohana"
+      },
+      "squad": 4,
+      "abilities": {
+        "transform": {
+          "sha256": "5804156d825e2cc8f8801112f36c06098babf3a5d9ae3666e07c12fd047c1ca3",
+          "bytes": 715334,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "b46794ab4ba1c6c33007a1d5bc03217c41aba6b718aa026be681119b3a170000",
+          "bytes": 796172,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "585d42b63c9fc33319307326e00b97eb5e81252e4f2f6c74a3c8dc79c84f2d9a",
+          "bytes": 90034,
+          "frames": 1
+        }
+      },
+      "atlasSha256": "e10cde2d234a425a5cc8e205415d60f09ff509bc1d3c7ba756dead8c4bf754f8",
+      "atlasBytes": 1331808,
+      "manifestSha256": "03f6329e236ed4874523d387c4dd45f89ce60571b6165a252436463bf528cb16",
+      "previewSha256": "171e83d6e646e4741fc920b03206438edc6a3d1ca00951ea42ec483a3e4fbcbc",
+      "zipBytes": 1332372,
+      "zipSha256": "53a75bf95903307e4e081307b6338c841aded1eb327d20f5f487f7674b5b85cd",
+      "frames": 73,
+      "spriteVersionNumber": 2
+    },
+    {
+      "id": "gotei-aizen",
+      "displayName": {
+        "zh": "蓝染惣右介",
+        "en": "Sosuke Aizen"
+      },
+      "squad": 5,
+      "abilities": {
+        "transform": {
+          "sha256": "b1747a46438ae75e83c5ace0fceb32820fde6cfb3a77db86a57fb4c59759911c",
+          "bytes": 840640,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "cb59c3a0d4ccaeff8f5c84f92835f990beba1d2e9c42145c34277d0b48c7da81",
+          "bytes": 1163944,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "c4d23d6135fd97ccc02d1a99b9c0dec20e006d44916487072d68db5838e1fa2c",
+          "bytes": 138824,
+          "frames": 1
+        }
+      },
+      "atlasSha256": "380650674cc28b70d785938a9bef1d30c449323cb983e9e3594ef67bd7614dea",
+      "atlasBytes": 1623406,
+      "manifestSha256": "0d10c3b80d05d3dea3b821cb8360ef4ac031b0c2a575eb85f6097d87cb071ddd",
+      "previewSha256": "bd20e964fb0fce624edc0eb46d8ff2f95c7156754af20e5666a0baed44c10e79",
+      "zipBytes": 1623989,
+      "zipSha256": "eb6f980a12f8ef3f064c22c5a331a40a90b74fb8e16441b755354b0c1db92cc0",
+      "frames": 73,
+      "spriteVersionNumber": 2
+    },
+    {
+      "id": "gotei-byakuya",
+      "displayName": {
+        "zh": "朽木白哉",
+        "en": "Byakuya Kuchiki"
+      },
+      "squad": 6,
+      "abilities": {
+        "transform": {
+          "sha256": "f75871bd4eb1bf0440d1d84c7eb10202c886478bf1a6f63fafe6a3bf605a3410",
+          "bytes": 965464,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "bda1103e1cb6383836550ade5c1abad6c50bd4c3cc64f17d93210e8be61bc3e7",
+          "bytes": 1312310,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "2e71039fc525ece0d5f412944f9b56ee551981f30036f09ac039949bcefa3fbf",
+          "bytes": 167656,
+          "frames": 1
+        }
+      },
+      "atlasSha256": "b42f53d27faf98a016a1843c216351fd892fcdf80c3e762f92f1130f63c5bd90",
+      "atlasBytes": 1828308,
+      "manifestSha256": "2c61d40e239c49fda8dfef619665abe6302905f4d24b8f6ffdb6afe5fa53b826",
+      "previewSha256": "94cc043fb0c40e2ab021cf50fc6c9508bd35cfcc863771132b9999812677927f",
+      "zipBytes": 1828891,
+      "zipSha256": "1b3aa0e37770b39bf77fe75b9747e25036adc395d4fa07f3b5372603348456a7",
+      "frames": 73,
+      "spriteVersionNumber": 2
+    },
+    {
+      "id": "gotei-komamura",
+      "displayName": {
+        "zh": "狛村左阵",
+        "en": "Sajin Komamura"
+      },
+      "squad": 7,
+      "abilities": {
+        "transform": {
+          "sha256": "540b813d8a63b6a676052d4f43bb119c898f5acf54af26843def3eb370add179",
+          "bytes": 996708,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "96e32645c8d8d5d2abbd8151d9f154ddd571b6a2c3fc258d4cafe26c29f43e57",
+          "bytes": 1308396,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "755803addcddde223308db135153ca82f3c57b13e2a2e750f0ffd636a8a8e867",
+          "bytes": 159988,
+          "frames": 1
+        }
+      },
+      "atlasSha256": "6d0ed32e05d867e0ed9b160fdbfa38261ab04566f3f3fcc31ce7c1e0284f0ce2",
+      "atlasBytes": 1927548,
+      "manifestSha256": "4ffe1aff099722fab5d03a7f54372a76973e23b4dc642d98c16fb4dc1d2cce1a",
+      "previewSha256": "37a354b1a1b8551627a40aff390200085b0724816dfe4e852eac0168235aa6d1",
+      "zipBytes": 1928137,
+      "zipSha256": "7c2aa6011bbf4e60366c1a751951a3a2a5972a8a07415a2bd23f8896d556e0fa",
+      "frames": 73,
+      "spriteVersionNumber": 2
+    },
+    {
+      "id": "gotei-shunsui",
+      "displayName": {
+        "zh": "京乐春水",
+        "en": "Shunsui Kyoraku"
+      },
+      "squad": 8,
+      "abilities": {
+        "transform": {
+          "sha256": "01c63609a35cd1d675d8bfb2fd3d76a02e3d0cacfd7561b11e45e1e515ba8f61",
+          "bytes": 923232,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "714d3530d36e36117cd2d261539af1a4cf31c0177ade1b5ba1c3e099e44efa80",
+          "bytes": 1282648,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "49fd78becfbf6b5eca671f1442c1ca3adf458cbddc69d1c74d4e79bad67d60ed",
+          "bytes": 157868,
+          "frames": 1
+        }
+      },
+      "atlasSha256": "ba6986b171c26a1488a9eadd15eedf36e6ee6ff51dd714e73ef224323bd2f17c",
+      "atlasBytes": 2182422,
+      "manifestSha256": "63e6ebea86daa1f90b59d70ea711af745447bfaff5fa387d9e33deb12606bf1e",
+      "previewSha256": "b03ba498407ed07bdf9af887bb3990bc79afcd83b22f528b65ab9e2e56455838",
+      "zipBytes": 2183013,
+      "zipSha256": "1b11aab3342a2125c2d728173af815b6d22327109a13b5e88d5852ea375f3249",
+      "frames": 73,
+      "spriteVersionNumber": 2
+    },
+    {
+      "id": "gotei-tosen",
+      "displayName": {
+        "zh": "东仙要",
+        "en": "Kaname Tosen"
+      },
+      "squad": 9,
+      "abilities": {
+        "transform": {
+          "sha256": "e5df7d1cc174a321607d0897e72c449d85041125b60d412d4813ee6ea9049ffc",
+          "bytes": 662648,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "b9e82b3f5b85de82289cea4b9432338bfecf635e3ca2b2731e95fe3ec2198ed2",
+          "bytes": 996014,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "c972531c25d44f1bd46a9d4de1394add88b405b8255162ed1ab1f8604771c8bc",
+          "bytes": 123114,
+          "frames": 1
+        }
+      },
+      "atlasSha256": "31711cc0a48ceed895d815c995ffa570c570341ef36d2c89c44d802f47378119",
+      "atlasBytes": 1416896,
+      "manifestSha256": "9bff27f35ac4cb05808bc01a310f95dd1bfffe5eed39f1dae2ffbb4b844ed817",
+      "previewSha256": "f7915f30d6a0f63b9c407701756cb4d6a10a58dff1a24969f5a4e233b9888562",
+      "zipBytes": 1417446,
+      "zipSha256": "d5714f77a204c54a2c94b98cc5b498c14d885826d0a09a8538de1c6f1ab6dbd9",
+      "frames": 73,
+      "spriteVersionNumber": 2
+    },
+    {
+      "id": "gotei-hitsugaya",
+      "displayName": {
+        "zh": "日番谷冬狮郎",
+        "en": "Toshiro Hitsugaya"
+      },
+      "squad": 10,
+      "abilities": {
+        "transform": {
+          "sha256": "51391e1d057f980880e13e3e7e1c2d80b19e07d512eaed1959d3d5c04045e90b",
+          "bytes": 632026,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "9c7d50e80a3772901ba46c1e038691c4853706f05e8c2bc9ae604f4d1a99ee8d",
+          "bytes": 1000826,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "73bf0b6974d4e2991a36ed6a4890bac17a20af6716d3bb4c2fa1da4104db2552",
+          "bytes": 118960,
+          "frames": 1
+        }
+      },
+      "atlasSha256": "6e6b8a0080766718e0b8a0b4e28f9a1faf2fbe59077884bcb2ac4b903abe8aa9",
+      "atlasBytes": 1372718,
+      "manifestSha256": "60c8f5d9a8aa9dd799b55fbbc4a6de6d0689d046fe8a0f66bb2dcbd16e1eb60e",
+      "previewSha256": "0c4eed724309244a1cfb6fcbf82ac1edbf6cdb0f0168b216706e405caed66a2f",
+      "zipBytes": 1373306,
+      "zipSha256": "2dbbe0bdd6167d5abbc9a4a4195672e8c43e09a8e9db794a28af1594f8716a1d",
+      "frames": 73,
+      "spriteVersionNumber": 2
+    },
+    {
+      "id": "gotei-kenpachi",
+      "displayName": {
+        "zh": "更木剑八",
+        "en": "Kenpachi Zaraki"
+      },
+      "squad": 11,
+      "abilities": {
+        "transform": {
+          "sha256": "53a2788a609f43b605092abf0d05920a0229489dd6e45990d90045b247d67ce5",
+          "bytes": 845132,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "694fc26b089f52d1ec0b688102af818162de46e3998f78a8dfa9d38e26d84f48",
+          "bytes": 1182432,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "89b97db9348296dedb826318904d34dc54742c6eb29597d2cbdb5898b4188040",
+          "bytes": 139786,
+          "frames": 1
+        }
+      },
+      "atlasSha256": "30fec5b2404d614b690aec85551e4c112a1fe7f4140de4f56ba2cb51c4fe7ddf",
+      "atlasBytes": 1706420,
+      "manifestSha256": "93cbc0296d95f1de964fd55a457541f5219182eda6d2cc44c520f0bf37f918bc",
+      "previewSha256": "69ee59441fc9fe5d05b1d5f6b3856e5da5f615eb8de5d056ad6c6549012f6b46",
+      "zipBytes": 1707001,
+      "zipSha256": "dab9bc424cadf0dd4efbd143cec4c5a36a1cca5b32eba52ed2571b9ec53a04e4",
+      "frames": 73,
+      "spriteVersionNumber": 2
+    },
+    {
+      "id": "gotei-mayuri",
+      "displayName": {
+        "zh": "涅茧利",
+        "en": "Mayuri Kurotsuchi"
+      },
+      "squad": 12,
+      "abilities": {
+        "transform": {
+          "sha256": "840a548ab864611cfbcd1f0684371cf3c0387980054a8f217a80f4dda1017278",
+          "bytes": 712876,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "5cb991e05a3560337e13a9c7d45dfa75270809ae119dde32d21ce602ad0d158d",
+          "bytes": 1074640,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "8d114810cb5e1e86cd9bf652f80230c55b8bbb26b731e291bc3c805a219cedf3",
+          "bytes": 121174,
+          "frames": 1
+        }
+      },
+      "atlasSha256": "b6a2675f0901dbec046601c5f989e66aadda74f049f37adc32d9f604ec165d5e",
+      "atlasBytes": 1518970,
+      "manifestSha256": "455fb632542fb03c05c8ab610eb18097326122c0b1295ae0a4437c0795a441e1",
+      "previewSha256": "65f811c5080a89f3c4be4a91b09433a4470b578e6f58f2d67a0e112cd08fc791",
+      "zipBytes": 1519534,
+      "zipSha256": "5b511bc9e34fb4323c141cd5a62dc737dc3fafd41049714e0ed5778626904c02",
+      "frames": 73,
+      "spriteVersionNumber": 2
+    },
+    {
+      "id": "gotei-ukitake",
+      "displayName": {
+        "zh": "浮竹十四郎",
+        "en": "Jushiro Ukitake"
+      },
+      "squad": 13,
+      "abilities": {
+        "transform": {
+          "sha256": "393410b960b5f2a5bf43f97e1ee65c78ff49b3acbed828cd56225fa2ff9c6b48",
+          "bytes": 656354,
+          "frames": 8
+        },
+        "awakened": {
+          "sha256": "de67f8d46270c7171b3fe923d711c74ae284de296d54a907876238862ed4cd73",
+          "bytes": 834656,
+          "frames": 8
+        },
+        "preview": {
+          "sha256": "0f1de8571a23a8c461014210435167283405e2a88fe5e76b3482f168a16d2883",
+          "bytes": 106922,
+          "frames": 1
+        }
+      },
+      "atlasSha256": "66ac862f8548421ec55dc759b58e22c7e53d1493e66d3dc54bfc319164550f55",
+      "atlasBytes": 1444590,
+      "manifestSha256": "88c6ce1175ff4b7e63666ce538f554698f07d68ee26a7a25bdb968f1cef8f909",
+      "previewSha256": "33c77120e08d9ec8212706aa18e11f74c0de9f6ddd16287353b8062bd7e25771",
+      "zipBytes": 1445181,
+      "zipSha256": "6a68160b53dbf39cd565e123e99a6e80c4b82f79c213cded9d0c93ee1e066877",
+      "frames": 73,
+      "spriteVersionNumber": 2
+    }
+  ]
+}
