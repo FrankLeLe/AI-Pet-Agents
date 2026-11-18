@@ -1,3 +1,5 @@
+import { CAPTAINS } from "./gotei-captains";
+
 type PowerText = Readonly<{ zh: string; en: string }>;
 
 export type PetPower = {
@@ -10,6 +12,7 @@ export type PetPower = {
   readonly atmosphere: "moon" | "frost" | "shield" | "spirit" | "armor";
   readonly restingScale: number;
   readonly restingOffsetY: number;
+  readonly desktopWorkEffect?: boolean;
 };
 
 export const POWER_SPRITE = {
@@ -91,6 +94,18 @@ export const PET_POWERS: readonly PetPower[] = [
     restingScale: 0.909091,
     restingOffsetY: -1.660839,
   },
+  ...CAPTAINS.map((captain) => ({
+    petId: captain.id,
+    name: captain.power,
+    action: captain.action,
+    description: captain.effect,
+    restingName: captain.rest,
+    color: captain.accent,
+    atmosphere: captain.atmosphere,
+    restingScale: captain.restingScale,
+    restingOffsetY: captain.restingOffsetY,
+    desktopWorkEffect: true,
+  })),
 ];
 
 export function getPetPower(petId: string): PetPower | undefined {

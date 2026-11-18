@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-19",
   "languages": [
     "zh",
     "en"
@@ -5111,6 +5111,1176 @@
       "manifestPath": "/pets/bleach-chad/pet.json",
       "downloadPath": "/downloads/bleach-chad.zip",
       "detailPath": "/api/v1/pets/bleach-chad.json"
+    },
+    {
+      "id": "gotei-yamamoto",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "needs": [
+        "steady"
+      ],
+      "displayName": {
+        "zh": "山本元柳斋重国",
+        "en": "Genryusai Shigekuni Yamamoto"
+      },
+      "badge": "GOTEI 1",
+      "accent": "#e89152",
+      "softAccent": "#fbe3c9",
+      "status": "published",
+      "tagline": {
+        "zh": "炉火旁的点名册",
+        "en": "Roll call by the brazier"
+      },
+      "description": {
+        "zh": "晨雾还没有散，山本已经把点名册摊在桌面。送信的人少带了一张回条，他便让大家先落座，自己用手杖压住被风掀起的纸角。",
+        "en": "The roll book is open before the morning mist has lifted. A messenger is one receipt short."
+      },
+      "personalityTags": [
+        {
+          "zh": "老练",
+          "en": "Seasoned"
+        },
+        {
+          "zh": "威严",
+          "en": "Commanding"
+        },
+        {
+          "zh": "自律",
+          "en": "Disciplined"
+        }
+      ],
+      "editorial": {
+        "zodiacZh": "一番队队长 · 总队长",
+        "zodiacEn": "Squad 1 Captain · Head Captain",
+        "roleZh": "威严",
+        "roleEn": "Commanding",
+        "promiseZh": "炉火旁的点名册",
+        "promiseEn": "Roll call by the brazier",
+        "storyTitleZh": "炉火旁的点名册",
+        "storyTitleEn": "Roll call by the brazier",
+        "storyZh": "晨雾还没有散，山本已经把点名册摊在桌面。送信的人少带了一张回条，他便让大家先落座，自己用手杖压住被风掀起的纸角。直到廊下传来最后一双草鞋的声音，他才提笔，在那人的名字旁落下一点墨。队员们以为今天的晨训就要开始，他却将茶壶向门口推了推，让赶路的人先暖暖手。回条到齐以后，最先起身的是山本。他把门边歪斜的草鞋摆回原处，叮嘱值夜的人先吃饭，自己在炉边等下一班来接。木杖旁升起一线火光，流刃若火把白羽织的边沿映成暖金。",
+        "storyEn": "The roll book is open before the morning mist has lifted. A messenger is one receipt short. Yamamoto holds the loose paper down with his staff until a final pair of sandals sounds in the corridor. He marks a dot beside the last name and pushes the teapot toward the door. The messenger has time to warm his hands before morning drill. Yamamoto straightens the sandals by the door and takes the next watch himself while the night shift eats. Fire gathers along Ryujin Jakka and lights the hem of the Head Captain’s white haori.",
+        "comfortZh": "晨雾还没有散，山本已经把点名册摊在桌面。送信的人少带了一张回条，他便让大家先落座，自己用手杖压住被风掀起的纸角。",
+        "comfortEn": "The roll book is open before the morning mist has lifted. A messenger is one receipt short.",
+        "moments": [
+          {
+            "titleZh": "静立听令",
+            "titleEn": "Stand at attention",
+            "bodyZh": "晨雾还没有散，山本已经把点名册摊在桌面。送信的人少带了一张回条，他便让大家先落座，自己用手杖压住被风掀起的纸角。",
+            "bodyEn": "The roll book is open before the morning mist has lifted. A messenger is one receipt short."
+          },
+          {
+            "titleZh": "交班的灯还亮着",
+            "titleEn": "The handover lamp",
+            "bodyZh": "回条到齐以后，最先起身的是山本。他把门边歪斜的草鞋摆回原处，叮嘱值夜的人先吃饭，自己在炉边等下一班来接。",
+            "bodyEn": "Yamamoto straightens the sandals by the door and takes the next watch himself while the night shift eats."
+          },
+          {
+            "titleZh": "始解 · 流刃若火",
+            "titleEn": "Shikai · Ryujin Jakka",
+            "bodyZh": "木杖旁升起一线火光，流刃若火把白羽织的边沿映成暖金。",
+            "bodyEn": "Fire gathers along Ryujin Jakka and lights the hem of the Head Captain’s white haori."
+          }
+        ],
+        "traitsZh": [
+          "老练",
+          "威严",
+          "自律"
+        ],
+        "traitsEn": [
+          "Seasoned",
+          "Commanding",
+          "Disciplined"
+        ],
+        "matchZh": "回条到齐以后，最先起身的是山本。他把门边歪斜的草鞋摆回原处，叮嘱值夜的人先吃饭，自己在炉边等下一班来接。",
+        "matchEn": "Yamamoto straightens the sandals by the door and takes the next watch himself while the night shift eats."
+      },
+      "spriteVersionNumber": 2,
+      "spritesheetPath": "/pets/gotei-yamamoto/spritesheet.webp",
+      "previewPath": "/pets/gotei-yamamoto/preview.webp",
+      "manifestPath": "/pets/gotei-yamamoto/pet.json",
+      "downloadPath": "/downloads/gotei-yamamoto.zip",
+      "detailPath": "/api/v1/pets/gotei-yamamoto.json"
+    },
+    {
+      "id": "gotei-soi-fon",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "needs": [
+        "solve"
+      ],
+      "displayName": {
+        "zh": "碎蜂",
+        "en": "Soi Fon"
+      },
+      "badge": "GOTEI 2",
+      "accent": "#d3a83d",
+      "softAccent": "#f7edbf",
+      "status": "published",
+      "tagline": {
+        "zh": "屋檐上的铃",
+        "en": "The bell on the eaves"
+      },
+      "description": {
+        "zh": "巡夜交班前，碎蜂听见檐铃多响了一声。她把半掩的窗推开一指宽，沿着屋脊走到风口，发现拴铃的结已经松了。",
+        "en": "One extra chime catches Soi Fon’s ear at the end of the night watch. She opens a window a finger’s width, crosses the roof and finds a loose knot on the wind bell."
+      },
+      "personalityTags": [
+        {
+          "zh": "敏捷",
+          "en": "Agile"
+        },
+        {
+          "zh": "严谨",
+          "en": "Exacting"
+        },
+        {
+          "zh": "警觉",
+          "en": "Alert"
+        }
+      ],
+      "editorial": {
+        "zodiacZh": "二番队队长",
+        "zodiacEn": "Squad 2 Captain",
+        "roleZh": "严谨",
+        "roleEn": "Exacting",
+        "promiseZh": "屋檐上的铃",
+        "promiseEn": "The bell on the eaves",
+        "storyTitleZh": "屋檐上的铃",
+        "storyTitleEn": "The bell on the eaves",
+        "storyZh": "巡夜交班前，碎蜂听见檐铃多响了一声。她把半掩的窗推开一指宽，沿着屋脊走到风口，发现拴铃的结已经松了。她没有惊动院里的新队士，俯身把绳结重新收紧，又退回刚才的位置等了一阵风。第二次掠过屋檐时，瓦片一点声音也没有。天亮后，值班的人只发现铃绳上多了一个极小的结。她回到值房，把原先写着风向的那页翻出来，添上巡查经过的时辰。等纸上的墨迹干透，院里的新人也已经睡熟了。金色指刺贴合右手，身旁闪出一枚蝶形蜂纹华图样。",
+        "storyEn": "One extra chime catches Soi Fon’s ear at the end of the night watch. She opens a window a finger’s width, crosses the roof and finds a loose knot on the wind bell. She tightens it without waking the recruit below and waits for another gust before returning. At dawn, the only sign of her visit is a neatly doubled knot. Back in the guardroom she adds the time to the weather log. By the time the ink dries, the recruit is asleep. A gold stinger fits over her right middle finger. A butterfly-shaped Homonka emblem flickers beside her.",
+        "comfortZh": "巡夜交班前，碎蜂听见檐铃多响了一声。她把半掩的窗推开一指宽，沿着屋脊走到风口，发现拴铃的结已经松了。",
+        "comfortEn": "One extra chime catches Soi Fon’s ear at the end of the night watch. She opens a window a finger’s width, crosses the roof and finds a loose knot on the wind bell.",
+        "moments": [
+          {
+            "titleZh": "收步屏息",
+            "titleEn": "Hold a silent stance",
+            "bodyZh": "巡夜交班前，碎蜂听见檐铃多响了一声。她把半掩的窗推开一指宽，沿着屋脊走到风口，发现拴铃的结已经松了。",
+            "bodyEn": "One extra chime catches Soi Fon’s ear at the end of the night watch. She opens a window a finger’s width, crosses the roof and finds a loose knot on the wind bell."
+          },
+          {
+            "titleZh": "最后一声铃响",
+            "titleEn": "One last chime",
+            "bodyZh": "她回到值房，把原先写着风向的那页翻出来，添上巡查经过的时辰。等纸上的墨迹干透，院里的新人也已经睡熟了。",
+            "bodyEn": "Back in the guardroom she adds the time to the weather log. By the time the ink dries, the recruit is asleep."
+          },
+          {
+            "titleZh": "始解 · 雀蜂",
+            "titleEn": "Shikai · Suzumebachi",
+            "bodyZh": "金色指刺贴合右手，身旁闪出一枚蝶形蜂纹华图样。",
+            "bodyEn": "A gold stinger fits over her right middle finger. A butterfly-shaped Homonka emblem flickers beside her."
+          }
+        ],
+        "traitsZh": [
+          "敏捷",
+          "严谨",
+          "警觉"
+        ],
+        "traitsEn": [
+          "Agile",
+          "Exacting",
+          "Alert"
+        ],
+        "matchZh": "她回到值房，把原先写着风向的那页翻出来，添上巡查经过的时辰。等纸上的墨迹干透，院里的新人也已经睡熟了。",
+        "matchEn": "Back in the guardroom she adds the time to the weather log. By the time the ink dries, the recruit is asleep."
+      },
+      "spriteVersionNumber": 2,
+      "spritesheetPath": "/pets/gotei-soi-fon/spritesheet.webp",
+      "previewPath": "/pets/gotei-soi-fon/preview.webp",
+      "manifestPath": "/pets/gotei-soi-fon/pet.json",
+      "downloadPath": "/downloads/gotei-soi-fon.zip",
+      "detailPath": "/api/v1/pets/gotei-soi-fon.json"
+    },
+    {
+      "id": "gotei-gin",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "needs": [
+        "solve"
+      ],
+      "displayName": {
+        "zh": "市丸银",
+        "en": "Gin Ichimaru"
+      },
+      "badge": "GOTEI 3",
+      "accent": "#a5a2c6",
+      "softAccent": "#e8e5f4",
+      "status": "published",
+      "tagline": {
+        "zh": "一枚柿饼",
+        "en": "One dried persimmon"
+      },
+      "description": {
+        "zh": "廊柱上挂着晒好的柿饼。市丸银数了两遍，抬头看一眼正踮脚的新队士，退开半步，露出一直挡在身后的小凳子。",
+        "en": "Persimmons hang from a veranda post. Gin counts them twice and steps aside, revealing a little stool to a recruit who has been stretching on tiptoe."
+      },
+      "personalityTags": [
+        {
+          "zh": "从容",
+          "en": "Easygoing"
+        },
+        {
+          "zh": "敏锐",
+          "en": "Perceptive"
+        },
+        {
+          "zh": "难测",
+          "en": "Elusive"
+        }
+      ],
+      "editorial": {
+        "zodiacZh": "三番队队长",
+        "zodiacEn": "Squad 3 Captain",
+        "roleZh": "敏锐",
+        "roleEn": "Perceptive",
+        "promiseZh": "一枚柿饼",
+        "promiseEn": "One dried persimmon",
+        "storyTitleZh": "一枚柿饼",
+        "storyTitleEn": "One dried persimmon",
+        "storyZh": "廊柱上挂着晒好的柿饼。市丸银数了两遍，抬头看一眼正踮脚的新队士，退开半步，露出一直挡在身后的小凳子。等那人伸手拿了一枚，他才笑着说，方才数的其实是绳子上的结。桌上的记录分明已经写好，却偏偏空着最后一格。他把笔搁在那里，留给发现答案的人自己来填。新队士回到柱子前，一个结一个结地点过去。晚风把绳子吹得轻轻摇晃，市丸银已经走远，桌上还剩一枚用纸包好的柿饼。短刃在银色刀光中向前伸长，又收回掌中。",
+        "storyEn": "Persimmons hang from a veranda post. Gin counts them twice and steps aside, revealing a little stool to a recruit who has been stretching on tiptoe. Once the recruit has taken a fruit, Gin says he was counting knots in the string. His report is already written except for the last square. He leaves the brush across that square. The recruit counts the knots one by one. Gin has gone, leaving a final persimmon wrapped in paper on the table. A slender silver blade extends from the short sword and draws back to his hand.",
+        "comfortZh": "廊柱上挂着晒好的柿饼。市丸银数了两遍，抬头看一眼正踮脚的新队士，退开半步，露出一直挡在身后的小凳子。",
+        "comfortEn": "Persimmons hang from a veranda post. Gin counts them twice and steps aside, revealing a little stool to a recruit who has been stretching on tiptoe.",
+        "moments": [
+          {
+            "titleZh": "眯眼微笑",
+            "titleEn": "Smile with narrowed eyes",
+            "bodyZh": "廊柱上挂着晒好的柿饼。市丸银数了两遍，抬头看一眼正踮脚的新队士，退开半步，露出一直挡在身后的小凳子。",
+            "bodyEn": "Persimmons hang from a veranda post. Gin counts them twice and steps aside, revealing a little stool to a recruit who has been stretching on tiptoe."
+          },
+          {
+            "titleZh": "空白的一格",
+            "titleEn": "An empty square",
+            "bodyZh": "新队士回到柱子前，一个结一个结地点过去。晚风把绳子吹得轻轻摇晃，市丸银已经走远，桌上还剩一枚用纸包好的柿饼。",
+            "bodyEn": "The recruit counts the knots one by one. Gin has gone, leaving a final persimmon wrapped in paper on the table."
+          },
+          {
+            "titleZh": "始解 · 神枪",
+            "titleEn": "Shikai · Shinso",
+            "bodyZh": "短刃在银色刀光中向前伸长，又收回掌中。",
+            "bodyEn": "A slender silver blade extends from the short sword and draws back to his hand."
+          }
+        ],
+        "traitsZh": [
+          "从容",
+          "敏锐",
+          "难测"
+        ],
+        "traitsEn": [
+          "Easygoing",
+          "Perceptive",
+          "Elusive"
+        ],
+        "matchZh": "新队士回到柱子前，一个结一个结地点过去。晚风把绳子吹得轻轻摇晃，市丸银已经走远，桌上还剩一枚用纸包好的柿饼。",
+        "matchEn": "The recruit counts the knots one by one. Gin has gone, leaving a final persimmon wrapped in paper on the table."
+      },
+      "spriteVersionNumber": 2,
+      "spritesheetPath": "/pets/gotei-gin/spritesheet.webp",
+      "previewPath": "/pets/gotei-gin/preview.webp",
+      "manifestPath": "/pets/gotei-gin/pet.json",
+      "downloadPath": "/downloads/gotei-gin.zip",
+      "detailPath": "/api/v1/pets/gotei-gin.json"
+    },
+    {
+      "id": "gotei-unohana",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "needs": [
+        "comfort"
+      ],
+      "displayName": {
+        "zh": "卯之花烈",
+        "en": "Retsu Unohana"
+      },
+      "badge": "GOTEI 4",
+      "accent": "#73ad91",
+      "softAccent": "#e1f1e6",
+      "status": "published",
+      "tagline": {
+        "zh": "替人留一盏灯",
+        "en": "The lamp left burning"
+      },
+      "description": {
+        "zh": "诊室里只剩下最后一盏灯。卯之花没有催刚从巡逻回来的队员说话，只把凳子往他面前挪了一点。",
+        "en": "One lamp is still lit in the infirmary. Unohana draws a stool closer to the last patrolman."
+      },
+      "personalityTags": [
+        {
+          "zh": "温和",
+          "en": "Gentle"
+        },
+        {
+          "zh": "细心",
+          "en": "Observant"
+        },
+        {
+          "zh": "沉着",
+          "en": "Composed"
+        }
+      ],
+      "editorial": {
+        "zodiacZh": "四番队队长",
+        "zodiacEn": "Squad 4 Captain",
+        "roleZh": "细心",
+        "roleEn": "Observant",
+        "promiseZh": "替人留一盏灯",
+        "promiseEn": "The lamp left burning",
+        "storyTitleZh": "替人留一盏灯",
+        "storyTitleEn": "The lamp left burning",
+        "storyZh": "诊室里只剩下最后一盏灯。卯之花没有催刚从巡逻回来的队员说话，只把凳子往他面前挪了一点。那人本来打算把擦伤藏在袖口里，看了看已经备好的清水和干净布条，终于把手放上桌。她替他理好袖口，又把第二张凳子拉近，因为等在门外的同伴也一瘸一拐。临走前，桌面上整整齐齐摆好了两杯茶。门口的脚步声远了，她重新把布条一卷一卷放回木盒，顺手把灯芯剪短一点。明天有人经过这里，仍会看见同样柔和的那一点光。肉雫唼舒展鳐形的双翼，在四番队队长身边停驻。",
+        "storyEn": "One lamp is still lit in the infirmary. Unohana draws a stool closer to the last patrolman. He was going to keep a scrape hidden in his sleeve, but the water and bandages are ready, so he rests his hand on the table. She brings over a second stool for his limping friend in the doorway. Two cups of tea wait by the time they leave. After the footsteps fade she rolls up the spare bandages and trims the wick. The lamp will still be there tomorrow. Minazuki spreads its ray-like fins beside the captain of Squad Four.",
+        "comfortZh": "诊室里只剩下最后一盏灯。卯之花没有催刚从巡逻回来的队员说话，只把凳子往他面前挪了一点。",
+        "comfortEn": "One lamp is still lit in the infirmary. Unohana draws a stool closer to the last patrolman.",
+        "moments": [
+          {
+            "titleZh": "合袖候诊",
+            "titleEn": "Wait with folded sleeves",
+            "bodyZh": "诊室里只剩下最后一盏灯。卯之花没有催刚从巡逻回来的队员说话，只把凳子往他面前挪了一点。",
+            "bodyEn": "One lamp is still lit in the infirmary. Unohana draws a stool closer to the last patrolman."
+          },
+          {
+            "titleZh": "给同伴的茶",
+            "titleEn": "Tea for two",
+            "bodyZh": "门口的脚步声远了，她重新把布条一卷一卷放回木盒，顺手把灯芯剪短一点。明天有人经过这里，仍会看见同样柔和的那一点光。",
+            "bodyEn": "After the footsteps fade she rolls up the spare bandages and trims the wick. The lamp will still be there tomorrow."
+          },
+          {
+            "titleZh": "始解 · 肉雫唼",
+            "titleEn": "Shikai · Minazuki",
+            "bodyZh": "肉雫唼舒展鳐形的双翼，在四番队队长身边停驻。",
+            "bodyEn": "Minazuki spreads its ray-like fins beside the captain of Squad Four."
+          }
+        ],
+        "traitsZh": [
+          "温和",
+          "细心",
+          "沉着"
+        ],
+        "traitsEn": [
+          "Gentle",
+          "Observant",
+          "Composed"
+        ],
+        "matchZh": "门口的脚步声远了，她重新把布条一卷一卷放回木盒，顺手把灯芯剪短一点。明天有人经过这里，仍会看见同样柔和的那一点光。",
+        "matchEn": "After the footsteps fade she rolls up the spare bandages and trims the wick. The lamp will still be there tomorrow."
+      },
+      "spriteVersionNumber": 2,
+      "spritesheetPath": "/pets/gotei-unohana/spritesheet.webp",
+      "previewPath": "/pets/gotei-unohana/preview.webp",
+      "manifestPath": "/pets/gotei-unohana/pet.json",
+      "downloadPath": "/downloads/gotei-unohana.zip",
+      "detailPath": "/api/v1/pets/gotei-unohana.json"
+    },
+    {
+      "id": "gotei-aizen",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "needs": [
+        "solve"
+      ],
+      "displayName": {
+        "zh": "蓝染惣右介",
+        "en": "Sosuke Aizen"
+      },
+      "badge": "GOTEI 5",
+      "accent": "#8798cb",
+      "softAccent": "#e4eafa",
+      "status": "published",
+      "tagline": {
+        "zh": "纸上倒影",
+        "en": "A reflection on paper"
+      },
+      "description": {
+        "zh": "午后的光正落在桌上一碗清水里。蓝染把写好的字搁在碗边，请送公文的队员读出最后一行。",
+        "en": "Afternoon light falls into a bowl beside Aizen’s writing. He asks a visiting courier to read the final line."
+      },
+      "personalityTags": [
+        {
+          "zh": "斯文",
+          "en": "Courteous"
+        },
+        {
+          "zh": "善察",
+          "en": "Observant"
+        },
+        {
+          "zh": "深藏",
+          "en": "Secretive"
+        }
+      ],
+      "editorial": {
+        "zodiacZh": "五番队队长",
+        "zodiacEn": "Squad 5 Captain",
+        "roleZh": "善察",
+        "roleEn": "Observant",
+        "promiseZh": "纸上倒影",
+        "promiseEn": "A reflection on paper",
+        "storyTitleZh": "纸上倒影",
+        "storyTitleEn": "A reflection on paper",
+        "storyZh": "午后的光正落在桌上一碗清水里。蓝染把写好的字搁在碗边，请送公文的队员读出最后一行。队员俯身看了好一会儿，才发现自己一直在看水里的倒影。蓝染替他把纸转过来，仍是那副温文的笑容。人走以后，他摘下眼镜，用袖口慢慢擦净镜片，桌上的纸早已经换到另一边了。下一个人敲门时，水面才刚刚平静下来。他戴回眼镜，把那碗水放到窗下，像整整一个下午都在做一件再平常不过的小事。镜光将戴眼镜的队长分作数道相似的身影，再缓缓重合。",
+        "storyEn": "Afternoon light falls into a bowl beside Aizen’s writing. He asks a visiting courier to read the final line. Only after leaning close does the courier realize he has been reading the reflection. Aizen turns the paper toward him with a polite smile. When the room is quiet, he cleans his glasses. The sheet is already on the other side of the bowl. The next knock comes just as the water settles. Aizen replaces his glasses and moves the bowl to the window. Mirrored images of the bespectacled captain separate and quietly fall back into step.",
+        "comfortZh": "午后的光正落在桌上一碗清水里。蓝染把写好的字搁在碗边，请送公文的队员读出最后一行。",
+        "comfortEn": "Afternoon light falls into a bowl beside Aizen’s writing. He asks a visiting courier to read the final line.",
+        "moments": [
+          {
+            "titleZh": "扶正眼镜",
+            "titleEn": "Adjust his glasses",
+            "bodyZh": "午后的光正落在桌上一碗清水里。蓝染把写好的字搁在碗边，请送公文的队员读出最后一行。",
+            "bodyEn": "Afternoon light falls into a bowl beside Aizen’s writing. He asks a visiting courier to read the final line."
+          },
+          {
+            "titleZh": "镜片上的光",
+            "titleEn": "Light on the lens",
+            "bodyZh": "下一个人敲门时，水面才刚刚平静下来。他戴回眼镜，把那碗水放到窗下，像整整一个下午都在做一件再平常不过的小事。",
+            "bodyEn": "The next knock comes just as the water settles. Aizen replaces his glasses and moves the bowl to the window."
+          },
+          {
+            "titleZh": "始解 · 镜花水月",
+            "titleEn": "Shikai · Kyoka Suigetsu",
+            "bodyZh": "镜光将戴眼镜的队长分作数道相似的身影，再缓缓重合。",
+            "bodyEn": "Mirrored images of the bespectacled captain separate and quietly fall back into step."
+          }
+        ],
+        "traitsZh": [
+          "斯文",
+          "善察",
+          "深藏"
+        ],
+        "traitsEn": [
+          "Courteous",
+          "Observant",
+          "Secretive"
+        ],
+        "matchZh": "下一个人敲门时，水面才刚刚平静下来。他戴回眼镜，把那碗水放到窗下，像整整一个下午都在做一件再平常不过的小事。",
+        "matchEn": "The next knock comes just as the water settles. Aizen replaces his glasses and moves the bowl to the window."
+      },
+      "spriteVersionNumber": 2,
+      "spritesheetPath": "/pets/gotei-aizen/spritesheet.webp",
+      "previewPath": "/pets/gotei-aizen/preview.webp",
+      "manifestPath": "/pets/gotei-aizen/pet.json",
+      "downloadPath": "/downloads/gotei-aizen.zip",
+      "detailPath": "/api/v1/pets/gotei-aizen.json"
+    },
+    {
+      "id": "gotei-byakuya",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "needs": [
+        "steady"
+      ],
+      "displayName": {
+        "zh": "朽木白哉",
+        "en": "Byakuya Kuchiki"
+      },
+      "badge": "GOTEI 6",
+      "accent": "#d897b7",
+      "softAccent": "#f6e4ec",
+      "status": "published",
+      "tagline": {
+        "zh": "砚旁一瓣花",
+        "en": "A petal by the inkstone"
+      },
+      "description": {
+        "zh": "一瓣樱花落在尚未干透的文书上。白哉停了笔，用纸角把花瓣轻轻托起，放在砚台旁边。",
+        "en": "A cherry petal lands on wet ink. Byakuya stops writing, lifts the petal with a corner of paper and sets it beside the inkstone."
+      },
+      "personalityTags": [
+        {
+          "zh": "克制",
+          "en": "Restrained"
+        },
+        {
+          "zh": "端正",
+          "en": "Precise"
+        },
+        {
+          "zh": "坚定",
+          "en": "Resolute"
+        }
+      ],
+      "editorial": {
+        "zodiacZh": "六番队队长",
+        "zodiacEn": "Squad 6 Captain",
+        "roleZh": "端正",
+        "roleEn": "Precise",
+        "promiseZh": "砚旁一瓣花",
+        "promiseEn": "A petal by the inkstone",
+        "storyTitleZh": "砚旁一瓣花",
+        "storyTitleEn": "A petal by the inkstone",
+        "storyZh": "一瓣樱花落在尚未干透的文书上。白哉停了笔，用纸角把花瓣轻轻托起，放在砚台旁边。送信的人以为他要从头再写，已经取来了新纸，他却只在被花遮住的地方补上最后一笔。那一笔与前面的字一样平稳。等墨迹干了，他才折好信笺，起身时白色围巾恰好拂过桌沿，没有带走那瓣花。文书被送出门时，庭院里的树又落了几瓣花。白哉从书架里抽出一本旧诗集，把砚台旁的那一瓣夹进上次读到的那页。刀身散作细小的刃片，转动时如被光照亮的樱花。",
+        "storyEn": "A cherry petal lands on wet ink. Byakuya stops writing, lifts the petal with a corner of paper and sets it beside the inkstone. A messenger brings a fresh sheet, but the captain only adds the missing stroke. It is as steady as the others. He waits for the ink to dry before folding the letter. His white scarf clears the petal as he rises. When the letter leaves, he slips the petal into a book of verse at the page where he stopped reading. The blade disperses into tiny fragments that catch the light like moving cherry petals.",
+        "comfortZh": "一瓣樱花落在尚未干透的文书上。白哉停了笔，用纸角把花瓣轻轻托起，放在砚台旁边。",
+        "comfortEn": "A cherry petal lands on wet ink. Byakuya stops writing, lifts the petal with a corner of paper and sets it beside the inkstone.",
+        "moments": [
+          {
+            "titleZh": "拢袖静候",
+            "titleEn": "Stand with sleeves folded",
+            "bodyZh": "一瓣樱花落在尚未干透的文书上。白哉停了笔，用纸角把花瓣轻轻托起，放在砚台旁边。",
+            "bodyEn": "A cherry petal lands on wet ink. Byakuya stops writing, lifts the petal with a corner of paper and sets it beside the inkstone."
+          },
+          {
+            "titleZh": "墨迹已干",
+            "titleEn": "When the ink dries",
+            "bodyZh": "文书被送出门时，庭院里的树又落了几瓣花。白哉从书架里抽出一本旧诗集，把砚台旁的那一瓣夹进上次读到的那页。",
+            "bodyEn": "When the letter leaves, he slips the petal into a book of verse at the page where he stopped reading."
+          },
+          {
+            "titleZh": "始解 · 千本樱",
+            "titleEn": "Shikai · Senbonzakura",
+            "bodyZh": "刀身散作细小的刃片，转动时如被光照亮的樱花。",
+            "bodyEn": "The blade disperses into tiny fragments that catch the light like moving cherry petals."
+          }
+        ],
+        "traitsZh": [
+          "克制",
+          "端正",
+          "坚定"
+        ],
+        "traitsEn": [
+          "Restrained",
+          "Precise",
+          "Resolute"
+        ],
+        "matchZh": "文书被送出门时，庭院里的树又落了几瓣花。白哉从书架里抽出一本旧诗集，把砚台旁的那一瓣夹进上次读到的那页。",
+        "matchEn": "When the letter leaves, he slips the petal into a book of verse at the page where he stopped reading."
+      },
+      "spriteVersionNumber": 2,
+      "spritesheetPath": "/pets/gotei-byakuya/spritesheet.webp",
+      "previewPath": "/pets/gotei-byakuya/preview.webp",
+      "manifestPath": "/pets/gotei-byakuya/pet.json",
+      "downloadPath": "/downloads/gotei-byakuya.zip",
+      "detailPath": "/api/v1/pets/gotei-byakuya.json"
+    },
+    {
+      "id": "gotei-komamura",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "needs": [
+        "comfort"
+      ],
+      "displayName": {
+        "zh": "狛村左阵",
+        "en": "Sajin Komamura"
+      },
+      "badge": "GOTEI 7",
+      "accent": "#b38050",
+      "softAccent": "#f3e4d1",
+      "status": "published",
+      "tagline": {
+        "zh": "窄门前的一步",
+        "en": "A step at the narrow gate"
+      },
+      "description": {
+        "zh": "狛村在窄门前停了下来。临时架起的门框只能让一副担架通过，队员们见他走近，正要把手里的东西放下让路。",
+        "en": "Komamura stops at a gate just wide enough for one stretcher. The carriers start to make way."
+      },
+      "personalityTags": [
+        {
+          "zh": "忠诚",
+          "en": "Loyal"
+        },
+        {
+          "zh": "宽厚",
+          "en": "Generous"
+        },
+        {
+          "zh": "坚毅",
+          "en": "Steadfast"
+        }
+      ],
+      "editorial": {
+        "zodiacZh": "七番队队长",
+        "zodiacEn": "Squad 7 Captain",
+        "roleZh": "宽厚",
+        "roleEn": "Generous",
+        "promiseZh": "窄门前的一步",
+        "promiseEn": "A step at the narrow gate",
+        "storyTitleZh": "窄门前的一步",
+        "storyTitleEn": "A step at the narrow gate",
+        "storyZh": "狛村在窄门前停了下来。临时架起的门框只能让一副担架通过，队员们见他走近，正要把手里的东西放下让路。他却先侧过肩，用自己的背稳稳撑住被风吹动的门板，让担架和后面的药箱一件件过去。最后那名队员回头时，只看见一双尖耳朵从门框上方露出来。狛村低下头，轻轻朝他点了一下。等到最后一箱药也进了门，他才松开肩膀，把门闩仔细插回去。轮到自己通过的时候，他依旧侧过身，免得碰倒墙边那盏很小的提灯。披甲巨人的轮廓从狼首队长身后升起，与他一同立定。",
+        "storyEn": "Komamura stops at a gate just wide enough for one stretcher. The carriers start to make way. Instead he turns his shoulder and holds the loose gate steady with his back while the stretchers and medicine boxes pass. The last orderly looks up and sees two pointed ears above the lintel. The captain lowers his head and gives him a small nod. After the last box goes through he sets the latch and turns sideways once more, careful of the little lantern by the wall. An armored giant rises behind the wolf-headed captain and settles into his stance.",
+        "comfortZh": "狛村在窄门前停了下来。临时架起的门框只能让一副担架通过，队员们见他走近，正要把手里的东西放下让路。",
+        "comfortEn": "Komamura stops at a gate just wide enough for one stretcher. The carriers start to make way.",
+        "moments": [
+          {
+            "titleZh": "立定守望",
+            "titleEn": "Stand watch",
+            "bodyZh": "狛村在窄门前停了下来。临时架起的门框只能让一副担架通过，队员们见他走近，正要把手里的东西放下让路。",
+            "bodyEn": "Komamura stops at a gate just wide enough for one stretcher. The carriers start to make way."
+          },
+          {
+            "titleZh": "最后一箱药",
+            "titleEn": "The last medicine chest",
+            "bodyZh": "等到最后一箱药也进了门，他才松开肩膀，把门闩仔细插回去。轮到自己通过的时候，他依旧侧过身，免得碰倒墙边那盏很小的提灯。",
+            "bodyEn": "After the last box goes through he sets the latch and turns sideways once more, careful of the little lantern by the wall."
+          },
+          {
+            "titleZh": "卍解 · 黑绳天谴明王",
+            "titleEn": "Bankai · Kokujo Tengen Myo'o",
+            "bodyZh": "披甲巨人的轮廓从狼首队长身后升起，与他一同立定。",
+            "bodyEn": "An armored giant rises behind the wolf-headed captain and settles into his stance."
+          }
+        ],
+        "traitsZh": [
+          "忠诚",
+          "宽厚",
+          "坚毅"
+        ],
+        "traitsEn": [
+          "Loyal",
+          "Generous",
+          "Steadfast"
+        ],
+        "matchZh": "等到最后一箱药也进了门，他才松开肩膀，把门闩仔细插回去。轮到自己通过的时候，他依旧侧过身，免得碰倒墙边那盏很小的提灯。",
+        "matchEn": "After the last box goes through he sets the latch and turns sideways once more, careful of the little lantern by the wall."
+      },
+      "spriteVersionNumber": 2,
+      "spritesheetPath": "/pets/gotei-komamura/spritesheet.webp",
+      "previewPath": "/pets/gotei-komamura/preview.webp",
+      "manifestPath": "/pets/gotei-komamura/pet.json",
+      "downloadPath": "/downloads/gotei-komamura.zip",
+      "detailPath": "/api/v1/pets/gotei-komamura.json"
+    },
+    {
+      "id": "gotei-shunsui",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "needs": [
+        "create"
+      ],
+      "displayName": {
+        "zh": "京乐春水",
+        "en": "Shunsui Kyoraku"
+      },
+      "badge": "GOTEI 8",
+      "accent": "#c9849f",
+      "softAccent": "#f6e3eb",
+      "status": "published",
+      "tagline": {
+        "zh": "廊下借半边阴凉",
+        "en": "Half the shade"
+      },
+      "description": {
+        "zh": "廊柱的影子恰好遮住半张棋盘。京乐春水把斗笠往下一压，叫正忙着抄写的队员坐过来，替他看一眼这步棋。",
+        "en": "A post casts a shadow over half the board. Shunsui tips his straw hat and asks a passing clerk to look at a move."
+      },
+      "personalityTags": [
+        {
+          "zh": "洒脱",
+          "en": "Relaxed"
+        },
+        {
+          "zh": "敏锐",
+          "en": "Perceptive"
+        },
+        {
+          "zh": "体贴",
+          "en": "Considerate"
+        }
+      ],
+      "editorial": {
+        "zodiacZh": "八番队队长",
+        "zodiacEn": "Squad 8 Captain",
+        "roleZh": "敏锐",
+        "roleEn": "Perceptive",
+        "promiseZh": "廊下借半边阴凉",
+        "promiseEn": "Half the shade",
+        "storyTitleZh": "廊下借半边阴凉",
+        "storyTitleEn": "Half the shade",
+        "storyZh": "廊柱的影子恰好遮住半张棋盘。京乐春水把斗笠往下一压，叫正忙着抄写的队员坐过来，替他看一眼这步棋。那人说自己只剩半刻钟，他就挪开茶杯，露出早已收拢好的棋子。原来留在盘上的只有一局快要结束的残局。等最后一枚棋子落下，太阳刚好绕过柱子，他把阴凉的一边留给了对方。远处有人催着交卷，他笑着把最后几枚棋子收回盒里。来客站起来才发现，自己方才一直紧紧握着笔的那只手已经慢慢放松了。两柄宽刀在花羽织两侧展开，脚边的影子随刀势移动。",
+        "storyEn": "A post casts a shadow over half the board. Shunsui tips his straw hat and asks a passing clerk to look at a move. The clerk has only a few minutes. Shunsui moves his teacup to reveal that most pieces are already put away. There is just one endgame left. By the final move the sunlight has shifted, leaving the visitor the shady seat. A call comes from the office. As the visitor gets up, the hand that had been clenched around a pen has finally relaxed. Twin curved blades open on either side of his flowered coat as shadows shift at his feet.",
+        "comfortZh": "廊柱的影子恰好遮住半张棋盘。京乐春水把斗笠往下一压，叫正忙着抄写的队员坐过来，替他看一眼这步棋。",
+        "comfortEn": "A post casts a shadow over half the board. Shunsui tips his straw hat and asks a passing clerk to look at a move.",
+        "moments": [
+          {
+            "titleZh": "扶笠听风",
+            "titleEn": "Lift the brim of his hat",
+            "bodyZh": "廊柱的影子恰好遮住半张棋盘。京乐春水把斗笠往下一压，叫正忙着抄写的队员坐过来，替他看一眼这步棋。",
+            "bodyEn": "A post casts a shadow over half the board. Shunsui tips his straw hat and asks a passing clerk to look at a move."
+          },
+          {
+            "titleZh": "把棋子收好",
+            "titleEn": "Putting the pieces away",
+            "bodyZh": "远处有人催着交卷，他笑着把最后几枚棋子收回盒里。来客站起来才发现，自己方才一直紧紧握着笔的那只手已经慢慢放松了。",
+            "bodyEn": "A call comes from the office. As the visitor gets up, the hand that had been clenched around a pen has finally relaxed."
+          },
+          {
+            "titleZh": "始解 · 花天狂骨",
+            "titleEn": "Shikai · Katen Kyokotsu",
+            "bodyZh": "两柄宽刀在花羽织两侧展开，脚边的影子随刀势移动。",
+            "bodyEn": "Twin curved blades open on either side of his flowered coat as shadows shift at his feet."
+          }
+        ],
+        "traitsZh": [
+          "洒脱",
+          "敏锐",
+          "体贴"
+        ],
+        "traitsEn": [
+          "Relaxed",
+          "Perceptive",
+          "Considerate"
+        ],
+        "matchZh": "远处有人催着交卷，他笑着把最后几枚棋子收回盒里。来客站起来才发现，自己方才一直紧紧握着笔的那只手已经慢慢放松了。",
+        "matchEn": "A call comes from the office. As the visitor gets up, the hand that had been clenched around a pen has finally relaxed."
+      },
+      "spriteVersionNumber": 2,
+      "spritesheetPath": "/pets/gotei-shunsui/spritesheet.webp",
+      "previewPath": "/pets/gotei-shunsui/preview.webp",
+      "manifestPath": "/pets/gotei-shunsui/pet.json",
+      "downloadPath": "/downloads/gotei-shunsui.zip",
+      "detailPath": "/api/v1/pets/gotei-shunsui.json"
+    },
+    {
+      "id": "gotei-tosen",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "needs": [
+        "steady"
+      ],
+      "displayName": {
+        "zh": "东仙要",
+        "en": "Kaname Tosen"
+      },
+      "badge": "GOTEI 9",
+      "accent": "#9184bc",
+      "softAccent": "#eae5f4",
+      "status": "published",
+      "tagline": {
+        "zh": "听风辨路",
+        "en": "Listening for the path"
+      },
+      "description": {
+        "zh": "东仙沿石阶走到廊下，在第三块木板前停住了脚步。刚换过的板子发出比昨天更空的回响，跟在后面的队员却只顾低头看路。",
+        "en": "Tosen stops at the third plank on the veranda. The new board rings more hollowly than yesterday."
+      },
+      "personalityTags": [
+        {
+          "zh": "沉静",
+          "en": "Quiet"
+        },
+        {
+          "zh": "自律",
+          "en": "Disciplined"
+        },
+        {
+          "zh": "执着",
+          "en": "Determined"
+        }
+      ],
+      "editorial": {
+        "zodiacZh": "九番队队长",
+        "zodiacEn": "Squad 9 Captain",
+        "roleZh": "自律",
+        "roleEn": "Disciplined",
+        "promiseZh": "听风辨路",
+        "promiseEn": "Listening for the path",
+        "storyTitleZh": "听风辨路",
+        "storyTitleEn": "Listening for the path",
+        "storyZh": "东仙沿石阶走到廊下，在第三块木板前停住了脚步。刚换过的板子发出比昨天更空的回响，跟在后面的队员却只顾低头看路。东仙把刀收稳，请他站在原地再听一次。一只小雀从屋檐下飞走，四周安静下来，那一点不同终于清楚了。他们把修缮的记号系在栏杆上，沿着剩下的路慢慢走完。回到队舍以后，他让那名队员自己在图上标出位置。对方重新走了一遍才落笔，这一次，他连木板旁边那根柱子也准确地记住了。暗色结界从清虫周围扩展，队长保持安静的立姿。",
+        "storyEn": "Tosen stops at the third plank on the veranda. The new board rings more hollowly than yesterday. His companion has been watching the floor. Tosen steadies his sword and asks him to listen again. A sparrow leaves the eaves and the difference becomes clear. They tie a repair marker to the rail and finish the rest of the walk together. Back at the barracks he asks his companion to mark the spot. After a second walk the man can even remember the post beside it. A dark field expands around Suzumushi while Tosen holds his ground.",
+        "comfortZh": "东仙沿石阶走到廊下，在第三块木板前停住了脚步。刚换过的板子发出比昨天更空的回响，跟在后面的队员却只顾低头看路。",
+        "comfortEn": "Tosen stops at the third plank on the veranda. The new board rings more hollowly than yesterday.",
+        "moments": [
+          {
+            "titleZh": "侧耳辨音",
+            "titleEn": "Listen for a footstep",
+            "bodyZh": "东仙沿石阶走到廊下，在第三块木板前停住了脚步。刚换过的板子发出比昨天更空的回响，跟在后面的队员却只顾低头看路。",
+            "bodyEn": "Tosen stops at the third plank on the veranda. The new board rings more hollowly than yesterday."
+          },
+          {
+            "titleZh": "回响的位置",
+            "titleEn": "Where the echo changes",
+            "bodyZh": "回到队舍以后，他让那名队员自己在图上标出位置。对方重新走了一遍才落笔，这一次，他连木板旁边那根柱子也准确地记住了。",
+            "bodyEn": "Back at the barracks he asks his companion to mark the spot. After a second walk the man can even remember the post beside it."
+          },
+          {
+            "titleZh": "卍解 · 清虫终式·阎魔蟋蟀",
+            "titleEn": "Bankai · Suzumushi Tsuishiki: Enma Korogi",
+            "bodyZh": "暗色结界从清虫周围扩展，队长保持安静的立姿。",
+            "bodyEn": "A dark field expands around Suzumushi while Tosen holds his ground."
+          }
+        ],
+        "traitsZh": [
+          "沉静",
+          "自律",
+          "执着"
+        ],
+        "traitsEn": [
+          "Quiet",
+          "Disciplined",
+          "Determined"
+        ],
+        "matchZh": "回到队舍以后，他让那名队员自己在图上标出位置。对方重新走了一遍才落笔，这一次，他连木板旁边那根柱子也准确地记住了。",
+        "matchEn": "Back at the barracks he asks his companion to mark the spot. After a second walk the man can even remember the post beside it."
+      },
+      "spriteVersionNumber": 2,
+      "spritesheetPath": "/pets/gotei-tosen/spritesheet.webp",
+      "previewPath": "/pets/gotei-tosen/preview.webp",
+      "manifestPath": "/pets/gotei-tosen/pet.json",
+      "downloadPath": "/downloads/gotei-tosen.zip",
+      "detailPath": "/api/v1/pets/gotei-tosen.json"
+    },
+    {
+      "id": "gotei-hitsugaya",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "needs": [
+        "solve"
+      ],
+      "displayName": {
+        "zh": "日番谷冬狮郎",
+        "en": "Toshiro Hitsugaya"
+      },
+      "badge": "GOTEI 10",
+      "accent": "#78b8cf",
+      "softAccent": "#dceff5",
+      "status": "published",
+      "tagline": {
+        "zh": "窗沿上的霜纹",
+        "en": "Frost on the sill"
+      },
+      "description": {
+        "zh": "冬狮郎经过资料室时，发现一扇窗没扣紧，吹进来的风把明天的巡查表翻得哗啦作响。他把散页按回日期排好，才发现每张纸角上都画着一小片形状不同的雪花。",
+        "en": "Hitsugaya finds tomorrow’s patrol sheets blowing across the records room. He sorts them by date, then notices a different tiny snowflake drawn on every corner."
+      },
+      "personalityTags": [
+        {
+          "zh": "冷静",
+          "en": "Levelheaded"
+        },
+        {
+          "zh": "敏捷",
+          "en": "Quick"
+        },
+        {
+          "zh": "负责",
+          "en": "Responsible"
+        }
+      ],
+      "editorial": {
+        "zodiacZh": "十番队队长",
+        "zodiacEn": "Squad 10 Captain",
+        "roleZh": "敏捷",
+        "roleEn": "Quick",
+        "promiseZh": "窗沿上的霜纹",
+        "promiseEn": "Frost on the sill",
+        "storyTitleZh": "窗沿上的霜纹",
+        "storyTitleEn": "Frost on the sill",
+        "storyZh": "冬狮郎经过资料室时，发现一扇窗没扣紧，吹进来的风把明天的巡查表翻得哗啦作响。他把散页按回日期排好，才发现每张纸角上都画着一小片形状不同的雪花。原来值班的人担心页码被风吹乱，早就偷偷留了记号。他没有擦掉那些图案，只把最上面那张重新压平，在靠窗的地方放了一块镇纸。午后有人来领巡查表，他把纸递过去，特意给那人看了一眼最小的那片雪花。窗扣已修好，一叠文件在桌上安安静静地等着交接。冰沿手臂凝结成龙形，晶莹的冰翼在背后张开。",
+        "storyEn": "Hitsugaya finds tomorrow’s patrol sheets blowing across the records room. He sorts them by date, then notices a different tiny snowflake drawn on every corner. Someone on duty had already devised a way to identify the pages. He leaves the drawings intact, flattens the top sheet and places a paperweight beside the unlatched window. At handover he points out the smallest snowflake. The repaired window keeps the remaining sheets in order. Ice gathers into a dragon around his arm and crystalline wings open behind him.",
+        "comfortZh": "冬狮郎经过资料室时，发现一扇窗没扣紧，吹进来的风把明天的巡查表翻得哗啦作响。他把散页按回日期排好，才发现每张纸角上都画着一小片形状不同的雪花。",
+        "comfortEn": "Hitsugaya finds tomorrow’s patrol sheets blowing across the records room. He sorts them by date, then notices a different tiny snowflake drawn on every corner.",
+        "moments": [
+          {
+            "titleZh": "抬眼巡查",
+            "titleEn": "Survey the room",
+            "bodyZh": "冬狮郎经过资料室时，发现一扇窗没扣紧，吹进来的风把明天的巡查表翻得哗啦作响。他把散页按回日期排好，才发现每张纸角上都画着一小片形状不同的雪花。",
+            "bodyEn": "Hitsugaya finds tomorrow’s patrol sheets blowing across the records room. He sorts them by date, then notices a different tiny snowflake drawn on every corner."
+          },
+          {
+            "titleZh": "压在纸角的石头",
+            "titleEn": "A stone for the corner",
+            "bodyZh": "午后有人来领巡查表，他把纸递过去，特意给那人看了一眼最小的那片雪花。窗扣已修好，一叠文件在桌上安安静静地等着交接。",
+            "bodyEn": "At handover he points out the smallest snowflake. The repaired window keeps the remaining sheets in order."
+          },
+          {
+            "titleZh": "卍解 · 大红莲冰轮丸",
+            "titleEn": "Bankai · Daiguren Hyorinmaru",
+            "bodyZh": "冰沿手臂凝结成龙形，晶莹的冰翼在背后张开。",
+            "bodyEn": "Ice gathers into a dragon around his arm and crystalline wings open behind him."
+          }
+        ],
+        "traitsZh": [
+          "冷静",
+          "敏捷",
+          "负责"
+        ],
+        "traitsEn": [
+          "Levelheaded",
+          "Quick",
+          "Responsible"
+        ],
+        "matchZh": "午后有人来领巡查表，他把纸递过去，特意给那人看了一眼最小的那片雪花。窗扣已修好，一叠文件在桌上安安静静地等着交接。",
+        "matchEn": "At handover he points out the smallest snowflake. The repaired window keeps the remaining sheets in order."
+      },
+      "spriteVersionNumber": 2,
+      "spritesheetPath": "/pets/gotei-hitsugaya/spritesheet.webp",
+      "previewPath": "/pets/gotei-hitsugaya/preview.webp",
+      "manifestPath": "/pets/gotei-hitsugaya/pet.json",
+      "downloadPath": "/downloads/gotei-hitsugaya.zip",
+      "detailPath": "/api/v1/pets/gotei-hitsugaya.json"
+    },
+    {
+      "id": "gotei-kenpachi",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "needs": [
+        "start"
+      ],
+      "displayName": {
+        "zh": "更木剑八",
+        "en": "Kenpachi Zaraki"
+      },
+      "badge": "GOTEI 11",
+      "accent": "#d6ae47",
+      "softAccent": "#f5ebcf",
+      "status": "published",
+      "tagline": {
+        "zh": "拐过第三个路口",
+        "en": "The third turning"
+      },
+      "description": {
+        "zh": "剑八说自己认得回队舍的路，转了三个弯，眼前又是刚才那口井。他站在井边盯了一会儿，终于朝提着水桶的队员招了招手。",
+        "en": "Kenpachi says he knows the way home. Three turns later he is back at the well."
+      },
+      "personalityTags": [
+        {
+          "zh": "豪爽",
+          "en": "Bold"
+        },
+        {
+          "zh": "好胜",
+          "en": "Competitive"
+        },
+        {
+          "zh": "直率",
+          "en": "Direct"
+        }
+      ],
+      "editorial": {
+        "zodiacZh": "十一番队队长",
+        "zodiacEn": "Squad 11 Captain",
+        "roleZh": "好胜",
+        "roleEn": "Competitive",
+        "promiseZh": "拐过第三个路口",
+        "promiseEn": "The third turning",
+        "storyTitleZh": "拐过第三个路口",
+        "storyTitleEn": "The third turning",
+        "storyZh": "剑八说自己认得回队舍的路，转了三个弯，眼前又是刚才那口井。他站在井边盯了一会儿，终于朝提着水桶的队员招了招手。那人不敢开口指出方向，只把水桶换到另一边，空出手指了指巷口。剑八大笑着跟了过去，发梢的铃铛响了一路。快到门前时，他伸手接过水桶，让带路的人先去推门。院子里马上有人围过来问他走了多远。他把桶稳稳放在石阶上，伸手往来时的方向比划了一个大圈，门边的新队士也忍不住跟着笑了起来。眼罩解除对力量的压制，金色灵压沿着羽织向外升腾。",
+        "storyEn": "Kenpachi says he knows the way home. Three turns later he is back at the well. He studies it for a moment and waves to a recruit with a bucket. The recruit switches hands and points toward the lane. Kenpachi laughs and follows, bells ringing in his hair. At the gate he takes the bucket so his guide can open the door. When the squad asks how far he went, he sets the bucket down and traces a great circle in the air. His young guide laughs too. Freed from the eyepatch, golden spiritual pressure rises around his haori.",
+        "comfortZh": "剑八说自己认得回队舍的路，转了三个弯，眼前又是刚才那口井。他站在井边盯了一会儿，终于朝提着水桶的队员招了招手。",
+        "comfortEn": "Kenpachi says he knows the way home. Three turns later he is back at the well.",
+        "moments": [
+          {
+            "titleZh": "扛刀等候",
+            "titleEn": "Rest the sword on his shoulder",
+            "bodyZh": "剑八说自己认得回队舍的路，转了三个弯，眼前又是刚才那口井。他站在井边盯了一会儿，终于朝提着水桶的队员招了招手。",
+            "bodyEn": "Kenpachi says he knows the way home. Three turns later he is back at the well."
+          },
+          {
+            "titleZh": "走到队舍门口",
+            "titleEn": "The last few steps",
+            "bodyZh": "院子里马上有人围过来问他走了多远。他把桶稳稳放在石阶上，伸手往来时的方向比划了一个大圈，门边的新队士也忍不住跟着笑了起来。",
+            "bodyEn": "When the squad asks how far he went, he sets the bucket down and traces a great circle in the air. His young guide laughs too."
+          },
+          {
+            "titleZh": "摘下眼罩 · 灵压解放",
+            "titleEn": "Eyepatch Release · Spiritual Pressure",
+            "bodyZh": "眼罩解除对力量的压制，金色灵压沿着羽织向外升腾。",
+            "bodyEn": "Freed from the eyepatch, golden spiritual pressure rises around his haori."
+          }
+        ],
+        "traitsZh": [
+          "豪爽",
+          "好胜",
+          "直率"
+        ],
+        "traitsEn": [
+          "Bold",
+          "Competitive",
+          "Direct"
+        ],
+        "matchZh": "院子里马上有人围过来问他走了多远。他把桶稳稳放在石阶上，伸手往来时的方向比划了一个大圈，门边的新队士也忍不住跟着笑了起来。",
+        "matchEn": "When the squad asks how far he went, he sets the bucket down and traces a great circle in the air. His young guide laughs too."
+      },
+      "spriteVersionNumber": 2,
+      "spritesheetPath": "/pets/gotei-kenpachi/spritesheet.webp",
+      "previewPath": "/pets/gotei-kenpachi/preview.webp",
+      "manifestPath": "/pets/gotei-kenpachi/pet.json",
+      "downloadPath": "/downloads/gotei-kenpachi.zip",
+      "detailPath": "/api/v1/pets/gotei-kenpachi.json"
+    },
+    {
+      "id": "gotei-mayuri",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "needs": [
+        "create"
+      ],
+      "displayName": {
+        "zh": "涅茧利",
+        "en": "Mayuri Kurotsuchi"
+      },
+      "badge": "GOTEI 12",
+      "accent": "#a88bc4",
+      "softAccent": "#eee3f4",
+      "status": "published",
+      "tagline": {
+        "zh": "一格偏差",
+        "en": "One mark off"
+      },
+      "description": {
+        "zh": "涅茧利在架子上排了三只小钟，让它们同时开始走动。第一圈结束，最左边的指针比另外两只快了一格。",
+        "en": "Mayuri sets three clocks ticking together. After one circuit the left-hand needle is a mark ahead."
+      },
+      "personalityTags": [
+        {
+          "zh": "好奇",
+          "en": "Curious"
+        },
+        {
+          "zh": "挑剔",
+          "en": "Demanding"
+        },
+        {
+          "zh": "精密",
+          "en": "Precise"
+        }
+      ],
+      "editorial": {
+        "zodiacZh": "十二番队队长",
+        "zodiacEn": "Squad 12 Captain",
+        "roleZh": "挑剔",
+        "roleEn": "Demanding",
+        "promiseZh": "一格偏差",
+        "promiseEn": "One mark off",
+        "storyTitleZh": "一格偏差",
+        "storyTitleEn": "One mark off",
+        "storyZh": "涅茧利在架子上排了三只小钟，让它们同时开始走动。第一圈结束，最左边的指针比另外两只快了一格。队员正要上前拨正，他却伸手挡住，俯身仔细看了一遍钟底的支架。桌板被垫高了一点点，只有左边那只钟放在接缝处。他把三只钟交换了位置，在记录纸上另外画出一列，等着下一圈的结果。第二回指针停下，他这才允许队员动笔。桌上的第一列数字完好无损地留着，因为在他看来，弄明白第一次为什么出错，比抄出一张整齐的表格有趣得多。金色三叉刃从刀柄展开，紫色灵雾沿刃锋翻卷。",
+        "storyEn": "Mayuri sets three clocks ticking together. After one circuit the left-hand needle is a mark ahead. An assistant reaches to reset it. Mayuri stops him and peers under the stand. Only the left clock sits on the seam between two boards. He swaps their places, draws another column on his recording sheet and waits for the next circuit. Only after the second reading does he allow the assistant to write. The first column stays intact for comparison. A gold three-pronged blade opens from the hilt, trailing a curl of violet mist.",
+        "comfortZh": "涅茧利在架子上排了三只小钟，让它们同时开始走动。第一圈结束，最左边的指针比另外两只快了一格。",
+        "comfortEn": "Mayuri sets three clocks ticking together. After one circuit the left-hand needle is a mark ahead.",
+        "moments": [
+          {
+            "titleZh": "俯身观察",
+            "titleEn": "Inspect the result",
+            "bodyZh": "涅茧利在架子上排了三只小钟，让它们同时开始走动。第一圈结束，最左边的指针比另外两只快了一格。",
+            "bodyEn": "Mayuri sets three clocks ticking together. After one circuit the left-hand needle is a mark ahead."
+          },
+          {
+            "titleZh": "把结果写下来",
+            "titleEn": "Record the reading",
+            "bodyZh": "第二回指针停下，他这才允许队员动笔。桌上的第一列数字完好无损地留着，因为在他看来，弄明白第一次为什么出错，比抄出一张整齐的表格有趣得多。",
+            "bodyEn": "Only after the second reading does he allow the assistant to write. The first column stays intact for comparison."
+          },
+          {
+            "titleZh": "始解 · 疋杀地藏",
+            "titleEn": "Shikai · Ashisogi Jizo",
+            "bodyZh": "金色三叉刃从刀柄展开，紫色灵雾沿刃锋翻卷。",
+            "bodyEn": "A gold three-pronged blade opens from the hilt, trailing a curl of violet mist."
+          }
+        ],
+        "traitsZh": [
+          "好奇",
+          "挑剔",
+          "精密"
+        ],
+        "traitsEn": [
+          "Curious",
+          "Demanding",
+          "Precise"
+        ],
+        "matchZh": "第二回指针停下，他这才允许队员动笔。桌上的第一列数字完好无损地留着，因为在他看来，弄明白第一次为什么出错，比抄出一张整齐的表格有趣得多。",
+        "matchEn": "Only after the second reading does he allow the assistant to write. The first column stays intact for comparison."
+      },
+      "spriteVersionNumber": 2,
+      "spritesheetPath": "/pets/gotei-mayuri/spritesheet.webp",
+      "previewPath": "/pets/gotei-mayuri/preview.webp",
+      "manifestPath": "/pets/gotei-mayuri/pet.json",
+      "downloadPath": "/downloads/gotei-mayuri.zip",
+      "detailPath": "/api/v1/pets/gotei-mayuri.json"
+    },
+    {
+      "id": "gotei-ukitake",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "needs": [
+        "comfort"
+      ],
+      "displayName": {
+        "zh": "浮竹十四郎",
+        "en": "Jushiro Ukitake"
+      },
+      "badge": "GOTEI 13",
+      "accent": "#81b7aa",
+      "softAccent": "#e1f0ea",
+      "status": "published",
+      "tagline": {
+        "zh": "两包糖果",
+        "en": "Two paper parcels"
+      },
+      "description": {
+        "zh": "浮竹把糖果分成两包，给巡逻归来的年轻队员一人一份。其中一个坚持自己没有帮上什么忙，只负责在门边等消息。",
+        "en": "Ukitake divides the sweets between two returning patrolmen. One protests that he only waited by the gate."
+      },
+      "personalityTags": [
+        {
+          "zh": "温厚",
+          "en": "Kind"
+        },
+        {
+          "zh": "耐心",
+          "en": "Patient"
+        },
+        {
+          "zh": "坚定",
+          "en": "Steadfast"
+        }
+      ],
+      "editorial": {
+        "zodiacZh": "十三番队队长",
+        "zodiacEn": "Squad 13 Captain",
+        "roleZh": "耐心",
+        "roleEn": "Patient",
+        "promiseZh": "两包糖果",
+        "promiseEn": "Two paper parcels",
+        "storyTitleZh": "两包糖果",
+        "storyTitleEn": "Two paper parcels",
+        "storyZh": "浮竹把糖果分成两包，给巡逻归来的年轻队员一人一份。其中一个坚持自己没有帮上什么忙，只负责在门边等消息。浮竹便请他把纸包拿稳，另一只手替同伴解开背包的绳结。等到两个人终于都坐下来，他才指指门外，说等在那里的人也守住了一个位置。廊下传来下一班的脚步声，他又从抽屉里找出一张干净的糖纸。新来的队员道谢离开时，桌上那壶茶依然是热的。他把空纸包压平，写上巡逻换班的时辰，放在门旁醒目的地方，好让夜里回来的人也看得见。两柄刀由缀着符牌的绳索连起，灵流沿着两端往返。",
+        "storyEn": "Ukitake divides the sweets between two returning patrolmen. One protests that he only waited by the gate. Ukitake asks him to hold a parcel while his free hand helps untie his friend’s pack. When both men are seated, the captain points to the gate. Someone had to keep that place. More footsteps sound outside and he reaches for another wrapper. The tea is still warm when the visitors leave. He writes the change of watch on a wrapper and pins it beside the door. A cord hung with plaques joins the two swords as a current of light travels between them.",
+        "comfortZh": "浮竹把糖果分成两包，给巡逻归来的年轻队员一人一份。其中一个坚持自己没有帮上什么忙，只负责在门边等消息。",
+        "comfortEn": "Ukitake divides the sweets between two returning patrolmen. One protests that he only waited by the gate.",
+        "moments": [
+          {
+            "titleZh": "含笑候客",
+            "titleEn": "Welcome a visitor",
+            "bodyZh": "浮竹把糖果分成两包，给巡逻归来的年轻队员一人一份。其中一个坚持自己没有帮上什么忙，只负责在门边等消息。",
+            "bodyEn": "Ukitake divides the sweets between two returning patrolmen. One protests that he only waited by the gate."
+          },
+          {
+            "titleZh": "下一班回来以前",
+            "titleEn": "Before the next watch",
+            "bodyZh": "新来的队员道谢离开时，桌上那壶茶依然是热的。他把空纸包压平，写上巡逻换班的时辰，放在门旁醒目的地方，好让夜里回来的人也看得见。",
+            "bodyEn": "The tea is still warm when the visitors leave. He writes the change of watch on a wrapper and pins it beside the door."
+          },
+          {
+            "titleZh": "始解 · 双鱼理",
+            "titleEn": "Shikai · Sogyo no Kotowari",
+            "bodyZh": "两柄刀由缀着符牌的绳索连起，灵流沿着两端往返。",
+            "bodyEn": "A cord hung with plaques joins the two swords as a current of light travels between them."
+          }
+        ],
+        "traitsZh": [
+          "温厚",
+          "耐心",
+          "坚定"
+        ],
+        "traitsEn": [
+          "Kind",
+          "Patient",
+          "Steadfast"
+        ],
+        "matchZh": "新来的队员道谢离开时，桌上那壶茶依然是热的。他把空纸包压平，写上巡逻换班的时辰，放在门旁醒目的地方，好让夜里回来的人也看得见。",
+        "matchEn": "The tea is still warm when the visitors leave. He writes the change of watch on a wrapper and pins it beside the door."
+      },
+      "spriteVersionNumber": 2,
+      "spritesheetPath": "/pets/gotei-ukitake/spritesheet.webp",
+      "previewPath": "/pets/gotei-ukitake/preview.webp",
+      "manifestPath": "/pets/gotei-ukitake/pet.json",
+      "downloadPath": "/downloads/gotei-ukitake.zip",
+      "detailPath": "/api/v1/pets/gotei-ukitake.json"
     }
   ]
 }

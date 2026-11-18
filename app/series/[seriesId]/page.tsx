@@ -6,6 +6,7 @@ import type { CSSProperties } from "react";
 
 import { normalizeLanguage, PageShell, t, withLanguage } from "@/app/_components/SiteChrome";
 import { PetPreview } from "@/app/_components/PetPreview";
+import { getPetPower } from "@/lib/pet-powers";
 import { PET_SERIES, getSeriesById, getSeriesPets } from "@/lib/series";
 
 import styles from "./series.module.css";
@@ -52,7 +53,8 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
   if (!series) notFound();
 
   const language = normalizeLanguage(query.lang);
-  const members = getSeriesPets(series);
+  const members = getSeriesPets(series).map((member) => ({ ...member, power: getPetPower(member.pet.id) }));
+  const captainRoster = series.id === "gotei-13-captains";
 
   return (
     <PageShell language={language} currentPath={`/series/${series.id}`}>
@@ -78,8 +80,8 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
               <a href="#story">{t(language, "读系列故事", "Read the series story")}</a>
             </div>
           </div>
-          <div className={styles.heroPets} aria-label={t(language, "系列角色", "Series characters")}>
-            {members.slice(0, 4).map(({ pet, profile }, index) => (
+          <div className={`${styles.heroPets} ${captainRoster ? styles.captainPortraits : ""}`} aria-label={t(language, "系列角色", "Series characters")}>
+            {(captainRoster ? members : members.slice(0, 4)).map(({ pet, profile }, index) => (
               <Link
                 href={withLanguage(`/pets/${pet.id}`, language)}
                 style={{ "--member-order": index } as CSSProperties}
@@ -106,13 +108,22 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
             </div>
           </header>
 
-          <p className={styles.scrollHint}>
+          {captainRoster ? (
+            <nav className={styles.squadNav} aria-label={t(language, "按队号查找", "Find a squad")}>
+              {members.map(({ pet, profile }, index) => (
+                <a key={pet.id} href={`#${pet.id}`} aria-label={`${profile.zodiac[language]} · ${profile.name[language]}`}>
+                  {index + 1}
+                </a>
+              ))}
+            </nav>
+          ) : <p className={styles.scrollHint}>
             {t(language, "横向滑动查看更多角色", "Swipe sideways to see more characters")}
-          </p>
+          </p>}
 
-          <div className={styles.characterGrid}>
-            {members.map(({ pet, profile }) => (
+          <div className={`${styles.characterGrid} ${captainRoster ? styles.captainGrid : ""}`}>
+            {members.map(({ pet, profile, power }) => (
               <article
+                id={pet.id}
                 className={styles.characterCard}
                 style={{
                   "--member-accent": pet.accent,
@@ -134,8 +145,8 @@ export default async function SeriesPage({ params, searchParams }: SeriesPagePro
                   <strong>{profile.specialty[language]}</strong>
                   <p>{profile.vignette[language]}</p>
                   <div>
-                    <Link href={`${withLanguage(`/pets/${pet.id}`, language)}${series.id === "bleach-spirit-squad" ? "#powers" : ""}`}>
-                      {series.id === "bleach-spirit-squad" ? t(language, "体验力量", "Discover their power") : t(language, "查看角色", "View character")}
+                    <Link href={`${withLanguage(`/pets/${pet.id}`, language)}${power ? "#powers" : ""}`}>
+                      {power ? t(language, "体验力量", "Discover their power") : t(language, "查看角色", "View character")}
                       <ArrowRight aria-hidden="true" size={17} strokeWidth={3} />
                     </Link>
                     <Link href={withLanguage(`/install/${pet.id}`, language)}>

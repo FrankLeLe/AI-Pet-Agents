@@ -1,3 +1,4 @@
+import { captainIds } from "./fixtures/captains.mjs";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
@@ -28,7 +29,7 @@ test("power timing preserves the authored transition and loops only the awakened
 
 test("power labels distinguish Bankai, a protective shield, Vollstandig and arm release", async () => {
   const { PET_POWERS, getPetPower } = await loadPetPowerModule();
-  assert.deepEqual(PET_POWERS.map((power) => power.petId), [
+  assert.deepEqual(PET_POWERS.map((power) => power.petId).filter((id) => id.startsWith("bleach-")), [
     "bleach-ichigo", "bleach-rukia", "bleach-orihime", "bleach-uryu", "bleach-chad",
   ]);
   for (const id of ["bleach-ichigo", "bleach-rukia"]) assert.match(getPetPower(id).name.en, /Bankai/);
@@ -40,6 +41,29 @@ test("power labels distinguish Bankai, a protective shield, Vollstandig and arm 
   assert.match(getPetPower("bleach-uryu").name.zh, /完圣体/);
   assert.match(getPetPower("bleach-chad").name.zh, /右臂.*左臂/);
   assert.equal(getPetPower("foldlume"), undefined);
+});
+
+test("captains use the abilities shown during Rukia’s rescue", async () => {
+  const { PET_POWERS, getPetPower } = await loadPetPowerModule();
+  assert.deepEqual(PET_POWERS.filter(({ petId }) => petId.startsWith("gotei-")).map(({ petId }) => petId), captainIds);
+  const bankai = captainIds.filter((id) => getPetPower(id).name.zh.includes("卍解"));
+  assert.deepEqual(bankai, ["gotei-komamura", "gotei-tosen", "gotei-hitsugaya"]);
+  assert.match(getPetPower("gotei-kenpachi").name.zh, /摘下眼罩/);
+  assert.equal(captainIds.filter((id) => getPetPower(id).name.zh.includes("始解")).length, 9);
+});
+
+test("the desktop working animation reaches the full release drawn for each captain", async () => {
+  for (const id of captainIds) {
+    const root = new URL(`../public/pets/${id}/`, import.meta.url);
+    const compare = async (file, rect) => sharp(await readFile(new URL(file, root)))
+      .extract(rect).flatten({ background: "#e3e3e3" }).resize(48, 52).removeAlpha().raw().toBuffer();
+    const [desktop, full] = await Promise.all([
+      compare("spritesheet.webp", { left: 3 * 192, top: 7 * 208, width: 192, height: 208 }),
+      compare("abilities/transform.webp", { left: 7 * 384, top: 0, width: 384, height: 416 }),
+    ]);
+    const meanError = desktop.reduce((sum, value, i) => sum + Math.abs(value - full[i]), 0) / desktop.length;
+    assert.ok(meanError < 4, `${id} working pose must show its signature effect`);
+  }
 });
 
 test("every power strip has eight complete transparent cells and a real change of form", async () => {

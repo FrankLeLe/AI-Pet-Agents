@@ -1,3 +1,4 @@
+import { CAPTAIN_EDITORIAL } from "./gotei-captains";
 import { BLEACH_EDITORIAL_CONTENT } from "./bleach-content";
 
 export type PetEditorialMoment = {
@@ -33,6 +34,7 @@ export type PetEditorialContent = {
 
 export const PET_EDITORIAL_CONTENT: Record<string, PetEditorialContent> = {
   ...BLEACH_EDITORIAL_CONTENT,
+  ...CAPTAIN_EDITORIAL,
   dewbert: {
     zodiacZh: "露珠团子",
     zodiacEn: "Dewdrop Companion",

@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "gotei-komamura",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "狛村左阵",
+      "en": "Sajin Komamura"
+    },
+    "badge": "GOTEI 7",
+    "accent": "#b38050",
+    "softAccent": "#f3e4d1",
+    "status": "published",
+    "tagline": {
+      "zh": "窄门前的一步",
+      "en": "A step at the narrow gate"
+    },
+    "description": {
+      "zh": "狛村在窄门前停了下来。临时架起的门框只能让一副担架通过，队员们见他走近，正要把手里的东西放下让路。",
+      "en": "Komamura stops at a gate just wide enough for one stretcher. The carriers start to make way."
+    },
+    "personalityTags": [
+      {
+        "zh": "忠诚",
+        "en": "Loyal"
+      },
+      {
+        "zh": "宽厚",
+        "en": "Generous"
+      },
+      {
+        "zh": "坚毅",
+        "en": "Steadfast"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "七番队队长",
+      "zodiacEn": "Squad 7 Captain",
+      "roleZh": "宽厚",
+      "roleEn": "Generous",
+      "promiseZh": "窄门前的一步",
+      "promiseEn": "A step at the narrow gate",
+      "storyTitleZh": "窄门前的一步",
+      "storyTitleEn": "A step at the narrow gate",
+      "storyZh": "狛村在窄门前停了下来。临时架起的门框只能让一副担架通过，队员们见他走近，正要把手里的东西放下让路。他却先侧过肩，用自己的背稳稳撑住被风吹动的门板，让担架和后面的药箱一件件过去。最后那名队员回头时，只看见一双尖耳朵从门框上方露出来。狛村低下头，轻轻朝他点了一下。等到最后一箱药也进了门，他才松开肩膀，把门闩仔细插回去。轮到自己通过的时候，他依旧侧过身，免得碰倒墙边那盏很小的提灯。披甲巨人的轮廓从狼首队长身后升起，与他一同立定。",
+      "storyEn": "Komamura stops at a gate just wide enough for one stretcher. The carriers start to make way. Instead he turns his shoulder and holds the loose gate steady with his back while the stretchers and medicine boxes pass. The last orderly looks up and sees two pointed ears above the lintel. The captain lowers his head and gives him a small nod. After the last box goes through he sets the latch and turns sideways once more, careful of the little lantern by the wall. An armored giant rises behind the wolf-headed captain and settles into his stance.",
+      "comfortZh": "狛村在窄门前停了下来。临时架起的门框只能让一副担架通过，队员们见他走近，正要把手里的东西放下让路。",
+      "comfortEn": "Komamura stops at a gate just wide enough for one stretcher. The carriers start to make way.",
+      "moments": [
+        {
+          "titleZh": "立定守望",
+          "titleEn": "Stand watch",
+          "bodyZh": "狛村在窄门前停了下来。临时架起的门框只能让一副担架通过，队员们见他走近，正要把手里的东西放下让路。",
+          "bodyEn": "Komamura stops at a gate just wide enough for one stretcher. The carriers start to make way."
+        },
+        {
+          "titleZh": "最后一箱药",
+          "titleEn": "The last medicine chest",
+          "bodyZh": "等到最后一箱药也进了门，他才松开肩膀，把门闩仔细插回去。轮到自己通过的时候，他依旧侧过身，免得碰倒墙边那盏很小的提灯。",
+          "bodyEn": "After the last box goes through he sets the latch and turns sideways once more, careful of the little lantern by the wall."
+        },
+        {
+          "titleZh": "卍解 · 黑绳天谴明王",
+          "titleEn": "Bankai · Kokujo Tengen Myo'o",
+          "bodyZh": "披甲巨人的轮廓从狼首队长身后升起，与他一同立定。",
+          "bodyEn": "An armored giant rises behind the wolf-headed captain and settles into his stance."
+        }
+      ],
+      "traitsZh": [
+        "忠诚",
+        "宽厚",
+        "坚毅"
+      ],
+      "traitsEn": [
+        "Loyal",
+        "Generous",
+        "Steadfast"
+      ],
+      "matchZh": "等到最后一箱药也进了门，他才松开肩膀，把门闩仔细插回去。轮到自己通过的时候，他依旧侧过身，免得碰倒墙边那盏很小的提灯。",
+      "matchEn": "After the last box goes through he sets the latch and turns sideways once more, careful of the little lantern by the wall."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/gotei-komamura/spritesheet.webp",
+    "previewPath": "/pets/gotei-komamura/preview.webp",
+    "manifestPath": "/pets/gotei-komamura/pet.json",
+    "downloadPath": "/downloads/gotei-komamura.zip",
+    "detailPath": "/api/v1/pets/gotei-komamura.json"
+  }
+}

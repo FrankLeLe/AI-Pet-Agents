@@ -100,6 +100,7 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
     "--pet-soft": pet.softAccent,
   };
   const codexPrompt = buildCodexInstallPrompt(pet.id, name, language);
+  const power = getPetPower(pet.id);
   const sizeLabel = `${(release.sizeBytes / 1_048_576).toFixed(1)} MB`;
 
   return (
@@ -129,9 +130,11 @@ export default async function PetInstallPage({ params, searchParams }: PetInstal
               {name}
             </h1>
             <p>{description}</p>
-            {getPetPower(pet.id) ? (
+            {power ? (
               <p>
-                {t(language, "把日常陪伴带回桌面；力量展开可以在角色页随时体验。", "Bring everyday company to your desktop; power sequences are ready to enjoy on the character page.")}
+                {power.desktopWorkEffect
+                  ? t(language, "队长进入工作状态时会短暂展开力量。到角色页可重播完整动作。", "Your captain briefly unleashes their power while working on your desktop. Replay the full sequence on the character page.")
+                  : t(language, "把日常陪伴带回桌面；力量展开可以在角色页随时体验。", "Bring everyday company to your desktop; power sequences are ready to enjoy on the character page.")}
               </p>
             ) : null}
             <div className={styles.heroActions}>

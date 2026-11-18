@@ -1,3 +1,4 @@
+import { captainIds } from "./fixtures/captains.mjs";
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { readFile, stat } from "node:fs/promises";
@@ -58,6 +59,7 @@ const expectedIds = [
   ...Object.keys(desktopWorkAtlasHashes),
   ...deskCornerIds,
   ...bleachIds,
+  ...captainIds,
 ];
 
 const expectedAnimationKeys = [
@@ -392,7 +394,7 @@ test("preserves the legacy pet release namespace and rejects unknown release ide
   const releaseModule = await loadPetReleaseModule();
   const legacyCommit = "1a559b86621a992abf2691d5e429cdf0b13d2716";
   assert.equal(releaseModule.PET_RELEASE_COMMIT, legacyCommit);
-  const legacyIds = expectedIds.filter((id) => !deskCornerIds.includes(id) && !bleachIds.includes(id));
+  const legacyIds = expectedIds.filter((id) => !deskCornerIds.includes(id) && !bleachIds.includes(id) && !captainIds.includes(id));
   assert.equal(legacyIds.length, 37);
   for (const id of legacyIds) {
     assert.ok(releaseModule.getPetRelease(id), `${id} must keep its existing release metadata`);
@@ -441,6 +443,48 @@ test("keeps BLEACH packages in their own immutable release namespace", async () 
   }
   assert.equal(commits.size, 1);
   for (const id of deskCornerIds.slice(3)) assert.equal(releases.getPetReleaseCommit(id), previous[2]);
+});
+
+test("each captain has animated native states, sixteen look frames, and transparent unused cells", async () => {
+  const activeCells = [6, 8, 8, 4, 5, 8, 6, 6, 6, 8, 8];
+  for (const id of captainIds) {
+    const root = new URL(`../public/pets/${id}/`, import.meta.url);
+    const rgba = await sharp(await readFile(new URL("spritesheet.webp", root))).ensureAlpha().raw().toBuffer();
+    const preview = await sharp(await readFile(new URL("preview.webp", root))).ensureAlpha().raw().toBuffer();
+    const lookFrames = new Set();
+    for (const [row, count] of activeCells.entries()) {
+      const poses = new Set();
+      for (let column = 0; column < 8; column++) {
+        const lines = [];
+        for (let y = 0; y < 208; y++) {
+          const offset = ((row * 208 + y) * 1536 + column * 192) * 4;
+          lines.push(rgba.subarray(offset, offset + 192 * 4));
+        }
+        const frame = Buffer.concat(lines);
+        const visible = frame.some((value, i) => i % 4 === 3 && value > 0);
+        assert.equal(visible, column < count, `${id} row ${row} column ${column}`);
+        if (!visible) continue;
+        if (row === 0 && column === 0) assert.deepEqual(frame, preview, id);
+        const signature = sha256(frame);
+        poses.add(signature);
+        if (row >= 9) lookFrames.add(signature);
+      }
+      assert.ok(poses.size > 1, `${id} row ${row} must move`);
+    }
+    assert.equal(lookFrames.size, 16, `${id} must supply all sixteen look frames`);
+  }
+});
+
+test("pins all thirteen captains to a common release distinct from earlier collections", async () => {
+  const releases = await loadPetReleaseModule();
+  const namespace = releases.getPetReleaseCommit(captainIds[0]);
+  assert.match(namespace, /^[0-9a-f]{40}$/);
+  const otherIds = expectedIds.filter((id) => !captainIds.includes(id));
+  assert.ok(otherIds.every((id) => releases.getPetReleaseCommit(id) !== namespace));
+  for (const id of captainIds) {
+    assert.equal(releases.getPetReleaseCommit(id), namespace);
+    assert.equal(releases.getPetPackageUrl(id), `https://aipetsagent.com/downloads/${namespace}/${id}.zip`);
+  }
 });
 
 test("pins every install archive to its published size and SHA-256", async () => {
@@ -648,7 +692,7 @@ test("serves each new pet only within its own release namespace", async () => {
   const [worker, releaseModule] = await Promise.all([loadBuiltWorker(), loadPetReleaseModule()]);
   const context = { waitUntil() {}, passThroughOnException() {} };
 
-  for (const id of [...deskCornerIds, ...bleachIds]) {
+  for (const id of [...deskCornerIds, ...bleachIds, ...captainIds]) {
     const release = releaseModule.getPetRelease(id);
     assert.ok(release?.releaseCommit, `${id} needs final release metadata`);
     const archive = await readFile(new URL(`../public/downloads/${id}.zip`, import.meta.url));

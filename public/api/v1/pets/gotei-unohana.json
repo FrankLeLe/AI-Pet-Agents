@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "gotei-unohana",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "卯之花烈",
+      "en": "Retsu Unohana"
+    },
+    "badge": "GOTEI 4",
+    "accent": "#73ad91",
+    "softAccent": "#e1f1e6",
+    "status": "published",
+    "tagline": {
+      "zh": "替人留一盏灯",
+      "en": "The lamp left burning"
+    },
+    "description": {
+      "zh": "诊室里只剩下最后一盏灯。卯之花没有催刚从巡逻回来的队员说话，只把凳子往他面前挪了一点。",
+      "en": "One lamp is still lit in the infirmary. Unohana draws a stool closer to the last patrolman."
+    },
+    "personalityTags": [
+      {
+        "zh": "温和",
+        "en": "Gentle"
+      },
+      {
+        "zh": "细心",
+        "en": "Observant"
+      },
+      {
+        "zh": "沉着",
+        "en": "Composed"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "四番队队长",
+      "zodiacEn": "Squad 4 Captain",
+      "roleZh": "细心",
+      "roleEn": "Observant",
+      "promiseZh": "替人留一盏灯",
+      "promiseEn": "The lamp left burning",
+      "storyTitleZh": "替人留一盏灯",
+      "storyTitleEn": "The lamp left burning",
+      "storyZh": "诊室里只剩下最后一盏灯。卯之花没有催刚从巡逻回来的队员说话，只把凳子往他面前挪了一点。那人本来打算把擦伤藏在袖口里，看了看已经备好的清水和干净布条，终于把手放上桌。她替他理好袖口，又把第二张凳子拉近，因为等在门外的同伴也一瘸一拐。临走前，桌面上整整齐齐摆好了两杯茶。门口的脚步声远了，她重新把布条一卷一卷放回木盒，顺手把灯芯剪短一点。明天有人经过这里，仍会看见同样柔和的那一点光。肉雫唼舒展鳐形的双翼，在四番队队长身边停驻。",
+      "storyEn": "One lamp is still lit in the infirmary. Unohana draws a stool closer to the last patrolman. He was going to keep a scrape hidden in his sleeve, but the water and bandages are ready, so he rests his hand on the table. She brings over a second stool for his limping friend in the doorway. Two cups of tea wait by the time they leave. After the footsteps fade she rolls up the spare bandages and trims the wick. The lamp will still be there tomorrow. Minazuki spreads its ray-like fins beside the captain of Squad Four.",
+      "comfortZh": "诊室里只剩下最后一盏灯。卯之花没有催刚从巡逻回来的队员说话，只把凳子往他面前挪了一点。",
+      "comfortEn": "One lamp is still lit in the infirmary. Unohana draws a stool closer to the last patrolman.",
+      "moments": [
+        {
+          "titleZh": "合袖候诊",
+          "titleEn": "Wait with folded sleeves",
+          "bodyZh": "诊室里只剩下最后一盏灯。卯之花没有催刚从巡逻回来的队员说话，只把凳子往他面前挪了一点。",
+          "bodyEn": "One lamp is still lit in the infirmary. Unohana draws a stool closer to the last patrolman."
+        },
+        {
+          "titleZh": "给同伴的茶",
+          "titleEn": "Tea for two",
+          "bodyZh": "门口的脚步声远了，她重新把布条一卷一卷放回木盒，顺手把灯芯剪短一点。明天有人经过这里，仍会看见同样柔和的那一点光。",
+          "bodyEn": "After the footsteps fade she rolls up the spare bandages and trims the wick. The lamp will still be there tomorrow."
+        },
+        {
+          "titleZh": "始解 · 肉雫唼",
+          "titleEn": "Shikai · Minazuki",
+          "bodyZh": "肉雫唼舒展鳐形的双翼，在四番队队长身边停驻。",
+          "bodyEn": "Minazuki spreads its ray-like fins beside the captain of Squad Four."
+        }
+      ],
+      "traitsZh": [
+        "温和",
+        "细心",
+        "沉着"
+      ],
+      "traitsEn": [
+        "Gentle",
+        "Observant",
+        "Composed"
+      ],
+      "matchZh": "门口的脚步声远了，她重新把布条一卷一卷放回木盒，顺手把灯芯剪短一点。明天有人经过这里，仍会看见同样柔和的那一点光。",
+      "matchEn": "After the footsteps fade she rolls up the spare bandages and trims the wick. The lamp will still be there tomorrow."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/gotei-unohana/spritesheet.webp",
+    "previewPath": "/pets/gotei-unohana/preview.webp",
+    "manifestPath": "/pets/gotei-unohana/pet.json",
+    "downloadPath": "/downloads/gotei-unohana.zip",
+    "detailPath": "/api/v1/pets/gotei-unohana.json"
+  }
+}

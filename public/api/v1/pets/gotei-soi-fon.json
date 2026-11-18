@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "gotei-soi-fon",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "solve"
+    ],
+    "displayName": {
+      "zh": "碎蜂",
+      "en": "Soi Fon"
+    },
+    "badge": "GOTEI 2",
+    "accent": "#d3a83d",
+    "softAccent": "#f7edbf",
+    "status": "published",
+    "tagline": {
+      "zh": "屋檐上的铃",
+      "en": "The bell on the eaves"
+    },
+    "description": {
+      "zh": "巡夜交班前，碎蜂听见檐铃多响了一声。她把半掩的窗推开一指宽，沿着屋脊走到风口，发现拴铃的结已经松了。",
+      "en": "One extra chime catches Soi Fon’s ear at the end of the night watch. She opens a window a finger’s width, crosses the roof and finds a loose knot on the wind bell."
+    },
+    "personalityTags": [
+      {
+        "zh": "敏捷",
+        "en": "Agile"
+      },
+      {
+        "zh": "严谨",
+        "en": "Exacting"
+      },
+      {
+        "zh": "警觉",
+        "en": "Alert"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "二番队队长",
+      "zodiacEn": "Squad 2 Captain",
+      "roleZh": "严谨",
+      "roleEn": "Exacting",
+      "promiseZh": "屋檐上的铃",
+      "promiseEn": "The bell on the eaves",
+      "storyTitleZh": "屋檐上的铃",
+      "storyTitleEn": "The bell on the eaves",
+      "storyZh": "巡夜交班前，碎蜂听见檐铃多响了一声。她把半掩的窗推开一指宽，沿着屋脊走到风口，发现拴铃的结已经松了。她没有惊动院里的新队士，俯身把绳结重新收紧，又退回刚才的位置等了一阵风。第二次掠过屋檐时，瓦片一点声音也没有。天亮后，值班的人只发现铃绳上多了一个极小的结。她回到值房，把原先写着风向的那页翻出来，添上巡查经过的时辰。等纸上的墨迹干透，院里的新人也已经睡熟了。金色指刺贴合右手，身旁闪出一枚蝶形蜂纹华图样。",
+      "storyEn": "One extra chime catches Soi Fon’s ear at the end of the night watch. She opens a window a finger’s width, crosses the roof and finds a loose knot on the wind bell. She tightens it without waking the recruit below and waits for another gust before returning. At dawn, the only sign of her visit is a neatly doubled knot. Back in the guardroom she adds the time to the weather log. By the time the ink dries, the recruit is asleep. A gold stinger fits over her right middle finger. A butterfly-shaped Homonka emblem flickers beside her.",
+      "comfortZh": "巡夜交班前，碎蜂听见檐铃多响了一声。她把半掩的窗推开一指宽，沿着屋脊走到风口，发现拴铃的结已经松了。",
+      "comfortEn": "One extra chime catches Soi Fon’s ear at the end of the night watch. She opens a window a finger’s width, crosses the roof and finds a loose knot on the wind bell.",
+      "moments": [
+        {
+          "titleZh": "收步屏息",
+          "titleEn": "Hold a silent stance",
+          "bodyZh": "巡夜交班前，碎蜂听见檐铃多响了一声。她把半掩的窗推开一指宽，沿着屋脊走到风口，发现拴铃的结已经松了。",
+          "bodyEn": "One extra chime catches Soi Fon’s ear at the end of the night watch. She opens a window a finger’s width, crosses the roof and finds a loose knot on the wind bell."
+        },
+        {
+          "titleZh": "最后一声铃响",
+          "titleEn": "One last chime",
+          "bodyZh": "她回到值房，把原先写着风向的那页翻出来，添上巡查经过的时辰。等纸上的墨迹干透，院里的新人也已经睡熟了。",
+          "bodyEn": "Back in the guardroom she adds the time to the weather log. By the time the ink dries, the recruit is asleep."
+        },
+        {
+          "titleZh": "始解 · 雀蜂",
+          "titleEn": "Shikai · Suzumebachi",
+          "bodyZh": "金色指刺贴合右手，身旁闪出一枚蝶形蜂纹华图样。",
+          "bodyEn": "A gold stinger fits over her right middle finger. A butterfly-shaped Homonka emblem flickers beside her."
+        }
+      ],
+      "traitsZh": [
+        "敏捷",
+        "严谨",
+        "警觉"
+      ],
+      "traitsEn": [
+        "Agile",
+        "Exacting",
+        "Alert"
+      ],
+      "matchZh": "她回到值房，把原先写着风向的那页翻出来，添上巡查经过的时辰。等纸上的墨迹干透，院里的新人也已经睡熟了。",
+      "matchEn": "Back in the guardroom she adds the time to the weather log. By the time the ink dries, the recruit is asleep."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/gotei-soi-fon/spritesheet.webp",
+    "previewPath": "/pets/gotei-soi-fon/preview.webp",
+    "manifestPath": "/pets/gotei-soi-fon/pet.json",
+    "downloadPath": "/downloads/gotei-soi-fon.zip",
+    "detailPath": "/api/v1/pets/gotei-soi-fon.json"
+  }
+}

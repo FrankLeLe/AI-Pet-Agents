@@ -1,3 +1,4 @@
+import { captainIds } from "./fixtures/captains.mjs";
 import assert from "node:assert/strict";
 import { access, readFile, stat } from "node:fs/promises";
 import test from "node:test";
@@ -278,7 +279,7 @@ test("publishes the human BLEACH squad with bilingual powers, attribution and in
       assert.ok(html.indexOf("BLEACH") < html.indexOf(language === "zh" ? "桌角小居民" : "Desk Corner Friends"));
     }
     assert.match(collection, language === "zh" ? /同人演绎/ : /fan interpretations/i);
-    for (const power of PET_POWERS) {
+    for (const power of PET_POWERS.filter(({ petId }) => Object.hasOwn(names, petId))) {
       const id = power.petId;
       for (const html of [home, index, collection]) {
         assert.ok(html.includes(names[id][language]));
@@ -305,6 +306,33 @@ test("publishes the human BLEACH squad with bilingual powers, attribution and in
   }
   const oldPage = await (await render("/pets/foldlume?lang=zh")).text();
   assert.doesNotMatch(oldPage, /data-power-action|id="powers"/);
+});
+
+test("lists the Soul Society captains in squad order and opens each power and desktop package", async () => {
+  const { getPetPower } = await loadPetPowerModule();
+  const { getPetPackageUrl } = await loadPetReleaseModule();
+  for (const language of ["zh", "en"]) {
+    const series = await (await render(`/series/gotei-13-captains?lang=${language}`)).text();
+    assert.match(series, language === "en" ? /rescue of Rukia/i : /露琪亚救出/);
+    let previous = -1;
+    for (const id of captainIds) {
+      const position = series.indexOf(`id="${id}"`);
+      assert.ok(position > previous, id);
+      previous = position;
+      assert.ok(series.includes(`href="#${id}"`));
+      assert.ok(series.includes(`/pets/${id}?lang=${language}#powers`));
+      const [detail, install] = await Promise.all([`/pets/${id}`, `/install/${id}`].map(async (path) => {
+        const response = await render(`${path}?lang=${language}`);
+        assert.equal(response.status, 200);
+        return response.text();
+      }));
+      // React escapes apostrophes in translated technique names.
+      assert.ok(detail.replaceAll("&#x27;", "'").includes(getPetPower(id).name[language]));
+      assert.match(detail, /data-power-action="activate"/);
+      assert.ok(install.includes(getPetPackageUrl(id)));
+      assert.match(install, language === "en" ? /while working on your desktop/ : /工作状态时会短暂展开力量/);
+    }
+  }
 });
 
 test("gives hatch users one short state-driven Codex path", async () => {
@@ -726,7 +754,7 @@ test("leaves HTTPS redirects to the edge", async () => {
 
 test("localizes metadata and canonical URLs for every pet installation page", async () => {
   const catalog = JSON.parse(await readFile(new URL("../public/api/v1/catalog.json", import.meta.url), "utf8"));
-  assert.equal(catalog.pets.length, 54);
+  assert.equal(catalog.pets.length, 67);
 
   for (const pet of catalog.pets) {
     for (const language of ["zh", "en"]) {
@@ -911,7 +939,7 @@ test("removes all temporary starter preview infrastructure", async () => {
   await assert.rejects(access(new URL("../app/_sites-preview", import.meta.url)));
 });
 
-test("ships fifty-four valid v2 pet packages and their downloads", async () => {
+test("ships sixty-seven valid v2 pet packages and their downloads", async () => {
   const expected = [
     "star-armor-tuantuan",
     "aries-ramcrest-duck",
@@ -945,6 +973,7 @@ test("ships fifty-four valid v2 pet packages and their downloads", async () => {
     "bleach-orihime",
     "bleach-uryu",
     "bleach-chad",
+    ...captainIds,
   ];
 
   for (const id of expected) {
@@ -970,7 +999,7 @@ test("ships fifty-four valid v2 pet packages and their downloads", async () => {
   );
   const socialCard = await stat(new URL("../public/og-series.png", import.meta.url));
 
-  assert.equal(catalog.pets.length, 54);
+  assert.equal(catalog.pets.length, 67);
   assert.equal(catalog.format.spriteVersionNumber, 2);
   assert.ok(skillArchive.size > 50_000);
   assert.ok(socialCard.size > 500_000);

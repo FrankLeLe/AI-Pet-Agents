@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "gotei-gin",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "solve"
+    ],
+    "displayName": {
+      "zh": "市丸银",
+      "en": "Gin Ichimaru"
+    },
+    "badge": "GOTEI 3",
+    "accent": "#a5a2c6",
+    "softAccent": "#e8e5f4",
+    "status": "published",
+    "tagline": {
+      "zh": "一枚柿饼",
+      "en": "One dried persimmon"
+    },
+    "description": {
+      "zh": "廊柱上挂着晒好的柿饼。市丸银数了两遍，抬头看一眼正踮脚的新队士，退开半步，露出一直挡在身后的小凳子。",
+      "en": "Persimmons hang from a veranda post. Gin counts them twice and steps aside, revealing a little stool to a recruit who has been stretching on tiptoe."
+    },
+    "personalityTags": [
+      {
+        "zh": "从容",
+        "en": "Easygoing"
+      },
+      {
+        "zh": "敏锐",
+        "en": "Perceptive"
+      },
+      {
+        "zh": "难测",
+        "en": "Elusive"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "三番队队长",
+      "zodiacEn": "Squad 3 Captain",
+      "roleZh": "敏锐",
+      "roleEn": "Perceptive",
+      "promiseZh": "一枚柿饼",
+      "promiseEn": "One dried persimmon",
+      "storyTitleZh": "一枚柿饼",
+      "storyTitleEn": "One dried persimmon",
+      "storyZh": "廊柱上挂着晒好的柿饼。市丸银数了两遍，抬头看一眼正踮脚的新队士，退开半步，露出一直挡在身后的小凳子。等那人伸手拿了一枚，他才笑着说，方才数的其实是绳子上的结。桌上的记录分明已经写好，却偏偏空着最后一格。他把笔搁在那里，留给发现答案的人自己来填。新队士回到柱子前，一个结一个结地点过去。晚风把绳子吹得轻轻摇晃，市丸银已经走远，桌上还剩一枚用纸包好的柿饼。短刃在银色刀光中向前伸长，又收回掌中。",
+      "storyEn": "Persimmons hang from a veranda post. Gin counts them twice and steps aside, revealing a little stool to a recruit who has been stretching on tiptoe. Once the recruit has taken a fruit, Gin says he was counting knots in the string. His report is already written except for the last square. He leaves the brush across that square. The recruit counts the knots one by one. Gin has gone, leaving a final persimmon wrapped in paper on the table. A slender silver blade extends from the short sword and draws back to his hand.",
+      "comfortZh": "廊柱上挂着晒好的柿饼。市丸银数了两遍，抬头看一眼正踮脚的新队士，退开半步，露出一直挡在身后的小凳子。",
+      "comfortEn": "Persimmons hang from a veranda post. Gin counts them twice and steps aside, revealing a little stool to a recruit who has been stretching on tiptoe.",
+      "moments": [
+        {
+          "titleZh": "眯眼微笑",
+          "titleEn": "Smile with narrowed eyes",
+          "bodyZh": "廊柱上挂着晒好的柿饼。市丸银数了两遍，抬头看一眼正踮脚的新队士，退开半步，露出一直挡在身后的小凳子。",
+          "bodyEn": "Persimmons hang from a veranda post. Gin counts them twice and steps aside, revealing a little stool to a recruit who has been stretching on tiptoe."
+        },
+        {
+          "titleZh": "空白的一格",
+          "titleEn": "An empty square",
+          "bodyZh": "新队士回到柱子前，一个结一个结地点过去。晚风把绳子吹得轻轻摇晃，市丸银已经走远，桌上还剩一枚用纸包好的柿饼。",
+          "bodyEn": "The recruit counts the knots one by one. Gin has gone, leaving a final persimmon wrapped in paper on the table."
+        },
+        {
+          "titleZh": "始解 · 神枪",
+          "titleEn": "Shikai · Shinso",
+          "bodyZh": "短刃在银色刀光中向前伸长，又收回掌中。",
+          "bodyEn": "A slender silver blade extends from the short sword and draws back to his hand."
+        }
+      ],
+      "traitsZh": [
+        "从容",
+        "敏锐",
+        "难测"
+      ],
+      "traitsEn": [
+        "Easygoing",
+        "Perceptive",
+        "Elusive"
+      ],
+      "matchZh": "新队士回到柱子前，一个结一个结地点过去。晚风把绳子吹得轻轻摇晃，市丸银已经走远，桌上还剩一枚用纸包好的柿饼。",
+      "matchEn": "The recruit counts the knots one by one. Gin has gone, leaving a final persimmon wrapped in paper on the table."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/gotei-gin/spritesheet.webp",
+    "previewPath": "/pets/gotei-gin/preview.webp",
+    "manifestPath": "/pets/gotei-gin/pet.json",
+    "downloadPath": "/downloads/gotei-gin.zip",
+    "detailPath": "/api/v1/pets/gotei-gin.json"
+  }
+}

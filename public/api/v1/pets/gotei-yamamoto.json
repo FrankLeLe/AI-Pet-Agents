@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "gotei-yamamoto",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "steady"
+    ],
+    "displayName": {
+      "zh": "山本元柳斋重国",
+      "en": "Genryusai Shigekuni Yamamoto"
+    },
+    "badge": "GOTEI 1",
+    "accent": "#e89152",
+    "softAccent": "#fbe3c9",
+    "status": "published",
+    "tagline": {
+      "zh": "炉火旁的点名册",
+      "en": "Roll call by the brazier"
+    },
+    "description": {
+      "zh": "晨雾还没有散，山本已经把点名册摊在桌面。送信的人少带了一张回条，他便让大家先落座，自己用手杖压住被风掀起的纸角。",
+      "en": "The roll book is open before the morning mist has lifted. A messenger is one receipt short."
+    },
+    "personalityTags": [
+      {
+        "zh": "老练",
+        "en": "Seasoned"
+      },
+      {
+        "zh": "威严",
+        "en": "Commanding"
+      },
+      {
+        "zh": "自律",
+        "en": "Disciplined"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "一番队队长 · 总队长",
+      "zodiacEn": "Squad 1 Captain · Head Captain",
+      "roleZh": "威严",
+      "roleEn": "Commanding",
+      "promiseZh": "炉火旁的点名册",
+      "promiseEn": "Roll call by the brazier",
+      "storyTitleZh": "炉火旁的点名册",
+      "storyTitleEn": "Roll call by the brazier",
+      "storyZh": "晨雾还没有散，山本已经把点名册摊在桌面。送信的人少带了一张回条，他便让大家先落座，自己用手杖压住被风掀起的纸角。直到廊下传来最后一双草鞋的声音，他才提笔，在那人的名字旁落下一点墨。队员们以为今天的晨训就要开始，他却将茶壶向门口推了推，让赶路的人先暖暖手。回条到齐以后，最先起身的是山本。他把门边歪斜的草鞋摆回原处，叮嘱值夜的人先吃饭，自己在炉边等下一班来接。木杖旁升起一线火光，流刃若火把白羽织的边沿映成暖金。",
+      "storyEn": "The roll book is open before the morning mist has lifted. A messenger is one receipt short. Yamamoto holds the loose paper down with his staff until a final pair of sandals sounds in the corridor. He marks a dot beside the last name and pushes the teapot toward the door. The messenger has time to warm his hands before morning drill. Yamamoto straightens the sandals by the door and takes the next watch himself while the night shift eats. Fire gathers along Ryujin Jakka and lights the hem of the Head Captain’s white haori.",
+      "comfortZh": "晨雾还没有散，山本已经把点名册摊在桌面。送信的人少带了一张回条，他便让大家先落座，自己用手杖压住被风掀起的纸角。",
+      "comfortEn": "The roll book is open before the morning mist has lifted. A messenger is one receipt short.",
+      "moments": [
+        {
+          "titleZh": "静立听令",
+          "titleEn": "Stand at attention",
+          "bodyZh": "晨雾还没有散，山本已经把点名册摊在桌面。送信的人少带了一张回条，他便让大家先落座，自己用手杖压住被风掀起的纸角。",
+          "bodyEn": "The roll book is open before the morning mist has lifted. A messenger is one receipt short."
+        },
+        {
+          "titleZh": "交班的灯还亮着",
+          "titleEn": "The handover lamp",
+          "bodyZh": "回条到齐以后，最先起身的是山本。他把门边歪斜的草鞋摆回原处，叮嘱值夜的人先吃饭，自己在炉边等下一班来接。",
+          "bodyEn": "Yamamoto straightens the sandals by the door and takes the next watch himself while the night shift eats."
+        },
+        {
+          "titleZh": "始解 · 流刃若火",
+          "titleEn": "Shikai · Ryujin Jakka",
+          "bodyZh": "木杖旁升起一线火光，流刃若火把白羽织的边沿映成暖金。",
+          "bodyEn": "Fire gathers along Ryujin Jakka and lights the hem of the Head Captain’s white haori."
+        }
+      ],
+      "traitsZh": [
+        "老练",
+        "威严",
+        "自律"
+      ],
+      "traitsEn": [
+        "Seasoned",
+        "Commanding",
+        "Disciplined"
+      ],
+      "matchZh": "回条到齐以后，最先起身的是山本。他把门边歪斜的草鞋摆回原处，叮嘱值夜的人先吃饭，自己在炉边等下一班来接。",
+      "matchEn": "Yamamoto straightens the sandals by the door and takes the next watch himself while the night shift eats."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/gotei-yamamoto/spritesheet.webp",
+    "previewPath": "/pets/gotei-yamamoto/preview.webp",
+    "manifestPath": "/pets/gotei-yamamoto/pet.json",
+    "downloadPath": "/downloads/gotei-yamamoto.zip",
+    "detailPath": "/api/v1/pets/gotei-yamamoto.json"
+  }
+}

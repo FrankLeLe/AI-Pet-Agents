@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "gotei-mayuri",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "create"
+    ],
+    "displayName": {
+      "zh": "涅茧利",
+      "en": "Mayuri Kurotsuchi"
+    },
+    "badge": "GOTEI 12",
+    "accent": "#a88bc4",
+    "softAccent": "#eee3f4",
+    "status": "published",
+    "tagline": {
+      "zh": "一格偏差",
+      "en": "One mark off"
+    },
+    "description": {
+      "zh": "涅茧利在架子上排了三只小钟，让它们同时开始走动。第一圈结束，最左边的指针比另外两只快了一格。",
+      "en": "Mayuri sets three clocks ticking together. After one circuit the left-hand needle is a mark ahead."
+    },
+    "personalityTags": [
+      {
+        "zh": "好奇",
+        "en": "Curious"
+      },
+      {
+        "zh": "挑剔",
+        "en": "Demanding"
+      },
+      {
+        "zh": "精密",
+        "en": "Precise"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "十二番队队长",
+      "zodiacEn": "Squad 12 Captain",
+      "roleZh": "挑剔",
+      "roleEn": "Demanding",
+      "promiseZh": "一格偏差",
+      "promiseEn": "One mark off",
+      "storyTitleZh": "一格偏差",
+      "storyTitleEn": "One mark off",
+      "storyZh": "涅茧利在架子上排了三只小钟，让它们同时开始走动。第一圈结束，最左边的指针比另外两只快了一格。队员正要上前拨正，他却伸手挡住，俯身仔细看了一遍钟底的支架。桌板被垫高了一点点，只有左边那只钟放在接缝处。他把三只钟交换了位置，在记录纸上另外画出一列，等着下一圈的结果。第二回指针停下，他这才允许队员动笔。桌上的第一列数字完好无损地留着，因为在他看来，弄明白第一次为什么出错，比抄出一张整齐的表格有趣得多。金色三叉刃从刀柄展开，紫色灵雾沿刃锋翻卷。",
+      "storyEn": "Mayuri sets three clocks ticking together. After one circuit the left-hand needle is a mark ahead. An assistant reaches to reset it. Mayuri stops him and peers under the stand. Only the left clock sits on the seam between two boards. He swaps their places, draws another column on his recording sheet and waits for the next circuit. Only after the second reading does he allow the assistant to write. The first column stays intact for comparison. A gold three-pronged blade opens from the hilt, trailing a curl of violet mist.",
+      "comfortZh": "涅茧利在架子上排了三只小钟，让它们同时开始走动。第一圈结束，最左边的指针比另外两只快了一格。",
+      "comfortEn": "Mayuri sets three clocks ticking together. After one circuit the left-hand needle is a mark ahead.",
+      "moments": [
+        {
+          "titleZh": "俯身观察",
+          "titleEn": "Inspect the result",
+          "bodyZh": "涅茧利在架子上排了三只小钟，让它们同时开始走动。第一圈结束，最左边的指针比另外两只快了一格。",
+          "bodyEn": "Mayuri sets three clocks ticking together. After one circuit the left-hand needle is a mark ahead."
+        },
+        {
+          "titleZh": "把结果写下来",
+          "titleEn": "Record the reading",
+          "bodyZh": "第二回指针停下，他这才允许队员动笔。桌上的第一列数字完好无损地留着，因为在他看来，弄明白第一次为什么出错，比抄出一张整齐的表格有趣得多。",
+          "bodyEn": "Only after the second reading does he allow the assistant to write. The first column stays intact for comparison."
+        },
+        {
+          "titleZh": "始解 · 疋杀地藏",
+          "titleEn": "Shikai · Ashisogi Jizo",
+          "bodyZh": "金色三叉刃从刀柄展开，紫色灵雾沿刃锋翻卷。",
+          "bodyEn": "A gold three-pronged blade opens from the hilt, trailing a curl of violet mist."
+        }
+      ],
+      "traitsZh": [
+        "好奇",
+        "挑剔",
+        "精密"
+      ],
+      "traitsEn": [
+        "Curious",
+        "Demanding",
+        "Precise"
+      ],
+      "matchZh": "第二回指针停下，他这才允许队员动笔。桌上的第一列数字完好无损地留着，因为在他看来，弄明白第一次为什么出错，比抄出一张整齐的表格有趣得多。",
+      "matchEn": "Only after the second reading does he allow the assistant to write. The first column stays intact for comparison."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/gotei-mayuri/spritesheet.webp",
+    "previewPath": "/pets/gotei-mayuri/preview.webp",
+    "manifestPath": "/pets/gotei-mayuri/pet.json",
+    "downloadPath": "/downloads/gotei-mayuri.zip",
+    "detailPath": "/api/v1/pets/gotei-mayuri.json"
+  }
+}

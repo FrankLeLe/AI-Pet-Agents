@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "gotei-hitsugaya",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "solve"
+    ],
+    "displayName": {
+      "zh": "日番谷冬狮郎",
+      "en": "Toshiro Hitsugaya"
+    },
+    "badge": "GOTEI 10",
+    "accent": "#78b8cf",
+    "softAccent": "#dceff5",
+    "status": "published",
+    "tagline": {
+      "zh": "窗沿上的霜纹",
+      "en": "Frost on the sill"
+    },
+    "description": {
+      "zh": "冬狮郎经过资料室时，发现一扇窗没扣紧，吹进来的风把明天的巡查表翻得哗啦作响。他把散页按回日期排好，才发现每张纸角上都画着一小片形状不同的雪花。",
+      "en": "Hitsugaya finds tomorrow’s patrol sheets blowing across the records room. He sorts them by date, then notices a different tiny snowflake drawn on every corner."
+    },
+    "personalityTags": [
+      {
+        "zh": "冷静",
+        "en": "Levelheaded"
+      },
+      {
+        "zh": "敏捷",
+        "en": "Quick"
+      },
+      {
+        "zh": "负责",
+        "en": "Responsible"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "十番队队长",
+      "zodiacEn": "Squad 10 Captain",
+      "roleZh": "敏捷",
+      "roleEn": "Quick",
+      "promiseZh": "窗沿上的霜纹",
+      "promiseEn": "Frost on the sill",
+      "storyTitleZh": "窗沿上的霜纹",
+      "storyTitleEn": "Frost on the sill",
+      "storyZh": "冬狮郎经过资料室时，发现一扇窗没扣紧，吹进来的风把明天的巡查表翻得哗啦作响。他把散页按回日期排好，才发现每张纸角上都画着一小片形状不同的雪花。原来值班的人担心页码被风吹乱，早就偷偷留了记号。他没有擦掉那些图案，只把最上面那张重新压平，在靠窗的地方放了一块镇纸。午后有人来领巡查表，他把纸递过去，特意给那人看了一眼最小的那片雪花。窗扣已修好，一叠文件在桌上安安静静地等着交接。冰沿手臂凝结成龙形，晶莹的冰翼在背后张开。",
+      "storyEn": "Hitsugaya finds tomorrow’s patrol sheets blowing across the records room. He sorts them by date, then notices a different tiny snowflake drawn on every corner. Someone on duty had already devised a way to identify the pages. He leaves the drawings intact, flattens the top sheet and places a paperweight beside the unlatched window. At handover he points out the smallest snowflake. The repaired window keeps the remaining sheets in order. Ice gathers into a dragon around his arm and crystalline wings open behind him.",
+      "comfortZh": "冬狮郎经过资料室时，发现一扇窗没扣紧，吹进来的风把明天的巡查表翻得哗啦作响。他把散页按回日期排好，才发现每张纸角上都画着一小片形状不同的雪花。",
+      "comfortEn": "Hitsugaya finds tomorrow’s patrol sheets blowing across the records room. He sorts them by date, then notices a different tiny snowflake drawn on every corner.",
+      "moments": [
+        {
+          "titleZh": "抬眼巡查",
+          "titleEn": "Survey the room",
+          "bodyZh": "冬狮郎经过资料室时，发现一扇窗没扣紧，吹进来的风把明天的巡查表翻得哗啦作响。他把散页按回日期排好，才发现每张纸角上都画着一小片形状不同的雪花。",
+          "bodyEn": "Hitsugaya finds tomorrow’s patrol sheets blowing across the records room. He sorts them by date, then notices a different tiny snowflake drawn on every corner."
+        },
+        {
+          "titleZh": "压在纸角的石头",
+          "titleEn": "A stone for the corner",
+          "bodyZh": "午后有人来领巡查表，他把纸递过去，特意给那人看了一眼最小的那片雪花。窗扣已修好，一叠文件在桌上安安静静地等着交接。",
+          "bodyEn": "At handover he points out the smallest snowflake. The repaired window keeps the remaining sheets in order."
+        },
+        {
+          "titleZh": "卍解 · 大红莲冰轮丸",
+          "titleEn": "Bankai · Daiguren Hyorinmaru",
+          "bodyZh": "冰沿手臂凝结成龙形，晶莹的冰翼在背后张开。",
+          "bodyEn": "Ice gathers into a dragon around his arm and crystalline wings open behind him."
+        }
+      ],
+      "traitsZh": [
+        "冷静",
+        "敏捷",
+        "负责"
+      ],
+      "traitsEn": [
+        "Levelheaded",
+        "Quick",
+        "Responsible"
+      ],
+      "matchZh": "午后有人来领巡查表，他把纸递过去，特意给那人看了一眼最小的那片雪花。窗扣已修好，一叠文件在桌上安安静静地等着交接。",
+      "matchEn": "At handover he points out the smallest snowflake. The repaired window keeps the remaining sheets in order."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/gotei-hitsugaya/spritesheet.webp",
+    "previewPath": "/pets/gotei-hitsugaya/preview.webp",
+    "manifestPath": "/pets/gotei-hitsugaya/pet.json",
+    "downloadPath": "/downloads/gotei-hitsugaya.zip",
+    "detailPath": "/api/v1/pets/gotei-hitsugaya.json"
+  }
+}

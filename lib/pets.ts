@@ -3,6 +3,7 @@ import {
   type PetEditorialContent,
 } from "./pet-content";
 import { SPRITE_FORMAT } from "./pet-animation";
+import { CAPTAIN_PETS } from "./gotei-captains";
 import { BLEACH_PET_DEFINITIONS } from "./bleach-content";
 
 export {
@@ -636,6 +637,7 @@ const PET_DEFINITIONS = [
     softAccent: "#dcefe8",
   },
   ...BLEACH_PET_DEFINITIONS,
+  ...CAPTAIN_PETS,
 ] as const satisfies readonly {
   id: string;
   category: Pet["category"];

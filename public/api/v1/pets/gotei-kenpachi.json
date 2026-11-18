@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "gotei-kenpachi",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "start"
+    ],
+    "displayName": {
+      "zh": "更木剑八",
+      "en": "Kenpachi Zaraki"
+    },
+    "badge": "GOTEI 11",
+    "accent": "#d6ae47",
+    "softAccent": "#f5ebcf",
+    "status": "published",
+    "tagline": {
+      "zh": "拐过第三个路口",
+      "en": "The third turning"
+    },
+    "description": {
+      "zh": "剑八说自己认得回队舍的路，转了三个弯，眼前又是刚才那口井。他站在井边盯了一会儿，终于朝提着水桶的队员招了招手。",
+      "en": "Kenpachi says he knows the way home. Three turns later he is back at the well."
+    },
+    "personalityTags": [
+      {
+        "zh": "豪爽",
+        "en": "Bold"
+      },
+      {
+        "zh": "好胜",
+        "en": "Competitive"
+      },
+      {
+        "zh": "直率",
+        "en": "Direct"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "十一番队队长",
+      "zodiacEn": "Squad 11 Captain",
+      "roleZh": "好胜",
+      "roleEn": "Competitive",
+      "promiseZh": "拐过第三个路口",
+      "promiseEn": "The third turning",
+      "storyTitleZh": "拐过第三个路口",
+      "storyTitleEn": "The third turning",
+      "storyZh": "剑八说自己认得回队舍的路，转了三个弯，眼前又是刚才那口井。他站在井边盯了一会儿，终于朝提着水桶的队员招了招手。那人不敢开口指出方向，只把水桶换到另一边，空出手指了指巷口。剑八大笑着跟了过去，发梢的铃铛响了一路。快到门前时，他伸手接过水桶，让带路的人先去推门。院子里马上有人围过来问他走了多远。他把桶稳稳放在石阶上，伸手往来时的方向比划了一个大圈，门边的新队士也忍不住跟着笑了起来。眼罩解除对力量的压制，金色灵压沿着羽织向外升腾。",
+      "storyEn": "Kenpachi says he knows the way home. Three turns later he is back at the well. He studies it for a moment and waves to a recruit with a bucket. The recruit switches hands and points toward the lane. Kenpachi laughs and follows, bells ringing in his hair. At the gate he takes the bucket so his guide can open the door. When the squad asks how far he went, he sets the bucket down and traces a great circle in the air. His young guide laughs too. Freed from the eyepatch, golden spiritual pressure rises around his haori.",
+      "comfortZh": "剑八说自己认得回队舍的路，转了三个弯，眼前又是刚才那口井。他站在井边盯了一会儿，终于朝提着水桶的队员招了招手。",
+      "comfortEn": "Kenpachi says he knows the way home. Three turns later he is back at the well.",
+      "moments": [
+        {
+          "titleZh": "扛刀等候",
+          "titleEn": "Rest the sword on his shoulder",
+          "bodyZh": "剑八说自己认得回队舍的路，转了三个弯，眼前又是刚才那口井。他站在井边盯了一会儿，终于朝提着水桶的队员招了招手。",
+          "bodyEn": "Kenpachi says he knows the way home. Three turns later he is back at the well."
+        },
+        {
+          "titleZh": "走到队舍门口",
+          "titleEn": "The last few steps",
+          "bodyZh": "院子里马上有人围过来问他走了多远。他把桶稳稳放在石阶上，伸手往来时的方向比划了一个大圈，门边的新队士也忍不住跟着笑了起来。",
+          "bodyEn": "When the squad asks how far he went, he sets the bucket down and traces a great circle in the air. His young guide laughs too."
+        },
+        {
+          "titleZh": "摘下眼罩 · 灵压解放",
+          "titleEn": "Eyepatch Release · Spiritual Pressure",
+          "bodyZh": "眼罩解除对力量的压制，金色灵压沿着羽织向外升腾。",
+          "bodyEn": "Freed from the eyepatch, golden spiritual pressure rises around his haori."
+        }
+      ],
+      "traitsZh": [
+        "豪爽",
+        "好胜",
+        "直率"
+      ],
+      "traitsEn": [
+        "Bold",
+        "Competitive",
+        "Direct"
+      ],
+      "matchZh": "院子里马上有人围过来问他走了多远。他把桶稳稳放在石阶上，伸手往来时的方向比划了一个大圈，门边的新队士也忍不住跟着笑了起来。",
+      "matchEn": "When the squad asks how far he went, he sets the bucket down and traces a great circle in the air. His young guide laughs too."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/gotei-kenpachi/spritesheet.webp",
+    "previewPath": "/pets/gotei-kenpachi/preview.webp",
+    "manifestPath": "/pets/gotei-kenpachi/pet.json",
+    "downloadPath": "/downloads/gotei-kenpachi.zip",
+    "detailPath": "/api/v1/pets/gotei-kenpachi.json"
+  }
+}

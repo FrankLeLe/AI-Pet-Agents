@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "gotei-shunsui",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "create"
+    ],
+    "displayName": {
+      "zh": "京乐春水",
+      "en": "Shunsui Kyoraku"
+    },
+    "badge": "GOTEI 8",
+    "accent": "#c9849f",
+    "softAccent": "#f6e3eb",
+    "status": "published",
+    "tagline": {
+      "zh": "廊下借半边阴凉",
+      "en": "Half the shade"
+    },
+    "description": {
+      "zh": "廊柱的影子恰好遮住半张棋盘。京乐春水把斗笠往下一压，叫正忙着抄写的队员坐过来，替他看一眼这步棋。",
+      "en": "A post casts a shadow over half the board. Shunsui tips his straw hat and asks a passing clerk to look at a move."
+    },
+    "personalityTags": [
+      {
+        "zh": "洒脱",
+        "en": "Relaxed"
+      },
+      {
+        "zh": "敏锐",
+        "en": "Perceptive"
+      },
+      {
+        "zh": "体贴",
+        "en": "Considerate"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "八番队队长",
+      "zodiacEn": "Squad 8 Captain",
+      "roleZh": "敏锐",
+      "roleEn": "Perceptive",
+      "promiseZh": "廊下借半边阴凉",
+      "promiseEn": "Half the shade",
+      "storyTitleZh": "廊下借半边阴凉",
+      "storyTitleEn": "Half the shade",
+      "storyZh": "廊柱的影子恰好遮住半张棋盘。京乐春水把斗笠往下一压，叫正忙着抄写的队员坐过来，替他看一眼这步棋。那人说自己只剩半刻钟，他就挪开茶杯，露出早已收拢好的棋子。原来留在盘上的只有一局快要结束的残局。等最后一枚棋子落下，太阳刚好绕过柱子，他把阴凉的一边留给了对方。远处有人催着交卷，他笑着把最后几枚棋子收回盒里。来客站起来才发现，自己方才一直紧紧握着笔的那只手已经慢慢放松了。两柄宽刀在花羽织两侧展开，脚边的影子随刀势移动。",
+      "storyEn": "A post casts a shadow over half the board. Shunsui tips his straw hat and asks a passing clerk to look at a move. The clerk has only a few minutes. Shunsui moves his teacup to reveal that most pieces are already put away. There is just one endgame left. By the final move the sunlight has shifted, leaving the visitor the shady seat. A call comes from the office. As the visitor gets up, the hand that had been clenched around a pen has finally relaxed. Twin curved blades open on either side of his flowered coat as shadows shift at his feet.",
+      "comfortZh": "廊柱的影子恰好遮住半张棋盘。京乐春水把斗笠往下一压，叫正忙着抄写的队员坐过来，替他看一眼这步棋。",
+      "comfortEn": "A post casts a shadow over half the board. Shunsui tips his straw hat and asks a passing clerk to look at a move.",
+      "moments": [
+        {
+          "titleZh": "扶笠听风",
+          "titleEn": "Lift the brim of his hat",
+          "bodyZh": "廊柱的影子恰好遮住半张棋盘。京乐春水把斗笠往下一压，叫正忙着抄写的队员坐过来，替他看一眼这步棋。",
+          "bodyEn": "A post casts a shadow over half the board. Shunsui tips his straw hat and asks a passing clerk to look at a move."
+        },
+        {
+          "titleZh": "把棋子收好",
+          "titleEn": "Putting the pieces away",
+          "bodyZh": "远处有人催着交卷，他笑着把最后几枚棋子收回盒里。来客站起来才发现，自己方才一直紧紧握着笔的那只手已经慢慢放松了。",
+          "bodyEn": "A call comes from the office. As the visitor gets up, the hand that had been clenched around a pen has finally relaxed."
+        },
+        {
+          "titleZh": "始解 · 花天狂骨",
+          "titleEn": "Shikai · Katen Kyokotsu",
+          "bodyZh": "两柄宽刀在花羽织两侧展开，脚边的影子随刀势移动。",
+          "bodyEn": "Twin curved blades open on either side of his flowered coat as shadows shift at his feet."
+        }
+      ],
+      "traitsZh": [
+        "洒脱",
+        "敏锐",
+        "体贴"
+      ],
+      "traitsEn": [
+        "Relaxed",
+        "Perceptive",
+        "Considerate"
+      ],
+      "matchZh": "远处有人催着交卷，他笑着把最后几枚棋子收回盒里。来客站起来才发现，自己方才一直紧紧握着笔的那只手已经慢慢放松了。",
+      "matchEn": "A call comes from the office. As the visitor gets up, the hand that had been clenched around a pen has finally relaxed."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/gotei-shunsui/spritesheet.webp",
+    "previewPath": "/pets/gotei-shunsui/preview.webp",
+    "manifestPath": "/pets/gotei-shunsui/pet.json",
+    "downloadPath": "/downloads/gotei-shunsui.zip",
+    "detailPath": "/api/v1/pets/gotei-shunsui.json"
+  }
+}

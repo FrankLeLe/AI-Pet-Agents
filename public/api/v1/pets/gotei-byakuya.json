@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "gotei-byakuya",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "steady"
+    ],
+    "displayName": {
+      "zh": "朽木白哉",
+      "en": "Byakuya Kuchiki"
+    },
+    "badge": "GOTEI 6",
+    "accent": "#d897b7",
+    "softAccent": "#f6e4ec",
+    "status": "published",
+    "tagline": {
+      "zh": "砚旁一瓣花",
+      "en": "A petal by the inkstone"
+    },
+    "description": {
+      "zh": "一瓣樱花落在尚未干透的文书上。白哉停了笔，用纸角把花瓣轻轻托起，放在砚台旁边。",
+      "en": "A cherry petal lands on wet ink. Byakuya stops writing, lifts the petal with a corner of paper and sets it beside the inkstone."
+    },
+    "personalityTags": [
+      {
+        "zh": "克制",
+        "en": "Restrained"
+      },
+      {
+        "zh": "端正",
+        "en": "Precise"
+      },
+      {
+        "zh": "坚定",
+        "en": "Resolute"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "六番队队长",
+      "zodiacEn": "Squad 6 Captain",
+      "roleZh": "端正",
+      "roleEn": "Precise",
+      "promiseZh": "砚旁一瓣花",
+      "promiseEn": "A petal by the inkstone",
+      "storyTitleZh": "砚旁一瓣花",
+      "storyTitleEn": "A petal by the inkstone",
+      "storyZh": "一瓣樱花落在尚未干透的文书上。白哉停了笔，用纸角把花瓣轻轻托起，放在砚台旁边。送信的人以为他要从头再写，已经取来了新纸，他却只在被花遮住的地方补上最后一笔。那一笔与前面的字一样平稳。等墨迹干了，他才折好信笺，起身时白色围巾恰好拂过桌沿，没有带走那瓣花。文书被送出门时，庭院里的树又落了几瓣花。白哉从书架里抽出一本旧诗集，把砚台旁的那一瓣夹进上次读到的那页。刀身散作细小的刃片，转动时如被光照亮的樱花。",
+      "storyEn": "A cherry petal lands on wet ink. Byakuya stops writing, lifts the petal with a corner of paper and sets it beside the inkstone. A messenger brings a fresh sheet, but the captain only adds the missing stroke. It is as steady as the others. He waits for the ink to dry before folding the letter. His white scarf clears the petal as he rises. When the letter leaves, he slips the petal into a book of verse at the page where he stopped reading. The blade disperses into tiny fragments that catch the light like moving cherry petals.",
+      "comfortZh": "一瓣樱花落在尚未干透的文书上。白哉停了笔，用纸角把花瓣轻轻托起，放在砚台旁边。",
+      "comfortEn": "A cherry petal lands on wet ink. Byakuya stops writing, lifts the petal with a corner of paper and sets it beside the inkstone.",
+      "moments": [
+        {
+          "titleZh": "拢袖静候",
+          "titleEn": "Stand with sleeves folded",
+          "bodyZh": "一瓣樱花落在尚未干透的文书上。白哉停了笔，用纸角把花瓣轻轻托起，放在砚台旁边。",
+          "bodyEn": "A cherry petal lands on wet ink. Byakuya stops writing, lifts the petal with a corner of paper and sets it beside the inkstone."
+        },
+        {
+          "titleZh": "墨迹已干",
+          "titleEn": "When the ink dries",
+          "bodyZh": "文书被送出门时，庭院里的树又落了几瓣花。白哉从书架里抽出一本旧诗集，把砚台旁的那一瓣夹进上次读到的那页。",
+          "bodyEn": "When the letter leaves, he slips the petal into a book of verse at the page where he stopped reading."
+        },
+        {
+          "titleZh": "始解 · 千本樱",
+          "titleEn": "Shikai · Senbonzakura",
+          "bodyZh": "刀身散作细小的刃片，转动时如被光照亮的樱花。",
+          "bodyEn": "The blade disperses into tiny fragments that catch the light like moving cherry petals."
+        }
+      ],
+      "traitsZh": [
+        "克制",
+        "端正",
+        "坚定"
+      ],
+      "traitsEn": [
+        "Restrained",
+        "Precise",
+        "Resolute"
+      ],
+      "matchZh": "文书被送出门时，庭院里的树又落了几瓣花。白哉从书架里抽出一本旧诗集，把砚台旁的那一瓣夹进上次读到的那页。",
+      "matchEn": "When the letter leaves, he slips the petal into a book of verse at the page where he stopped reading."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/gotei-byakuya/spritesheet.webp",
+    "previewPath": "/pets/gotei-byakuya/preview.webp",
+    "manifestPath": "/pets/gotei-byakuya/pet.json",
+    "downloadPath": "/downloads/gotei-byakuya.zip",
+    "detailPath": "/api/v1/pets/gotei-byakuya.json"
+  }
+}

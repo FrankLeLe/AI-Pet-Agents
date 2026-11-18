@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "gotei-ukitake",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "comfort"
+    ],
+    "displayName": {
+      "zh": "浮竹十四郎",
+      "en": "Jushiro Ukitake"
+    },
+    "badge": "GOTEI 13",
+    "accent": "#81b7aa",
+    "softAccent": "#e1f0ea",
+    "status": "published",
+    "tagline": {
+      "zh": "两包糖果",
+      "en": "Two paper parcels"
+    },
+    "description": {
+      "zh": "浮竹把糖果分成两包，给巡逻归来的年轻队员一人一份。其中一个坚持自己没有帮上什么忙，只负责在门边等消息。",
+      "en": "Ukitake divides the sweets between two returning patrolmen. One protests that he only waited by the gate."
+    },
+    "personalityTags": [
+      {
+        "zh": "温厚",
+        "en": "Kind"
+      },
+      {
+        "zh": "耐心",
+        "en": "Patient"
+      },
+      {
+        "zh": "坚定",
+        "en": "Steadfast"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "十三番队队长",
+      "zodiacEn": "Squad 13 Captain",
+      "roleZh": "耐心",
+      "roleEn": "Patient",
+      "promiseZh": "两包糖果",
+      "promiseEn": "Two paper parcels",
+      "storyTitleZh": "两包糖果",
+      "storyTitleEn": "Two paper parcels",
+      "storyZh": "浮竹把糖果分成两包，给巡逻归来的年轻队员一人一份。其中一个坚持自己没有帮上什么忙，只负责在门边等消息。浮竹便请他把纸包拿稳，另一只手替同伴解开背包的绳结。等到两个人终于都坐下来，他才指指门外，说等在那里的人也守住了一个位置。廊下传来下一班的脚步声，他又从抽屉里找出一张干净的糖纸。新来的队员道谢离开时，桌上那壶茶依然是热的。他把空纸包压平，写上巡逻换班的时辰，放在门旁醒目的地方，好让夜里回来的人也看得见。两柄刀由缀着符牌的绳索连起，灵流沿着两端往返。",
+      "storyEn": "Ukitake divides the sweets between two returning patrolmen. One protests that he only waited by the gate. Ukitake asks him to hold a parcel while his free hand helps untie his friend’s pack. When both men are seated, the captain points to the gate. Someone had to keep that place. More footsteps sound outside and he reaches for another wrapper. The tea is still warm when the visitors leave. He writes the change of watch on a wrapper and pins it beside the door. A cord hung with plaques joins the two swords as a current of light travels between them.",
+      "comfortZh": "浮竹把糖果分成两包，给巡逻归来的年轻队员一人一份。其中一个坚持自己没有帮上什么忙，只负责在门边等消息。",
+      "comfortEn": "Ukitake divides the sweets between two returning patrolmen. One protests that he only waited by the gate.",
+      "moments": [
+        {
+          "titleZh": "含笑候客",
+          "titleEn": "Welcome a visitor",
+          "bodyZh": "浮竹把糖果分成两包，给巡逻归来的年轻队员一人一份。其中一个坚持自己没有帮上什么忙，只负责在门边等消息。",
+          "bodyEn": "Ukitake divides the sweets between two returning patrolmen. One protests that he only waited by the gate."
+        },
+        {
+          "titleZh": "下一班回来以前",
+          "titleEn": "Before the next watch",
+          "bodyZh": "新来的队员道谢离开时，桌上那壶茶依然是热的。他把空纸包压平，写上巡逻换班的时辰，放在门旁醒目的地方，好让夜里回来的人也看得见。",
+          "bodyEn": "The tea is still warm when the visitors leave. He writes the change of watch on a wrapper and pins it beside the door."
+        },
+        {
+          "titleZh": "始解 · 双鱼理",
+          "titleEn": "Shikai · Sogyo no Kotowari",
+          "bodyZh": "两柄刀由缀着符牌的绳索连起，灵流沿着两端往返。",
+          "bodyEn": "A cord hung with plaques joins the two swords as a current of light travels between them."
+        }
+      ],
+      "traitsZh": [
+        "温厚",
+        "耐心",
+        "坚定"
+      ],
+      "traitsEn": [
+        "Kind",
+        "Patient",
+        "Steadfast"
+      ],
+      "matchZh": "新来的队员道谢离开时，桌上那壶茶依然是热的。他把空纸包压平，写上巡逻换班的时辰，放在门旁醒目的地方，好让夜里回来的人也看得见。",
+      "matchEn": "The tea is still warm when the visitors leave. He writes the change of watch on a wrapper and pins it beside the door."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/gotei-ukitake/spritesheet.webp",
+    "previewPath": "/pets/gotei-ukitake/preview.webp",
+    "manifestPath": "/pets/gotei-ukitake/pet.json",
+    "downloadPath": "/downloads/gotei-ukitake.zip",
+    "detailPath": "/api/v1/pets/gotei-ukitake.json"
+  }
+}

@@ -31,25 +31,31 @@ async function transpile(relativePath) {
 }
 
 export async function loadPetModule() {
-  const [animationSource, editorialSource, petsSource, bleachSource] = await Promise.all([
+  const [animationSource, editorialSource, petsSource, bleachSource, captainSource] = await Promise.all([
     transpile("pet-animation.ts"),
     transpile("pet-content.ts"),
     transpile("pets.ts"),
     transpile("bleach-content.ts"),
+    transpile("gotei-captains.ts"),
   ]);
   const animationUrl = toDataUrl(animationSource);
   const bleachUrl = toDataUrl(bleachSource);
-  const editorialUrl = toDataUrl(editorialSource.replaceAll('"./bleach-content"', `"${bleachUrl}"`));
+  const captainUrl = toDataUrl(captainSource);
+  const linkCollections = (source) => source
+    .replaceAll('"./bleach-content"', `"${bleachUrl}"`)
+    .replaceAll('"./gotei-captains"', `"${captainUrl}"`);
+  const editorialUrl = toDataUrl(linkCollections(editorialSource));
   const linkedPetsSource = petsSource
     .replaceAll('"./pet-animation"', `"${animationUrl}"`)
     .replaceAll('"./pet-content"', `"${editorialUrl}"`);
-  const linkedCatalogSource = linkedPetsSource.replaceAll('"./bleach-content"', `"${bleachUrl}"`);
+  const linkedCatalogSource = linkCollections(linkedPetsSource);
 
   return import(toDataUrl(linkedCatalogSource));
 }
 
 export async function loadPetPowerModule() {
-  return import(toDataUrl(await transpile("pet-powers.ts")));
+  const [powers, captains] = await Promise.all([transpile("pet-powers.ts"), transpile("gotei-captains.ts")]);
+  return import(toDataUrl(powers.replaceAll('"./gotei-captains"', `"${toDataUrl(captains)}"`)));
 }
 
 export async function loadPetReleaseModule() {

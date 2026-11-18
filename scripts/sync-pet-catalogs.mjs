@@ -10,7 +10,7 @@ function json(value) {
 }
 
 const petModule = await loadPetModule();
-const updatedAt = "2026-11-11";
+const updatedAt = "2026-11-19";
 const apiCatalog = {
   schemaVersion: 1,
   updatedAt,
@@ -42,7 +42,7 @@ await Promise.all([
       new URL(`${pet.id}.json`, apiPetUrl),
       json({
         schemaVersion: 1,
-        updatedAt,
+        updatedAt: pet.id.startsWith("gotei-") ? updatedAt : "2026-11-11",
         languages: petModule.LANGUAGES,
         spriteFormat: petModule.SPRITE_FORMAT,
         animationKeys: petModule.ANIMATION_KEYS,

@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "gotei-tosen",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "steady"
+    ],
+    "displayName": {
+      "zh": "东仙要",
+      "en": "Kaname Tosen"
+    },
+    "badge": "GOTEI 9",
+    "accent": "#9184bc",
+    "softAccent": "#eae5f4",
+    "status": "published",
+    "tagline": {
+      "zh": "听风辨路",
+      "en": "Listening for the path"
+    },
+    "description": {
+      "zh": "东仙沿石阶走到廊下，在第三块木板前停住了脚步。刚换过的板子发出比昨天更空的回响，跟在后面的队员却只顾低头看路。",
+      "en": "Tosen stops at the third plank on the veranda. The new board rings more hollowly than yesterday."
+    },
+    "personalityTags": [
+      {
+        "zh": "沉静",
+        "en": "Quiet"
+      },
+      {
+        "zh": "自律",
+        "en": "Disciplined"
+      },
+      {
+        "zh": "执着",
+        "en": "Determined"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "九番队队长",
+      "zodiacEn": "Squad 9 Captain",
+      "roleZh": "自律",
+      "roleEn": "Disciplined",
+      "promiseZh": "听风辨路",
+      "promiseEn": "Listening for the path",
+      "storyTitleZh": "听风辨路",
+      "storyTitleEn": "Listening for the path",
+      "storyZh": "东仙沿石阶走到廊下，在第三块木板前停住了脚步。刚换过的板子发出比昨天更空的回响，跟在后面的队员却只顾低头看路。东仙把刀收稳，请他站在原地再听一次。一只小雀从屋檐下飞走，四周安静下来，那一点不同终于清楚了。他们把修缮的记号系在栏杆上，沿着剩下的路慢慢走完。回到队舍以后，他让那名队员自己在图上标出位置。对方重新走了一遍才落笔，这一次，他连木板旁边那根柱子也准确地记住了。暗色结界从清虫周围扩展，队长保持安静的立姿。",
+      "storyEn": "Tosen stops at the third plank on the veranda. The new board rings more hollowly than yesterday. His companion has been watching the floor. Tosen steadies his sword and asks him to listen again. A sparrow leaves the eaves and the difference becomes clear. They tie a repair marker to the rail and finish the rest of the walk together. Back at the barracks he asks his companion to mark the spot. After a second walk the man can even remember the post beside it. A dark field expands around Suzumushi while Tosen holds his ground.",
+      "comfortZh": "东仙沿石阶走到廊下，在第三块木板前停住了脚步。刚换过的板子发出比昨天更空的回响，跟在后面的队员却只顾低头看路。",
+      "comfortEn": "Tosen stops at the third plank on the veranda. The new board rings more hollowly than yesterday.",
+      "moments": [
+        {
+          "titleZh": "侧耳辨音",
+          "titleEn": "Listen for a footstep",
+          "bodyZh": "东仙沿石阶走到廊下，在第三块木板前停住了脚步。刚换过的板子发出比昨天更空的回响，跟在后面的队员却只顾低头看路。",
+          "bodyEn": "Tosen stops at the third plank on the veranda. The new board rings more hollowly than yesterday."
+        },
+        {
+          "titleZh": "回响的位置",
+          "titleEn": "Where the echo changes",
+          "bodyZh": "回到队舍以后，他让那名队员自己在图上标出位置。对方重新走了一遍才落笔，这一次，他连木板旁边那根柱子也准确地记住了。",
+          "bodyEn": "Back at the barracks he asks his companion to mark the spot. After a second walk the man can even remember the post beside it."
+        },
+        {
+          "titleZh": "卍解 · 清虫终式·阎魔蟋蟀",
+          "titleEn": "Bankai · Suzumushi Tsuishiki: Enma Korogi",
+          "bodyZh": "暗色结界从清虫周围扩展，队长保持安静的立姿。",
+          "bodyEn": "A dark field expands around Suzumushi while Tosen holds his ground."
+        }
+      ],
+      "traitsZh": [
+        "沉静",
+        "自律",
+        "执着"
+      ],
+      "traitsEn": [
+        "Quiet",
+        "Disciplined",
+        "Determined"
+      ],
+      "matchZh": "回到队舍以后，他让那名队员自己在图上标出位置。对方重新走了一遍才落笔，这一次，他连木板旁边那根柱子也准确地记住了。",
+      "matchEn": "Back at the barracks he asks his companion to mark the spot. After a second walk the man can even remember the post beside it."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/gotei-tosen/spritesheet.webp",
+    "previewPath": "/pets/gotei-tosen/preview.webp",
+    "manifestPath": "/pets/gotei-tosen/pet.json",
+    "downloadPath": "/downloads/gotei-tosen.zip",
+    "detailPath": "/api/v1/pets/gotei-tosen.json"
+  }
+}

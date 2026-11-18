@@ -8,4 +8,4 @@ The character artwork, spritesheets, static previews, downloadable pet archives,
 
 Codex and OpenAI are marks of their respective owners. This is an independent project and does not imply official endorsement.
 
-The `bleach-spirit-squad` collection is a chibi fan interpretation of characters from Tite Kubo's **BLEACH**. The underlying characters, names, and setting belong to their respective rights holders. These assets are not original franchise characters created by this project and are not included in the MIT source-code license.
+The `bleach-spirit-squad` and `gotei-13-captains` collections are chibi fan interpretations of characters from Tite Kubo's **BLEACH**. The underlying characters, names, and setting belong to their respective rights holders. These assets are not original franchise characters created by this project and are not included in the MIT source-code license.

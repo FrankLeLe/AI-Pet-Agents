@@ -1,5 +1,6 @@
 import type { Language, LocalizedText, Pet } from "./pets";
 import { getPetById } from "./pets";
+import { CAPTAIN_SERIES } from "./gotei-captains";
 import { BLEACH_SERIES } from "./bleach-content";
 
 export type SeriesMemberProfile = {
@@ -835,6 +836,7 @@ const DESK_CORNER_MEMBERS = [
 ] as const satisfies readonly SeriesMemberProfile[];
 
 export const PET_SERIES = [
+  CAPTAIN_SERIES,
   BLEACH_SERIES,
   {
     id: "desk-corner-friends",
@@ -928,7 +930,7 @@ export const PET_SERIES = [
   },
 ] as const satisfies readonly PetSeries[];
 
-export const FEATURED_SERIES_ID = "bleach-spirit-squad";
+export const FEATURED_SERIES_ID = "gotei-13-captains";
 
 export function getFeaturedSeries() {
   return getSeriesById(FEATURED_SERIES_ID) ?? PET_SERIES[0];

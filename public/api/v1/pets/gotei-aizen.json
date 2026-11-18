@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "spriteFormat": {
+    "spriteVersionNumber": 2,
+    "atlasWidth": 1536,
+    "atlasHeight": 2288,
+    "columns": 8,
+    "rows": 11,
+    "cellWidth": 192,
+    "cellHeight": 208
+  },
+  "animationKeys": [
+    "idle",
+    "running-right",
+    "running-left",
+    "waving",
+    "jumping",
+    "failed",
+    "waiting",
+    "running",
+    "review",
+    "look"
+  ],
+  "pet": {
+    "id": "gotei-aizen",
+    "category": "bleach",
+    "zodiacOrder": null,
+    "needs": [
+      "solve"
+    ],
+    "displayName": {
+      "zh": "蓝染惣右介",
+      "en": "Sosuke Aizen"
+    },
+    "badge": "GOTEI 5",
+    "accent": "#8798cb",
+    "softAccent": "#e4eafa",
+    "status": "published",
+    "tagline": {
+      "zh": "纸上倒影",
+      "en": "A reflection on paper"
+    },
+    "description": {
+      "zh": "午后的光正落在桌上一碗清水里。蓝染把写好的字搁在碗边，请送公文的队员读出最后一行。",
+      "en": "Afternoon light falls into a bowl beside Aizen’s writing. He asks a visiting courier to read the final line."
+    },
+    "personalityTags": [
+      {
+        "zh": "斯文",
+        "en": "Courteous"
+      },
+      {
+        "zh": "善察",
+        "en": "Observant"
+      },
+      {
+        "zh": "深藏",
+        "en": "Secretive"
+      }
+    ],
+    "editorial": {
+      "zodiacZh": "五番队队长",
+      "zodiacEn": "Squad 5 Captain",
+      "roleZh": "善察",
+      "roleEn": "Observant",
+      "promiseZh": "纸上倒影",
+      "promiseEn": "A reflection on paper",
+      "storyTitleZh": "纸上倒影",
+      "storyTitleEn": "A reflection on paper",
+      "storyZh": "午后的光正落在桌上一碗清水里。蓝染把写好的字搁在碗边，请送公文的队员读出最后一行。队员俯身看了好一会儿，才发现自己一直在看水里的倒影。蓝染替他把纸转过来，仍是那副温文的笑容。人走以后，他摘下眼镜，用袖口慢慢擦净镜片，桌上的纸早已经换到另一边了。下一个人敲门时，水面才刚刚平静下来。他戴回眼镜，把那碗水放到窗下，像整整一个下午都在做一件再平常不过的小事。镜光将戴眼镜的队长分作数道相似的身影，再缓缓重合。",
+      "storyEn": "Afternoon light falls into a bowl beside Aizen’s writing. He asks a visiting courier to read the final line. Only after leaning close does the courier realize he has been reading the reflection. Aizen turns the paper toward him with a polite smile. When the room is quiet, he cleans his glasses. The sheet is already on the other side of the bowl. The next knock comes just as the water settles. Aizen replaces his glasses and moves the bowl to the window. Mirrored images of the bespectacled captain separate and quietly fall back into step.",
+      "comfortZh": "午后的光正落在桌上一碗清水里。蓝染把写好的字搁在碗边，请送公文的队员读出最后一行。",
+      "comfortEn": "Afternoon light falls into a bowl beside Aizen’s writing. He asks a visiting courier to read the final line.",
+      "moments": [
+        {
+          "titleZh": "扶正眼镜",
+          "titleEn": "Adjust his glasses",
+          "bodyZh": "午后的光正落在桌上一碗清水里。蓝染把写好的字搁在碗边，请送公文的队员读出最后一行。",
+          "bodyEn": "Afternoon light falls into a bowl beside Aizen’s writing. He asks a visiting courier to read the final line."
+        },
+        {
+          "titleZh": "镜片上的光",
+          "titleEn": "Light on the lens",
+          "bodyZh": "下一个人敲门时，水面才刚刚平静下来。他戴回眼镜，把那碗水放到窗下，像整整一个下午都在做一件再平常不过的小事。",
+          "bodyEn": "The next knock comes just as the water settles. Aizen replaces his glasses and moves the bowl to the window."
+        },
+        {
+          "titleZh": "始解 · 镜花水月",
+          "titleEn": "Shikai · Kyoka Suigetsu",
+          "bodyZh": "镜光将戴眼镜的队长分作数道相似的身影，再缓缓重合。",
+          "bodyEn": "Mirrored images of the bespectacled captain separate and quietly fall back into step."
+        }
+      ],
+      "traitsZh": [
+        "斯文",
+        "善察",
+        "深藏"
+      ],
+      "traitsEn": [
+        "Courteous",
+        "Observant",
+        "Secretive"
+      ],
+      "matchZh": "下一个人敲门时，水面才刚刚平静下来。他戴回眼镜，把那碗水放到窗下，像整整一个下午都在做一件再平常不过的小事。",
+      "matchEn": "The next knock comes just as the water settles. Aizen replaces his glasses and moves the bowl to the window."
+    },
+    "spriteVersionNumber": 2,
+    "spritesheetPath": "/pets/gotei-aizen/spritesheet.webp",
+    "previewPath": "/pets/gotei-aizen/preview.webp",
+    "manifestPath": "/pets/gotei-aizen/pet.json",
+    "downloadPath": "/downloads/gotei-aizen.zip",
+    "detailPath": "/api/v1/pets/gotei-aizen.json"
+  }
+}

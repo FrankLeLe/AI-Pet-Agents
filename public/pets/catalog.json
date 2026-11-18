@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-19",
   "format": {
     "spriteVersionNumber": 2,
     "atlasWidth": 1536,
@@ -604,6 +604,149 @@
       },
       "preview": "/pets/bleach-chad/preview.webp",
       "download": "/downloads/bleach-chad.zip"
+    },
+    {
+      "id": "gotei-yamamoto",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "山本元柳斋重国",
+        "en": "Genryusai Shigekuni Yamamoto"
+      },
+      "preview": "/pets/gotei-yamamoto/preview.webp",
+      "download": "/downloads/gotei-yamamoto.zip"
+    },
+    {
+      "id": "gotei-soi-fon",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "碎蜂",
+        "en": "Soi Fon"
+      },
+      "preview": "/pets/gotei-soi-fon/preview.webp",
+      "download": "/downloads/gotei-soi-fon.zip"
+    },
+    {
+      "id": "gotei-gin",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "市丸银",
+        "en": "Gin Ichimaru"
+      },
+      "preview": "/pets/gotei-gin/preview.webp",
+      "download": "/downloads/gotei-gin.zip"
+    },
+    {
+      "id": "gotei-unohana",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "卯之花烈",
+        "en": "Retsu Unohana"
+      },
+      "preview": "/pets/gotei-unohana/preview.webp",
+      "download": "/downloads/gotei-unohana.zip"
+    },
+    {
+      "id": "gotei-aizen",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "蓝染惣右介",
+        "en": "Sosuke Aizen"
+      },
+      "preview": "/pets/gotei-aizen/preview.webp",
+      "download": "/downloads/gotei-aizen.zip"
+    },
+    {
+      "id": "gotei-byakuya",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "朽木白哉",
+        "en": "Byakuya Kuchiki"
+      },
+      "preview": "/pets/gotei-byakuya/preview.webp",
+      "download": "/downloads/gotei-byakuya.zip"
+    },
+    {
+      "id": "gotei-komamura",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "狛村左阵",
+        "en": "Sajin Komamura"
+      },
+      "preview": "/pets/gotei-komamura/preview.webp",
+      "download": "/downloads/gotei-komamura.zip"
+    },
+    {
+      "id": "gotei-shunsui",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "京乐春水",
+        "en": "Shunsui Kyoraku"
+      },
+      "preview": "/pets/gotei-shunsui/preview.webp",
+      "download": "/downloads/gotei-shunsui.zip"
+    },
+    {
+      "id": "gotei-tosen",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "东仙要",
+        "en": "Kaname Tosen"
+      },
+      "preview": "/pets/gotei-tosen/preview.webp",
+      "download": "/downloads/gotei-tosen.zip"
+    },
+    {
+      "id": "gotei-hitsugaya",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "日番谷冬狮郎",
+        "en": "Toshiro Hitsugaya"
+      },
+      "preview": "/pets/gotei-hitsugaya/preview.webp",
+      "download": "/downloads/gotei-hitsugaya.zip"
+    },
+    {
+      "id": "gotei-kenpachi",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "更木剑八",
+        "en": "Kenpachi Zaraki"
+      },
+      "preview": "/pets/gotei-kenpachi/preview.webp",
+      "download": "/downloads/gotei-kenpachi.zip"
+    },
+    {
+      "id": "gotei-mayuri",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "涅茧利",
+        "en": "Mayuri Kurotsuchi"
+      },
+      "preview": "/pets/gotei-mayuri/preview.webp",
+      "download": "/downloads/gotei-mayuri.zip"
+    },
+    {
+      "id": "gotei-ukitake",
+      "category": "bleach",
+      "zodiacOrder": null,
+      "displayName": {
+        "zh": "浮竹十四郎",
+        "en": "Jushiro Ukitake"
+      },
+      "preview": "/pets/gotei-ukitake/preview.webp",
+      "download": "/downloads/gotei-ukitake.zip"
     }
   ]
 }

@@ -8,6 +8,71 @@ type PetRelease = {
 };
 
 export const PET_RELEASES: Readonly<Record<string, PetRelease>> = {
+  "gotei-yamamoto": {
+    sizeBytes: 1_724_141,
+    sha256: "203928c56d616c75f9903ea910fdee774df2e80a5fb40cf7b2c45ef8a85b1bd1",
+    releaseCommit: "d36c4f5382f0cc1ad01d16e57f3023f590791120",
+  },
+  "gotei-soi-fon": {
+    sizeBytes: 1_435_361,
+    sha256: "0ba5436f144024f2addcb56452e6a0b4bfcb533e0c23f3360e63ec86c7892404",
+    releaseCommit: "d36c4f5382f0cc1ad01d16e57f3023f590791120",
+  },
+  "gotei-gin": {
+    sizeBytes: 1_371_419,
+    sha256: "f50299c9c89a754f3bc9c112a813965809e4bd436373da617178aadce38c2633",
+    releaseCommit: "d36c4f5382f0cc1ad01d16e57f3023f590791120",
+  },
+  "gotei-unohana": {
+    sizeBytes: 1_332_372,
+    sha256: "53a75bf95903307e4e081307b6338c841aded1eb327d20f5f487f7674b5b85cd",
+    releaseCommit: "d36c4f5382f0cc1ad01d16e57f3023f590791120",
+  },
+  "gotei-aizen": {
+    sizeBytes: 1_623_989,
+    sha256: "eb6f980a12f8ef3f064c22c5a331a40a90b74fb8e16441b755354b0c1db92cc0",
+    releaseCommit: "d36c4f5382f0cc1ad01d16e57f3023f590791120",
+  },
+  "gotei-byakuya": {
+    sizeBytes: 1_828_891,
+    sha256: "1b3aa0e37770b39bf77fe75b9747e25036adc395d4fa07f3b5372603348456a7",
+    releaseCommit: "d36c4f5382f0cc1ad01d16e57f3023f590791120",
+  },
+  "gotei-komamura": {
+    sizeBytes: 1_928_137,
+    sha256: "7c2aa6011bbf4e60366c1a751951a3a2a5972a8a07415a2bd23f8896d556e0fa",
+    releaseCommit: "d36c4f5382f0cc1ad01d16e57f3023f590791120",
+  },
+  "gotei-shunsui": {
+    sizeBytes: 2_183_013,
+    sha256: "1b11aab3342a2125c2d728173af815b6d22327109a13b5e88d5852ea375f3249",
+    releaseCommit: "d36c4f5382f0cc1ad01d16e57f3023f590791120",
+  },
+  "gotei-tosen": {
+    sizeBytes: 1_417_446,
+    sha256: "d5714f77a204c54a2c94b98cc5b498c14d885826d0a09a8538de1c6f1ab6dbd9",
+    releaseCommit: "d36c4f5382f0cc1ad01d16e57f3023f590791120",
+  },
+  "gotei-hitsugaya": {
+    sizeBytes: 1_373_306,
+    sha256: "2dbbe0bdd6167d5abbc9a4a4195672e8c43e09a8e9db794a28af1594f8716a1d",
+    releaseCommit: "d36c4f5382f0cc1ad01d16e57f3023f590791120",
+  },
+  "gotei-kenpachi": {
+    sizeBytes: 1_707_001,
+    sha256: "dab9bc424cadf0dd4efbd143cec4c5a36a1cca5b32eba52ed2571b9ec53a04e4",
+    releaseCommit: "d36c4f5382f0cc1ad01d16e57f3023f590791120",
+  },
+  "gotei-mayuri": {
+    sizeBytes: 1_519_534,
+    sha256: "5b511bc9e34fb4323c141cd5a62dc737dc3fafd41049714e0ed5778626904c02",
+    releaseCommit: "d36c4f5382f0cc1ad01d16e57f3023f590791120",
+  },
+  "gotei-ukitake": {
+    sizeBytes: 1_445_181,
+    sha256: "6a68160b53dbf39cd565e123e99a6e80c4b82f79c213cded9d0c93ee1e066877",
+    releaseCommit: "d36c4f5382f0cc1ad01d16e57f3023f590791120",
+  },
   "bleach-ichigo": {
     sizeBytes: 1_534_593,
     sha256: "87799a35d4da173994d8a7562f053a5aecd294756a7447fe58aebdd6ac8fd3f3",
